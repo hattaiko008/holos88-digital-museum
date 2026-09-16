@@ -6,7 +6,7 @@
   <meta name="description" content="いま、という時代の博物誌。植物、動物、素材、場所、思想。世界の標本から、思いがけない関係を辿るデジタルミュージアム。">
   <meta name="theme-color" content="#ffffff">
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%231c2520'/%3E%3Ctext x='32' y='44' text-anchor='middle' font-family='Arial' font-size='36' fill='white'%3E88%3C/text%3E%3C/svg%3E">
-  <link rel="stylesheet" href="styles.css"><script src="app.js" defer></script>
+  <link rel="stylesheet" href="styles.css"><link rel="stylesheet" href="articles.css"><script src="app.js" defer></script>
 </head>
 <body>
 <a class="skip-link" href="#collection">コレクションへ移動</a>
@@ -40,6 +40,7 @@
   <section id="michikusa" class="michikusa wrap" aria-labelledby="michikusa-heading">
     <div><p class="eyebrow" id="michikusa-heading">MICHIKUSA<span class="sprout">🌱</span></p><h2>すこし、道草。</h2></div><p>気になったものへ、ひとつ寄り道。<br>思いがけない発見から、また世界を見る。</p><button id="michikusa-open" class="text-link">種の世界へ寄り道 <span aria-hidden="true">↗</span></button>
   </section>
+  {{ARTICLE_WINDOWS}}
 </main>
 <footer class="wrap"><div><a class="wordmark" href="#top">HOLOS <span>88</span></a><p>世界は、やおよろず。</p></div><p>A NATURAL HISTORY OF NOW.<br><span>HOME / PROTOTYPE 01</span></p></footer>
 <dialog id="object-dialog" aria-labelledby="dialog-title"><div class="dialog-top"><span id="dialog-kicker" class="eyebrow">COLLECTION PREVIEW</span><button id="dialog-close" aria-label="閉じる">閉じる ×</button></div><div id="dialog-content"></div><button id="dialog-return" class="return-button">Return to HOME</button></dialog>

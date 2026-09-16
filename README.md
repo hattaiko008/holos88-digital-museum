@@ -55,3 +55,20 @@ British Museumは実ブラウザのCollection画面で確認。V&Aはページ�
 
 ## 技術の判断
 依存パッケージなしの静的サイトを採用。サーバー利用料のかかるDBやCMSを持たず、静的HTMLとして検索エンジンが標本の内容を読めます。データと表示を分け、将来のページ生成へ流用できます。収蔵数が大きくなった時点で検索やCMSを検討します。
+
+## PHASE 03 — Article Windows
+
+- LIFE NOTES: http://127.0.0.1:8088/articles/horse-time.html
+- MARKET WINDOW: http://127.0.0.1:8088/articles/five-percent.html
+- MUSEUM FEATURE: 既存の `/stories/archaeology-of-fear.html`
+- HOME下部のARTICLE WINDOWSから各記事へ移動。記事末尾のRELATED STORY、INTO THE COLLECTION、標本プレビューのFROM THIS OBJECTで往復できます。
+
+### 内容と表示の分離
+
+`content/articles.json` が共通記事台帳です。`authors`、`windows`はIDで参照し、ECHOはひとつの著者です。各記事はtitle/subtitle/date/status/author_ids/body/images/sources/related_stories/related_collections/related_specimens/accent_color/revisionを持ちます。`body_ref`は既存特集データへの参照で、9.11の本文を複製しません。変更したらbuildしてください。
+
+`lib/articles.mjs`が共通の署名、Source Window、関連導線、通常記事を生成します。既存特集は`lib/editorial.mjs`が章構成を維持したまま共通部品を利用します。`dist/articles.css`は追加部分専用。HOME検索のロジックは維持しています。
+
+本文ブロックは`paragraph`（text）、`heading`（text）、`source`（source_id）、`image`（media_id）。sourcesの項目はid/nameまたはinstitution/title/url/任意summary。imagesはid/src/creator/title/date/institution/source_url/rights/license/credit_line/alt_text/captionを想定し、ローカルassetと権利情報が必要です。revisionは任意のdate/note。現状の2つの新規記事は本文未入稿のためbody/images/sourcesが空で、日付も未設定です。
+
+将来のCMSはこのデータ層を編集する形で追加できます。現段階では編集UIも公開・承認フローもありません。

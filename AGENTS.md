@@ -47,3 +47,14 @@
 - 事実・証拠・仮説・争点・反証された主張・不明を区別。政府、メディア、SNS、自分の好む説明にも同じ基準を適用する。
 - SHAMANIC WINDOWは象徴・文化・哲学の編集モードと明示し、歴史や科学の事実として扱わない。
 - 本文は再利用可能なtyped blocks、資料・画像・関係はID参照。CMS/DBは作らない。出典は段落近くと末尾で辿れるようにする。
+
+## PHASE 03 — CONTENT ARCHITECTURE（2026-09-16）
+- Phase 03はユーザー承認済み。3つのArticle Windowと既存Museumを接続する。HOMEは下部のArticle Windows入口だけを追加し、既存の余白・文字・グリッド・検索を維持。
+- LIFE NOTES / hachico、MARKET WINDOW / ECHO、MUSEUM FEATURE / ECHO・TEAM HOLOSは同一サイトの窓。ECHOの著者IDを窓ごとに分けない。
+- 記事共通データはcontent/articles.json、標本はcollection.json、既存特集本文はcontent/specimen-002.json。既存本文を重複保存しない。
+- 原稿のない記事の本文・日付・引用・出典を創作しない。placeholder状態と本文準備中を明示する。
+- BODY = SYSTEM / DISPLAY = COMPOSITION。本文の可読性を優先し、大規模なdisplayやタイポグラフィの改訂は別Phase。
+- SOURCE WINDOWは小さな罫線と資料名・リンク。本文の声と外部資料を区別する。出典未登録は準備中と表示。
+- 関連記事と標本は安定IDで参照。標本から記事への逆引きを生成する。関係の説明は編集上の導線であり、未入稿の内容について事実を推定しない。
+- accent_colorは任意、少量の装飾線に限る。AIを表の意匠や属性ラベルにしない。
+- CMS/Admin、課金、会員、ニュースレター、チャット、巨大グラフ、新検索、生成画像は追加しない。

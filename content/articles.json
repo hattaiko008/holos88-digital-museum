@@ -1,0 +1,145 @@
+{
+  "schema_version": 1,
+  "authors": [
+    {
+      "id": "hachico",
+      "name": "hachico"
+    },
+    {
+      "id": "echo",
+      "name": "ECHO"
+    },
+    {
+      "id": "team-holos",
+      "name": "TEAM HOLOS"
+    }
+  ],
+  "windows": [
+    {
+      "id": "life",
+      "label": "LIFE NOTES"
+    },
+    {
+      "id": "market",
+      "label": "MARKET WINDOW"
+    },
+    {
+      "id": "museum",
+      "label": "MUSEUM FEATURE"
+    }
+  ],
+  "articles": [
+    {
+      "id": "horse-time",
+      "window": "life",
+      "title": "サイト作ってたら、馬の時間になった。",
+      "subtitle": "大雨と、馬と、金木犀。時々、Digital Museum。",
+      "author_ids": [
+        "hachico"
+      ],
+      "date": null,
+      "status": "placeholder",
+      "route": "/articles/horse-time.html",
+      "body": [],
+      "images": [],
+      "sources": [],
+      "related_stories": [
+        {
+          "id": "five-percent",
+          "reason": "別の窓へ。日常から、数字を読む入口へ。"
+        }
+      ],
+      "related_collections": [
+        {
+          "id": "H88-0005",
+          "reason": "タイトルに登場する馬を、標本から見る。"
+        },
+        {
+          "id": "H88-0006",
+          "reason": "雨から、水という素材へ。"
+        }
+      ],
+      "related_specimens": [],
+      "accent_color": "#97622d",
+      "revision": null
+    },
+    {
+      "id": "five-percent",
+      "window": "market",
+      "title": "5％という数字の、その向こう",
+      "subtitle": null,
+      "author_ids": [
+        "echo"
+      ],
+      "date": null,
+      "status": "placeholder",
+      "route": "/articles/five-percent.html",
+      "body": [],
+      "images": [],
+      "sources": [],
+      "related_stories": [
+        {
+          "id": "specimen-002",
+          "reason": "数字を読む窓から、資料と証拠を辿る物語へ。"
+        },
+        {
+          "id": "horse-time",
+          "reason": "FROM LIFE — 日常の窓へ戻る。"
+        }
+      ],
+      "related_collections": [
+        {
+          "id": "H88-0006",
+          "reason": "接続の試作：数字の窓から、水という素材へ。本文との関係は入稿後に編集します。"
+        }
+      ],
+      "related_specimens": [
+        {
+          "id": "specimen-002",
+          "reason": "別の資料の読み方を、SPECIMEN 002から辿る。"
+        }
+      ],
+      "accent_color": null,
+      "revision": null
+    },
+    {
+      "id": "specimen-002",
+      "window": "museum",
+      "title": "恐怖の考古学",
+      "subtitle": "——25年後、一本の樹木から世界を見る",
+      "author_ids": [
+        "echo"
+      ],
+      "date": "2026-09-11",
+      "status": "editorial-draft",
+      "route": "/stories/archaeology-of-fear.html",
+      "body": [],
+      "images": [],
+      "sources": [],
+      "related_stories": [
+        {
+          "id": "horse-time",
+          "reason": "FROM LIFE — 樹木と世界から、日常の窓へ。"
+        },
+        {
+          "id": "five-percent",
+          "reason": "資料を読む姿勢を携えて、数字の窓へ。"
+        }
+      ],
+      "related_collections": [
+        {
+          "id": "H88-0001",
+          "reason": "物語の中心にある、生きた樹木の記録へ。"
+        },
+        {
+          "id": "H88-0006",
+          "reason": "記憶の風景から、水という素材へ。"
+        }
+      ],
+      "related_specimens": [],
+      "accent_color": null,
+      "revision": null,
+      "body_ref": "content/specimen-002.json"
+    }
+  ]
+}
