@@ -1,4 +1,5 @@
 import { readFile, writeFile, access } from 'node:fs/promises';
+import {buildEditorial} from './lib/editorial.mjs';
 const data = JSON.parse(await readFile(new URL('./collection.json',import.meta.url),'utf8'));
 const escape = value => String(value ?? '').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const ids = new Set();
@@ -15,5 +16,8 @@ const filters = ['ALL',...data.exploreBy].map(t=>`<button type="button" data-fil
 const route = data.relationshipPreview.map((r,i)=>(i?'<span class="arrow" aria-hidden="true">→</span>':'')+`<button type="button" data-relation="${r.id}" aria-pressed="${i===0}">${escape(r.title)}</button>`).join('');
 let html=await readFile(new URL('./home.template.html',import.meta.url),'utf8');
 html=html.replace('{{CARDS}}',cards).replace('{{FILTERS}}',filters).replace('{{PATH}}',route).replace('{{DATA}}',JSON.stringify(data).replace(/</g,'\\u003c'));
+// Only the approved Survivor Tree entry gains a destination; HOME styling and data stay intact.
+html=html.replace(/<button class="object-button" data-object="survivor-tree"([\s\S]*?)<\/button>/,(_match,body)=>`<a class="object-button" href="/objects/survivor-tree.html"${body.replace(' — 標本プレビュー',' — 収蔵記録')}</a>`);
 await writeFile(new URL('./dist/index.html',import.meta.url),html);
 console.log(`Built HOME: ${data.objects.length} objects, ${data.objects.filter(o=>o.image.src).length} licensed images.`);
+await buildEditorial(data);

@@ -32,3 +32,18 @@
 - セマンティックHTML、キーボード操作、見えるフォーカス、十分なコントラスト、フォームラベル、検索0件状態、モバイル表示を保つ。
 - 検索・フィルター・関係プレビューを実際に動かす。ダミーリンクで未実装ページへ誘導しない。
 - 変更後は生成処理、JS構文、ローカルHTTP、アセット、主要操作、狭い幅を確認。HOME完成時点で止めてレビューを求める。
+
+## PHASE 02 — 優先する追加ルール（2026-09-15）
+- HOMEはユーザー承認済みのDESIGN BASELINE 01。グローバルCSS、HOMEの構造・余白・分類・検索挙動を再設計しない。HOMEのSurvivor TreeからOBJECTへの接続だけを追加する。
+- Phase 02で認められた追加はSurvivor Tree OBJECT、SPECIMEN 002 STORY、MICHIKUSAの小部屋、関係経路だけ。Phase 03はレビュー承認後。
+- 既存`collection.json`の標本IDを保持。SeedはH88-0003、DustはH88-0009。新しい物語データは`content/specimen-002.json`から既存IDを参照し、HOMEの試作データを書き換えない。
+- 英語はdisplay/taxonomy、日本語は物語の主要言語。日英見出しをすべて同じ重みで二重化しない。学名は自然なラテン語表記。
+- COLLECTIONは静かに、OBJECTは正確に、STORYは表現豊かに。新規ページのCSSは`.phase-two`に限定し、HOMEへ流出させない。
+- 9.11の大量死、病気、戦争、継続する悲嘆を見世物にしない。炎上するビル、破壊の演出、偽アーカイブ、偽引用を使わない。
+- 新規画像は今回ユーザーが認めた「明確に再利用可能な素材」も対象。CC BY/CC BY-SAは個別の出典・作者・ライセンスリンク・加工有無を表示し、その条件を守る。権利不明素材はplaceholder。
+- MEDIAはcreator/title/date/institution/source_url/rights/license/credit_line/alt_textを持つ。既存のcamelCase画像データは変換して利用し、破壊的に移行しない。
+- MICHIKUSAは主文を残したdialogとして開き、閉じる・Escape・RETURN TO NEW YORKで元の読書位置とフォーカスへ戻る。別Objectは小部屋内の資料引出しで辿れる。
+- 三春滝桜自体が3.11の瓦礫から救出されたとは書かない。苗木贈呈の確認済みの記録と、ニューヨークとの編集上の比較を区別する。
+- 事実・証拠・仮説・争点・反証された主張・不明を区別。政府、メディア、SNS、自分の好む説明にも同じ基準を適用する。
+- SHAMANIC WINDOWは象徴・文化・哲学の編集モードと明示し、歴史や科学の事実として扱わない。
+- 本文は再利用可能なtyped blocks、資料・画像・関係はID参照。CMS/DBは作らない。出典は段落近くと末尾で辿れるようにする。
