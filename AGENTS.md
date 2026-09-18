@@ -58,3 +58,16 @@
 - 関連記事と標本は安定IDで参照。標本から記事への逆引きを生成する。関係の説明は編集上の導線であり、未入稿の内容について事実を推定しない。
 - accent_colorは任意、少量の装飾線に限る。AIを表の意匠や属性ラベルにしない。
 - CMS/Admin、課金、会員、ニュースレター、チャット、巨大グラフ、新検索、生成画像は追加しない。
+
+## PHASE 04 — READING EXPERIENCE（承認済み）
+- Phase 03 checkpointは7cd0f53。既存ID/URL、検索、標本と記事の逆引きを維持。HOMEの流れはCOVER → READ → EXPLORE → CONNECT → WANDER。
+- 原本ロゴはdist/assets/holos-original.jpg（受領名IMG_1438.jpg）。content/home.jsonのSHA-256で同一性を確認。再生成・描き直し・ベクター化・造形修正は禁止。現在は原本のバイトをそのまま保存。
+- content/home.jsonが5場面とORBITの設定。12秒間隔、1→2→3→4→5で停止。手動操作・focus・pointer・画面外・タブ非表示で停止し、自動再開しない。reduced motionでは自動切替も漂いも無効。
+- COVER 04は既存Moon。ORBITは6標本、図版未確認部分は文字placeholder。画像や歴史写真を生成して埋めない。
+- LIFE/MARKETのPUBLICATION MASTERはcontent/masters/phase04-publication-master.txtに保管。本文はcontent/articles.jsonへ転記。原稿の段落・順序・強調・見出し・SOURCE WINDOW・FLOW MAPを維持し、生成・要約・リライト・未記載文章の補完をしない。
+- 完成原稿にも元から短い独立段落がある。それを勝手に結合せず、複数文の段落も分割しない。呼吸はCSSで調整。
+- SOURCE WINDOWの未確定URLはnull、verification_statusはpending-source-desk。推測で出典を追加しない。ユーザーの最終SOURCE DESK確認前に公開済み・検証済みと扱わない。
+- 表示署名はWORDS BY hachico / WRITTEN BY ECHO。属性や人物間の関係を説明しない。
+- SATORI’S VIEWと音声は任意。空ならUIを出さない。音の制作・取得・再生UIは今回は実装しない。将来も自動再生禁止。
+- 共通本文は18px・約660px幅・約2.05行高を基本にする。displayは局所的な構図として扱い、カテゴリー固定色は付けない。
+- JSがなくても記事のリンクと静的Coverにアクセスできること。生成HTMLは直接編集しない。

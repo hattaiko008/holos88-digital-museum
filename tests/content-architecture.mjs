@@ -31,6 +31,12 @@ for(const p of pages){
 }
 const git=process.env.HOLOS_GIT||'git';
 for(const f of ['dist/styles.css','dist/editorial.css','collection.json','content/specimen-002.json'])assert.equal(await readFile(new URL(f,root),'utf8'),execFileSync(git,['show','43c1e30:'+f],{cwd:root,encoding:'utf8'}));
-const before=execFileSync(git,['show','43c1e30:home.template.html'],{cwd:root,encoding:'utf8'});
-const after=(await readFile(new URL('home.template.html',root),'utf8')).replace('<link rel="stylesheet" href="articles.css">','').replace('  {{ARTICLE_WINDOWS}}\n','');assert.equal(after,before);
+const before=execFileSync(git,['show','7cd0f53:home.template.html'],{cwd:root,encoding:'utf8'});
+const after=await readFile(new URL('home.template.html',root),'utf8');
+for(const id of ['collection','relationships','michikusa']){
+ const pattern=new RegExp(`<section id="${id}"[\\s\\S]*?</section>`);
+ assert.equal(after.match(pattern)?.[0].replace(/<a class="text-link relationship-onward"[^>]*>[^<]*<\/a>/,''),before.match(pattern)?.[0],`Preserve HOME ${id}`);
+}
+assert(after.indexOf('{{COVER}}')<after.indexOf('{{ARTICLE_WINDOWS}}'));
+assert(after.indexOf('{{ARTICLE_WINDOWS}}')<after.indexOf('id="collection"'));
 console.log(`PASS: ${pages.length} pages, ${refs} internal references, bidirectional article links, unique author, placeholders and baseline preservation.`);

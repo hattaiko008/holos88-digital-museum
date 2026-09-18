@@ -1,0 +1,7 @@
+{
+  "article_id": "horse-time",
+  "scope": "最初のSOURCE WINDOW直前まで。文言変更なし、元のblock indexを結合する試作。",
+  "groups": [[0], [1], [2,3], [4], [5,6], [7,8], [9,10,11]],
+  "intentional_short_groups": [0,1],
+  "source_body_end_exclusive": 12
+}

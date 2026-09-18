@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "HOLOS optional editorial windows and sound containers",
+  "description": "Field contracts for future editing; no sound playback or source inference is implemented in Phase 04.",
+  "type": "object",
+  "properties": {
+    "satori_view": {"anyOf": [{"type": "null"}, {"type": "object", "required": ["body"], "properties": {"body": {"type": "array", "items": {"type": "object", "required": ["type", "text"], "properties": {"type": {"const": "paragraph"}, "text": {"type": "string"}}}}, "revision": {"type": ["object", "null"]}}}]},
+    "audio": {"type": "array", "items": {"$ref": "#/$defs/sound"}},
+    "ambient_audio": {"anyOf": [{"type": "null"}, {"$ref": "#/$defs/sound"}]}
+  },
+  "$defs": {
+    "sound": {
+      "type": "object",
+      "required": ["id", "src", "caption", "credit", "rights", "autoplay"],
+      "properties": {
+        "id": {"type": "string"},
+        "src": {"type": "string"},
+        "caption": {"type": "string"},
+        "location_label": {"type": ["string", "null"]},
+        "recorded_date": {"type": ["string", "null"]},
+        "credit": {"type": "string"},
+        "source_url": {"type": ["string", "null"]},
+        "rights": {"type": "string"},
+        "license": {"type": ["string", "null"]},
+        "transcript": {"type": ["string", "null"]},
+        "autoplay": {"const": false}
+      }
+    }
+  }
+}

@@ -6,6 +6,6 @@
   "scripts": {
     "build": "node build.mjs",
     "start": "node server.mjs",
-    "test": "node tests/content-architecture.mjs"
+    "test": "node tests/content-architecture.mjs && node tests/reading-experience.mjs"
   }
 }

@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "cover": {
+    "interval_ms": 12000,
+    "scenes": [
+      {
+        "id": "life",
+        "kind": "article",
+        "article_id": "horse-time"
+      },
+      {
+        "id": "market",
+        "kind": "article",
+        "article_id": "five-percent"
+      },
+      {
+        "id": "museum",
+        "kind": "article",
+        "article_id": "specimen-002",
+        "display_title": "THE ARCHAEOLOGY OF FEAR",
+        "display_subtitle": "恐怖の考古学"
+      },
+      {
+        "id": "archive",
+        "kind": "collection",
+        "collection_id": "H88-0002",
+        "label": "ARCHIVE / COLLECTION FEATURE"
+      },
+      {
+        "id": "orbit",
+        "kind": "orbit",
+        "label": "HOLOS ORBIT"
+      }
+    ]
+  },
+  "orbit": {
+    "logo": {
+      "src": "/assets/holos-original.jpg",
+      "original_filename": "IMG_1438.jpg",
+      "sha256": "66438a35b0ff2c1a5270f7cb38b7f69bd97b02eb68bc4258c3eed12040838e54",
+      "creator": "ECHO",
+      "rights": "ユーザー提供・HOLOS原本として使用承認",
+      "changes": "なし。原本ファイルとバイト単位で一致。",
+      "alt_text": "ベージュの不均一な多面体に黒いHOLOSの文字。上部に細い線の軌道が描かれた原本ロゴ。"
+    },
+    "objects": [
+      {
+        "collection_id": "H88-0005",
+        "visual_status": "archive-pending"
+      },
+      {
+        "collection_id": "H88-0002",
+        "visual_status": "archive-pending"
+      },
+      {
+        "collection_id": "H88-0001",
+        "visual_status": "archive-pending"
+      },
+      {
+        "collection_id": "H88-0003",
+        "visual_status": "archive-pending"
+      },
+      {
+        "collection_id": "H88-0006",
+        "visual_status": "archive-pending"
+      },
+      {
+        "collection_id": "H88-0008",
+        "visual_status": "archive-pending"
+      }
+    ],
+    "ambient_audio": null
+  }
+}

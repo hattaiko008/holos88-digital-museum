@@ -72,3 +72,21 @@ British Museumは実ブラウザのCollection画面で確認。V&Aはページ�
 本文ブロックは`paragraph`（text）、`heading`（text）、`source`（source_id）、`image`（media_id）。sourcesの項目はid/nameまたはinstitution/title/url/任意summary。imagesはid/src/creator/title/date/institution/source_url/rights/license/credit_line/alt_text/captionを想定し、ローカルassetと権利情報が必要です。revisionは任意のdate/note。現状の2つの新規記事は本文未入稿のためbody/images/sourcesが空で、日付も未設定です。
 
 将来のCMSはこのデータ層を編集する形で追加できます。現段階では編集UIも公開・承認フローもありません。
+
+## PHASE 04 — Reading Experience
+
+Phase 03 checkpoint: `7cd0f53`。
+
+- HOMEはCover → READ（Article Windows）→ Collection → Relationships → MICHIKUSA。
+- `content/home.json`: 5場面のCover、既存Moon入口、6標本のORBIT、原本ロゴのハッシュ、将来の環境音設定。
+- `lib/cover.mjs`: Coverの静的HTML生成。`dist/cover.js`と`cover-state.js`が自動切替・停止・手動操作を追加。
+- `dist/cover.css`, `dist/reading.css`: Coverと読書の追加スタイル。既存Museumの共通CSSは保持。
+- `content/articles.json`: 受領したLIFE/MARKET実原稿。`content/masters/phase04-publication-master.txt`は受領時の原文保管。改訂する場合は原本を上書きせず、新しいmasterとrevisionを記録してください。
+- SOURCE WINDOWは指定された本文を維持。3件の新規SourceのURLはnull、最終SOURCE DESK待ち。日付付きの市場記述を検証済みとみなさないでください。公開配信はしていません。
+- `content/optional-fields.schema.json`: SATORI’S VIEW、記事のsound specimen、ORBITのambient soundの将来用契約。空なら非表示。音声はデータの器のみで、プレーヤー未実装。
+- ロゴは受領原本をそのままコピー。圧縮・crop・透明化も行っていません。画像が変わるとbuildで検出します。
+- Cover写真は既存の使用条件確認済み資料。Waterは本文当日の雨、Petroleumは市場当日の取材写真ではありません。キャプションで区別。ORBITのarchive図版は未収集。
+
+Coverは12秒ごとに1→5、最後で停止。手動操作後は自動再開しません。reduced motion、focus、pointer、画面外、非表示タブでも停止。ORBITの小さな漂いは別途停止できます。JavaScriptを無効にすると5場面が静的に並びます。
+
+`npm run build` / `npm test`。後者は内部リンク・既存展示維持に加え、原稿の文字と段落順、強調、FLOW MAP、原本ロゴ、Cover状態遷移を検証します。

@@ -1,3 +1,4 @@
+import {buildCover} from './lib/cover.mjs';
 import {loadArticles,articleWindows,buildArticles,collectionArticleLinks} from './lib/articles.mjs';
 import { readFile, writeFile, access } from 'node:fs/promises';
 import {buildEditorial} from './lib/editorial.mjs';
@@ -18,7 +19,7 @@ const cards = data.objects.map((o,i)=>`<article class="object-card" data-slug="$
 const filters = ['ALL',...data.exploreBy].map(t=>`<button type="button" data-filter="${t}" aria-pressed="${t==='ALL'}">${t}</button>`).join('');
 const route = data.relationshipPreview.map((r,i)=>(i?'<span class="arrow" aria-hidden="true">→</span>':'')+`<button type="button" data-relation="${r.id}" aria-pressed="${i===0}">${escape(r.title)}</button>`).join('');
 let html=await readFile(new URL('./home.template.html',import.meta.url),'utf8');
-html=html.replace('{{ARTICLE_WINDOWS}}',articleWindows(articles)).replace('{{CARDS}}',cards).replace('{{FILTERS}}',filters).replace('{{PATH}}',route).replace('{{DATA}}',JSON.stringify(data).replace(/</g,'\\u003c'));
+html=html.replace('{{COVER}}',await buildCover(articles)).replace('{{ARTICLE_WINDOWS}}',articleWindows(articles)).replace('{{CARDS}}',cards).replace('{{FILTERS}}',filters).replace('{{PATH}}',route).replace('{{DATA}}',JSON.stringify(data).replace(/</g,'\\u003c'));
 // Only the approved Survivor Tree entry gains a destination; HOME styling and data stay intact.
 html=html.replace(/<button class="object-button" data-object="survivor-tree"([\s\S]*?)<\/button>/,(_match,body)=>`<a class="object-button" href="/objects/survivor-tree.html"${body.replace(' — 標本プレビュー',' — 収蔵記録')}</a>`);
 await writeFile(new URL('./dist/index.html',import.meta.url),html);
