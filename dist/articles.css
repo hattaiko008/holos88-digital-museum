@@ -1,0 +1,36 @@
+/* Additive connection layer: baseline collection, search and typography stay intact. */
+.article-windows{padding-top:72px;padding-bottom:80px;border-top:1px solid #d8dad7}
+.article-windows h2{font-size:25px;font-weight:400;margin:18px 0 38px}
+.window-entries{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:40px}
+.window-entries article{border-top:1px solid #d8dad7;padding-top:22px}
+.window-entries h3{font-size:20px;font-weight:400;line-height:1.7;margin:24px 0 12px}
+.window-entries p,.window-entries small{font-size:13px;line-height:1.9}
+.article-windows a,.article-connections a{color:inherit;text-underline-offset:5px}
+.article-byline{font:13px/1.8 Arial,sans-serif;letter-spacing:.04em;margin:30px 0;color:#333}
+.article-byline span{margin-left:12px}
+.article-connections{border-top:1px solid #d8dad7;padding:48px 0;margin:64px 0}
+.article-connections h2{font-size:25px;font-weight:400;margin:16px 0 32px}
+.article-connections small{display:block;font-size:12px;line-height:1.8;margin-top:9px}
+.article-connections p:not(.eyebrow){font-size:14px;line-height:1.9;color:#525852}
+.connection-stories{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:32px;margin-bottom:40px}
+.connection-stories a{font-size:21px;line-height:1.7}
+.article-connections ul{list-style:none;padding:0;margin:24px 0 36px}
+.article-connections li{border-top:1px solid #e0e1de;padding:20px 0}
+.source-window{border-left:1px solid #858a83;padding:3px 0 3px 22px;margin:48px 0;color:#444;max-width:640px}
+.source-window .eyebrow{font-size:12px;font-style:italic;letter-spacing:.12em}
+.source-window cite{font-size:15px;line-height:1.9}
+.source-window p:not(.eyebrow){font-size:14px;line-height:1.9}
+.article-page .article-breadcrumb{font-size:13px;margin:30px 0 64px}
+.article-page .article-opening{max-width:850px;padding-bottom:48px}
+.article-page h1{font-family:Georgia,'Yu Mincho','Hiragino Mincho ProN',serif;font-size:clamp(30px,4vw,52px);font-weight:400;line-height:1.6;letter-spacing:.02em}
+.article-page .article-subtitle{font-size:17px;line-height:1.9;margin-top:25px}
+.article-page .article-body{max-width:660px;margin:0 auto 80px;font-size:18px;line-height:2}
+.article-page .article-body h2{font-size:24px;font-weight:400}
+.article-page .article-body p{margin:24px 0}
+.article-page .article-body img{max-width:100%;height:auto}
+.article-page figcaption{font-size:12px;line-height:1.8}
+.article-placeholder{padding:30px 0 60px;border-top:1px solid #d8dad7}
+.window-life .article-opening{border-top:2px solid var(--article-accent,#777)}
+.window-market .article-opening{border-top:1px solid #303530}
+.article-revision{font-size:12px;color:#555}
+@media(max-width:700px){.window-entries,.connection-stories{grid-template-columns:1fr;gap:24px}.article-windows{padding-top:48px;padding-bottom:48px}.article-page .article-breadcrumb{margin-bottom:40px}.article-page .article-body{font-size:18px}.article-connections{margin:40px 0;padding:32px 0}.article-page h1{overflow-wrap:anywhere}}
