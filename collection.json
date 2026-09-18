@@ -1,0 +1,410 @@
+{
+  "objects": [
+    {
+      "id": "H88-0001",
+      "slug": "survivor-tree",
+      "title": "Survivor Tree",
+      "titleJa": "サバイバーツリー",
+      "types": [
+        "PLANTS",
+        "PLACES"
+      ],
+      "date": null,
+      "place": "New York / World Trade Center",
+      "species": "Pyrus calleryana",
+      "material": null,
+      "creatorMaker": null,
+      "associatedEvents": [],
+      "sources": [],
+      "rights": null,
+      "relatedObjectIds": [],
+      "relatedStoryIds": [
+        "specimen-002"
+      ],
+      "caption": "Pyrus calleryana · New York",
+      "image": {
+        "kind": "placeholder",
+        "src": null,
+        "creator": null,
+        "title": null,
+        "date": null,
+        "institution": null,
+        "sourceUrl": null,
+        "rights": null,
+        "licenseUrl": null,
+        "alt": "Survivor Tree：画像準備中"
+      },
+      "status": "prototype"
+    },
+    {
+      "id": "H88-0002",
+      "slug": "moon",
+      "title": "Moon",
+      "titleJa": "月",
+      "types": [
+        "OBJECTS",
+        "TIME"
+      ],
+      "date": null,
+      "place": "Cosmos",
+      "species": null,
+      "material": null,
+      "creatorMaker": null,
+      "associatedEvents": [],
+      "sources": [],
+      "rights": null,
+      "relatedObjectIds": [],
+      "relatedStoryIds": [],
+      "caption": "Earth’s natural satellite",
+      "image": {
+        "kind": "photograph",
+        "src": "assets/moon.jpg",
+        "creator": "NASA",
+        "title": "AS11-44-6667 - Full Moon Photographed From Apollo 11 Spacecraft",
+        "date": "1969-07-21",
+        "institution": "NASA",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:AS11-44-6667_-_Full_Moon_Photographed_From_Apollo_11_Spacecraft.jpg",
+        "rights": "Public Domain",
+        "licenseUrl": "https://commons.wikimedia.org/wiki/Template:PD-USGov-NASA",
+        "alt": "Apollo 11から撮影された月"
+      },
+      "status": "prototype"
+    },
+    {
+      "id": "H88-0003",
+      "slug": "seed",
+      "title": "Seed",
+      "titleJa": "種",
+      "types": [
+        "PLANTS",
+        "OBJECTS"
+      ],
+      "date": null,
+      "place": null,
+      "species": null,
+      "material": null,
+      "creatorMaker": null,
+      "associatedEvents": [],
+      "sources": [],
+      "rights": null,
+      "relatedObjectIds": [],
+      "relatedStoryIds": [
+        "specimen-002"
+      ],
+      "caption": "Broccoli seeds",
+      "image": {
+        "kind": "photograph",
+        "src": "assets/seed.jpg",
+        "creator": "Miguel Tremblay",
+        "title": "Graines de brocoli",
+        "date": "2013-03-31",
+        "institution": null,
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Graines_de_brocoli.jpg",
+        "rights": "CC0 1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "alt": "ブロッコリーの種を拡大した写真"
+      },
+      "status": "prototype"
+    },
+    {
+      "id": "H88-0004",
+      "slug": "petroleum",
+      "title": "Petroleum",
+      "titleJa": "石油",
+      "types": [
+        "MATERIALS"
+      ],
+      "date": null,
+      "place": null,
+      "species": null,
+      "material": null,
+      "creatorMaker": null,
+      "associatedEvents": [],
+      "sources": [],
+      "rights": null,
+      "relatedObjectIds": [],
+      "relatedStoryIds": [],
+      "caption": "Crude oil · 原油",
+      "image": {
+        "kind": "photograph",
+        "src": "assets/petroleum.jpg",
+        "creator": "Nefronus",
+        "title": "Petroleum sample",
+        "date": "2020-10-12",
+        "institution": null,
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Petroleum_sample.jpg",
+        "rights": "CC0 1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "alt": "フラスコとビーカーに入った原油"
+      },
+      "status": "prototype"
+    },
+    {
+      "id": "H88-0005",
+      "slug": "horse",
+      "title": "Horse",
+      "titleJa": "馬",
+      "types": [
+        "ANIMALS"
+      ],
+      "date": null,
+      "place": null,
+      "species": "Equus caballus",
+      "material": null,
+      "creatorMaker": null,
+      "associatedEvents": [],
+      "sources": [],
+      "rights": null,
+      "relatedObjectIds": [],
+      "relatedStoryIds": [],
+      "caption": "Equus caballus",
+      "image": {
+        "kind": "photograph",
+        "src": "assets/horse.jpg",
+        "creator": "Beersrobert000",
+        "title": "Horse running",
+        "date": "2012-08",
+        "institution": null,
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Horse_running.jpg",
+        "rights": "CC0 1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "alt": "走る馬"
+      },
+      "status": "prototype"
+    },
+    {
+      "id": "H88-0006",
+      "slug": "water",
+      "title": "Water",
+      "titleJa": "水",
+      "types": [
+        "MATERIALS"
+      ],
+      "date": null,
+      "place": null,
+      "species": null,
+      "material": null,
+      "creatorMaker": null,
+      "associatedEvents": [],
+      "sources": [],
+      "rights": null,
+      "relatedObjectIds": [],
+      "relatedStoryIds": [],
+      "caption": "H₂O · 水",
+      "image": {
+        "kind": "photograph",
+        "src": "assets/water.jpg",
+        "creator": "MartinThoma",
+        "title": "Water-pattern-1",
+        "date": "2016-04-10",
+        "institution": null,
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Water-pattern-1.jpg",
+        "rights": "CC0 1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "alt": "光が反射する水面"
+      },
+      "status": "prototype"
+    },
+    {
+      "id": "H88-0007",
+      "slug": "miharu-takizakura",
+      "title": "Miharu Takizakura",
+      "titleJa": "三春滝桜",
+      "types": [
+        "PLANTS",
+        "PLACES"
+      ],
+      "date": null,
+      "place": "Miharu / Fukushima",
+      "species": null,
+      "material": null,
+      "creatorMaker": null,
+      "associatedEvents": [],
+      "sources": [],
+      "rights": null,
+      "relatedObjectIds": [],
+      "relatedStoryIds": [
+        "specimen-002"
+      ],
+      "caption": "Miharu, Fukushima",
+      "image": {
+        "kind": "placeholder",
+        "src": null,
+        "creator": null,
+        "title": null,
+        "date": null,
+        "institution": null,
+        "sourceUrl": null,
+        "rights": null,
+        "licenseUrl": null,
+        "alt": "Miharu Takizakura：画像準備中"
+      },
+      "status": "prototype"
+    },
+    {
+      "id": "H88-0008",
+      "slug": "soil",
+      "title": "Soil",
+      "titleJa": "土壌",
+      "types": [
+        "MATERIALS"
+      ],
+      "date": null,
+      "place": null,
+      "species": null,
+      "material": null,
+      "creatorMaker": null,
+      "associatedEvents": [],
+      "sources": [],
+      "rights": null,
+      "relatedObjectIds": [],
+      "relatedStoryIds": [],
+      "caption": "The ground beneath us",
+      "image": {
+        "kind": "photograph",
+        "src": "assets/soil.jpg",
+        "creator": "Abumuslimjalingo",
+        "title": "A soil",
+        "date": "2024-08-01",
+        "institution": null,
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:A_soil.jpg",
+        "rights": "CC0 1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "alt": "乾いた土壌の表面"
+      },
+      "status": "prototype"
+    },
+    {
+      "id": "H88-0009",
+      "slug": "dust",
+      "title": "Dust",
+      "titleJa": "塵",
+      "types": [
+        "MATERIALS"
+      ],
+      "date": null,
+      "place": null,
+      "species": null,
+      "material": null,
+      "creatorMaker": null,
+      "associatedEvents": [],
+      "sources": [],
+      "rights": null,
+      "relatedObjectIds": [],
+      "relatedStoryIds": [
+        "specimen-002"
+      ],
+      "caption": "Particles of a world · 世界の粒子",
+      "image": {
+        "kind": "placeholder",
+        "src": null,
+        "creator": null,
+        "title": null,
+        "date": null,
+        "institution": null,
+        "sourceUrl": null,
+        "rights": null,
+        "licenseUrl": null,
+        "alt": "Dust：画像準備中"
+      },
+      "status": "prototype"
+    },
+    {
+      "id": "H88-0010",
+      "slug": "memory",
+      "title": "Memory",
+      "titleJa": "記憶",
+      "types": [
+        "IDEAS",
+        "TIME"
+      ],
+      "date": null,
+      "place": null,
+      "species": null,
+      "material": null,
+      "creatorMaker": null,
+      "associatedEvents": [],
+      "sources": [],
+      "rights": null,
+      "relatedObjectIds": [],
+      "relatedStoryIds": [
+        "specimen-002"
+      ],
+      "caption": "What remains · 残るもの",
+      "image": {
+        "kind": "placeholder",
+        "src": null,
+        "creator": null,
+        "title": null,
+        "date": null,
+        "institution": null,
+        "sourceUrl": null,
+        "rights": null,
+        "licenseUrl": null,
+        "alt": "Memory：画像準備中"
+      },
+      "status": "prototype"
+    }
+  ],
+  "exploreBy": [
+    "PLANTS",
+    "ANIMALS",
+    "OBJECTS",
+    "PLACES",
+    "MATERIALS",
+    "IDEAS",
+    "EVENTS",
+    "TIME"
+  ],
+  "relationshipPreview": [
+    {
+      "id": "tree",
+      "title": "Survivor Tree",
+      "heading": "Survivor Tree → Seed",
+      "text": "一本の樹木を、種という小さな単位から見つめ直す。何が受け継がれ、どこへ運ばれていくのだろう。"
+    },
+    {
+      "id": "seed",
+      "title": "Seed",
+      "heading": "Seed → Memory",
+      "text": "種を残すこと。記憶を残すこと。生命の継承と、人が語り継ぐ営みを並べて考える。"
+    },
+    {
+      "id": "memory",
+      "title": "Memory",
+      "heading": "Memory → Fukushima",
+      "text": "場所は、出来事をどのように記憶するのだろう。ニューヨークから福島へ、樹木と人の関係を辿るための問い。"
+    },
+    {
+      "id": "fukushima",
+      "title": "Fukushima",
+      "heading": "Fukushima → Earth",
+      "text": "三春滝桜という一本の樹木から、土地、暮らし、地球へ。小さな場所を通して、世界を見つめる。"
+    },
+    {
+      "id": "earth",
+      "title": "Earth",
+      "heading": "Earth → Life",
+      "text": "世界を辿ったあと、日々のLifeへ。足元の土や目の前の木は、どんなつながりを持っているだろう。"
+    }
+  ],
+  "relationships": [
+    {
+      "fromId": "H88-0001",
+      "toId": "H88-0003",
+      "label": "生命の継承を考える",
+      "status": "editorial-proposal",
+      "sources": []
+    }
+  ],
+  "stories": [
+    {
+      "id": "specimen-002",
+      "number": "002",
+      "title": "9.11 — THE ARCHAEOLOGY OF FEAR",
+      "titleJa": "恐怖の考古学——25年後、一本の樹木から世界を見る",
+      "status": "planned",
+      "centralObjectId": "H88-0001"
+    }
+  ]
+}

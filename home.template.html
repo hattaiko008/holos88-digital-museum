@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>HOLOS 88 — A NATURAL HISTORY OF NOW.</title>
+  <meta name="description" content="いま、という時代の博物誌。植物、動物、素材、場所、思想。世界の標本から、思いがけない関係を辿るデジタルミュージアム。">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%231c2520'/%3E%3Ctext x='32' y='44' text-anchor='middle' font-family='Arial' font-size='36' fill='white'%3E88%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css"><link rel="stylesheet" href="articles.css"><link rel="stylesheet" href="reading.css"><link rel="stylesheet" href="cover.css"><script type="module" src="cover.js"></script><script src="app.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#collection">コレクションへ移動</a>
+<header class="site-header wrap">
+  <a class="wordmark" href="#top" aria-label="HOLOS 88 ホーム">HOLOS <span>88</span></a>
+  <span class="museum-label">DIGITAL MUSEUM</span>
+  <nav aria-label="メインナビゲーション"><a href="#article-windows">READ</a><a href="#collection">COLLECTION</a><a href="#relationships">RELATIONSHIPS</a><a href="#michikusa">MICHIKUSA<span class="sprout">🌱</span></a></nav>
+</header>
+<main id="top">
+  <h1 class="sr-only">HOLOS 88 — A MUSEUM OF RELATIONSHIPS</h1>
+  {{COVER}}
+  {{ARTICLE_WINDOWS}}
+  <section class="intro wrap" aria-labelledby="collection-title">
+    <div class="identity-line"><p>A NATURAL HISTORY OF NOW.</p><p>いま、という時代の博物誌。</p></div>
+    <div class="title-line"><h2 id="collection-title">EXPLORE THE<br class="mobile-break"> COLLECTION</h2><p>小さな窓から、世界を見る。</p></div>
+    <form id="search-form" role="search">
+      <label for="search" class="sr-only">コレクションを検索</label>
+      <div class="search-box"><svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="10" cy="10" r="6.5"/><path d="m15 15 6 6"/></svg><input id="search" type="search" placeholder="Search objects, plants, places, materials, ideas…" autocomplete="off"><button type="submit">Search <span aria-hidden="true">↗</span></button></div>
+    </form>
+    <div class="explore-by" aria-label="Explore by"><span class="eyebrow">EXPLORE BY</span><div id="filters">{{FILTERS}}</div></div>
+  </section>
+  <section id="collection" class="collection wrap" aria-labelledby="objects-heading">
+    <div class="section-bar"><h2 id="objects-heading">A world of objects</h2><div><span id="result-count" role="status" aria-live="polite">10 objects</span><button id="reset" hidden>すべて表示</button></div></div>
+    <div class="object-grid" id="object-grid">{{CARDS}}</div>
+    <div id="empty" hidden><h3>標本が見つかりませんでした。</h3><p>別の言葉で検索するか、探索軸を変えてみてください。</p><button id="empty-reset">すべての標本を見る</button></div>
+    <p class="collection-note">PROTOTYPE COLLECTION <span>写真のない標本は、画像準備中として展示しています。</span></p>
+  </section>
+  <section id="relationships" class="relationships" aria-labelledby="relationship-heading">
+    <div class="wrap relationship-layout">
+      <div><p class="eyebrow">RELATIONSHIPS / 01</p><h2 id="relationship-heading">一本の樹木から、<br>世界へ。</h2><p class="relationship-intro">ものとものの間にある、見えないつながり。<br>ひとつ選んで、その先を覗いてみる。</p></div>
+      <div class="relationship-explorer"><p class="eyebrow">A PATH THROUGH THE COLLECTION</p><div class="path" id="relationship-path" aria-label="関係を辿る">{{PATH}}</div><div class="relation-copy" id="relation-copy" aria-live="polite"></div><a class="text-link relationship-onward" href="/stories/archaeology-of-fear.html#relationships">この関係を、物語の中で辿る ↗</a><p class="draft-note">SPECIMEN 002に向けた、編集上の関係プレビュー</p></div>
+    </div>
+  </section>
+  <section id="michikusa" class="michikusa wrap" aria-labelledby="michikusa-heading">
+    <div><p class="eyebrow" id="michikusa-heading">MICHIKUSA<span class="sprout">🌱</span></p><h2>すこし、道草。</h2></div><p>気になったものへ、ひとつ寄り道。<br>思いがけない発見から、また世界を見る。</p><button id="michikusa-open" class="text-link">種の世界へ寄り道 <span aria-hidden="true">↗</span></button>
+  </section>
+</main>
+<footer class="wrap"><div><a class="wordmark" href="#top">HOLOS <span>88</span></a><p>世界は、やおよろず。</p></div><p>A NATURAL HISTORY OF NOW.<br><span>HOME / PROTOTYPE 01</span></p></footer>
+<dialog id="object-dialog" aria-labelledby="dialog-title"><div class="dialog-top"><span id="dialog-kicker" class="eyebrow">COLLECTION PREVIEW</span><button id="dialog-close" aria-label="閉じる">閉じる ×</button></div><div id="dialog-content"></div><button id="dialog-return" class="return-button">Return to HOME</button></dialog>
+<script type="application/json" id="collection-data">{{DATA}}</script>
+</body></html>

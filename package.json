@@ -1,0 +1,12 @@
+{
+  "name": "holos88-digital-museum",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node build.mjs",
+    "build:pages": "node build.mjs && node scripts/prepare-pages.mjs",
+    "start": "node server.mjs",
+    "test": "node tests/content-architecture.mjs && node tests/reading-experience.mjs"
+  }
+}
