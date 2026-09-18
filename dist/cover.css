@@ -1,0 +1,61 @@
+.cover-apparatus{padding-top:24px;padding-bottom:54px;color:#202420}
+.cover-label{display:flex;justify-content:space-between;font-size:11px;letter-spacing:.12em;margin-bottom:26px;gap:20px}
+.cover-scenes{position:relative}
+.cover-scene{border-top:1px solid #d8dad7;margin-bottom:60px}
+.cover-plane{display:grid;grid-template-columns:1fr 1.1fr;min-height:520px;gap:60px;align-items:center;color:inherit;text-decoration:none}
+.cover-copy{padding:35px 0}.cover-author{font-size:13px;margin:18px 0 36px}
+.cover-plane h2{font:400 clamp(36px,4.8vw,68px)/1.45 Georgia,'Yu Mincho',serif;letter-spacing:-.02em;margin:0 0 25px;overflow-wrap:anywhere}
+.cover-subtitle{font-size:17px;line-height:1.9}.cover-kicker{font:400 clamp(35px,5vw,70px)/1.1 Georgia,serif;margin:0 0 25px}
+.cover-read{display:block;font-size:12px;letter-spacing:.1em;margin-top:36px}.cover-copy small{display:block;font-size:12px;margin-top:16px}
+.cover-image{width:100%;height:470px;object-fit:cover;display:block}
+.scene-market .cover-image,.scene-archive .cover-image{object-fit:contain}
+.scene-museum .cover-image{object-fit:contain}
+.scene-museum h2{font-size:clamp(30px,4.4vw,60px);line-height:1.15}
+.scene-archive h2{font-size:clamp(60px,8vw,100px);font-style:italic}
+.cover-credit{font-size:11px;line-height:1.8;max-width:780px;margin:14px 0 0 auto;color:#545954}.cover-credit span{display:block}.cover-credit a{text-underline-offset:3px}
+.cover-controls{border-top:1px solid #d8dad7;padding-top:18px;display:flex;align-items:center;gap:24px;font-size:12px}
+.cover-controls[hidden],.cover-scene[hidden],.orbit-motion[hidden]{display:none!important}
+.cover-controls nav{display:flex;gap:10px}.cover-controls button,.orbit-motion{border:0;border-bottom:1px solid transparent;background:none;color:inherit;padding:10px;cursor:pointer;font:inherit}
+.cover-controls [aria-current=true]{border-bottom-color:#202420}.cover-controls button:disabled{cursor:default;color:#626662}.cover-controls p{margin-left:auto}
+.cover-to-read{display:block;width:fit-content;margin:28px auto 0;font-size:13px;text-underline-offset:6px}
+.cover-ready .cover-scenes{min-height:610px}.cover-ready .cover-scene{margin-bottom:0;min-height:610px}
+.cover-plane:focus-visible,.orbit-object:focus-visible,.cover-controls button:focus-visible{outline:2px solid #303730;outline-offset:5px}
+.orbit-heading{position:relative;z-index:1;padding:24px 0 0}.orbit-heading h2{font:400 25px/1.5 'Yu Mincho',serif;margin:12px 0}.orbit-heading>p:last-child{font-size:13px}
+.orbit-field{position:relative;width:min(850px,100%);height:390px;margin:-24px auto 0}
+.orbit-original{position:absolute;width:330px;height:330px;object-fit:contain;left:50%;top:50%;transform:translate(-50%,-50%)}
+.orbit-object{position:absolute;color:inherit;text-decoration:none;display:flex;flex-direction:column;text-align:center;padding:12px;min-width:110px;max-width:190px}
+.orbit-index{font-size:10px;letter-spacing:.12em;color:#6c706a}.orbit-name{font:italic 26px/1.5 Georgia,serif}.orbit-label{font-size:11px;line-height:1.5;opacity:.65}.orbit-object:hover .orbit-label,.orbit-object:focus .orbit-label{opacity:1;text-decoration:underline}
+.orbit-object-0{left:4%;top:5%}.orbit-object-1{right:5%;top:0}.orbit-object-2{left:0;top:47%}.orbit-object-3{right:0;top:40%}.orbit-object-4{left:20%;bottom:-8%}.orbit-object-5{right:16%;bottom:-7%}
+.orbit-foot{display:flex;align-items:center;justify-content:space-between;gap:24px;margin-top:38px;font-size:11px;line-height:1.8}.orbit-foot p{margin:0}.orbit-foot a{font-size:12px}
+@keyframes museum-drift{0%,100%{transform:translate(0,0) rotate(-.3deg)}40%{transform:translate(3px,-4px) rotate(.3deg)}75%{transform:translate(-2px,-1px) rotate(-.1deg)}}
+.orbit-drifting .orbit-object{animation:museum-drift 19s ease-in-out infinite}.orbit-drifting .orbit-object:nth-of-type(even){animation-duration:27s;animation-direction:reverse}.orbit-drifting .orbit-object:nth-of-type(3n){animation-duration:33s;animation-delay:-9s}.orbit-field:focus-within .orbit-object,.orbit-field:hover .orbit-object{animation-play-state:paused}
+@media(min-width:1500px){.cover-plane{min-height:600px}.cover-image{height:550px}.cover-ready .cover-scenes,.cover-ready .cover-scene{min-height:680px}.orbit-field{height:440px}.orbit-original{width:380px;height:380px}}
+@media(max-width:700px){.cover-apparatus{padding-top:20px}.cover-label{font-size:9px}.cover-label span:last-child{max-width:130px;text-align:right}.cover-plane{grid-template-columns:1fr;gap:12px;min-height:0}.cover-image{grid-row:1;height:240px}.cover-copy{padding:10px 0 20px}.cover-author{margin:10px 0 20px}.cover-plane h2{font-size:32px;line-height:1.5}.scene-museum h2{font-size:32px;line-height:1.1}.scene-archive h2{font-size:60px}.cover-kicker{font-size:36px;margin-bottom:16px}.cover-subtitle{font-size:15px}.cover-read{margin-top:22px}.cover-credit{font-size:10px;margin-top:4px}.cover-ready .cover-scenes,.cover-ready .cover-scene{min-height:690px}.cover-controls{flex-wrap:wrap;gap:8px}.cover-controls nav{gap:4px}.cover-controls p{margin:0 0 0 auto}.cover-controls button{min-height:42px;min-width:36px}.orbit-heading h2{font-size:24px}.orbit-field{height:395px;margin:0 -4px;width:calc(100% + 8px)}.orbit-original{width:230px;height:230px}.orbit-name{font-size:20px}.orbit-object{padding:8px;min-width:80px;max-width:130px}.orbit-object-0{left:0;top:0}.orbit-object-1{right:0;top:0}.orbit-object-2{left:-4px;top:39%;max-width:100px}.orbit-object-3{right:-4px;top:40%}.orbit-object-4{left:6%;bottom:0}.orbit-object-5{right:5%;bottom:0}.orbit-label{font-size:10px}.orbit-foot{flex-wrap:wrap;gap:14px;margin-top:12px}.orbit-foot p{max-width:100%}.cover-scene{margin-bottom:40px}}
+@media(prefers-reduced-motion:reduce){.orbit-object{animation:none!important}.cover-apparatus *{scroll-behavior:auto!important}}
+.cover-plane h2{text-wrap:balance}.cover-kicker{text-wrap:balance}
+@media(max-width:700px){.cover-credit,.orbit-label{font-size:11px}}
+
+/* Final pass: compose the four entrance planes; preserve the approved Orbit. */
+@media(min-width:701px){
+ .scene-life .cover-plane{grid-template-columns:1.15fr 1fr;gap:48px}
+ .scene-life .cover-image{height:420px;align-self:end;margin-bottom:24px}
+ .scene-life .cover-copy{align-self:start;padding-top:66px}
+ .scene-market .cover-plane{grid-template-columns:1.25fr .85fr}
+ .scene-market .cover-kicker{font-size:clamp(64px,8vw,112px);letter-spacing:-.055em;margin-bottom:32px}
+ .scene-market h2{font-size:clamp(32px,3.7vw,52px)}
+ .scene-market .cover-image{height:340px;align-self:end;margin-bottom:36px}
+ .scene-museum .cover-plane{grid-template-columns:1.25fr 1fr;gap:40px}
+ .scene-museum h2{font-size:clamp(42px,5.3vw,74px);line-height:1.02;letter-spacing:-.04em;max-width:600px}
+ .scene-museum .cover-subtitle{font-size:24px;margin-top:28px}
+ .scene-museum .cover-image{height:410px}
+ .scene-archive .cover-plane{grid-template-columns:.75fr 1.25fr}
+ .scene-archive h2{font-size:clamp(80px,10vw,140px)}
+}
+.cover-apparatus{padding-bottom:36px}
+.cover-to-read{margin-top:30px;padding:12px 0}
+.cover-apparatus + .article-windows{padding-top:44px}
+@media(max-width:700px){
+ .scene-museum h2{font-size:clamp(32px,9vw,42px);line-height:1.08;overflow-wrap:normal}
+ .scene-museum .cover-subtitle{font-size:20px}
+ .cover-apparatus + .article-windows{padding-top:32px}
+}
