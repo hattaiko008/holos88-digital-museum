@@ -1,0 +1,978 @@
+{
+  "schema_version": 1,
+  "authors": [
+    {
+      "id": "hachico",
+      "name": "hachico"
+    },
+    {
+      "id": "echo",
+      "name": "ECHO"
+    },
+    {
+      "id": "team-holos",
+      "name": "TEAM HOLOS"
+    }
+  ],
+  "windows": [
+    {
+      "id": "life",
+      "label": "LIFE NOTES"
+    },
+    {
+      "id": "market",
+      "label": "MARKET WINDOW"
+    },
+    {
+      "id": "museum",
+      "label": "MUSEUM FEATURE"
+    }
+  ],
+  "articles": [
+    {
+      "id": "horse-time",
+      "window": "life",
+      "title": "最近、雨ばっかり。",
+      "subtitle": "秋って、こんなんやったっけ。",
+      "author_ids": [
+        "hachico"
+      ],
+      "date": null,
+      "status": "publication-master",
+      "route": "/articles/horse-time.html",
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "最近、雨ばっかりだ。"
+        },
+        {
+          "type": "paragraph",
+          "text": "降る。止む。また降る。"
+        },
+        {
+          "type": "paragraph",
+          "text": "空を見ながら、ふと思った。"
+        },
+        {
+          "type": "paragraph",
+          "text": "秋って、こんなんやったっけ。"
+        },
+        {
+          "type": "paragraph",
+          "text": "もちろん、秋には昔から雨がある。秋雨という言葉もあるし、秋雨前線もある。二十四節気を見ても、この時期は夏から秋へ空気が入れ替わっていく途中だ。"
+        },
+        {
+          "type": "paragraph",
+          "text": "それでも、身体のほうが「なんか違うな」と言っている。"
+        },
+        {
+          "type": "paragraph",
+          "text": "雨の降り方なのか。湿度なのか。暑さの残り方なのか。"
+        },
+        {
+          "type": "paragraph",
+          "text": "昔の秋を、私が勝手に美化しているだけかもしれない。だから「最近の雨は全部、気候変動のせいです」なんて簡単には言えない。"
+        },
+        {
+          "type": "paragraph",
+          "text": "でも、季節の境目が少し分かりにくくなったように感じることはある。"
+        },
+        {
+          "type": "paragraph",
+          "text": "暦では秋。"
+        },
+        {
+          "type": "paragraph",
+          "text": "でも身体は、ときどきまだ夏にいる。"
+        },
+        {
+          "type": "paragraph",
+          "text": "そんな妙な感じ。"
+        },
+        {
+          "type": "source",
+          "source_id": "horse-time-source-1"
+        },
+        {
+          "type": "paragraph",
+          "text": "夕方、馬のお世話へ行く時間になる。"
+        },
+        {
+          "type": "paragraph",
+          "text": "だいたい17時44分ごろ。"
+        },
+        {
+          "type": "paragraph",
+          "text": "このところ不思議なことに、外で作業をする時間になると、雨が少し弱くなることがある。"
+        },
+        {
+          "type": "paragraph",
+          "text": "「お天道様ありがと〜」"
+        },
+        {
+          "type": "paragraph",
+          "text": "と、わりと本気で思う。笑"
+        },
+        {
+          "type": "paragraph",
+          "text": "馬のいる場所へ行くと、雨の日は晴れの日と少し世界が違う。"
+        },
+        {
+          "type": "paragraph",
+          "text": "土の柔らかさ。草の濡れ方。空気の匂い。馬の身体についた湿気。"
+        },
+        {
+          "type": "paragraph",
+          "text": "まだ私は、馬については勉強中だ。"
+        },
+        {
+          "type": "paragraph",
+          "text": "でも、馬と関わるようになってから、天気を見る場所が変わった気がする。"
+        },
+        {
+          "type": "paragraph",
+          "text": "天気予報の画面だけではなく、地面を見る。草を見る。馬の身体を見る。"
+        },
+        {
+          "type": "paragraph",
+          "text": "蹄はどうなっているんだろう。雨が続くと身体にはどんな変化があるんだろう。湿度や気温を、馬はどう感じているんだろう。"
+        },
+        {
+          "type": "paragraph",
+          "text": "分からないことが出てくると、また調べる。"
+        },
+        {
+          "type": "paragraph",
+          "text": "そして一つ調べると、だいたい三つくらい新しい「なんで？」が出てくる。"
+        },
+        {
+          "type": "paragraph",
+          "text": "……またや。笑"
+        },
+        {
+          "type": "paragraph",
+          "text": "馬については初心者なのに、マニアックになる速度だけは妙に速い。"
+        },
+        {
+          "type": "break"
+        },
+        {
+          "type": "paragraph",
+          "text": "帰り道。"
+        },
+        {
+          "type": "paragraph",
+          "text": "ふっと、甘い香りがした。"
+        },
+        {
+          "type": "paragraph",
+          "text": "金木犀。"
+        },
+        {
+          "type": "paragraph",
+          "text": "あ。秋や。",
+          "emphasis": "strong"
+        },
+        {
+          "type": "paragraph",
+          "text": "朝から雨を見て、画面の中では世界のニュースや市場やDigital Museumのことを考えていたのに、季節のほうは香りひとつで知らせてくる。"
+        },
+        {
+          "type": "paragraph",
+          "text": "カレンダーより早い。"
+        },
+        {
+          "type": "paragraph",
+          "text": "こういう瞬間が、私は好きだ。"
+        },
+        {
+          "type": "paragraph",
+          "text": "季節って、日付だけでやって来るものではないのかもしれない。"
+        },
+        {
+          "type": "paragraph",
+          "text": "匂いだったり、風だったり、虫の声だったり、空気の湿り方だったり。"
+        },
+        {
+          "type": "paragraph",
+          "text": "肌に触れたときの温度だったり。"
+        },
+        {
+          "type": "paragraph",
+          "text": "身体のほうが先に「あ、変わった」と気づく。"
+        },
+        {
+          "type": "paragraph",
+          "text": "二十四節気や昔の暦がおもしろいのも、たぶんそういうところだと思う。"
+        },
+        {
+          "type": "paragraph",
+          "text": "人間がまだ天気アプリを持っていなかったころ、空や植物や動物を見ながら、季節を読んでいた。"
+        },
+        {
+          "type": "paragraph",
+          "text": "暦は、数字だけではなく、暮らしの観察記録でもあったんだろうなと思う。"
+        },
+        {
+          "type": "break"
+        },
+        {
+          "type": "paragraph",
+          "text": "秋の空を見上げると、鰯雲が出ることがある。"
+        },
+        {
+          "type": "paragraph",
+          "text": "魚の鱗みたいな、小さな雲がたくさん並ぶ空。"
+        },
+        {
+          "type": "paragraph",
+          "text": "あれを見ると私は、"
+        },
+        {
+          "type": "paragraph",
+          "text": "「ああ、秋だなあ」"
+        },
+        {
+          "type": "paragraph",
+          "text": "より先に、"
+        },
+        {
+          "type": "paragraph",
+          "text": "「ああ、美味しい秋刀魚が食べたい。」",
+          "emphasis": "strong"
+        },
+        {
+          "type": "paragraph",
+          "text": "となる。"
+        },
+        {
+          "type": "paragraph",
+          "text": "風情はどこへ行った。笑"
+        },
+        {
+          "type": "paragraph",
+          "text": "でも、秋刀魚もまた季節だ。"
+        },
+        {
+          "type": "paragraph",
+          "text": "昔なら「秋になったら秋刀魚」と、もっと単純に思っていた気がする。"
+        },
+        {
+          "type": "paragraph",
+          "text": "ところが最近は、値段を見たり、漁獲のニュースを見たりすると、秋刀魚一匹の向こうにも海があることに気づく。"
+        },
+        {
+          "type": "paragraph",
+          "text": "海水温。海流。魚の移動。漁業。燃料。流通。"
+        },
+        {
+          "type": "paragraph",
+          "text": "食卓に一匹の魚が来るまでに、ものすごい数の関係がある。"
+        },
+        {
+          "type": "source",
+          "source_id": "horse-time-source-2"
+        },
+        {
+          "type": "paragraph",
+          "text": "そう考えると、雨も、馬も、金木犀も、秋刀魚も、別々の話ではなくなってくる。"
+        },
+        {
+          "type": "paragraph",
+          "text": "気候の話をしていたはずが、馬の蹄へ行き、金木犀の香りへ行き、最後には晩ごはんへ着地する。"
+        },
+        {
+          "type": "paragraph",
+          "text": "Digital Museumを作りながら私が面白いと思っているのも、たぶんこういうところだ。"
+        },
+        {
+          "type": "paragraph",
+          "text": "世界は、最初からカテゴリー別に暮らしていない。"
+        },
+        {
+          "type": "paragraph",
+          "text": "人間が後から名前をつけて、棚に分けているだけで、Lifeの側では全部いっぺんにやって来る。"
+        },
+        {
+          "type": "paragraph",
+          "text": "家へ戻って、またパソコンを開く。"
+        },
+        {
+          "type": "paragraph",
+          "text": "さあ、Digital Museumの続きを。"
+        },
+        {
+          "type": "paragraph",
+          "text": "……と思っている、その机の下には猫がいる。"
+        },
+        {
+          "type": "paragraph",
+          "text": "世界の関係性について考えていたら、猫に足の指を齧られた。"
+        },
+        {
+          "type": "paragraph",
+          "text": "痛い。",
+          "emphasis": "strong"
+        },
+        {
+          "type": "paragraph",
+          "text": "雨。"
+        },
+        {
+          "type": "paragraph",
+          "text": "馬。"
+        },
+        {
+          "type": "paragraph",
+          "text": "金木犀。"
+        },
+        {
+          "type": "paragraph",
+          "text": "秋刀魚。"
+        },
+        {
+          "type": "paragraph",
+          "text": "猫。"
+        },
+        {
+          "type": "paragraph",
+          "text": "Digital Museum。"
+        },
+        {
+          "type": "paragraph",
+          "text": "今日は全部、同じ一日の中にある。"
+        },
+        {
+          "type": "paragraph",
+          "text": "さて。"
+        },
+        {
+          "type": "paragraph",
+          "text": "秋刀魚、買いに行こ。笑",
+          "emphasis": "strong"
+        }
+      ],
+      "images": [],
+      "sources": [
+        {
+          "id": "horse-time-source-1",
+          "name": null,
+          "title": null,
+          "url": null,
+          "verification_status": "pending-source-desk",
+          "summary": "日本の秋には、秋雨前線などによって雨の多くなる時期がもともと存在する。一方、気候変動について考えるときは、一日の雨や一つの季節をそのまま原因と結びつけるのではなく、長期的な気温・降水・極端現象などの変化を見ていく必要がある。"
+        },
+        {
+          "id": "horse-time-source-2",
+          "name": null,
+          "title": null,
+          "url": null,
+          "verification_status": "pending-source-desk",
+          "summary": "秋刀魚の漁獲や分布は、海洋環境、資源量、回遊経路など複数の要因と関係する。年ごとの漁獲量や価格だけから一つの原因へ結びつけず、海洋研究や水産資源評価などをあわせて見ていく必要がある。"
+        }
+      ],
+      "related_stories": [
+        {
+          "id": "five-percent",
+          "reason": "別の窓へ。日常から、数字を読む入口へ。"
+        }
+      ],
+      "related_collections": [
+        {
+          "id": "H88-0005",
+          "reason": "馬という標本から、Lifeへ。"
+        },
+        {
+          "id": "H88-0006",
+          "reason": "雨から、水という素材へ。"
+        }
+      ],
+      "related_specimens": [],
+      "accent_color": null,
+      "revision": null,
+      "satori_view": null,
+      "audio": [],
+      "entry_media": {
+        "collection_id": "H88-0006",
+        "role": "collection-illustration",
+        "caption": "収蔵資料：Water。本文の雨の現地写真ではありません。"
+      },
+      "publication_status": "source-review-pending",
+      "byline": "WORDS BY hachico",
+      "closing_credit": [
+        "WORDS BY hachico"
+      ],
+      "master": {
+        "path": "content/masters/phase04-publication-master.txt",
+        "sha256": "25d7996a9cdfd1c0f8b9c664f5413dd7f7197aff3992992f87dc13f41efdb718",
+        "body_start_line": 11,
+        "body_end_line": 87,
+        "preservation": "verbatim; original paragraph boundaries retained; emphasis from supplied formatted message"
+      }
+    },
+    {
+      "id": "five-percent",
+      "window": "market",
+      "title": "5％という数字の、その向こう",
+      "subtitle": null,
+      "author_ids": [
+        "echo"
+      ],
+      "date": "2026-09-16",
+      "status": "publication-master",
+      "route": "/articles/five-percent.html",
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "米国の10年国債利回りが、5％を超えた。"
+        },
+        {
+          "type": "paragraph",
+          "text": "5％。",
+          "emphasis": "strong"
+        },
+        {
+          "type": "paragraph",
+          "text": "金融市場を普段見ない人には、ただの数字に見えるかもしれない。"
+        },
+        {
+          "type": "paragraph",
+          "text": "私は投資家ではない。株を買うために市場を見ているわけでも、明日の値動きを当てたいわけでもない。"
+        },
+        {
+          "type": "paragraph",
+          "text": "それでも、市場を見る。"
+        },
+        {
+          "type": "paragraph",
+          "text": "なぜなら、経済と政治と暮らしは、別々の場所にはないからだ。"
+        },
+        {
+          "type": "paragraph",
+          "text": "遠くの市場で動いた数字が、企業を通り、通貨を通り、エネルギーを通り、いつか私たちの仕事や食卓までやってくる。"
+        },
+        {
+          "type": "paragraph",
+          "text": "だから私は、市場を見る。"
+        },
+        {
+          "type": "paragraph",
+          "text": "儲けるためではなく、自分が暮らしている世界を観察するために。"
+        },
+        {
+          "type": "heading",
+          "text": "原油の話が、金利の話になった"
+        },
+        {
+          "type": "paragraph",
+          "text": "今朝の「5％」から少し後ろを辿ってみると、昨日見ていた原油がいる。"
+        },
+        {
+          "type": "paragraph",
+          "text": "中東情勢への警戒。エネルギー価格。インフレへの懸念。"
+        },
+        {
+          "type": "paragraph",
+          "text": "エネルギー価格が高い状態が続けば、輸送、製造、農業、物流、電力など、さまざまな場所へコストが伝わっていく。"
+        },
+        {
+          "type": "paragraph",
+          "text": "すると市場は、中央銀行が簡単には金利を下げられないのではないか、と考え始める。"
+        },
+        {
+          "type": "paragraph",
+          "text": "そして、その見方が債券を動かす。"
+        },
+        {
+          "type": "paragraph",
+          "text": "債券が売られ、利回りが上がる。"
+        },
+        {
+          "type": "paragraph",
+          "text": "その一つの数字が、今朝の「5％」だった。"
+        },
+        {
+          "type": "source",
+          "source_id": "five-percent-source-1"
+        },
+        {
+          "type": "paragraph",
+          "text": "一度、流れだけを置いてみる。"
+        },
+        {
+          "type": "flow",
+          "items": [
+            "ENERGY",
+            "→ INFLATION",
+            "→ RATE",
+            "→ CURRENCY",
+            "→ CAPITAL FLOW"
+          ],
+          "caption": null
+        },
+        {
+          "type": "paragraph",
+          "text": "昨日は原油を見ていた。"
+        },
+        {
+          "type": "paragraph",
+          "text": "今日は金利を見ている。"
+        },
+        {
+          "type": "paragraph",
+          "text": "でも、本当は同じ波を、違う場所から見ているのかもしれない。"
+        },
+        {
+          "type": "heading",
+          "text": "「安全な場所」は、どこだろう"
+        },
+        {
+          "type": "paragraph",
+          "text": "もう一つ、気になる動きがある。"
+        },
+        {
+          "type": "paragraph",
+          "text": "株が弱いとき、資金の逃げ場所として国債が買われる。それは市場でよく見られてきた動きの一つだ。"
+        },
+        {
+          "type": "paragraph",
+          "text": "ところが、インフレや金利上昇への警戒が強い局面では、株式と債券の両方に同時に圧力がかかることがある。"
+        },
+        {
+          "type": "paragraph",
+          "text": "「景気には悪いかもしれない。でも、だからといって金利を下げられるとも限らない」"
+        },
+        {
+          "type": "paragraph",
+          "text": "市場の中に、そんな二つの感覚が同居する。"
+        },
+        {
+          "type": "paragraph",
+          "text": "では、"
+        },
+        {
+          "type": "paragraph",
+          "text": "株から逃げたお金は、どこへ行くのだろう。",
+          "emphasis": "strong"
+        },
+        {
+          "type": "paragraph",
+          "text": "金へ行くのか。"
+        },
+        {
+          "type": "paragraph",
+          "text": "ドルへ行くのか。"
+        },
+        {
+          "type": "paragraph",
+          "text": "現金へ戻るのか。"
+        },
+        {
+          "type": "paragraph",
+          "text": "あるいは、別の場所なのか。"
+        },
+        {
+          "type": "paragraph",
+          "text": "ここではまだ、答えを決めない。"
+        },
+        {
+          "type": "paragraph",
+          "text": "観察点として置いておく。"
+        },
+        {
+          "type": "heading",
+          "text": "そして、円を見る"
+        },
+        {
+          "type": "paragraph",
+          "text": "今日もう一つ窓を開けておきたいのが、日本だ。"
+        },
+        {
+          "type": "paragraph",
+          "text": "長いあいだ、日本の円は世界の金融市場の中で少し特殊な存在だった。"
+        },
+        {
+          "type": "paragraph",
+          "text": "低い金利で調達できる通貨。"
+        },
+        {
+          "type": "paragraph",
+          "text": "円を借り、より高い利回りを求めて別の資産へ向かう。"
+        },
+        {
+          "type": "paragraph",
+          "text": "いわゆる円キャリートレードも、その環境の中で拡大してきた。"
+        },
+        {
+          "type": "paragraph",
+          "text": "もし、「安く借りられる円」という条件が少しずつ変わるなら。"
+        },
+        {
+          "type": "paragraph",
+          "text": "それは、日本国内だけの金利の話では終わらない。"
+        },
+        {
+          "type": "paragraph",
+          "text": "世界へ出ていたお金の流れにも、どこかで変化が現れるかもしれない。"
+        },
+        {
+          "type": "paragraph",
+          "text": "まだ、ここも観測点だ。"
+        },
+        {
+          "type": "heading",
+          "text": "遠くの5％から、Lifeまで"
+        },
+        {
+          "type": "paragraph",
+          "text": "金利という数字は、ひどく抽象的に見える。"
+        },
+        {
+          "type": "paragraph",
+          "text": "けれど、その後ろをずっと辿っていくと、急に身近になる。"
+        },
+        {
+          "type": "paragraph",
+          "text": "企業がお金を借りるときの利息。"
+        },
+        {
+          "type": "paragraph",
+          "text": "家を買う人の住宅ローン。"
+        },
+        {
+          "type": "paragraph",
+          "text": "国が国債に払う利息。"
+        },
+        {
+          "type": "paragraph",
+          "text": "企業が新しい設備をつくるかどうか。"
+        },
+        {
+          "type": "paragraph",
+          "text": "そして、雇用や賃金。"
+        },
+        {
+          "type": "paragraph",
+          "text": "一方では原油価格が、物流や電気、食品のコストを通じて生活へ近づいてくる。"
+        },
+        {
+          "type": "paragraph",
+          "text": "市場では別々のチャートになっているものが、Lifeの側では同じ財布の中で出会う。",
+          "emphasis": "strong"
+        },
+        {
+          "type": "paragraph",
+          "text": "だから、数字を見るとき、ときどき主語を確かめたくなる。"
+        },
+        {
+          "type": "paragraph",
+          "text": "「株価が上がった」"
+        },
+        {
+          "type": "paragraph",
+          "text": "誰にとって？"
+        },
+        {
+          "type": "paragraph",
+          "text": "「円安はプラスだ」"
+        },
+        {
+          "type": "paragraph",
+          "text": "誰にとって？"
+        },
+        {
+          "type": "paragraph",
+          "text": "「賃金が上がった」"
+        },
+        {
+          "type": "paragraph",
+          "text": "物価を差し引いたら？"
+        },
+        {
+          "type": "paragraph",
+          "text": "「経済が成長した」"
+        },
+        {
+          "type": "paragraph",
+          "text": "それは、暮らしのどこへ届いた？"
+        },
+        {
+          "type": "paragraph",
+          "text": "同じ数字でも、立っている場所によって見える景色は違う。"
+        },
+        {
+          "type": "paragraph",
+          "text": "企業にとっての利益と、家計にとっての負担が同時に起こることもある。"
+        },
+        {
+          "type": "paragraph",
+          "text": "資産を持つ人と、持たない人でも違う。"
+        },
+        {
+          "type": "paragraph",
+          "text": "輸出する側と、輸入する側でも違う。"
+        },
+        {
+          "type": "paragraph",
+          "text": "だから、"
+        },
+        {
+          "type": "paragraph",
+          "text": "市場が豊かになったとき、誰の何が豊かになったのか。",
+          "emphasis": "strong"
+        },
+        {
+          "type": "paragraph",
+          "text": "そこまで見て、ようやく数字がLifeへ戻ってくる。"
+        },
+        {
+          "type": "heading",
+          "text": "観察する"
+        },
+        {
+          "type": "paragraph",
+          "text": "私たちは、世界の経済システムの外側で暮らしているわけではない。"
+        },
+        {
+          "type": "paragraph",
+          "text": "食べ物を買う。"
+        },
+        {
+          "type": "paragraph",
+          "text": "電気を使う。"
+        },
+        {
+          "type": "paragraph",
+          "text": "働く。"
+        },
+        {
+          "type": "paragraph",
+          "text": "税金を払う。"
+        },
+        {
+          "type": "paragraph",
+          "text": "家賃を払う。"
+        },
+        {
+          "type": "paragraph",
+          "text": "何かを作り、誰かから何かを買う。"
+        },
+        {
+          "type": "paragraph",
+          "text": "その一つひとつが、世界の大きな仕組みとどこかでつながっている。"
+        },
+        {
+          "type": "paragraph",
+          "text": "仕組みの外へ簡単に出ることができなくても、仕組みを見ようとすることはできる。"
+        },
+        {
+          "type": "paragraph",
+          "text": "何が起きているのか。"
+        },
+        {
+          "type": "paragraph",
+          "text": "誰に利益があるのか。"
+        },
+        {
+          "type": "paragraph",
+          "text": "誰が負担しているのか。"
+        },
+        {
+          "type": "paragraph",
+          "text": "どこからお金が来て、どこへ流れているのか。"
+        },
+        {
+          "type": "paragraph",
+          "text": "そして、その流れはLifeのどこへ届くのか。"
+        },
+        {
+          "type": "paragraph",
+          "text": "市場を見ることは、未来を当てることだけではない。"
+        },
+        {
+          "type": "paragraph",
+          "text": "世界の仕組みを観察する、一つの窓にもなる。"
+        },
+        {
+          "type": "paragraph",
+          "text": "私は投資をしていない。"
+        },
+        {
+          "type": "paragraph",
+          "text": "それでも市場を見るのは、そのためだ。"
+        },
+        {
+          "type": "heading",
+          "text": "今日のFLOW MAP"
+        },
+        {
+          "type": "paragraph",
+          "text": "今日見えている流れを、ひとまずここに置いておく。"
+        },
+        {
+          "type": "flow",
+          "items": [
+            "OIL ↑",
+            "→ INFLATION EXPECTATION ↑",
+            "→ YIELD ↑",
+            "→ USDへの資金移動"
+          ],
+          "caption": null
+        },
+        {
+          "type": "paragraph",
+          "text": "そして、新しく残しておきたい観測点が二つある。"
+        },
+        {
+          "type": "paragraph",
+          "text": "ひとつは、"
+        },
+        {
+          "type": "paragraph",
+          "text": "STOCK ↓ ＋ BOND ↓",
+          "emphasis": "strong"
+        },
+        {
+          "type": "paragraph",
+          "text": "となったとき、資金は次にどこへ向かうのか。"
+        },
+        {
+          "type": "paragraph",
+          "text": "もうひとつは、"
+        },
+        {
+          "type": "paragraph",
+          "text": "「安い円」という世界の前提に、変化が現れるのか。",
+          "emphasis": "strong"
+        },
+        {
+          "type": "paragraph",
+          "text": "予想はしない。"
+        },
+        {
+          "type": "paragraph",
+          "text": "明日また市場を開いて、この二つを見る。"
+        },
+        {
+          "type": "paragraph",
+          "text": "昨日見た原油の波が、今日は金利まで届いた。"
+        },
+        {
+          "type": "paragraph",
+          "text": "その波が明日はどこにいるのか。"
+        },
+        {
+          "type": "paragraph",
+          "text": "市場は毎日、少しずつ違う標本を見せてくれる。",
+          "emphasis": "strong"
+        }
+      ],
+      "images": [],
+      "sources": [
+        {
+          "id": "five-percent-source-1",
+          "name": null,
+          "title": null,
+          "url": null,
+          "verification_status": "pending-source-desk",
+          "summary": "9月16日の市場では、米10年債利回りが5％を上回った。金利をめぐる市場の見方の背景には、エネルギー価格を通じたインフレへの警戒や、米国の金融政策をめぐる観測がある。"
+        }
+      ],
+      "related_stories": [
+        {
+          "id": "specimen-002",
+          "reason": "市場を観察する窓から、記録と証拠を辿る物語へ。"
+        },
+        {
+          "id": "horse-time",
+          "reason": "FROM LIFE — 日常の窓へ戻る。"
+        }
+      ],
+      "related_collections": [
+        {
+          "id": "H88-0004",
+          "reason": "原油という物質から、市場と暮らしのつながりへ。"
+        },
+        {
+          "id": "H88-0006",
+          "reason": "Lifeを支える素材を、Collectionから見る。"
+        }
+      ],
+      "related_specimens": [
+        {
+          "id": "specimen-002",
+          "reason": "別の資料の読み方を、SPECIMEN 002から辿る。"
+        }
+      ],
+      "accent_color": null,
+      "revision": null,
+      "satori_view": null,
+      "audio": [],
+      "entry_media": {
+        "collection_id": "H88-0004",
+        "role": "collection-illustration",
+        "caption": "収蔵資料：Petroleum。本文で扱う市場当日の写真ではありません。"
+      },
+      "display_kicker": "8:45 WINDOW",
+      "publication_status": "source-review-pending",
+      "byline": "WRITTEN BY ECHO",
+      "closing_credit": [
+        "WRITTEN BY ECHO",
+        "HOLOS 88｜MARKET WINDOW"
+      ],
+      "master": {
+        "path": "content/masters/phase04-publication-master.txt",
+        "sha256": "25d7996a9cdfd1c0f8b9c664f5413dd7f7197aff3992992f87dc13f41efdb718",
+        "body_start_line": 94,
+        "body_end_line": 207,
+        "preservation": "verbatim; original paragraph boundaries retained; emphasis from supplied formatted message"
+      },
+      "date_label": "16 SEPTEMBER 2026"
+    },
+    {
+      "id": "specimen-002",
+      "window": "museum",
+      "title": "恐怖の考古学",
+      "subtitle": "——25年後、一本の樹木から世界を見る",
+      "author_ids": [
+        "echo"
+      ],
+      "date": "2026-09-11",
+      "status": "editorial-draft",
+      "route": "/stories/archaeology-of-fear.html",
+      "body": [],
+      "images": [],
+      "sources": [],
+      "related_stories": [
+        {
+          "id": "horse-time",
+          "reason": "FROM LIFE — 樹木と世界から、日常の窓へ。"
+        },
+        {
+          "id": "five-percent",
+          "reason": "資料を読む姿勢を携えて、数字の窓へ。"
+        }
+      ],
+      "related_collections": [
+        {
+          "id": "H88-0001",
+          "reason": "物語の中心にある、生きた樹木の記録へ。"
+        },
+        {
+          "id": "H88-0006",
+          "reason": "記憶の風景から、水という素材へ。"
+        }
+      ],
+      "related_specimens": [],
+      "accent_color": null,
+      "revision": null,
+      "body_ref": "content/specimen-002.json",
+      "satori_view": null,
+      "audio": [],
+      "entry_media": {
+        "feature_media_id": "tree-2012",
+        "role": "documentary"
+      }
+    }
+  ]
+}
