@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "build": "node build.mjs",
+    "build:pages": "node build.mjs && node scripts/prepare-pages.mjs",
     "start": "node server.mjs",
     "test": "node tests/content-architecture.mjs && node tests/reading-experience.mjs"
   }

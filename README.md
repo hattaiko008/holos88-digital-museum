@@ -32,6 +32,18 @@ npm start
 
 http://127.0.0.1:8088 をブラウザで開きます。終了はCtrl+C。
 
+## GitHub Pagesで公開する
+
+`main`へ変更を送ると、`.github/workflows/pages.yml`がテスト、静的HTML生成、GitHub Pagesへの公開を順番に行います。プロジェクトサイトのURLに合わせ、`.pages-dist`に作る公開用コピーだけに`/holos88-digital-museum/`を付けます。ローカル用の`dist`と原稿データは変更しません。
+
+手元で公開用生成物を確認する場合：
+
+```sh
+BASE_PATH=/holos88-digital-museum npm run build:pages
+```
+
+公開先：`https://hattaiko008.github.io/holos88-digital-museum/`
+
 ## 更新する場所
 - `collection.json`: 標本、画像クレジット、関連ID、関係の試作データ。ここを編集してbuildするとHOMEへ反映します。
 - `home.template.html`: ページの文章と構造。
