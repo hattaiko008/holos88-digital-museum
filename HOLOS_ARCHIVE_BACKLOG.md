@@ -41,6 +41,21 @@ OBJECT → RELATIONSHIP → CONSEQUENCE → CHOICE → LIFE
 - `visual_mode`: plate / photograph / document / diagram / typographic / mixed
 - `fact_layer`: documented / interpretation / question / relationship
 
+### PLACE / GLOBE WINDOW
+
+地図は、記事を国別カテゴリーへ閉じ込めるための分類ではない。資料、出来事、植物、人、航路、思想がどこに触れているかを、地球儀の上で見つける入口にする。
+
+- `place_scope`: local / city / region / country / sea / route / diaspora / planetary
+- `place_name`: 現在の地名と、記事に必要な歴史上の地名を併記する
+- `place_relation`: origin / observation / movement / extraction / cultivation / conflict / refuge / return / imagination
+- `time_scope`: 地図上の地点にも年代または時代幅を持たせる
+
+最初の閲覧窓は、アジア／中東・北アフリカ／ヨーロッパ／アフリカ／北米／中南米・カリブ／オセアニア／極地・海域／宇宙を置ける。ただし、それを唯一の見方にしない。国境は時代で変わり、海、交易路、移住、先住民の土地、植民地の歴史は大陸区分だけでは読めないためである。
+
+地図上のピンには、記事の所在地だけでなく、関係ラベルを付ける。たとえばミレーなら `Barbizon / observation / 1849–1875`、種子標本なら `collection site / cultivation / date verified` のように扱う。場所が不明確な資料に、見栄えのためのピンを置かない。
+
+最初は静かな平面地図または地球儀の一覧として試し、派手な操作や常時動く3D地球にはしない。記事が20〜30本ほど増え、地点と関係の密度が出てから、PLACE WINDOWを実装する。
+
 窓は増やせるが、記事を窓へ押し込めない。複数の入口から同じ記事へ到達できる設計にする。
 
 ## 3｜優先して育てる記事候補
