@@ -79,6 +79,16 @@ OPEN QUESTION
 - ピンは記事の住所ではなく、`場所 × 関係 × 時代`。資料を確認できない地点には置かない。
 - 実装は記事が20〜30本ほどたまってから。今は各原稿にplace metadataを残す。
 
+## CIVIC WINDOWS memo
+
+- `THE BUNDLE AND THE AXE` — ファシズムの語源、権威、排除、言葉を正確に使うための博物辞書。
+- `WHO GETS TO CALL THEMSELVES "THE PEOPLE"?` — 右派・左派のポピュリズム、生活不安、制度、少数者の権利。
+- `THE CLASSROOM IS A COMMONS` — 教育、教育勅語、歴史教育、批判的思考、子どもの権利。
+- `WHY DOES THE LEFT LOSE THE ROOM?` — 左派・リベラルの言葉、組織、生活への届き方を内側から問う。
+- `MUNICIPAL SOCIALISM` — マムダニ、サンダース、住宅・交通・保育・自治体政策を生活の制度から読む。
+- `JAPAN / POWER, RELIGION, EDUCATION` — 政権、団体、宗教、教育を、一次資料と複数根拠から扱う。
+- 詳細な編集基準：`content/briefs/civic-windows-01.md`
+
 ## Editorial rule
 
 各記事は一つの標本から始め、一つの強いMICHIKUSAを持ち、元の標本へ戻る。記事の数を増やすために同じ内容を分割しない。
