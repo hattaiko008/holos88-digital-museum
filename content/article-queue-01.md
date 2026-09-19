@@ -108,6 +108,7 @@ OPEN QUESTION
 - `THE OBJECT THAT REMEMBERS LABOUR` — 民具、道具、資源、労働、生活。
 - `ORAL HISTORY / WHO WAS LISTENED TO?` — 口承、昔話、歌、証言、聞き書き、記録の権力。
 - `WORLD HISTORY FROM A KITCHEN TABLE` — 食卓、交易、植民地、環境、家族。
+- `MANY CLOCKS / 世界の文明年表` — 地球儀と年表を、都市、農耕、文字、海、信仰、科学、口承、帝国、移動の複数の時計として重ねる。
 - 詳細な編集基準：`content/briefs/histories-in-motion-01.md`
 
 ## Editorial rule
