@@ -1,6 +1,6 @@
 # HOLOS 88 — DESIGN BASELINE 01 / STORY BASELINE 01
 
-今後の編集・配信・会員・顧客対応を含む運営設計は [HOLOS_OPERATING_SYSTEM.md](HOLOS_OPERATING_SYSTEM.md) にまとめています。
+今後の編集・配信・会員・顧客対応を含む運営設計は [HOLOS_OPERATING_SYSTEM.md](HOLOS_OPERATING_SYSTEM.md) にまとめています。ChatGPT / Codexの利用量を抑える制作手順は [CREDIT_EFFICIENCY_PROTOCOL.md](CREDIT_EFFICIENCY_PROTOCOL.md) にまとめています。
 
 ## PHASE 02 の確認画面
 - HOME: http://127.0.0.1:8088/
