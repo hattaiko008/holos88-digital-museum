@@ -111,6 +111,13 @@ OPEN QUESTION
 - `MANY CLOCKS / 世界の文明年表` — 地球儀と年表を、都市、農耕、文字、海、信仰、科学、口承、帝国、移動の複数の時計として重ねる。
 - 詳細な編集基準：`content/briefs/histories-in-motion-01.md`
 
+## SCREEN ESSAYS memo
+
+- hachicoの`閑話休題`とは別に、ECHOの静かな収蔵映像をつくる。
+- 記事を読み上げるのでなく、標本、資料、字幕、沈黙、環境音で記事が映像の時間を持つようにする。
+- 最初の候補：SEED / HORSE / MOON TO STARS / MILLET & LAND / 8:45 WINDOW。
+- 詳細な制作基準：`content/briefs/screen-essays-01.md`
+
 ## Editorial rule
 
 各記事は一つの標本から始め、一つの強いMICHIKUSAを持ち、元の標本へ戻る。記事の数を増やすために同じ内容を分割しない。
