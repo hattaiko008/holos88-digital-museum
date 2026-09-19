@@ -24,6 +24,8 @@ Status: editorial draft — not yet published
 
 アンリ・ベルクソンは、時間を空間のように扱うことに疑問を持った。
 
+ベルクソンは、1859年に生まれたフランスの哲学者である。1889年の『時間と自由』から、意識、記憶、生命、自由をめぐる仕事まで、繰り返し「持続」という感覚へ戻っていった。ここで言う持続は、難しい専門語を覚えるための言葉ではない。時計が教える時間と、自分が実際に生きている時間は、同じなのだろうかと問うための入口である。 [2]
+
 時計の時間は、便利だ。予定を合わせ、列車を動かし、実験を比較する。けれどベルクソンが考えたのは、その時計を否定することではない。数字で測れる時間だけでは、私たちが生きている時間を取りこぼしてしまうのではないか、ということだった。
 
 彼が「持続」と呼んだ時間では、過去は終わった箱にしまわれない。過去は現在に染み込みながら、次の瞬間の見え方を変えていく。意識は、同じ大きさの瞬間を数珠のようにつないだものではなく、少しずつ成熟し、内容を変えていく過程だと考えられる。 [2]
@@ -106,6 +108,12 @@ Status: editorial draft — not yet published
 - **→ FIELD / GERMINATION｜芽が出るための条件。**  
   持続という思想から、発芽の科学へ戻る。
 
+- **→ WADOKEI｜季節によって、一刻の長さが変わる時計。**
+  均一ではない時間という問いから、江戸の不定時法へ。
+
+- **→ FUTURE WINDOW｜未来は、過去へ届くのか。**
+  量子論における逆向きの因果をめぐる、未決着の解釈へ。科学的結論ではなく、問いと理論の窓として扱う。
+
 ---
 
 ## SOURCE WINDOW / DRAFT DESK
@@ -122,6 +130,12 @@ Status: editorial draft — not yet published
 
 4. USDA Forest Service, **Seed Germination and**. 水、酸素、温度と種子の発芽に関する資料。  
    https://research.fs.usda.gov/treesearch/download/46349.pdf
+
+5. THE SEIKO MUSEUM GINZA, **不定時法の説明**. 江戸時代の和時計が、季節で昼夜の長さが変わる不定時法へ合わせられた仕組み。WADOKEI記事の調査開始点。
+   https://museum.seiko.co.jp/knowledge/relation_16/
+
+6. Stanford Encyclopedia of Philosophy, **Retrocausality in Quantum Mechanics**. 量子論の逆向きの因果を仮定する解釈の概説。確立した物理学的結論として扱わない。FUTURE WINDOW記事の調査開始点。
+   https://plato.stanford.edu/entries/qm-retrocausality/
 
 ## VISUAL DIRECTION / NOT YET SELECTED
 
