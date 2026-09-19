@@ -54,7 +54,7 @@ Status: editorial draft — not yet published
 
 HOLOS 88の「88」も、ここでまた少し光る。
 
-八田の八。八十八。八百万。無数のもの。そして、空を区切る88の領域。
+無数のものを見上げながら、空を区切る88の領域を思う。
 
 星座は、世界を分けるためだけにあるのではない。
 
@@ -111,6 +111,19 @@ HOLOS 88の「88」も、ここでまた少し光る。
 
 ---
 
+## MARGIN SPECIMENS / 付箋
+
+**HARVEST MOON**
+北半球で秋分に最も近い満月を、英語圏ではHarvest Moonと呼ぶ。農作業に月明かりが役立ったという説明とともに広まった名称である。2026年は、9月27日の満月がこれに当たる。北米の月名や各先住民の暦は、ひとつの「古代インディアン」の伝統にまとめず、地域・民族・言語ごとの資料を確認してから別記事にする。 [5]
+
+**HOEI NOJIRI / 野尻抱影**
+「星の文人」と呼ばれ、星を天文学だけでなく文学や民俗の言葉でも紹介した書き手。『星は周る』『日本の星』などは、この展示室の資料棚候補。Echoの記憶にある『星の質問帖』は、版・刊行情報・入手先を確認してから紹介する。 [6]
+
+**MOON BEYOND JAPAN**
+中南米、北米、東アジア、太平洋などの月と星の伝承は、次の展示室候補。シャーマニズムという一語でまとめず、特定の共同体、儀礼、時代、語り手を確かめる。
+
+---
+
 ## SOURCE WINDOW / DRAFT DESK
 
 1. 国立天文台、**中秋の名月（2026年9月）**. 2026年の中秋の名月は9月25日、満月は9月27日、十三夜は10月23日。  
@@ -122,6 +135,12 @@ HOLOS 88の「88」も、ここでまた少し光る。
 4. 国立天文台暦計算室、**季節の星座**、**おもな恒星**. 秋の四辺形、冬の大三角、オリオン座、シリウスなど。  
    https://eco.mtk.nao.ac.jp/koyomi/wiki/B5A8C0E12FB5A8C0E1A4CEC0B1BAC2.html  
    https://eco.mtk.nao.ac.jp/koyomi/faq/stars.html
+5. NASA Science, **Harvest Moon**; **Supermoon, Blood Moon, Blue Moon and Harvest Moon**. Harvest Moonの定義と、北米の秋の収穫との関係。
+   https://science.nasa.gov/resource/harvest-moon/
+   https://spaceplace.nasa.gov/full-moons/en/
+6. 国立国会図書館サーチ、**野尻抱影 : 星は周る**; **日本の星 : 星の方言集**. 野尻抱影の星に関する著作と紹介。
+   https://ndlsearch.ndl.go.jp/books/R100000002-I026958721
+   https://ndlsearch.ndl.go.jp/books/R100000002-I029381488
 
 ## VISUAL DIRECTION / NOT YET SELECTED
 
