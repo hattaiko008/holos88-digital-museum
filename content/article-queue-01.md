@@ -89,6 +89,15 @@ OPEN QUESTION
 - `JAPAN / POWER, RELIGION, EDUCATION` — 政権、団体、宗教、教育を、一次資料と複数根拠から扱う。
 - 詳細な編集基準：`content/briefs/civic-windows-01.md`
 
+## CLIMATE JUSTICE WINDOWS memo
+
+- `SDGs / THE MAP AND THE TERRITORY` — 目標、進捗、資金、債務、企業・行政の広報と実際の影響。
+- `GRETA / A VOICE BECOMES A NETWORK` — 若い人の気候運動、メディア、気候正義、パレスチナ連帯。
+- `OIL / THE SKY IN THE TANK` — 石油、海峡、輸送、肥料、都市、家計、気候。
+- `CLIMATE JUSTICE / WHO PAYS FOR THE FUTURE?` — 被害、適応、復興、保険、債務、移住、食料、水。
+- `PALESTINE / WATER, LAND, LIFE` — 人道、土地、水、農、エネルギー、生活を独立して読む。
+- 詳細な編集基準：`content/briefs/climate-justice-windows-01.md`
+
 ## Editorial rule
 
 各記事は一つの標本から始め、一つの強いMICHIKUSAを持ち、元の標本へ戻る。記事の数を増やすために同じ内容を分割しない。
