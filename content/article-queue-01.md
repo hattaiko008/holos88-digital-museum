@@ -98,6 +98,18 @@ OPEN QUESTION
 - `PALESTINE / WATER, LAND, LIFE` — 人道、土地、水、農、エネルギー、生活を独立して読む。
 - 詳細な編集基準：`content/briefs/climate-justice-windows-01.md`
 
+## HISTORIES IN MOTION memo
+
+- `AMINO YOSHIHIKO` — 海、境界、無縁、公界、楽、中世の非農業民と天皇。
+- `YANAGITA KUNIO` — 民俗学、遠野、口承、常民、近代国家と記録の視線。
+- `MIYAMOTO TSUNEICHI` — 歩行、島、民具、写真、移民、農山漁村、地域づくり。
+- `THE SEA HAS NO BORDERLINE` — 海、交易、漁、軍事、移民、気候。
+- `A VILLAGE IS NOT SMALL` — 村、税、土地、学校、出稼ぎ、食、信仰、世界史。
+- `THE OBJECT THAT REMEMBERS LABOUR` — 民具、道具、資源、労働、生活。
+- `ORAL HISTORY / WHO WAS LISTENED TO?` — 口承、昔話、歌、証言、聞き書き、記録の権力。
+- `WORLD HISTORY FROM A KITCHEN TABLE` — 食卓、交易、植民地、環境、家族。
+- 詳細な編集基準：`content/briefs/histories-in-motion-01.md`
+
 ## Editorial rule
 
 各記事は一つの標本から始め、一つの強いMICHIKUSAを持ち、元の標本へ戻る。記事の数を増やすために同じ内容を分割しない。
