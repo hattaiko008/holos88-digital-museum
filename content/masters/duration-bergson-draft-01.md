@@ -114,6 +114,9 @@ Status: editorial draft — not yet published
 - **→ FUTURE WINDOW｜未来は、過去へ届くのか。**
   量子論における逆向きの因果をめぐる、未決着の解釈へ。科学的結論ではなく、問いと理論の窓として扱う。
 
+- **→ SHŪTEN｜身体は小宇宙なのか。**
+  時間と循環の問いから、道教・気功における小周天／大周天、東洋医学、鍼灸、経絡の歴史と身体観へ。
+
 ---
 
 ## SOURCE WINDOW / DRAFT DESK
@@ -136,6 +139,9 @@ Status: editorial draft — not yet published
 
 6. Stanford Encyclopedia of Philosophy, **Retrocausality in Quantum Mechanics**. 量子論の逆向きの因果を仮定する解釈の概説。確立した物理学的結論として扱わない。FUTURE WINDOW記事の調査開始点。
    https://plato.stanford.edu/entries/qm-retrocausality/
+
+7. 日本宗教学会『宗教研究』、**現代韓国における道教の比較瞑想論的研究**. 小周天・大周天を含む現代道教実践の比較瞑想論的研究。SHŪTEN記事の調査開始点。
+   https://www.jstage.jst.go.jp/article/jjpm/61/6/61_61.6_516/_pdf
 
 ## VISUAL DIRECTION / NOT YET SELECTED
 
