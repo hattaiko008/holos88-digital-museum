@@ -20,6 +20,11 @@ Date: 2026-09-19
 13. `8:45 WINDOW / 1.25％と4.00％のあいだにあるもの。` — 日銀、FRB、中東の石油輸送、選挙、家計。2026-09-19時点の観測草案。
 14. `LIFE NOTE / 心白、13歳半の時間に。` — hachicoとホワイトシェパードのコハク。未来の老い、食欲、生活の時間。現在は公開保留。
 
+## HACHICO｜seasonal series
+
+- `暦の小窓`（working title） — 二十四節気・七十二候を定点に、空、月、星、古い慣わし、食、暮らし、身体感覚、象徴へ道草する連載。`hachicoの日々徒然`とは分け、月1〜2本から試作する。
+- 詳細設計：`content/briefs/seasonal-hachico-series-01.md`
+
 ## Next specimens
 
 14. `WATER` — 雨、都市、水路、身体、記憶、生命。
