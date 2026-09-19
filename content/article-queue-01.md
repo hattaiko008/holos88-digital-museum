@@ -118,6 +118,13 @@ OPEN QUESTION
 - 最初の候補：SEED / HORSE / MOON TO STARS / MILLET & LAND / 8:45 WINDOW。
 - 詳細な制作基準：`content/briefs/screen-essays-01.md`
 
+## COVER 05 / HOLOS ORBIT memo
+
+- 参照：X post、Morph / Formation / Helix（Modulify）。見た目やコードを転用せず、平面の軌道感、遅い位相のずれ、構造が見える余白を抽出する。
+- 中央はHOLOS原本ロゴ。周囲はrights-verifiedの古い図版・自然史・科学図版。
+- 01→02→03→04→05→STOP。無限ループなし、手動後の自動再開なし、reduced motion対応。
+- 詳細な制作基準：`content/briefs/cover-orbit-motion-brief-01.md`
+
 ## Editorial rule
 
 各記事は一つの標本から始め、一つの強いMICHIKUSAを持ち、元の標本へ戻る。記事の数を増やすために同じ内容を分割しない。
