@@ -31,11 +31,13 @@ Substack will be used as a free email acquisition and relationship layer only. P
 
 Initial candidates:
 
+- **Ko-fi — promoted to first candidate** — supports tips, memberships and a shop for digital products; creators connect their own PayPal or Stripe account and are paid directly. Ko-fi states there is no monthly fee and a 0–5% creator fee depending on the feature/plan. This matches the low-touch, non-salon model better than a community-first platform. Confirm Japan-specific payout, tax, refund and digital-delivery details before opening it.
+
 - **Apps** — advertises PayPal support, member pages, monthly plans, and zero initial/monthly fees. Verify transaction fees, export, access control, cancellation and delivery before adoption.
 - **PayPal subscriptions + private HOLOS delivery** — official PayPal recurring payments are available, but access control and delivery would be maintained by us.
 - **MemberPay** — appears to support one-time digital content and monthly plans; PayPal availability and the exact low-touch model require direct confirmation.
 
-Apps is the first candidate to inspect because it appears closest to “PayPal + digital content + minimal community.” No account, payment button, or paid plan will be created until the checks are complete.
+Ko-fi is now the first candidate to inspect because it appears closest to “PayPal + digital content + minimal community.” Apps remains the Japanese platform candidate if Ko-fi's local payout or content-delivery conditions are unsuitable. No account, payment button, or paid plan will be created until the checks are complete.
 
 ## Content reuse rule
 
@@ -67,5 +69,7 @@ Before opening paid services, prepare a 30-day content map using three finished 
 - [PayPal Japan: recurring payments](https://www.paypal.com/jp/business/accept-payments/checkout/recurring)
 - [Apps digital content platform](https://theapps.jp/)
 - [MemberPay service plans and digital content](https://memberpay-help.zendesk.com/hc/ja/articles/5296885656862-%E3%83%97%E3%83%A9%E3%83%B3-%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9-%E5%8D%98%E7%99%BA%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9-%E6%9C%88%E9%A1%8D%E5%AE%9A%E9%A1%8D%E3%83%97%E3%83%A9%E3%83%B3%E3%81%AE%E4%BD%9C%E6%88%90%E6%96%B9%E6%B3%95)
+- [Ko-fi](https://ko-fi.com/)
+- [Ko-fi Help](https://help.ko-fi.com/hc/en-us)
 
 The shared YouTube video could not be fetched in this review environment, so its specific claims were not used as evidence.
