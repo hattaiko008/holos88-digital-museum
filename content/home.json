@@ -46,7 +46,17 @@
     "objects": [
       {
         "collection_id": "H88-0005",
-        "visual_status": "archive-pending"
+        "visual_status": "verified-public-domain",
+        "visual": {
+          "src": "/assets/study01-391117.jpg",
+          "alt_text": "アルブレヒト・デューラーによる横向きの馬の銅版画",
+          "creator": "Albrecht Dürer",
+          "title": "The Little Horse",
+          "date": "1505",
+          "institution": "The Metropolitan Museum of Art",
+          "source_url": "https://www.metmuseum.org/art/collection/search/391117",
+          "rights": "Public Domain"
+        }
       },
       {
         "collection_id": "H88-0002",
@@ -58,11 +68,31 @@
       },
       {
         "collection_id": "H88-0003",
-        "visual_status": "archive-pending"
+        "visual_status": "verified-public-domain",
+        "visual": {
+          "src": "/assets/study01-696380.jpg",
+          "alt_text": "ウジェーヌ・ブレリによる樫の枝のエッチング",
+          "creator": "Eugène Stanislas Alexandre Bléry",
+          "title": "The Branches of an Oak Tree",
+          "date": "ca. 1837",
+          "institution": "The Metropolitan Museum of Art",
+          "source_url": "https://www.metmuseum.org/art/collection/search/696380",
+          "rights": "Public Domain"
+        }
       },
       {
         "collection_id": "H88-0006",
-        "visual_status": "archive-pending"
+        "visual_status": "verified-public-domain",
+        "visual": {
+          "src": "/assets/study01-384116.jpg",
+          "alt_text": "蝶と貝殻を描いた17世紀の博物画",
+          "creator": "Balthasar van der Ast",
+          "title": "An Arrowhead Blue Butterfly and a Scotch Bonnet Sea Shell",
+          "date": "17th century",
+          "institution": "The Metropolitan Museum of Art",
+          "source_url": "https://www.metmuseum.org/art/collection/search/384116",
+          "rights": "Public Domain"
+        }
       },
       {
         "collection_id": "H88-0008",
