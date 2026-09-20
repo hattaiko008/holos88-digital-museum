@@ -47,6 +47,34 @@ One finished HOLOS article becomes a small constellation, not seven copies:
 
 Each adaptation changes its purpose and length. No automatic cross-posting without editorial review. Scientific, political, financial and historical claims retain their source link.
 
+## Per-article distribution pack
+
+From now on, every publication master should carry a small distribution appendix. It is prepared during editing, then used only after the full article and image rights are approved.
+
+```text
+HOLOS — full article / canonical URL
+NOTE — searchable excerpt with an original opening and a clear return link
+SUBSTACK — free letter: one observation, one excerpt, one link
+INSTAGRAM — one visual idea, carousel outline, short caption
+X — one fact or question; thread only when the subject needs context
+PINTEREST — title, vertical visual concept, search description, destination URL
+KO-FI — free support note, paid extension, PDF or magazine candidate
+YOUTUBE — screen essay candidate and visual/sound notes
+```
+
+Do not paste the same text everywhere. The full article lives on HOLOS. Other services open different windows and return the reader to the canonical article, email list, or paid shelf.
+
+## Sample: AKIBUN
+
+- **HOLOS** — full seasonal essay with SOURCE WINDOW.
+- **note** — lead with the counterintuitive fact that autumn equinox is not exactly equal day and night; publish roughly one-third to one-half, then link to the full essay.
+- **Substack** — a short free letter beginning with the thicker-socks observation; link to HOLOS.
+- **Instagram** — two to four slides: horizon/solar rim, “day is still slightly longer,” higan, socks. Use verified archival or scientific imagery.
+- **X** — one concise observation about sunrise being defined by the Sun's upper rim, followed by the article link.
+- **Pinterest** — vertical seasonal card using an old astronomical diagram or calendar image, with `秋分 / EQUINOX / HOLOS 88` and a direct article URL.
+- **Ko-fi** — keep the article free at launch. Later include it in a seasonal PDF or illustrated calendar collection rather than charging for the same short essay alone.
+- **YouTube** — hold as a 3–5 minute screen essay candidate after several seasonal articles form a set.
+
 ## Pinterest direction
 
 Pinterest fits HOLOS because it is a visual discovery and save-oriented channel. Use high-resolution archive material, strong framing, restrained typography and a clear link to a related landing page. Do not turn it into a catalogue of products. The first boards can be `SEASONAL WINDOWS`, `NATURAL HISTORY`, `MUSEUM OF RELATIONSHIPS`, `OLD BOOKS / NEW QUESTIONS`.
