@@ -24,7 +24,7 @@ Date: 2026-09-19
 
 - `暦の小窓`（working title） — 二十四節気・七十二候を定点に、空、月、星、古い慣わし、食、暮らし、身体感覚、象徴へ道草する連載。`hachicoの日々徒然`とは分け、月1〜2本から試作する。
 - 詳細設計：`content/briefs/seasonal-hachico-series-01.md`
-- Sample master: `content/masters/seasonal-akibun-draft-01.md` — 秋分、生活の端から来る季節、彼岸、月と星、靴下。
+- Sample master: `content/masters/seasonal-akibun-draft-01.md` — 「昼と夜は、じつは同じではない。」秋分点、日の出の定義、大気差、日本の彼岸、生活の端から来る季節。
 
 ## Next specimens
 
