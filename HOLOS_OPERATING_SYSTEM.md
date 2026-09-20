@@ -194,4 +194,6 @@ Genspark、NotebookLM、Claude、Claude Codeは、必要な仕事が明確にな
 4. 公開済み記事からSubstack・SNS向け原稿を生成するテンプレートを作る。
 5. 顧客対応を始める前に、問い合わせ分類・返信承認・個人情報の扱いを決める。
 
+フロント、バックエンド、メール、課金、顧客対応、商品候補の詳細は `content/briefs/service-backend-architecture-01.md` を基準にする。
+
 最後の確認：その道は、ちゃんとLifeへ戻っているか？
