@@ -13,7 +13,7 @@ HOLOSは商品を押し売りする場所ではなく、読み物・標本・図
 |---|---|---|---|
 | HOLOS 88 | home museum / owned archive | full articles, specimens, relationships | email / free reading list |
 | note | Japanese discovery and short essays | hachico essays, excerpts, seasonal windows | HOLOS article or email |
-| Substack | optional publication and email relationship | ECHO essays, monthly letter, audio/video essays | free list → paid later |
+| Substack | free email relationship only | ECHO essays, monthly letter, article notices | HOLOS article → email |
 | Instagram | visual field notes | one image, detail crop, short caption, process | article / save / profile |
 | X | live thinking and links | observation, source note, conversation | article / newsletter |
 | Pinterest | long-tail visual discovery | woodcuts, diagrams, seasonal cards, article covers | article landing page |
@@ -24,10 +24,18 @@ HOLOSは商品を押し売りする場所ではなく、読み物・標本・図
 1. **Open** — public articles, specimens, source windows, short social excerpts.
 2. **Remember** — free email letter / seasonal index / new article notice.
 3. **Support** — optional paid membership or monthly letter after a stable free archive exists.
-4. **Deepen** — digital magazine, screen essay collection, reading circle, small online salon.
+4. **Deepen** — digital magazine, screen essay collection, downloadable archive, quiet reading room. Regular live community is not required.
 5. **Commission** — editorial direction, research, brand/world-building, cultural curation and consulting. This should arrive through demonstrated work, not aggressive sales copy.
 
-Substack's free publishing is possible, but paid subscriptions use Stripe; therefore it cannot currently be treated as the only paid route. note's official membership page states that memberships can be combined with single paid articles and lists a 10% fee, so it is a candidate for the Japanese paid layer. Confirm current payment availability and fees at setup time.
+Substack will be used as a free email acquisition and relationship layer only. Paid subscriptions use Stripe, so it is not the paid route for HOLOS. note will mainly support SEO and discovery, not serve as the main checkout. The paid layer should be a low-touch digital-content service that accepts PayPal and delivers articles or an archive without requiring a social community.
+
+Initial candidates:
+
+- **Apps** — advertises PayPal support, member pages, monthly plans, and zero initial/monthly fees. Verify transaction fees, export, access control, cancellation and delivery before adoption.
+- **PayPal subscriptions + private HOLOS delivery** — official PayPal recurring payments are available, but access control and delivery would be maintained by us.
+- **MemberPay** — appears to support one-time digital content and monthly plans; PayPal availability and the exact low-touch model require direct confirmation.
+
+Apps is the first candidate to inspect because it appears closest to “PayPal + digital content + minimal community.” No account, payment button, or paid plan will be created until the checks are complete.
 
 ## Content reuse rule
 
@@ -56,6 +64,8 @@ Before opening paid services, prepare a 30-day content map using three finished 
 - [note メンバーシップ公式](https://note.com/lp/membership)
 - [Pinterest Business: publish your content](https://help.pinterest.com/en/business/article/publish-your-content)
 - [Pinterest Business: Pin performance and distribution](https://help.pinterest.com/en/business/article/pin-performance-and-distribution)
+- [PayPal Japan: recurring payments](https://www.paypal.com/jp/business/accept-payments/checkout/recurring)
+- [Apps digital content platform](https://theapps.jp/)
+- [MemberPay service plans and digital content](https://memberpay-help.zendesk.com/hc/ja/articles/5296885656862-%E3%83%97%E3%83%A9%E3%83%B3-%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9-%E5%8D%98%E7%99%BA%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9-%E6%9C%88%E9%A1%8D%E5%AE%9A%E9%A1%8D%E3%83%97%E3%83%A9%E3%83%B3%E3%81%AE%E4%BD%9C%E6%88%90%E6%96%B9%E6%B3%95)
 
 The shared YouTube video could not be fetched in this review environment, so its specific claims were not used as evidence.
-
