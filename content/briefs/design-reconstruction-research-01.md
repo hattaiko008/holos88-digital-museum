@@ -15,6 +15,8 @@ Decision: the current site is held. This brief starts a new design system while 
 - HOLOS ORBITは5枚目の演出ではなく、Museumや関係地図の奥へ入る独立した展示にする。
 - ナビゲーションは `READ / MUSEUM / ATLAS / LETTER / SEARCH` に整理する。
 - 記事をジャンルで固定せず、まず `日記 / 暦 / エッセイ / 解説 / 市場 / 標本 / 展示 / ガイド / 映像` という読み方で分ける。その上に自然、動物、科学、哲学、政治、経済、美術、音楽、工芸など複数の主題を重ねる。
+- 公開上の「3つの窓」という固定表記は廃止する。記事はカテゴリーから探せるようにし、増え続けるカテゴリーを少数の大分類、詳細カテゴリー、横断タグ、ATLASで受け止める。
+- 大きな見出しや構図をつくる文字には英語を使い、その近くに小さな日本語訳を置く。本文と意味の中心は日本語のままにする。
 - 本文は安定した一続きの読み物にする。ブロドビッチ的な大胆さは、表紙、章の変わり目、図版、引用、MICHIKUSA、出口で使う。
 - 「恐怖の考古学」は一本の記事として通読できる形を基本にし、必要な場所だけ展示的な見開きを入れる。
 - メルマガ、支援、商品、仕事依頼は、読者がHOLOSの価値を体験した後に現れる静かな出口にする。
@@ -115,6 +117,46 @@ READ  /  MUSEUM  /  ATLAS  /  LETTER          SEARCH
 
 `SUPPORT`, `SHOP`, `WORK WITH HOLOS`, About and Source Policy belong in a quiet utility area and footer. They should not compete with reading in the primary navigation.
 
+### Language hierarchy
+
+HOLOS is primarily read in Japanese. English creates display composition; it does not replace the content language.
+
+```text
+LARGE ENGLISH DISPLAY
+小さな日本語の見出し・和訳
+
+日本語の導入と本文
+English metadata only where useful
+```
+
+- Hero titles, section names, issue names and exhibition-room titles may use large English display type.
+- A concise Japanese title or translation sits close enough to be understood without searching.
+- Standfirst, navigation help, article summaries, body copy, source explanation and calls to action remain natural Japanese.
+- English is not added as decoration when it weakens meaning or creates a false bilingual identity.
+- Japanese titles may still become large when the words themselves are the visual subject, but this is an editorial exception rather than the default template.
+- Screen readers and page metadata receive the full Japanese title; visual hierarchy must not hide meaning.
+
+This gives English the role of poster and Japanese the role of voice.
+
+### Typography direction
+
+The design needs three typographic voices, not one font forced to do every job.
+
+1. **DISPLAY SERIF / English** — high contrast, editorial, capable of extreme scale and tight composition. Test a Bodoni/Didot lineage and a slightly softer contemporary editorial serif. Candidate trials: `Bodoni Moda`, `Cormorant Garamond`; compare with licensed contemporary options before selection.
+2. **JAPANESE READING SERIF** — calm Mincho with clear punctuation and kana at 17–19px. Candidate trials: `Noto Serif JP`, `Shippori Mincho`. The final choice must be tested for long reading, weight, loading cost and licensing.
+3. **UTILITY SANS / labels and data** — restrained grotesk for dates, categories, source status, captions, navigation and numbers. Candidate trial: a local/system sans or `Noto Sans JP` where Japanese labels are needed.
+
+Type creates energy through scale, crop, tracking, alignment and contrast. It should not depend on novelty fonts. A large English word may run off the page edge; the Japanese translation remains intact and quiet. Body Japanese never inherits the compressed spacing used for display English.
+
+Rules for trial pages:
+
+- English display can be very large, tightly spaced and asymmetrical.
+- Japanese translation is smaller but not faint; it must remain comfortably readable.
+- Avoid full-width Japanese set in extremely large multi-line blocks as the default hero treatment.
+- Avoid excessive all-caps in long English titles; use it for short category or section names.
+- Use italics for source or editorial nuance only where the selected font has a real italic.
+- Do not load many font families or weights. The prototype should prove the system with a small, deliberate set.
+
 ## 5｜A new HOME: one living cover
 
 Retire the five-slide cover as the main entrance.
@@ -148,7 +190,38 @@ Below the cover:
 
 HOLOS ORBIT becomes a destination inside ATLAS or MUSEUM rather than the fifth cover scene. The original logo remains untouched at its centre. Rights-cleared woodcuts and natural-history line drawings move slowly along flat paths. The orbit becomes a way to enter objects and relationships, not a decorative finale.
 
-## 6｜Editorial formats before subject categories
+## 6｜Category system and editorial formats
+
+The former public label of “three windows” is retired. LIFE NOTES, MARKET WINDOW and MUSEUM FEATURE may survive as series names when editorially useful, but they no longer define the whole publication.
+
+### Categories can grow without growing the navigation
+
+The site uses four levels:
+
+```text
+REALM          broad shelf
+CATEGORY       named subject
+TAG            precise recurring term
+RELATIONSHIP   an explained path between entries
+```
+
+Initial Realms:
+
+| Realm | Japanese guide | Example categories |
+|---|---|---|
+| LIFE | 暮らしと生命 | Daily Life, Season, Food, Wellbeing, Animals |
+| EARTH | 地球と自然 | Climate, Ecology, Land, Water, Plants, Evolution |
+| HUMAN | 人間と社会 | Body, Mind, Education, Politics, Economy, Work |
+| TIME | 時間と記憶 | History, Archaeology, Calendar, Future, Archive |
+| IMAGINATION | 思想と表現 | Philosophy, Art, Literature, Music, Film, Belief |
+| MAKING | 手と技術 | Craft, Tools, Agriculture, Design, Technology |
+| COSMOS | 天体と未知 | Moon, Stars, Space, Physics, Time |
+
+These are shelves, not walls. One article may belong to several Realms. `Seed`, for example, may connect LIFE, EARTH, TIME and MAKING. No fixed colour is assigned to a Realm.
+
+Only a small changing selection of categories appears on HOME. The complete category index belongs inside READ and SEARCH. Popularity alone does not decide visibility; editorial relevance and the current constellation also matter.
+
+### Formats describe how the piece is read
 
 HOLOS can grow to many subjects without turning the navigation into a department store. Every work receives one **format**, then many **subjects and relations**.
 
@@ -164,7 +237,26 @@ HOLOS can grow to many subjects without turning the navigation into a department
 | GUIDE | practical, finite and useful | how to observe, read, care, visit, research |
 | SCREEN ESSAY | writing given duration, image and sound | selected essays and exhibitions |
 
-Subjects remain plural: Nature, Animals, Climate, Science, Body, Philosophy, Art, Music, Books, Craft, Economy, Politics, History, Spirituality and more. One article can inhabit several subjects without being duplicated.
+Subjects remain plural: Nature, Animals, Climate, Science, Body, Philosophy, Art, Music, Books, Craft, Economy, Politics, History, Spirituality and more. One article can inhabit several subjects without being duplicated. The visible category name tells the reader what world they are entering; the format tells them what kind of reading experience awaits.
+
+### Category page composition
+
+Every category page uses the shared HOLOS system but receives an editorial composition based on its material.
+
+```text
+ANIMALS
+動物
+
+one leading story
+current articles
+objects and species
+places on the Atlas
+related categories
+```
+
+The large English category name provides visual force. The small Japanese name provides immediate orientation. Below it, Japanese introductions explain why these pieces have been gathered together now.
+
+Category pages are curated landings, not automatic tag dumps. They may combine articles, objects, images, maps, timelines, books and MICHIKUSA routes. The underlying metadata remains reusable so the same work can appear in another relevant category without creating a duplicate article.
 
 ## 7｜Page modes by content family
 
