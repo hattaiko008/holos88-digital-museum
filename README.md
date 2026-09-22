@@ -1,6 +1,13 @@
 # HOLOS 88 — DESIGN BASELINE 01 / STORY BASELINE 01
 
-今後の編集・配信・会員・顧客対応を含む運営設計は [HOLOS_OPERATING_SYSTEM.md](HOLOS_OPERATING_SYSTEM.md) にまとめています。ChatGPT / Codexの利用量を抑える制作手順は [CREDIT_EFFICIENCY_PROTOCOL.md](CREDIT_EFFICIENCY_PROTOCOL.md) にまとめています。
+今後の編集・配信・会員・顧客対応を含む運営設計は [HOLOS_OPERATING_SYSTEM.md](HOLOS_OPERATING_SYSTEM.md) にまとめています。CHATOを受付と司令塔にする制作ループは [TEAM LOOP OPERATING SYSTEM](content/briefs/holos-team-loop-operating-system-01.md)、ChatGPT / Codexの利用量を抑える制作手順は [CREDIT_EFFICIENCY_PROTOCOL.md](CREDIT_EFFICIENCY_PROTOCOL.md) にまとめています。
+
+## 現在のデザイン本線
+
+- ACTIVE PROTOTYPE: http://127.0.0.1:8088/prototype/index.html
+- LEGACY REFERENCE: http://127.0.0.1:8088/
+
+旧サイトはPHASE 04までの比較資料として残し、今後は`prototype/reconstruction-01/`を更新してブラッシュアップします。記事、カテゴリー、画像、本文の細部は、骨格とサンプル記事が揃ってから順に詰めます。
 
 ## PHASE 02 の確認画面
 - HOME: http://127.0.0.1:8088/

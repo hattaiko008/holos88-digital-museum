@@ -1,7 +1,7 @@
 # HOLOS 88 — current working contract
 
 ## Scope and identity
-- Current user directions override historical phase rules. Existing site is held; redesign: content/briefs/design-reconstruction-research-01.md. Resume as a separate prototype within requested scope.
+- Current user directions override historical phase rules. Preserve the previous site as a reference. `prototype/reconstruction-01/` is the active design line to refine from now on; do not merge the legacy design back into it by default. Direction: `content/briefs/design-reconstruction-research-01.md`.
 - Museum of Relationships: magazine, collection, relationships. English display with readable nearby Japanese; Japanese reading. Growing categories, no fixed three-window taxonomy or category colours.
 - Keep hachico/ECHO publicly unlinked. WORDS BY hachico / WRITTEN BY ECHO. Empty SATORI’S VIEW and sound containers stay hidden.
 
@@ -16,6 +16,7 @@
 - Articles: content/articles.json; feature: content/specimen-002.json; objects: collection.json; cover/logo: content/home.json; originals: content/masters/.
 - Editorial: HOLOS_OPERATING_SYSTEM.md; ideas: HOLOS_ARCHIVE_BACKLOG.md.
 - Services: content/briefs/service-backend-architecture-01.md; distribution: content/briefs/monetization-distribution-01.md. Free Substack, note discovery, PayPal/Ko-fi candidate, low-touch content. External sending/payment/publication requires actual authorization.
+- Team workflow: `content/briefs/holos-team-loop-operating-system-01.md`. CHATO is the single intake and orchestrator. Treat desks as modes before creating persistent agents. Route work by task shape and measured benefit, not vendor claims.
 - Historical details: docs/history/agents-before-efficiency-2026-09-21.md. Consult relevant sections for existing cover behavior, Survivor Tree/Fukushima, SHAMANIC WINDOW or legacy phase constraints. Old freezes do not override the current user.
 
 ## Efficiency without reducing capability

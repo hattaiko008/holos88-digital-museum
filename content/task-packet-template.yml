@@ -1,0 +1,29 @@
+# HOLOS 88 Task Packet — copy for each bounded piece of work.
+id: H88-TASK-YYYYMMDD-001
+title: ""
+status: intake # intake | planned | working | verify | echo-review | ready | published | held
+
+objective: ""
+deliverable: ""
+source_of_truth: []
+
+fixed:
+  - ""
+out_of_scope:
+  - ""
+
+desk_modes: [] # editorial | curatorial | source | build | distribution | operations | verification
+external_adapters: [] # empty by default
+risk: low # low | medium | high
+loop: closed # closed | open
+
+definition_of_done:
+  - ""
+verification:
+  - ""
+max_repair_iterations: 2
+
+echo_approval_required_for: []
+artifacts: []
+unresolved: []
+decision_log: []

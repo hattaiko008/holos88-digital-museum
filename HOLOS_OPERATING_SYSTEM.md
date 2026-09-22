@@ -140,6 +140,8 @@ LISTEN — 反応、質問、訂正、次のRelationshipを回収
 
 当面はCHATOが編集長室として各Deskを切り替える。仕事量が増えた時だけ専用AIや別タスクに分ける。
 
+CHATOは、Echoから受け取った思いつき、修正、運営上の依頼を最初に受ける唯一の窓口でもある。CHATOが目的、成果物、完了条件、確認境界へ整理し、必要なDesk・道具・モデルだけを呼ぶ。Echoが複数AIへ同じ説明を繰り返す運用にはしない。
+
 | Desk | 主な仕事 | 人間の確認 |
 |---|---|---|
 | EDITORIAL | 企画整理、構成、文章の磨き、更新計画 | 声と公開判断 |
@@ -183,6 +185,8 @@ Echoの確認後に行うもの：
 9. 会員運営を開始し、実際の仕事だけ自動化する。
 
 Genspark、NotebookLM、Claude、Claude Codeは、必要な仕事が明確になった時点で補助道具として接続を検討する。複数AIを先に常時連携させず、成果物はGoogle Drive、GitHub、HOLOSのデータ形式のいずれかへ戻す。
+
+具体的なループ、Task Packet、停止条件、外部AIの採用基準は `content/briefs/holos-team-loop-operating-system-01.md` に定める。
 
 ## 10｜NEXT BUILD
 
