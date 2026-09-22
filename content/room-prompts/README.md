@@ -26,5 +26,5 @@ hachicoとECHOが同じ人間のwriting modeであることは内部設計であ
 ## Prompt files
 
 - [hachico room](hachico-room-start.md)
+- [hachico room course correction](hachico-room-course-correction-01.md) — 既存の部屋が無難で平板な文章になった時に貼る
 - [ECHO room](echo-room-start.md)
-
