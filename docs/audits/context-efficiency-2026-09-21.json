@@ -1,0 +1,221 @@
+{
+  "measured_at": "2026-09-21T10:03:48.033828+00:00",
+  "scope": "Available active local session files; excludes archived/cloud sessions",
+  "caveats": [
+    "Usage is sum of last_token_usage after adjacent total-usage deduplication.",
+    "Recorded model context is attribution evidence, not billing confirmation.",
+    "Reasoning tokens are a subset of output; cached input is a subset of input.",
+    "No per-task credit conversion, image token counts or quality A/B are available."
+  ],
+  "measurements": {
+    "unit": "Unicode characters, not tokens or billed credits",
+    "instruction_before": 4984,
+    "instruction_after_including_parent": 3794,
+    "instruction_reduction_percent": 23.9,
+    "replay_full_brief_chars": 22930,
+    "replay_relevant_sections_chars": 6408,
+    "replay_reduction_percent": 72.1,
+    "replay_scope": "language/typography/category lookup only; not a whole-design task",
+    "replay_evidence": "Exact unmodified sections retained, not summaries"
+  },
+  "sessions": [
+    {
+      "session": "rollout-2026-09-15T17-02-19-01a0a416-98db-7c90-aefc-a53f21825fce",
+      "models": {
+        "codex-auto-review": 3
+      },
+      "usage_by_recorded_model": {
+        "codex-auto-review": {
+          "input_tokens": 63581,
+          "cached_input_tokens": 45312,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 330,
+          "reasoning_output_tokens": 119,
+          "total_tokens": 63911
+        }
+      },
+      "deduplicated_usage_events": 3,
+      "tool_calls": 0,
+      "largest_tool_text_chars": [],
+      "malformed_lines": 0
+    },
+    {
+      "session": "rollout-2026-09-15T23-02-02-01a0a55f-ec57-78d2-88df-a317927079ac",
+      "models": {
+        "gpt-6-astra": 1,
+        "gpt-5.6-sol": 1
+      },
+      "usage_by_recorded_model": {
+        "gpt-6-astra": {
+          "input_tokens": 616920,
+          "cached_input_tokens": 564864,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 5780,
+          "reasoning_output_tokens": 318,
+          "total_tokens": 622700
+        },
+        "gpt-5.6-sol": {
+          "input_tokens": 64276,
+          "cached_input_tokens": 19072,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 40,
+          "reasoning_output_tokens": 0,
+          "total_tokens": 64316
+        }
+      },
+      "deduplicated_usage_events": 17,
+      "tool_calls": 15,
+      "largest_tool_text_chars": [
+        32502,
+        19446,
+        4050,
+        3103,
+        2487
+      ],
+      "malformed_lines": 0
+    },
+    {
+      "session": "rollout-2026-09-16T13-06-29-01a0a865-0cdd-7141-9fc0-d0bed9f195ec",
+      "models": {
+        "gpt-6-astra": 1
+      },
+      "usage_by_recorded_model": {
+        "gpt-6-astra": {
+          "input_tokens": 2416359,
+          "cached_input_tokens": 2297600,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 9117,
+          "reasoning_output_tokens": 246,
+          "total_tokens": 2425476
+        }
+      },
+      "deduplicated_usage_events": 29,
+      "tool_calls": 28,
+      "largest_tool_text_chars": [
+        47167,
+        38329,
+        23685,
+        20786,
+        18643
+      ],
+      "malformed_lines": 0
+    },
+    {
+      "session": "rollout-2026-09-17T15-33-13-01a0ae11-beba-7871-8e7a-450a76573b83",
+      "models": {
+        "gpt-6-astra": 14,
+        "gpt-5.6-sol": 23,
+        "gpt-5.6-luna": 16,
+        "gpt-5.6-terra": 32
+      },
+      "usage_by_recorded_model": {
+        "gpt-6-astra": {
+          "input_tokens": 2447148,
+          "cached_input_tokens": 2270336,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 12217,
+          "reasoning_output_tokens": 229,
+          "total_tokens": 2459365
+        },
+        "gpt-5.6-sol": {
+          "input_tokens": 42970300,
+          "cached_input_tokens": 41847680,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 90906,
+          "reasoning_output_tokens": 19905,
+          "total_tokens": 43061206
+        },
+        "gpt-5.6-luna": {
+          "input_tokens": 9240130,
+          "cached_input_tokens": 8273664,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 31573,
+          "reasoning_output_tokens": 3421,
+          "total_tokens": 9271703
+        },
+        "gpt-5.6-terra": {
+          "input_tokens": 18688925,
+          "cached_input_tokens": 18197248,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 96424,
+          "reasoning_output_tokens": 11322,
+          "total_tokens": 18785349
+        }
+      },
+      "deduplicated_usage_events": 539,
+      "tool_calls": 467,
+      "largest_tool_text_chars": [
+        64577,
+        64236,
+        50491,
+        45654,
+        40150
+      ],
+      "malformed_lines": 0
+    },
+    {
+      "session": "rollout-2026-09-18T18-49-39-01a0b3eb-f119-7a42-9f90-a4f6ebb7f00d",
+      "models": {
+        "codex-auto-review": 36
+      },
+      "usage_by_recorded_model": {
+        "codex-auto-review": {
+          "input_tokens": 1520550,
+          "cached_input_tokens": 1449728,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 3191,
+          "reasoning_output_tokens": 951,
+          "total_tokens": 1523741
+        }
+      },
+      "deduplicated_usage_events": 37,
+      "tool_calls": 1,
+      "largest_tool_text_chars": [
+        9144
+      ],
+      "malformed_lines": 0
+    },
+    {
+      "session": "rollout-2026-09-19T18-13-25-01a0b8f1-21da-79e2-ba91-4f115d786e7a",
+      "models": {
+        "codex-auto-review": 2
+      },
+      "usage_by_recorded_model": {
+        "codex-auto-review": {
+          "input_tokens": 74112,
+          "cached_input_tokens": 31232,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 291,
+          "reasoning_output_tokens": 160,
+          "total_tokens": 74403
+        }
+      },
+      "deduplicated_usage_events": 2,
+      "tool_calls": 0,
+      "largest_tool_text_chars": [],
+      "malformed_lines": 0
+    },
+    {
+      "session": "rollout-2026-09-20T21-25-42-01a0bec7-874b-7783-81de-c68adb4009ef",
+      "models": {
+        "codex-auto-review": 30
+      },
+      "usage_by_recorded_model": {
+        "codex-auto-review": {
+          "input_tokens": 4990267,
+          "cached_input_tokens": 4022528,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 3036,
+          "reasoning_output_tokens": 1058,
+          "total_tokens": 4993303
+        }
+      },
+      "deduplicated_usage_events": 31,
+      "tool_calls": 1,
+      "largest_tool_text_chars": [
+        1025
+      ],
+      "malformed_lines": 0
+    }
+  ]
+}
