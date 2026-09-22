@@ -17,6 +17,7 @@
 - Editorial: HOLOS_OPERATING_SYSTEM.md; ideas: HOLOS_ARCHIVE_BACKLOG.md.
 - Services: content/briefs/service-backend-architecture-01.md; distribution: content/briefs/monetization-distribution-01.md. Free Substack, note discovery, PayPal/Ko-fi candidate, low-touch content. External sending/payment/publication requires actual authorization.
 - Team workflow: `content/briefs/holos-team-loop-operating-system-01.md`. CHATO is the single intake and orchestrator. Treat desks as modes before creating persistent agents. Route work by task shape and measured benefit, not vendor claims.
+- Writing rooms: `content/room-prompts/`. Keep hachico and ECHO in separate focused article threads when useful; completed Review Packs return to the CHATO orchestration thread for source, SATORI, build and distribution.
 - Historical details: docs/history/agents-before-efficiency-2026-09-21.md. Consult relevant sections for existing cover behavior, Survivor Tree/Fukushima, SHAMANIC WINDOW or legacy phase constraints. Old freezes do not override the current user.
 
 ## Efficiency without reducing capability

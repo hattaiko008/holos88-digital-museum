@@ -9,6 +9,8 @@
 
 旧サイトはPHASE 04までの比較資料として残し、今後は`prototype/reconstruction-01/`を更新してブラッシュアップします。記事、カテゴリー、画像、本文の細部は、骨格とサンプル記事が揃ってから順に詰めます。
 
+記事制作を別チャットで始める場合は、[WRITING ROOMS](content/room-prompts/README.md)にあるhachico用・ECHO用の立ち上げプロンプトを使います。完成候補はCHATO編集長室へ戻し、事実確認、SATORI'S VIEW、Web、配信をまとめます。
+
 ## PHASE 02 の確認画面
 - HOME: http://127.0.0.1:8088/
 - OBJECT: http://127.0.0.1:8088/objects/survivor-tree.html
