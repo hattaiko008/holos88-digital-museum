@@ -79,6 +79,8 @@ ChatGPTの個人ログインは現在の個人Gmailのまま維持する。
 
 `holos-holon.com`とGoogle Workspaceを再開した後、HOLOSの外部窓口と運営資料を分離する。
 
+Google Workspace、NotebookLM、GeminiのHOLOS用接続先は、`contact@holos-holon.com`へ統一する。Google Workspaceの契約反映とユーザー整理が完了するまでは、she-creates側の接続や旧アカウントを削除しない。NotebookLMのノートブック、Geminiの設定、Drive資料の移行先は、契約反映後に確認する。
+
 初期アドレス案：
 
 - `hello@holos-holon.com` — 一般窓口
