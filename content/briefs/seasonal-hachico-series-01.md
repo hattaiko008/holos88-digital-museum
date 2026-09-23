@@ -3,6 +3,8 @@
 Status: concept locked / sample article pending  
 Date: 2026-09-19
 
+> 2026-09-23：媒体階層、有料拡張、連載ページ、制作フローを含む刊行設計は `hachico-seasonal-publication-system-01.md` へ展開。この文書は初期コンセプトと文体原則の記録として保持する。
+
 ## Series distinction
 
 ### A｜hachicoの日々徒然
@@ -82,4 +84,3 @@ OPEN QUESTION — reader's next window
 ```
 
 図版は古い暦、植物図譜、星図、料理・道具の資料などを候補にする。公開時は作者、年代、所蔵館、権利状態、出典URLをSOURCE DESKで確認する。
-
