@@ -4,6 +4,8 @@ Status: sample master / SOURCE DESK pending
 Voice: hachico  
 Series: 暦の小窓（working title）
 
+> 2026-09-23：追加素材（彼岸／常世／小豆／母の編み物／衣替え／大雨／JAZZ／心身と養生）を含む新しい刊行マスターは `autumn-equinox-publication-master-02.md` へ展開。この稿は初期サンプルとして保存する。
+
 ## 昼と夜は、じつは同じではない。
 
 秋分です。
