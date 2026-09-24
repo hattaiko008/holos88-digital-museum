@@ -7,6 +7,10 @@ const navButtons=[...document.querySelectorAll('[data-view]')];
 const form=document.querySelector('#specimen-form');
 const list=document.querySelector('#specimen-list');
 const count=document.querySelector('#specimen-count');
+const countLabel=document.querySelector('#collection-count-label');
+const filterBar=document.querySelector('.filter-bar');
+const exportButton=document.querySelector('#export-button');
+const clearButton=document.querySelector('#clear-button');
 const stepForm=document.querySelector('#step-form');
 const activeStep=document.querySelector('#active-step');
 const methodShelf=document.querySelector('#method-shelf');
@@ -15,6 +19,7 @@ const thirdQuestionText=document.querySelector('#third-question-text');
 const relationshipForm=document.querySelector('#relationship-form');
 const relationshipMap=document.querySelector('#relationship-map');
 let currentFilter='ALL';
+let seasonSampleOpen=false;
 const thirdQuestions=[
   '正解ではなく実験に変えると、何ができますか。',
   '10年後の自分は、この問題を何と呼ぶでしょう。',
@@ -67,6 +72,11 @@ form.addEventListener('submit',event=>{
 });
 
 function renderSpecimens(){
+  if(seasonSampleOpen){renderSeasonSample();return}
+  filterBar.hidden=false; exportButton.hidden=false; clearButton.hidden=false;
+  countLabel.textContent='点を、この端末に収蔵しています。';
+  list.classList.remove('is-season-sample');
+  document.querySelector('#season-sample-button').innerHTML='VIEW 28-DAY SAMPLE <span>使い続けた見本を見る</span>';
   const all=specimens(); count.textContent=all.length;
   const shown=currentFilter==='ALL'?all:all.filter(item=>item.areas.includes(currentFilter));
   if(!shown.length){list.innerHTML='<p class="empty">まだ標本がありません。<br>今日ひっかかった一言から、置いてみましょう。</p>';return}
@@ -83,6 +93,30 @@ function renderSpecimens(){
     saveRelationships(relationships().filter(link=>link.from!==button.dataset.delete&&link.to!==button.dataset.delete));
   }));
 }
+
+const seasonSampleRows=[
+['01','朝、予定表を見る前にメールを開いた','WORK,TIME','薄曇り'],['02','夕方、肩が重くなってから昼食が遅かったと気づく','BODY,WORK','雨'],['03','母からの頼まれごとへ、考える前に「いいよ」と返した','RELATIONSHIPS,TIME','風'],['04','20分だけ本を読んだ。思ったより長く感じた','TIME,HOME','晴れ'],['05','締切のことを考えながら眠り、夜中に目が覚めた','WORK,BODY','嵐'],['06','コハクとの散歩のあと、頭の中が静かになった','BODY,HOME,TIME','晴れ'],['07','買わなくてもよい日用品を、不安で多めに注文した','MONEY,HOME','薄曇り'],['08','頼まれた資料を、必要以上にきれいに仕上げた','WORK,TIME','雨'],['09','パートナーに話したら、問題が半分の大きさに見えた','RELATIONSHIPS,BODY','晴れ'],['10','何もしない午後を、無駄にした気がした','TIME','薄曇り'],['11','朝の10分を先に取ると、一日が少し自分のものになった','TIME,HOME','晴れ'],['12','人の予定を優先し、自分の用事をまた翌週へ送った','RELATIONSHIPS,TIME','雨'],['13','首の痛み。昨日の作業時間を数えたら九時間だった','BODY,WORK,TIME','嵐'],['14','冷蔵庫の残りもので夕食。買い物へ行かずに済んだ','HOME,MONEY,TIME','晴れ'],['15','仕事を一件断った。罪悪感はあったが夜はよく眠れた','WORK,BODY,TIME','風'],['16','久しぶりの友人と話したあと、作りたいものが浮かんだ','RELATIONSHIPS,WORK','晴れ'],['17','予定のない時間に、結局仕事の続きをしていた','WORK,TIME','薄曇り'],['18','散歩を休んだ。休むと決めたら身体が少し軽くなった','BODY,TIME','雨'],['19','値段だけで選んだものを、結局使わなかった','MONEY,HOME','薄曇り'],['20','20分の読書を三日続けた。続きを読みたくなっている','TIME,HOME','晴れ'],['21','説明しすぎず「今日はできない」とだけ伝えた','RELATIONSHIPS,TIME','風'],['22','締切を一日交渉したら、相手は普通に了承した','WORK,RELATIONSHIPS','晴れ'],['23','朝食を抜いた日は、午後の判断が雑になる','BODY,WORK','雨'],['24','母の編み物を見ながら、急がない手仕事の時間を思った','HOME,TIME,RELATIONSHIPS','晴れ'],['25','数字を確認したら、お金の不安が少し具体的になった','MONEY,WORK','薄曇り'],['26','通知を半日切った。困った連絡は一つもなかった','TIME,WORK','晴れ'],['27','疲れているのに、元気な日の予定を守ろうとしていた','BODY,TIME','嵐'],['28','今月は「時間がない」より「先に渡している」が多かった','TIME,RELATIONSHIPS,WORK','風']
+];
+const seasonSampleSpecimens=seasonSampleRows.map(([day,observation,areas,weather],index)=>({id:`MONTH-${String(index+1).padStart(2,'0')}`,observedOn:`2026-09-${day}`,observation,areas:areas.split(','),weather,place:'',season:'秋'}));
+const seasonSampleLinks=[
+  {from:'MONTH-01',to:'MONTH-05',relation:'同時に起きる'},{from:'MONTH-05',to:'MONTH-13',relation:'原因かもしれない'},{from:'MONTH-13',to:'MONTH-15',relation:'変化した'},{from:'MONTH-03',to:'MONTH-12',relation:'繰り返している'},{from:'MONTH-12',to:'MONTH-21',relation:'変化した'},{from:'MONTH-09',to:'MONTH-16',relation:'支えている'},{from:'MONTH-10',to:'MONTH-11',relation:'反対の知恵'},{from:'MONTH-11',to:'MONTH-20',relation:'育っている'},{from:'MONTH-17',to:'MONTH-26',relation:'変化した'},{from:'MONTH-07',to:'MONTH-25',relation:'確かめた'}
+];
+
+function renderSeasonSample(){
+  count.textContent=seasonSampleSpecimens.length;
+  countLabel.textContent='日分の、見本の記録を展示しています。';
+  filterBar.hidden=true; exportButton.hidden=true; clearButton.hidden=true;
+  list.classList.add('is-season-sample');
+  document.querySelector('#season-sample-button').innerHTML='CLOSE 28-DAY SAMPLE <span>自分の収蔵庫へ戻る</span>';
+  const weatherCounts=seasonSampleSpecimens.reduce((acc,item)=>{acc[item.weather]=(acc[item.weather]||0)+1;return acc},{});
+  const weatherStrip=seasonSampleSpecimens.map(item=>`<span title="${item.observedOn} / ${item.weather}">${weatherMark(item.weather)}</span>`).join('');
+  const weatherSummary=Object.entries(weatherCounts).map(([name,value])=>`<span>${name} ${value}</span>`).join('');
+  const recent=seasonSampleSpecimens.slice(-9).reverse().map(item=>`<article class="specimen-card"><header><span class="id">${item.id}</span><time class="date">${item.observedOn}</time></header><p class="weather">${weatherMark(item.weather)}</p><blockquote>${item.observation}</blockquote><div class="tags">${item.areas.map(area=>`<span>${area}</span>`).join('')}</div></article>`).join('');
+  list.innerHTML=`<section class="season-sample-head"><p class="catalogue">A MONTH IN THE PERSONAL MUSEUM</p><h3>28 DAYS.<br>28 SPECIMENS.</h3><p>毎日の小さな記録が、まだ名前のなかった繰り返しを見せ始めます。</p></section><section class="weather-history"><header><span>BODY WEATHER / 28 DAYS</span><p>${weatherSummary}</p></header><div>${weatherStrip}</div></section>${buildAreaMap(seasonSampleSpecimens,seasonSampleLinks)}<section class="emerging-patterns"><header><span>WHAT EMERGED?</span><h3>THREE PATTERNS</h3></header><div><article><b>01</b><h4>TIME × RELATIONSHIPS</h4><p>「時間がない」日は、時間そのものより、頼まれる前に誰かへ渡している日が多かった。</p></article><article><b>02</b><h4>WORK × BODY</h4><p>締切が重なると肩と眠りへ現れる。仕事の量は、身体の天気より一日遅れて気づかれていた。</p></article><article><b>03</b><h4>SMALL BOUNDARIES</h4><p>断る、交渉する、通知を切る。小さな境界を置いた日は、思っていたほど誰も困らなかった。</p></article></div></section><section class="sample-recent"><header><span>RECENT SPECIMENS</span><h3>最近の標本</h3></header><div>${recent}</div></section>`;
+  wireAreaMap(seasonSampleSpecimens,seasonSampleLinks);
+}
+
+document.querySelector('#season-sample-button').addEventListener('click',()=>{seasonSampleOpen=!seasonSampleOpen;renderSpecimens();document.querySelector('[data-panel="collection"]').scrollIntoView({behavior:'smooth',block:'start'})});
 
 document.querySelectorAll('[data-filter]').forEach(button=>button.addEventListener('click',()=>{
   currentFilter=button.dataset.filter;

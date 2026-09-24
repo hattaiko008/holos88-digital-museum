@@ -191,6 +191,8 @@ HOW / METHOD CARDSは、選んだ領域と方向に対して三つの方法を�
 
 72-HOUR STEPの終了時には、WHAT HAPPENED / BODY WEATHER / NEXT（CONTINUE・CHANGE・CLOSE）を記録する。結果を新しい標本としてCOLLECTIONへ戻し、次の関係線とカテゴリー地図へ反映する。予想と現実の差を本人の観察履歴として残す。
 
+COLLECTIONには、28日間使い続けた状態を体験できる非保存のサンプル展示を置く。BODY WEATHERの変化、領域ごとの比重、複数の関係線、浮かび上がった反復、直近の標本を一続きで見せる。利用者本人の記録とは明確に区別し、見本を開いても端末内データへ追加しない。
+
 ### PHASE 3｜MEMBER WEB APP
 
 Ko-fiまたは独自会員と接続する。

@@ -114,6 +114,30 @@
 .review-grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem}
 .experiment-review button{border:0;background:var(--ink);color:var(--paper);padding:1rem 1.2rem;letter-spacing:.08em;text-align:left;margin-top:2rem}
 .experiment-review button span{color:#c8cbc5}
+.specimen-list.is-season-sample{display:block;border:0;margin-top:3rem}
+.filter-bar[hidden],.collection-actions button[hidden]{display:none}
+.season-sample-head{display:grid;grid-template-columns:1.2fr .8fr;gap:3rem;align-items:end;border-bottom:1px solid var(--line);padding:1rem 0 3rem}
+.season-sample-head .catalogue{grid-column:1/3}
+.season-sample-head h3{font:clamp(3.5rem,7vw,7rem)/.78 var(--display);font-weight:400;letter-spacing:-.05em;margin:1rem 0 0}
+.season-sample-head>p:last-child{font:1rem/1.8 var(--jp);color:var(--jp-muted);margin:0}
+.weather-history{border:1px solid var(--line);margin:3rem 0 2rem}
+.weather-history header{display:flex;justify-content:space-between;padding:1rem 1.2rem;border-bottom:1px solid var(--line);font-size:9px;letter-spacing:.12em}
+.weather-history header p{display:flex;gap:1rem;margin:0;font:11px var(--jp);letter-spacing:0;color:var(--jp-muted)}
+.weather-history>div{display:grid;grid-template-columns:repeat(14,1fr)}
+.weather-history>div span{display:grid;place-items:center;aspect-ratio:1;border-right:1px solid var(--line);border-bottom:1px solid var(--line);font:1.25rem var(--display)}
+.emerging-patterns{border:1px solid var(--line);margin:2rem 0}
+.emerging-patterns>header{padding:1.2rem;border-bottom:1px solid var(--line)}
+.emerging-patterns>header span,.sample-recent>header span{font-size:9px;letter-spacing:.15em;font-weight:700}
+.emerging-patterns>header h3,.sample-recent>header h3{font:2rem var(--display);font-weight:400;margin:.6rem 0 0}
+.emerging-patterns>div{display:grid;grid-template-columns:repeat(3,1fr)}
+.emerging-patterns article{padding:1.3rem;border-right:1px solid var(--line)}
+.emerging-patterns article:last-child{border-right:0}
+.emerging-patterns b{font:1.8rem var(--display);font-weight:400}
+.emerging-patterns h4{font:1.1rem var(--display);font-weight:400;margin:2rem 0 .8rem}
+.emerging-patterns p{font:13px/1.8 var(--jp);color:var(--jp-muted)}
+.sample-recent{margin-top:3rem}
+.sample-recent>header{border-bottom:1px solid var(--line);padding-bottom:1rem}
+.sample-recent>div{display:grid;grid-template-columns:repeat(3,1fr);border-left:1px solid var(--line)}
 .network-figure figcaption{display:grid;grid-template-columns:1fr auto;border-bottom:1px solid var(--line);padding:1rem 1.2rem;gap:.35rem 2rem}
 .network-figure figcaption span{font-size:9px;letter-spacing:.15em;font-weight:700}
 .network-figure figcaption strong{font:1.15rem var(--display);font-weight:400}
@@ -149,4 +173,4 @@
 .relationship-note{grid-column:1/4;font:12px/1.7 var(--jp);color:var(--jp-muted);margin:1rem 0 0}
 .relationship-card>button{grid-column:3;border:0;background:transparent;justify-self:end;font-size:9px;margin-top:1rem}
 @media(max-width:780px){.mode-nav{grid-template-columns:repeat(2,1fr)}.voice-grid{grid-template-columns:1fr}}
-@media(max-width:780px){.relationship-form{grid-template-columns:1fr}.relationship-form .wide,.relationship-form button{grid-column:1}.relationship-card{grid-template-columns:1fr}.relationship-line{min-height:70px;flex-direction:column}.relationship-line i{width:1px}.relationship-note,.relationship-card>button{grid-column:1}.network-figure figcaption{grid-template-columns:1fr}.network-figure figcaption small{grid-column:1}.network-figure svg{min-height:280px}.area-map header{display:block}.area-map-controls{margin-top:1rem}.area-map-controls button{flex:1}.area-map svg{min-height:290px}.direction-grid{grid-template-columns:1fr 1fr}.direction-grid label:nth-child(3n){border-right:1px solid var(--line)}.direction-grid label:nth-child(2n){border-right:0}.direction-focus{display:block}.direction-focus button{width:100%;margin-top:1rem}.sample-direction-note{display:block}.sample-direction-note button{width:100%;margin-top:1rem}.method-shelf>header{display:block}.method-shelf>header small{display:block;margin-top:.7rem}.method-grid{grid-template-columns:1fr}.method-grid article{border-right:0;border-bottom:1px solid var(--line);min-height:450px}.method-grid article:last-child{border-bottom:0}.museum-window{grid-template-columns:1fr;gap:1rem}.review-grid{grid-template-columns:1fr;gap:0}}
+@media(max-width:780px){.relationship-form{grid-template-columns:1fr}.relationship-form .wide,.relationship-form button{grid-column:1}.relationship-card{grid-template-columns:1fr}.relationship-line{min-height:70px;flex-direction:column}.relationship-line i{width:1px}.relationship-note,.relationship-card>button{grid-column:1}.network-figure figcaption{grid-template-columns:1fr}.network-figure figcaption small{grid-column:1}.network-figure svg{min-height:280px}.area-map header{display:block}.area-map-controls{margin-top:1rem}.area-map-controls button{flex:1}.area-map svg{min-height:290px}.direction-grid{grid-template-columns:1fr 1fr}.direction-grid label:nth-child(3n){border-right:1px solid var(--line)}.direction-grid label:nth-child(2n){border-right:0}.direction-focus{display:block}.direction-focus button{width:100%;margin-top:1rem}.sample-direction-note{display:block}.sample-direction-note button{width:100%;margin-top:1rem}.method-shelf>header{display:block}.method-shelf>header small{display:block;margin-top:.7rem}.method-grid{grid-template-columns:1fr}.method-grid article{border-right:0;border-bottom:1px solid var(--line);min-height:450px}.method-grid article:last-child{border-bottom:0}.museum-window{grid-template-columns:1fr;gap:1rem}.review-grid{grid-template-columns:1fr;gap:0}.season-sample-head{display:block}.season-sample-head .catalogue{grid-column:auto}.season-sample-head>p:last-child{margin-top:2rem}.weather-history header{display:block}.weather-history header p{flex-wrap:wrap;margin-top:.7rem}.weather-history>div{grid-template-columns:repeat(7,1fr)}.emerging-patterns>div,.sample-recent>div{grid-template-columns:1fr}.emerging-patterns article{border-right:0;border-bottom:1px solid var(--line)}}

@@ -90,7 +90,7 @@
       <div class="view-heading collection-heading">
         <p class="catalogue">PRIVATE COLLECTION</p>
         <h2 id="collection-title">YOUR<br>SPECIMENS</h2>
-        <p><strong id="specimen-count">0</strong>点を、この端末に収蔵しています。</p>
+        <p><strong id="specimen-count">0</strong><span id="collection-count-label">点を、この端末に収蔵しています。</span></p>
       </div>
       <div class="filter-bar" role="group" aria-label="領域で絞り込む">
         <button type="button" data-filter="ALL" aria-pressed="true">ALL</button>
@@ -103,6 +103,7 @@
       </div>
       <div id="specimen-list" class="specimen-list" aria-live="polite"></div>
       <div class="collection-actions">
+        <button type="button" id="season-sample-button" class="quiet">VIEW 28-DAY SAMPLE <span>使い続けた見本を見る</span></button>
         <button type="button" id="export-button">EXPORT NOTES <span>記録を書き出す</span></button>
         <button type="button" id="clear-button" class="quiet">CLEAR ALL <span>すべて削除</span></button>
       </div>
