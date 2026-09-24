@@ -8,6 +8,9 @@
 .intro-note{font-size:1.04rem;color:var(--jp-muted)}
 .intro-note p:first-child{font-size:1.3rem;color:var(--ink)}
 .intro-note .ja-title{font-size:1.04rem;color:#42443f}
+.specimen-meaning{border-top:1px solid var(--line);padding-top:1rem;margin-top:2rem}
+.specimen-meaning b{display:block;font:10px var(--sans);letter-spacing:.12em;color:var(--ink);margin-bottom:.5rem}
+.specimen-meaning span{display:block;font:12px/1.8 var(--jp);color:var(--jp-muted)}
 .mode-nav{grid-template-columns:repeat(5,1fr)}
 .mode-nav button{font-size:.83rem}
 .mode-nav button span{font-size:1.85rem}

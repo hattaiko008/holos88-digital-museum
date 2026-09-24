@@ -103,7 +103,7 @@ function renderSpecimens(){
   if(seasonSampleOpen){renderSeasonSample();return}
   filterBar.hidden=false; exportButton.hidden=false; clearButton.hidden=false;
   document.querySelector('.collection-view-bar').hidden=false;
-  countLabel.textContent='点を、この端末に収蔵しています。';
+  countLabel.textContent='件の記録が、この端末に残っています。';
   list.classList.remove('is-season-sample');
   document.querySelector('#season-sample-button').innerHTML='VIEW 28-DAY SAMPLE <span>使い続けた見本を見る</span>';
   const all=specimens(); count.textContent=all.length;
@@ -125,7 +125,7 @@ function renderSpecimens(){
   </article>`).join('')+buildMedicine(shown);
   }
   list.querySelectorAll('[data-delete]').forEach(button=>button.addEventListener('click',()=>{
-    const next=specimens().filter(item=>item.id!==button.dataset.delete); saveSpecimens(next); renderSpecimens(); showToast('標本を削除しました。');
+    const next=specimens().filter(item=>item.id!==button.dataset.delete); saveSpecimens(next); renderSpecimens(); showToast('記録を削除しました。');
     saveRelationships(relationships().filter(link=>link.from!==button.dataset.delete&&link.to!==button.dataset.delete));
   }));
 }
@@ -160,7 +160,7 @@ function renderSeasonSample(){
   filterBar.hidden=true; exportButton.hidden=true; clearButton.hidden=true;
   document.querySelector('.collection-view-bar').hidden=true;
   list.classList.remove('is-diary-log'); list.classList.add('is-season-sample');
-  document.querySelector('#season-sample-button').innerHTML='CLOSE 28-DAY SAMPLE <span>自分の収蔵庫へ戻る</span>';
+  document.querySelector('#season-sample-button').innerHTML='CLOSE 28-DAY SAMPLE <span>自分の日記と記録へ戻る</span>';
   const weatherCounts=seasonSampleSpecimens.reduce((acc,item)=>{acc[item.weather]=(acc[item.weather]||0)+1;return acc},{});
   const weatherStrip=seasonSampleSpecimens.map(item=>`<span title="${item.observedOn} / ${item.weather}">${weatherMark(item.weather)}</span>`).join('');
   const weatherSummary=Object.entries(weatherCounts).map(([name,value])=>`<span>${name} ${value}</span>`).join('');
@@ -185,7 +185,7 @@ document.querySelectorAll('[data-filter]').forEach(button=>button.addEventListen
 
 document.querySelector('#clear-button').addEventListener('click',()=>{
   if(!specimens().length)return;
-  if(window.confirm('この端末に保存した標本と関係線を、すべて削除しますか？')){localStorage.removeItem(STORAGE_KEY);localStorage.removeItem(RELATIONSHIP_KEY);renderSpecimens();showToast('すべて削除しました。')}
+  if(window.confirm('この端末に保存した記録とつながりを、すべて削除しますか？')){localStorage.removeItem(STORAGE_KEY);localStorage.removeItem(RELATIONSHIP_KEY);renderSpecimens();showToast('すべて削除しました。')}
 });
 
 function specimenLabel(item){
@@ -216,7 +216,7 @@ function buildNetwork(all,links){
     const snippet=raw.length>15?`${raw.slice(0,15)}…`:raw;
     return `<g class="map-node${id===center?' is-center':''}" transform="translate(${p.x} ${p.y})"><circle r="${id===center?72:58}"></circle><text class="node-id" y="-10">${escapeHtml(id)}</text><text class="node-label" y="14">${escapeHtml(snippet)}</text><title>${escapeHtml(raw)}</title></g>`;
   }).join('');
-  return `<figure class="network-figure"><figcaption><span>RELATIONSHIP NETWORK</span><strong>${ids.length} specimens / ${links.length} connections</strong><small>もっとも多く結ばれた標本を、中心に表示しています。</small></figcaption><svg viewBox="0 0 900 520" role="img" aria-label="収蔵した標本の関係地図"><defs><marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z"></path></marker></defs>${relationLines}${nodes}</svg></figure>`;
+  return `<figure class="network-figure"><figcaption><span>RELATIONSHIP NETWORK</span><strong>${ids.length} records / ${links.length} connections</strong><small>いちばん多くつながった記録を、中心に置いています。</small></figcaption><svg viewBox="0 0 900 520" role="img" aria-label="保存した記録のつながりを示す地図"><defs><marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z"></path></marker></defs>${relationLines}${nodes}</svg></figure>`;
 }
 
 const sampleSpecimens=[
@@ -362,8 +362,8 @@ function renderRelationships(){
   const all=specimens();
   const selects=[relationshipForm.elements.from,relationshipForm.elements.to];
   const options=all.map(item=>`<option value="${escapeHtml(item.id)}">${escapeHtml(specimenLabel(item))}</option>`).join('');
-  selects.forEach((select,index)=>{const previous=select.value;select.innerHTML=`<option value="">標本を選ぶ</option>${options}`;select.value=previous;if(index===1&&!select.value&&all[1])select.value=all[1].id});
-  if(all.length<2){relationshipMap.innerHTML='<div class="empty-map"><p>関係を結ぶには、二つ以上の標本が必要です。<br>まずFIELD NOTEへ、小さな記録を置いてみましょう。</p><button type="button" id="show-sample-map">VIEW SAMPLE MAP <span>見本の関係地図を見る</span></button></div>';wireSampleButton();return}
+  selects.forEach((select,index)=>{const previous=select.value;select.innerHTML=`<option value="">記録を選ぶ</option>${options}`;select.value=previous;if(index===1&&!select.value&&all[1])select.value=all[1].id});
+  if(all.length<2){relationshipMap.innerHTML='<div class="empty-map"><p>つながりを見るには、二つ以上の記録が必要です。<br>まずFIELD NOTEへ、今日の言葉を置いてみましょう。</p><button type="button" id="show-sample-map">VIEW SAMPLE MAP <span>つながりの見本を見る</span></button></div>';wireSampleButton();return}
   const byId=Object.fromEntries(all.map(item=>[item.id,item]));
   const links=relationships().filter(link=>byId[link.from]&&byId[link.to]);
   if(!links.length){relationshipMap.innerHTML='<div class="empty-map"><p>まだ関係線はありません。<br>正解を決めず、「そう見える」を一本だけ結んでみましょう。</p><button type="button" id="show-sample-map">VIEW SAMPLE MAP <span>見本の関係地図を見る</span></button></div>';wireSampleButton();return}
@@ -382,14 +382,14 @@ function renderRelationships(){
 relationshipForm.addEventListener('submit',event=>{
   event.preventDefault(); const data=new FormData(relationshipForm);
   const from=data.get('from'),to=data.get('to');
-  if(from===to){showToast('別の二つの標本を選んでください。');return}
+  if(from===to){showToast('別の二つの記録を選んでください。');return}
   const all=relationships();
   all.unshift({id:`RL-${String(Date.now()).slice(-8)}`,from,to,relation:data.get('relation'),note:data.get('note').trim(),createdAt:new Date().toISOString()});
-  saveRelationships(all); relationshipForm.elements.note.value=''; renderRelationships(); showToast('標本のあいだに、関係線を結びました。');
+  saveRelationships(all); relationshipForm.elements.note.value=''; renderRelationships(); showToast('二つの記録を、線でつなぎました。');
 });
 
 document.querySelector('#export-button').addEventListener('click',()=>{
-  const all=specimens(); if(!all.length){showToast('書き出す標本がありません。');return}
+  const all=specimens(); if(!all.length){showToast('書き出す記録がありません。');return}
   const lines=['# LIFE SPECIMEN EXPORT','',...all.flatMap(item=>[
     `## ${item.observedOn} / ${item.id}`,'',`- SEASON: ${item.season}`,`- PLACE: ${item.place||'—'}`,`- BODY WEATHER: ${item.weather}`,`- LIFE AREAS: ${item.areas.join(', ')||'UNCLASSIFIED'}`,'',item.observation,''
   ])];
@@ -407,13 +407,13 @@ function renderStep(){
   const step=parse(STEP_KEY,null);
   if(!step){activeStep.innerHTML='';return}
   const when=new Date(step.when); const valid=!Number.isNaN(when.valueOf());
-  activeStep.innerHTML=`<article class="experiment"><p class="catalogue">ACTIVE EXPERIMENT</p><p class="due">${valid?when.toLocaleString('ja-JP',{month:'short',day:'numeric',hour:'2-digit',minute:'2-digit'}):'日時未設定'}</p><h3>${escapeHtml(step.action)}</h3>${step.question?`<p>QUESTION / ${escapeHtml(step.question)}</p>`:''}${step.observe?`<p>OBSERVE / ${escapeHtml(step.observe)}</p>`:''}</article><form id="experiment-review" class="experiment-review"><p class="catalogue">RETURN / EXPERIMENT TO SPECIMEN</p><h3>WHAT DID REALITY SAY?</h3><p class="review-lead">現実は、どんな返事をしましたか。</p><label>WHAT HAPPENED<span>実際に起きたこと</span><textarea name="result" rows="4" maxlength="600" required></textarea></label><div class="review-grid"><label>BODY WEATHER<span>実験後の心身</span><select name="weather"><option>晴れ</option><option>薄曇り</option><option>雨</option><option>風</option><option>嵐</option><option selected>わからない</option></select></label><label>NEXT<span>次はどうしますか</span><select name="next"><option value="CONTINUE">CONTINUE｜続ける</option><option value="CHANGE">CHANGE｜変える</option><option value="CLOSE">CLOSE｜終える</option></select></label></div><label>ONE LINE<span>次の自分へ残す一言・任意</span><input name="note" type="text" maxlength="180"></label><button type="submit">RETURN TO COLLECTION <span>結果を標本として収蔵する</span></button></form>`;
+  activeStep.innerHTML=`<article class="experiment"><p class="catalogue">ACTIVE EXPERIMENT</p><p class="due">${valid?when.toLocaleString('ja-JP',{month:'short',day:'numeric',hour:'2-digit',minute:'2-digit'}):'日時未設定'}</p><h3>${escapeHtml(step.action)}</h3>${step.question?`<p>QUESTION / ${escapeHtml(step.question)}</p>`:''}${step.observe?`<p>OBSERVE / ${escapeHtml(step.observe)}</p>`:''}</article><form id="experiment-review" class="experiment-review"><p class="catalogue">RETURN / EXPERIMENT TO COLLECTION</p><h3>WHAT DID REALITY SAY?</h3><p class="review-lead">現実は、どんな返事をしましたか。</p><label>WHAT HAPPENED<span>実際に起きたこと</span><textarea name="result" rows="4" maxlength="600" required></textarea></label><div class="review-grid"><label>BODY WEATHER<span>実験後の心身</span><select name="weather"><option>晴れ</option><option>薄曇り</option><option>雨</option><option>風</option><option>嵐</option><option selected>わからない</option></select></label><label>NEXT<span>次はどうしますか</span><select name="next"><option value="CONTINUE">CONTINUE｜続ける</option><option value="CHANGE">CHANGE｜変える</option><option value="CLOSE">CLOSE｜終える</option></select></label></div><label>ONE LINE<span>次の自分へ残す一言・任意</span><input name="note" type="text" maxlength="180"></label><button type="submit">RETURN TO COLLECTION <span>結果を記録に残す</span></button></form>`;
   document.querySelector('#experiment-review').addEventListener('submit',event=>{
     event.preventDefault(); const data=new FormData(event.currentTarget); const all=specimens();
     const next=data.get('next'); const result=data.get('result').trim(); const note=data.get('note').trim();
     const observation=[`EXPERIMENT｜${step.action}`,`WHAT HAPPENED｜${result}`,`NEXT｜${next}`,note&&`ONE LINE｜${note}`].filter(Boolean).join('\n\n');
     all.unshift({id:`EX-${String(Date.now()).slice(-8)}`,createdAt:new Date().toISOString(),observedOn:new Date().toISOString().slice(0,10),place:'',season:'実験',weather:data.get('weather'),observation,areas:step.focusArea?[step.focusArea]:[]});
-    saveSpecimens(all); localStorage.removeItem(STEP_KEY); stepForm.reset(); renderStep(); showToast('現実からの返事を、標本として収蔵しました。'); showPanel('collection');
+    saveSpecimens(all); localStorage.removeItem(STEP_KEY); stepForm.reset(); renderStep(); showToast('現実からの返事を、記録に残しました。'); showPanel('collection');
   });
 }
 
@@ -438,7 +438,7 @@ voicesForm.addEventListener('submit',event=>{
   ].filter(Boolean).join('\n\n');
   all.unshift({id:`TV-${String(Date.now()).slice(-8)}`,createdAt:new Date().toISOString(),observedOn:new Date().toISOString().slice(0,10),place:'',season:'未分類',weather:'わからない',observation,areas:[]});
   saveSpecimens(all); voicesForm.reset(); thirdQuestionText.textContent=thirdQuestions[0];
-  showToast('三つの声を標本として残しました。'); showPanel('collection');
+  showToast('三つの声を、記録に残しました。'); showPanel('collection');
 });
 
 renderSpecimens(); renderStep();
