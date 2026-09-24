@@ -228,6 +228,8 @@ Ko-fiまたは独自会員と接続する。
 
 ## 収益構造
 
+詳細：`business/life-school/payment-content-ladder-01.md`
+
 - 無料：FIELD NOTE、月5件まで
 - 買い切り：SECOND SEASON KITと基本機能
 - Membership：記録数、季節のワーク、関係地図
