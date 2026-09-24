@@ -1,5 +1,8 @@
 # KO-FI LISTING 03｜THE THIRD VOICE
 
+状態：商品本文初稿 v0.1完成／組版前
+本文：`content/products/third-voice-workbook-01.md`
+
 ## 商品名
 
 **THE THIRD VOICE｜もう一つの視点を招くワークブック**  
