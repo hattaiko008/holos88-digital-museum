@@ -6,6 +6,8 @@
 **WRITTEN BY ECHO**  
 **STATUS / DEVELOPMENT DRAFT**
 
+---
+
 1968年、知識へ入る二つの扉が開いた。
 
 一つは紙だった。Whole Earth Catalogは、本、道具、農、建築、通信、教育を大きな紙面へ並べ、読者が自分で入口を選べるようにした。

@@ -6,6 +6,8 @@
 **WRITTEN BY ECHO**  
 **STATUS / DEVELOPMENT DRAFT**
 
+---
+
 1966年1月、サンフランシスコ。音楽を聴きに来たはずの人は、観客席へ静かに収まることができなかった。
 
 音、テープ、電子楽器、投影、ストロボ、踊る身体。Grateful DeadやBig Brother and the Holding Company、Merry Pranksters、San Francisco Tape Music Center周辺の人々が、同じ環境へ流れ込んだ。舞台の上で完成品を見せる催しというより、会場にいる人間も装置も光も、その場で何が起きるかを変えてしまう実験だった。

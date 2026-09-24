@@ -3,11 +3,11 @@ const edoMap={date:'1678',title:'ZŌHO EDO ŌEZU, EIRI / 増補江戸大絵図 �
 const sfRadio={title:'SOMAFM / GROOVE SALAD',stream:'https://ice2.somafm.com/groovesalad-128-mp3',note:'San Francisco発の独立系インターネットラジオ。HOLOS内では公式公開ストリームを直接再生します。',source:'https://somafm.com/groovesalad/'};
 
 const places=[
-  {id:'trips',year:'1966',title:'TRIPS FESTIVAL',location:'SAN FRANCISCO / UNITED STATES',lon:-122.4194,lat:37.7749,note:'音、光、電子楽器、踊る身体。のちに別々の文化と呼ばれるものが、三夜だけ同じ空間にいた。',link:'../articles/whole-earth-catalog.html',map:sfMap,radio:sfRadio},
+  {id:'trips',year:'1966',title:'TRIPS FESTIVAL',location:'SAN FRANCISCO / UNITED STATES',lon:-122.4194,lat:37.7749,note:'音、光、電子楽器、踊る身体。のちに別々の文化と呼ばれるものが、三夜だけ同じ空間にいた。',link:'../articles/three-nights-before-the-summer-of-love.html',map:sfMap,radio:sfRadio},
   {id:'catalog',year:'1968',title:'WHOLE EARTH CATALOG',location:'MENLO PARK / UNITED STATES',lon:-122.1817,lat:37.4529,note:'離れて暮らす人々へ、本、農具、建築、思想を届けた紙のネットワーク。',link:'../articles/whole-earth-catalog.html',map:sfMap,radio:sfRadio},
-  {id:'demo',year:'1968',title:'THE MOTHER OF ALL DEMOS',location:'SAN FRANCISCO / UNITED STATES',lon:-122.4075,lat:37.7877,note:'マウス、ハイパーテキスト、共同編集。知識へ触れる新しい身体が、公開の舞台に現れた。',link:'../articles/cabinet.html',map:sfMap,radio:sfRadio},
-  {id:'well',year:'1985',title:'THE WELL',location:'SAUSALITO / UNITED STATES',lon:-122.4853,lat:37.8591,note:'Catalogの読者と書き手が、コンピュータの中で話し始めた。紙の共同体は、終わらない会話へ。',link:'../articles/whole-earth-catalog.html',map:sfMap,radio:sfRadio},
-  {id:'wired',year:'1993',title:'WIRED',location:'SAN FRANCISCO / UNITED STATES',lon:-122.401,lat:37.797,note:'ネットワーク、自由、未来。カウンターカルチャーの語彙が、デジタル産業の言葉へ翻訳されていく。',link:'../articles/whole-earth-catalog.html',map:sfMap,radio:sfRadio},
+  {id:'demo',year:'1968',title:'THE MOTHER OF ALL DEMOS',location:'SAN FRANCISCO / UNITED STATES',lon:-122.4075,lat:37.7877,note:'マウス、ハイパーテキスト、共同編集。知識へ触れる新しい身体が、公開の舞台に現れた。',link:'../articles/two-doors-opened-in-1968.html',map:sfMap,radio:sfRadio},
+  {id:'well',year:'1985',title:'THE WELL',location:'SAUSALITO / UNITED STATES',lon:-122.4853,lat:37.8591,note:'Catalogの読者と書き手が、コンピュータの中で話し始めた。紙の共同体は、終わらない会話へ。',link:'../articles/from-commune-to-platform.html',map:sfMap,radio:sfRadio},
+  {id:'wired',year:'1993',title:'WIRED',location:'SAN FRANCISCO / UNITED STATES',lon:-122.401,lat:37.797,note:'ネットワーク、自由、未来。カウンターカルチャーの語彙が、デジタル産業の言葉へ翻訳されていく。',link:'../articles/the-freedom-that-fit-the-market.html',map:sfMap,radio:sfRadio},
   {id:'longnow',year:'1996',title:'THE LONG NOW',location:'SAN FRANCISCO / UNITED STATES',lon:-122.4477,lat:37.806,note:'速くなり続ける技術文化の中へ、1万年という遅い時間を置く。',link:'../articles/duration.html',map:sfMap,radio:sfRadio},
   {id:'edo',year:'1678',title:'EDO ŌEZU',location:'EDO / PRESENT-DAY TOKYO',lon:139.6917,lat:35.6895,note:'城、寺社、土地の所有者。現在の東京とは違う向きと縮尺で、江戸という都市が描かれている。',link:'../articles/wadokei.html',map:edoMap},
   {id:'whole',year:'NOW',title:'WHOLE EARTH',location:'EVERYWHERE / この地球全体',lon:25,lat:5,note:'一つの中心ではなく、無数の場所から見る。次に加わるピンは、あなたが暮らしている場所かもしれない。',link:'../articles/between-the-windows.html'}
