@@ -1,0 +1,34 @@
+:root{--jp-muted:#5d605b}
+.app-name strong{font-size:1.15rem}
+.app-name span{font-size:12px;color:var(--jp-muted)}
+.privacy{font-size:10px;color:var(--jp-muted)}
+.catalogue{font-size:10px}
+.intro-note{font-size:1.04rem;color:var(--jp-muted)}
+.intro-note p:first-child{font-size:1.3rem;color:var(--ink)}
+.intro-note .ja-title{font-size:1.04rem;color:#42443f}
+.mode-nav{grid-template-columns:repeat(4,1fr)}
+.mode-nav button{font-size:.83rem}
+.mode-nav button span{font-size:1.85rem}
+.mode-nav button small{font-size:12px;color:var(--jp-muted)}
+.mode-nav button[aria-pressed=true] small{color:#c8cbc5}
+.view-heading>p:last-child{font-size:1.16rem;color:var(--jp-muted)}
+.specimen-form label,.step-form label,.voices-form label{font-size:10px}
+.specimen-form label>span,.step-form label>span,.voices-form label>span,legend span,.form-end button span,.step-form button span,.collection-actions button span{font-size:12px;color:var(--jp-muted)}
+.weather-options label{font-size:12px;color:var(--jp-muted)}
+.area-options small{font-size:12px;color:var(--jp-muted)}
+.form-end p{font-size:12px;color:var(--jp-muted)}
+.third-question button span,.voices-form>button span{font-size:12px}
+.third-question .catalogue,.third-question blockquote{color:var(--paper)}
+.voices-form{border-top:1px solid;padding-top:2rem}
+.voices-form label{display:block;letter-spacing:.11em;font-weight:700}
+.voices-form label>span{display:block;font-family:var(--jp);letter-spacing:.04em;margin:.35rem 0 .8rem}
+.voice-grid{display:grid;grid-template-columns:repeat(3,1fr);margin:3rem 0;border-left:1px solid var(--line);border-top:1px solid var(--line)}
+.voice-grid label{padding:1.2rem;border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
+.voice-grid b{font:2rem var(--display);font-weight:400}
+.voice-grid textarea{min-height:180px}
+.third-question{background:var(--ink);color:var(--paper);padding:2rem;margin:3rem 0}
+.third-question blockquote{font:1.55rem/1.65 var(--jp);margin:2.5rem 0}
+.third-question button,.voices-form>button{border:0;background:var(--paper);color:var(--ink);padding:1rem 1.2rem;letter-spacing:.08em}
+.third-question button span,.voices-form>button span{display:block;font:10px var(--jp);margin-top:.3rem}
+.voices-form>button{background:var(--ink);color:var(--paper);margin-top:2rem}
+@media(max-width:780px){.mode-nav{grid-template-columns:repeat(2,1fr)}.voice-grid{grid-template-columns:1fr}}

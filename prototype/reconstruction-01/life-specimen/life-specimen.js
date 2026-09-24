@@ -7,7 +7,17 @@ const list=document.querySelector('#specimen-list');
 const count=document.querySelector('#specimen-count');
 const stepForm=document.querySelector('#step-form');
 const activeStep=document.querySelector('#active-step');
+const voicesForm=document.querySelector('#voices-form');
+const thirdQuestionText=document.querySelector('#third-question-text');
 let currentFilter='ALL';
+const thirdQuestions=[
+  '正解ではなく実験に変えると、何ができますか。',
+  '10年後の自分は、この問題を何と呼ぶでしょう。',
+  '誰にも説明しなくてよいなら、何を残しますか。',
+  '成功と引き換えに失うものは何ですか。',
+  '反対の選択にある知恵は何ですか。',
+  '人間以外の生き物なら、何を急がないでしょう。'
+];
 
 const parse=(key,fallback)=>{try{return JSON.parse(localStorage.getItem(key))??fallback}catch{return fallback}};
 const specimens=()=>parse(STORAGE_KEY,[]);
@@ -96,5 +106,29 @@ function renderStep(){
   activeStep.innerHTML=`<article class="experiment"><p class="catalogue">ACTIVE EXPERIMENT</p><p class="due">${valid?when.toLocaleString('ja-JP',{month:'short',day:'numeric',hour:'2-digit',minute:'2-digit'}):'日時未設定'}</p><h3>${escapeHtml(step.action)}</h3>${step.question?`<p>QUESTION / ${escapeHtml(step.question)}</p>`:''}${step.observe?`<p>OBSERVE / ${escapeHtml(step.observe)}</p>`:''}<button type="button" id="complete-step">CLOSE / 実験を閉じる</button></article>`;
   document.querySelector('#complete-step').addEventListener('click',()=>{localStorage.removeItem(STEP_KEY);renderStep();showToast('実験を閉じました。気づきを標本に残してみましょう。')});
 }
+
+document.querySelector('#another-question').addEventListener('click',()=>{
+  const current=thirdQuestionText.textContent;
+  const available=thirdQuestions.filter(question=>question!==current);
+  thirdQuestionText.textContent=available[Math.floor(Math.random()*available.length)];
+});
+
+voicesForm.addEventListener('submit',event=>{
+  event.preventDefault();
+  const data=new FormData(voicesForm); const all=specimens();
+  const topic=data.get('topic').trim(); const fact=data.get('fact').trim(); const story=data.get('story').trim();
+  const possibility=data.get('possibility').trim(); const hypothesis=data.get('hypothesis').trim();
+  const observation=[
+    `QUESTION｜${topic}`,
+    fact&&`FACT｜${fact}`,
+    story&&`STORY｜${story}`,
+    possibility&&`POSSIBILITY｜${possibility}`,
+    `THIRD QUESTION｜${thirdQuestionText.textContent}`,
+    hypothesis&&`HYPOTHESIS｜${hypothesis}`
+  ].filter(Boolean).join('\n\n');
+  all.unshift({id:`TV-${String(Date.now()).slice(-8)}`,createdAt:new Date().toISOString(),observedOn:new Date().toISOString().slice(0,10),place:'',season:'未分類',weather:'わからない',observation,areas:[]});
+  saveSpecimens(all); voicesForm.reset(); thirdQuestionText.textContent=thirdQuestions[0];
+  showToast('三つの声を標本として残しました。'); showPanel('collection');
+});
 
 renderSpecimens(); renderStep();

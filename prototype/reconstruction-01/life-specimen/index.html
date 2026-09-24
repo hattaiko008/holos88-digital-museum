@@ -6,6 +6,7 @@
   <meta name="description" content="暮らしの標本を記録し、次の一季節を考えるLIFE SPECIMEN試作版。">
   <title>LIFE SPECIMEN — SECOND SEASON</title>
   <link rel="stylesheet" href="./life-specimen.css">
+  <link rel="stylesheet" href="./life-specimen-v2.css">
 </head>
 <body>
   <a class="skip" href="#main">記録フォームへ</a>
@@ -31,7 +32,8 @@
     <nav class="mode-nav" aria-label="記録メニュー">
       <button type="button" data-view="observe" aria-pressed="true"><span>01</span>FIELD NOTE<small>観察する</small></button>
       <button type="button" data-view="collection" aria-pressed="false"><span>02</span>COLLECTION<small>収蔵を見る</small></button>
-      <button type="button" data-view="step" aria-pressed="false"><span>03</span>72-HOUR STEP<small>小さく試す</small></button>
+      <button type="button" data-view="voices" aria-pressed="false"><span>03</span>THREE VOICES<small>見方をずらす</small></button>
+      <button type="button" data-view="step" aria-pressed="false"><span>04</span>72-HOUR STEP<small>小さく試す</small></button>
     </nav>
 
     <section class="view is-active" data-panel="observe" aria-labelledby="observe-title">
@@ -103,6 +105,29 @@
         <button type="button" id="export-button">EXPORT NOTES <span>記録を書き出す</span></button>
         <button type="button" id="clear-button" class="quiet">CLEAR ALL <span>すべて削除</span></button>
       </div>
+    </section>
+
+    <section class="view" data-panel="voices" aria-labelledby="voices-title" hidden>
+      <div class="view-heading">
+        <p class="catalogue">FACT / STORY / POSSIBILITY</p>
+        <h2 id="voices-title">OPEN<br>ANOTHER<br>WINDOW.</h2>
+        <p>いつもの説明へ、小さな窓を開ける。</p>
+      </div>
+      <form id="voices-form" class="voices-form">
+        <label class="wide">THE QUESTION<span>いま考えたいこと</span><textarea name="topic" rows="2" maxlength="240" required></textarea></label>
+        <div class="voice-grid">
+          <label><b>FACT</b><span>確認できること</span><textarea name="fact" rows="5" maxlength="500" placeholder="数字、期限、実際に起きたこと"></textarea></label>
+          <label><b>STORY</b><span>自分が意味づけていること</span><textarea name="story" rows="5" maxlength="500" placeholder="今さら遅い、きっと失敗する…"></textarea></label>
+          <label><b>POSSIBILITY</b><span>まだ確かめていないこと</span><textarea name="possibility" rows="5" maxlength="500" placeholder="小さくなら試せるかもしれない…"></textarea></label>
+        </div>
+        <div class="third-question">
+          <p class="catalogue">THE THIRD QUESTION / 第三の問い</p>
+          <blockquote id="third-question-text">正解ではなく実験に変えると、何ができますか。</blockquote>
+          <button type="button" id="another-question">ANOTHER QUESTION <span>別の窓を開く</span></button>
+        </div>
+        <label class="wide">A POSSIBILITY<span>いま見えてきた仮説</span><textarea name="hypothesis" rows="3" maxlength="400" placeholder="私は、＿＿という可能性を小さく確かめてみる。"></textarea></label>
+        <button type="submit">COLLECT THIS VIEW <span>この見方を標本として残す</span></button>
+      </form>
     </section>
 
     <section class="view" data-panel="step" aria-labelledby="step-title" hidden>
