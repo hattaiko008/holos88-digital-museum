@@ -67,3 +67,4 @@
 @media(max-width:760px){.michikusa-garden:before{opacity:.23}}
 .hachico-copy .title-star{display:inline-block;font:400 .3em/1 var(--sans);vertical-align:.38em;letter-spacing:0;margin:0 .16em}
 .hachico-copy .title-star{font-size:.72em;vertical-align:.08em;margin:0 .08em}
+.hachico-copy .title-star{font-family:var(--serif);font-weight:400;font-style:italic;transform:skewX(-10deg) scaleX(.92);transform-origin:center;opacity:.9}
