@@ -185,6 +185,8 @@ RELATIONSHIP MAPは、一つの標本へ複数の関係線を結べる。家族�
 
 カテゴリー地図では、WORK / BODY / RELATIONSHIPS / HOME / MONEY / TIMEを円で表示する。円の大きさはATTENTION（記録への登場回数）とCONNECTION（関係線への登場回数）を切り替えられる。大きさを重要度と自動解釈せず、KEEP / RELEASEは本人が選ぶ次段階のレンズとして扱う。
 
+DIRECTION LENSでは、各領域をOBSERVE / KEEP / LESS / MORE / RELEASEへ本人が配置する。今季動かす領域を一つ選ぶと、その意図を72-HOUR STEPへ渡す。可視化を評価で終わらせず、本人が選んだ小さな実験へ戻す。
+
 ### PHASE 3｜MEMBER WEB APP
 
 Ko-fiまたは独自会員と接続する。

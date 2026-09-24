@@ -1,6 +1,7 @@
 const STORAGE_KEY='holos88.lifeSpecimens.v1';
 const STEP_KEY='holos88.lifeExperiment.v1';
 const RELATIONSHIP_KEY='holos88.lifeRelationships.v1';
+const DIRECTION_KEY='holos88.lifeDirections.v1';
 const panels=[...document.querySelectorAll('[data-panel]')];
 const navButtons=[...document.querySelectorAll('[data-view]')];
 const form=document.querySelector('#specimen-form');
@@ -27,6 +28,8 @@ const specimens=()=>parse(STORAGE_KEY,[]);
 const saveSpecimens=value=>localStorage.setItem(STORAGE_KEY,JSON.stringify(value));
 const relationships=()=>parse(RELATIONSHIP_KEY,[]);
 const saveRelationships=value=>localStorage.setItem(RELATIONSHIP_KEY,JSON.stringify(value));
+const directions=()=>parse(DIRECTION_KEY,{});
+const saveDirections=value=>localStorage.setItem(DIRECTION_KEY,JSON.stringify(value));
 const escapeHtml=value=>String(value??'').replace(/[&<>'"]/g,char=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[char]));
 const weatherMark=value=>({'晴れ':'○','薄曇り':'◐','雨':'╱','風':'≈','嵐':'✳','わからない':'?'}[value]||'·');
 
@@ -159,6 +162,27 @@ function wireAreaMap(all,links){
     current.outerHTML=buildAreaMap(all,links,button.dataset.areaMetric); wireAreaMap(all,links);
   }));
 }
+
+const directionOptions=[['OBSERVE','もう少し見る'],['KEEP','残す'],['LESS','減らす'],['MORE','増やす'],['RELEASE','手放す']];
+
+function buildDirectionPlanner(sample=false){
+  const saved=sample?{WORK:'LESS',BODY:'KEEP',RELATIONSHIPS:'MORE',HOME:'OBSERVE',MONEY:'OBSERVE',TIME:'MORE'}:directions();
+  const rows=Object.entries(areaNames).map(([area,jp])=>`<label><b>${area}</b><span>${jp}</span><select data-direction-area="${area}" ${sample?'disabled':''}>${directionOptions.map(([value,label])=>`<option value="${value}" ${saved[area]===value?'selected':''}>${value}｜${label}</option>`).join('')}</select></label>`).join('');
+  const focusOptions=Object.entries(areaNames).map(([area,jp])=>`<option value="${area}">${area}｜${jp}</option>`).join('');
+  return `<section class="direction-planner${sample?' is-sample':''}"><header><span>DIRECTION LENS</span><h3>KEEP / LESS / MORE / RELEASE</h3><p>円の大きさを見たあとで、向かいたい方向は自分で選びます。</p></header><div class="direction-grid">${rows}</div>${sample?'<p class="sample-direction-note">SAMPLE / TIMEを増やすために、WORKを少し減らし、BODYを守る。円の大きさだけでは見えない「意志」を重ねた例です。</p>':`<div class="direction-focus"><label>FOCUS THIS SEASON<span>今季、まず動かす領域</span><select id="direction-focus-area">${focusOptions}</select></label><button type="button" id="direction-to-step">MAKE A 72-HOUR STEP <span>小さな一歩へ進む</span></button></div>`}</section>`;
+}
+
+function wireDirectionPlanner(){
+  document.querySelectorAll('[data-direction-area]').forEach(select=>select.addEventListener('change',()=>{const next=directions();next[select.dataset.directionArea]=select.value;saveDirections(next);showToast('今の方向を、この端末に記録しました。')}));
+  const button=document.querySelector('#direction-to-step'); if(!button)return;
+  button.addEventListener('click',()=>{
+    const area=document.querySelector('#direction-focus-area').value; const choice=directions()[area]||'OBSERVE';
+    const jp=areaNames[area]; const directionLabel=Object.fromEntries(directionOptions)[choice];
+    stepForm.elements.question.value=`${area}｜${jp}を「${directionLabel}」方向で考える`;
+    showPanel('step'); stepForm.elements.action.focus();
+    showToast('方向を72時間の実験へ渡しました。次は小さな行動を一つ。');
+  });
+}
 const sampleLinks=[
   {id:'SL-01',from:'SAMPLE-02',to:'SAMPLE-01',relation:'奪っている',note:'頼まれる前に動く時間が積み重なっている。'},
   {id:'SL-02',from:'SAMPLE-03',to:'SAMPLE-01',relation:'支えている',note:'話すことで考えが整理され、自分の時間へ戻りやすい。'},
@@ -180,7 +204,7 @@ function sampleCards(){
 function wireSampleButton(){
   const button=document.querySelector('#show-sample-map'); if(!button)return;
   button.addEventListener('click',()=>{
-    relationshipMap.innerHTML=`<div class="sample-banner"><p><b>SAMPLE MAP</b><span>これは見本です。あなたの記録には保存されません。</span></p><button type="button" id="close-sample-map">CLOSE SAMPLE <span>見本を閉じる</span></button></div>${buildAreaMap(sampleSpecimens,sampleLinks)}${buildNetwork(sampleSpecimens,sampleLinks)}${sampleCards()}`;
+    relationshipMap.innerHTML=`<div class="sample-banner"><p><b>SAMPLE MAP</b><span>これは見本です。あなたの記録には保存されません。</span></p><button type="button" id="close-sample-map">CLOSE SAMPLE <span>見本を閉じる</span></button></div>${buildAreaMap(sampleSpecimens,sampleLinks)}${buildDirectionPlanner(true)}${buildNetwork(sampleSpecimens,sampleLinks)}${sampleCards()}`;
     wireAreaMap(sampleSpecimens,sampleLinks);
     document.querySelector('#close-sample-map').addEventListener('click',renderRelationships);
   });
@@ -195,7 +219,7 @@ function renderRelationships(){
   const byId=Object.fromEntries(all.map(item=>[item.id,item]));
   const links=relationships().filter(link=>byId[link.from]&&byId[link.to]);
   if(!links.length){relationshipMap.innerHTML='<div class="empty-map"><p>まだ関係線はありません。<br>正解を決めず、「そう見える」を一本だけ結んでみましょう。</p><button type="button" id="show-sample-map">VIEW SAMPLE MAP <span>見本の関係地図を見る</span></button></div>';wireSampleButton();return}
-  relationshipMap.innerHTML=buildAreaMap(all,links)+buildNetwork(all,links)+links.map(link=>`<article class="relationship-card">
+  relationshipMap.innerHTML=buildAreaMap(all,links)+buildDirectionPlanner()+buildNetwork(all,links)+links.map(link=>`<article class="relationship-card">
     <div class="relationship-node"><span>${escapeHtml(link.from)}</span><p>${escapeHtml(specimenLabel(byId[link.from]).split('｜').slice(1).join('｜'))}</p></div>
     <div class="relationship-line"><i></i><strong>${escapeHtml(link.relation)}</strong><i></i></div>
     <div class="relationship-node"><span>${escapeHtml(link.to)}</span><p>${escapeHtml(specimenLabel(byId[link.to]).split('｜').slice(1).join('｜'))}</p></div>
@@ -204,6 +228,7 @@ function renderRelationships(){
   </article>`).join('');
   relationshipMap.querySelectorAll('[data-delete-link]').forEach(button=>button.addEventListener('click',()=>{saveRelationships(relationships().filter(link=>link.id!==button.dataset.deleteLink));renderRelationships();showToast('関係線を外しました。')}));
   wireAreaMap(all,links);
+  wireDirectionPlanner();
 }
 
 relationshipForm.addEventListener('submit',event=>{
