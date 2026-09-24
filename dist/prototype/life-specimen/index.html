@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="暮らしの標本を記録し、次の一季節を考えるLIFE SPECIMEN試作版。">
+  <title>LIFE SPECIMEN — SECOND SEASON</title>
+  <link rel="stylesheet" href="./life-specimen.css">
+</head>
+<body>
+  <a class="skip" href="#main">記録フォームへ</a>
+  <header class="app-head">
+    <a href="/prototype/index.html" class="brand"><span>HOLOS</span><sup>88</sup></a>
+    <div class="app-name"><strong>LIFE SPECIMEN</strong><span>暮らしの標本</span></div>
+    <p class="privacy"><i aria-hidden="true"></i> この試作版の記録は、この端末内だけに保存されます</p>
+  </header>
+
+  <main id="main">
+    <section class="intro" aria-labelledby="intro-title">
+      <div>
+        <p class="catalogue">PERSONAL MUSEUM / PROTOTYPE 01</p>
+        <h1 id="intro-title"><span>OBSERVE.</span><span>COLLECT.</span><span>CONNECT.</span></h1>
+      </div>
+      <div class="intro-note">
+        <p>日記を完成させなくていい。</p>
+        <p>今日ひっかかった言葉、身体の天気、使った時間。小さな記録を標本として置き、あとから関係を見つけます。</p>
+        <p class="ja-title">自分のLifeを観察する、小さな個人博物館。</p>
+      </div>
+    </section>
+
+    <nav class="mode-nav" aria-label="記録メニュー">
+      <button type="button" data-view="observe" aria-pressed="true"><span>01</span>FIELD NOTE<small>観察する</small></button>
+      <button type="button" data-view="collection" aria-pressed="false"><span>02</span>COLLECTION<small>収蔵を見る</small></button>
+      <button type="button" data-view="step" aria-pressed="false"><span>03</span>72-HOUR STEP<small>小さく試す</small></button>
+    </nav>
+
+    <section class="view is-active" data-panel="observe" aria-labelledby="observe-title">
+      <div class="view-heading">
+        <p class="catalogue">FIELD NOTE / THREE MINUTES</p>
+        <h2 id="observe-title">WHAT DID<br>YOU NOTICE?</h2>
+        <p>今日、何に気づきましたか。</p>
+      </div>
+
+      <form id="specimen-form" class="specimen-form">
+        <div class="specimen-meta">
+          <label>OBSERVED ON<span>観察日</span><input name="observedOn" type="date" required></label>
+          <label>PLACE<span>場所・任意</span><input name="place" type="text" maxlength="60" placeholder="台所、仕事場、公園…"></label>
+          <label>SEASON<span>季節</span><select name="season"><option>春</option><option>夏</option><option selected>秋</option><option>冬</option><option>季節の間</option></select></label>
+        </div>
+
+        <fieldset class="weather-field">
+          <legend>BODY WEATHER <span>心身の天気</span></legend>
+          <div class="weather-options">
+            <label><input type="radio" name="weather" value="晴れ"><span>○</span>晴れ</label>
+            <label><input type="radio" name="weather" value="薄曇り"><span>◐</span>薄曇り</label>
+            <label><input type="radio" name="weather" value="雨"><span>╱</span>雨</label>
+            <label><input type="radio" name="weather" value="風"><span>≈</span>風</label>
+            <label><input type="radio" name="weather" value="嵐"><span>✳</span>嵐</label>
+            <label><input type="radio" name="weather" value="わからない"><span>?</span>不明</label>
+          </div>
+        </fieldset>
+
+        <label class="observation">OBSERVATION <span>今日ひっかかったこと</span>
+          <textarea name="observation" rows="5" maxlength="600" required placeholder="一文でも、単語だけでも。"></textarea>
+        </label>
+
+        <fieldset class="areas-field">
+          <legend>LIFE AREAS <span>関係する領域・複数可</span></legend>
+          <div class="area-options">
+            <label><input type="checkbox" name="areas" value="WORK"><span>WORK<small>仕事</small></span></label>
+            <label><input type="checkbox" name="areas" value="BODY"><span>BODY<small>身体</small></span></label>
+            <label><input type="checkbox" name="areas" value="RELATIONSHIPS"><span>RELATIONSHIPS<small>関係</small></span></label>
+            <label><input type="checkbox" name="areas" value="HOME"><span>HOME<small>暮らし</small></span></label>
+            <label><input type="checkbox" name="areas" value="MONEY"><span>MONEY<small>お金</small></span></label>
+            <label><input type="checkbox" name="areas" value="TIME"><span>TIME<small>時間</small></span></label>
+          </div>
+        </fieldset>
+
+        <div class="form-end">
+          <p>正しく分類しなくて大丈夫。あとから名前を変えられます。</p>
+          <button type="submit">COLLECT THIS NOTE <span>この標本を収蔵する</span></button>
+        </div>
+      </form>
+    </section>
+
+    <section class="view" data-panel="collection" aria-labelledby="collection-title" hidden>
+      <div class="view-heading collection-heading">
+        <p class="catalogue">PRIVATE COLLECTION</p>
+        <h2 id="collection-title">YOUR<br>SPECIMENS</h2>
+        <p><strong id="specimen-count">0</strong>点を、この端末に収蔵しています。</p>
+      </div>
+      <div class="filter-bar" role="group" aria-label="領域で絞り込む">
+        <button type="button" data-filter="ALL" aria-pressed="true">ALL</button>
+        <button type="button" data-filter="WORK" aria-pressed="false">WORK</button>
+        <button type="button" data-filter="BODY" aria-pressed="false">BODY</button>
+        <button type="button" data-filter="RELATIONSHIPS" aria-pressed="false">RELATION</button>
+        <button type="button" data-filter="HOME" aria-pressed="false">HOME</button>
+        <button type="button" data-filter="MONEY" aria-pressed="false">MONEY</button>
+        <button type="button" data-filter="TIME" aria-pressed="false">TIME</button>
+      </div>
+      <div id="specimen-list" class="specimen-list" aria-live="polite"></div>
+      <div class="collection-actions">
+        <button type="button" id="export-button">EXPORT NOTES <span>記録を書き出す</span></button>
+        <button type="button" id="clear-button" class="quiet">CLEAR ALL <span>すべて削除</span></button>
+      </div>
+    </section>
+
+    <section class="view" data-panel="step" aria-labelledby="step-title" hidden>
+      <div class="view-heading">
+        <p class="catalogue">ONE SMALL EXPERIMENT</p>
+        <h2 id="step-title">TOUCH<br>REALITY.</h2>
+        <p>72時間以内に、現実へ触れる。</p>
+      </div>
+      <form id="step-form" class="step-form">
+        <label>THE QUESTION<span>いま考えていること</span><textarea name="question" rows="3" maxlength="300"></textarea></label>
+        <label>ONE STEP<span>大きな決断の前にできる、小さな一歩</span><textarea name="action" rows="3" maxlength="300" required placeholder="一人に連絡する。一ページ作る。数字を確認する…"></textarea></label>
+        <div class="step-grid">
+          <label>WHEN<span>行う日時</span><input name="when" type="datetime-local" required></label>
+          <label>OBSERVE<span>何を観察するか</span><input name="observe" type="text" maxlength="100" placeholder="気分、反応、時間、数字…"></label>
+        </div>
+        <button type="submit">SET THE EXPERIMENT <span>この実験を置く</span></button>
+      </form>
+      <div id="active-step" class="active-step" aria-live="polite"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>LIFE SPECIMEN / LOCAL PROTOTYPE 01</p>
+    <p>紙で意味のあるワークだけを、デジタルで動かす。</p>
+    <a href="/prototype/index.html">RETURN TO HOLOS 88 ↗</a>
+  </footer>
+  <script src="./life-specimen.js"></script>
+</body>
+</html>
