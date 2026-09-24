@@ -69,3 +69,20 @@
 .hachico-copy .title-star{font-size:.72em;vertical-align:.08em;margin:0 .08em}
 .hachico-copy .title-star{font-family:var(--serif);font-weight:400;font-style:italic;transform:skewX(-10deg) scaleX(.92);transform-origin:center;opacity:.9}
 .hachico-copy .title-star{margin-left:-.03em;margin-right:-.03em}
+
+/* A growing archive can move horizontally without turning HOME into an endless list. */
+.moving-windows{margin:6rem -3vw 8rem;padding:0 3vw}
+.moving-windows header{display:flex;justify-content:space-between;align-items:end;margin-bottom:2rem}
+.moving-windows h3{font:400 clamp(3.5rem,7vw,8rem)/.78 var(--serif);letter-spacing:-.065em;margin:1.5rem 0}
+.rail-controls{display:flex;border:1px solid rgba(255,255,255,.38)}.rail-controls button{width:64px;height:56px;border:0;border-right:1px solid rgba(255,255,255,.38);background:transparent;color:inherit;font:1.4rem var(--serif);cursor:pointer}.rail-controls button:last-child{border-right:0}.rail-controls button:hover{background:rgba(255,255,255,.1)}
+.window-rail{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:thin;scrollbar-color:rgba(255,255,255,.4) transparent;padding-bottom:1.5rem}
+.rail-card{position:relative;flex:0 0 min(36vw,440px);height:560px;scroll-snap-align:start;overflow:hidden;background:#302e29;color:#f6f1e7;padding:1.25rem;display:flex;flex-direction:column;isolation:isolate}
+.rail-card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:saturate(.48) contrast(.92);z-index:-2}.rail-card:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,10,8,.08),rgba(10,10,8,.82));z-index:-1}.rail-card span{font-size:8px;letter-spacing:.16em}.rail-card strong{font:400 clamp(2.8rem,5vw,5.8rem)/.82 var(--serif);letter-spacing:-.055em;margin-top:auto}.rail-card small{font:12px/1.7 var(--jp);margin-top:1rem}.rail-card:nth-child(even){height:500px;align-self:flex-end}.rail-seed:before,.rail-moon:before,.rail-time:before{content:"";position:absolute;width:42%;height:9px;right:0;top:0;background:#9b8063}.rail-moon:before{background:#777f96}.rail-time:before{background:#66828a}
+/* Article colour comes from the subject, then recedes behind the reading. */
+.article-paper{--article-accent:#8e5844;--article-tint:#e4d7cf}.article-market{--article-accent:#7b6026;--article-tint:#d8c58f}.article-dark{--article-accent:#b99288;--article-tint:#3a302f}.article-ai{--article-accent:#526c79;--article-tint:#cbd5d8}.article-botany{--article-accent:#687052;--article-tint:#d6dac7}.article-time{--article-accent:#667d8d;--article-tint:#d5dfe3}.article-life{--article-accent:#955f4d;--article-tint:#ddd0c5}
+.reading-page .article-hero-text{box-shadow:inset 0 -9px 0 var(--article-accent,#8e5844)}
+.reading-page:not(.article-dark) .article-hero-text h1,.reading-page:not(.article-dark) .article-body-generated h2{color:var(--article-accent,#11110f)}
+.reading-page .source-window{border-color:var(--article-accent,#11110f);background:linear-gradient(90deg,var(--article-tint,#eee) 0 34%,transparent 34%);padding-left:1rem}
+.reading-page .michikusa{background:var(--article-tint,#d9d6c6)}
+.reading-page .michi-grid a:hover{background:rgba(255,255,255,.28)}
+@media(max-width:760px){.moving-windows{margin:5rem -1rem 6rem;padding:0 1rem}.moving-windows header{align-items:flex-end}.moving-windows h3{font-size:14vw}.rail-controls button{width:48px;height:46px}.rail-card{flex-basis:82vw;height:480px}.rail-card:nth-child(even){height:430px}.reading-page .source-window{background:linear-gradient(90deg,var(--article-tint,#eee) 0 12px,transparent 12px);padding-left:1.25rem}}

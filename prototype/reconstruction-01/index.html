@@ -91,6 +91,17 @@
 
     <section class="deep-layer" id="threads" aria-labelledby="threads-title">
       <div class="layer-intro"><p class="eyebrow">MUSEUM BELOW / LAYER 02</p><h2 id="threads-title">FOLLOW<br>A THREAD</h2><p>記事を探すのではなく、一本の関係を辿る。違う分野の窓が、同じ糸の上で出会います。</p></div>
+      <section class="moving-windows" id="moving" aria-labelledby="moving-title">
+        <header><div><p class="eyebrow">NOW ON VIEW / RECENT WINDOWS</p><h3 id="moving-title">WINDOWS<br>IN MOTION</h3><p class="title-ja">いま開いている窓</p></div><div class="rail-controls" aria-label="記事を横へ送る"><button type="button" data-rail-prev aria-label="前の記事へ">←</button><button type="button" data-rail-next aria-label="次の記事へ">→</button></div></header>
+        <div class="window-rail" data-window-rail tabindex="0">
+          <a class="rail-card rail-seed" href="/prototype/articles/seed.html"><img src="/assets/seed.jpg" alt="小さな種と定規" loading="lazy"><span>BOTANY / LANGUAGE</span><strong>SEED</strong><small>蒔かぬ種は生えぬ。</small></a>
+          <a class="rail-card rail-moon" href="/prototype/articles/moon-to-stars.html"><img src="/assets/moon.jpg" alt="夜空に浮かぶ月" loading="lazy"><span>COSMOS / SEASON</span><strong>MOON TO STARS</strong><small>月を見たあと、星を待つ。</small></a>
+          <a class="rail-card rail-horse" href="/prototype/articles/horse.html"><img src="/assets/study01-391117.jpg" alt="デューラーによる馬の銅版画" loading="lazy"><span>ANIMAL / HISTORY</span><strong>HORSE</strong><small>人を、どこまで遠くへ。</small></a>
+          <a class="rail-card rail-time" href="/prototype/articles/duration.html"><img src="/assets/water.jpg" alt="静かな水面" loading="lazy"><span>TIME / PHILOSOPHY</span><strong>DURATION</strong><small>待つことは、何もしないことか。</small></a>
+          <a class="rail-card rail-image" href="/prototype/articles/kaleidoscope.html"><img src="/assets/study01-384116.jpg" alt="蝶と貝を描いた古い図版" loading="lazy"><span>IMAGE / RELATIONSHIP</span><strong>KALEIDOSCOPE</strong><small>同じ欠片を、少しだけ回す。</small></a>
+        </div>
+      </section>
+
       <div class="thread-routes">
         <div><p>01 · KNOWLEDGE MOVES</p><a href="/prototype/articles/cabinet.html">CARD</a><i>→</i><a href="/prototype/articles/gift.html">GIFT</a><i>→</i><a href="/prototype/articles/last-question.html">AI</a><small>記録は、動くことで何をつくるのか。</small></div>
         <div><p>02 · A SEED HAS MANY CLOCKS</p><a href="/prototype/articles/seed.html">SEED</a><i>→</i><a href="/prototype/articles/germination.html">GERMINATION</a><i>→</i><a href="/prototype/articles/duration.html">TIME</a><small>芽が出ない時間も、生きている。</small></div>
@@ -143,5 +154,14 @@
   </main>
 
   <footer><a class="wordmark" href="/prototype/index.html"><span>HOLOS</span><sup>88</sup></a><p>A NATURAL HISTORY OF NOW.<br>いま、という時代の博物誌。</p><p>DESIGN RECONSTRUCTION STUDY 01<br>LOCAL PROTOTYPE / 2026</p></footer>
+  <script>
+    (() => {
+      const rail=document.querySelector('[data-window-rail]');
+      if(!rail)return;
+      const move=direction=>rail.scrollBy({left:direction*Math.max(rail.clientWidth*.72,280),behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'});
+      document.querySelector('[data-rail-prev]')?.addEventListener('click',()=>move(-1));
+      document.querySelector('[data-rail-next]')?.addEventListener('click',()=>move(1));
+    })();
+  </script>
 </body>
 </html>
