@@ -1,5 +1,8 @@
 # KO-FI LISTING 02｜28 DAYS
 
+状態：商品本文・ワークv0.1完成／組版前
+本文：`content/products/28-days-monthly-letter-kit-01.md`
+
 ## 商品名
 
 **28 DAYS｜MONTHLY LETTER KIT**  
