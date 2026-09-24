@@ -29,16 +29,16 @@ Ko-fiでは、ひとりで静かに読める季節の便り、自分の言葉を
 最初の画面には、商品を大量に並べない。
 
 1. 無料：`ONE QUESTION｜今日の問い` 
-2. 680円：`SEASONAL LETTER｜秋分から霜降へ`
-3. 1,800円：`28 DAYS｜MONTHLY LETTER KIT`
-4. 3,800円：`THE THIRD VOICE｜Starter Workbook`
+2. 880円：`SEASONAL LETTER｜秋分から霜降へ`
+3. 1,880円：`28 DAYS｜MONTHLY LETTER KIT`
+4. 3,880円：`THE THIRD VOICE｜Starter Workbook`
 
 Membershipは三商品の販売と無料配信が動いてから公開する。
 
 ## MEMBERSHIP PREVIEW
 
 **THE SEASONAL ROOM｜季節の部屋**  
-予定価格：月額1,200円
+予定価格：月額1,880円
 
 - 月2回のSEASONAL LETTER
 - 月末のMONTHLY WINDOW
@@ -87,4 +87,3 @@ HOLOS Museumへ道草
 - 購入後メッセージ
 - 返金、再配布、個人利用の案内
 - 連絡先を`contact@holos-holon.com`へ統一
-

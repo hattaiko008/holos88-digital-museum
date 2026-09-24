@@ -20,9 +20,9 @@ Shopは「道具を渡す場所」、Commissionsは「一緒に使って仕上�
 
 ## LAUNCH SHELF｜最初の3商品
 
-1. **SEASONAL LETTER｜秋分から霜降へ**：680円
-2. **28 DAYS｜MONTHLY LETTER KIT**：1,800円
-3. **THE THIRD VOICE｜Starter Workbook**：3,800円
+1. **SEASONAL LETTER｜秋分から霜降へ**：880円
+2. **28 DAYS｜MONTHLY LETTER KIT**：1,880円
+3. **THE THIRD VOICE｜Starter Workbook**：3,880円
 
 季節の読み物、継続記録、深い自己対話という三段階を、小さな価格差で体験できる棚にする。登録原稿は`launch-shelf-01.md`と`listing-01〜03`を正とする。
 
