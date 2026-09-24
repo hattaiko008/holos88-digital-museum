@@ -1,5 +1,8 @@
 # KO-FI LISTING 01｜SEASONAL LETTER
 
+状態：商品本文v0.1完成／組版・図版選定前
+本文：`content/products/seasonal-letter-autumn-01.md`
+
 ## 商品名
 
 **SEASONAL LETTER｜秋分から霜降へ**  
