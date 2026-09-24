@@ -1,7 +1,7 @@
 # SECOND SEASON｜APP ROADMAP 01
 
 更新日：2026-09-24  
-状態：将来設計／PDF検証後に着手
+状態：PRIVATE WEB PROTOTYPE 実装中
 
 ## 結論
 
@@ -174,7 +174,12 @@ PDFの各ワークにも同じIDを持たせる。これにより、紙、PDF、
 
 - FIELD NOTE
 - LIFE AREAS
+- COLLECTION
+- RELATIONSHIP MAP
+- THREE VOICES
 - 72-HOUR STEP
+
+2026-09-24時点で上記の最小機能を実装。記録と関係線は端末内だけに保存し、外部送信しない。
 
 ### PHASE 3｜MEMBER WEB APP
 
@@ -219,4 +224,3 @@ Ko-fiまたは独自会員と接続する。
 まずPDFで、人が本当に書く問い、飛ばす問い、戻ってくるページを観察する。その結果だけをアプリへ持ち込む。
 
 **紙で意味のあるワークだけを、デジタルで動かす。**
-

@@ -1,5 +1,6 @@
 const STORAGE_KEY='holos88.lifeSpecimens.v1';
 const STEP_KEY='holos88.lifeExperiment.v1';
+const RELATIONSHIP_KEY='holos88.lifeRelationships.v1';
 const panels=[...document.querySelectorAll('[data-panel]')];
 const navButtons=[...document.querySelectorAll('[data-view]')];
 const form=document.querySelector('#specimen-form');
@@ -9,6 +10,8 @@ const stepForm=document.querySelector('#step-form');
 const activeStep=document.querySelector('#active-step');
 const voicesForm=document.querySelector('#voices-form');
 const thirdQuestionText=document.querySelector('#third-question-text');
+const relationshipForm=document.querySelector('#relationship-form');
+const relationshipMap=document.querySelector('#relationship-map');
 let currentFilter='ALL';
 const thirdQuestions=[
   '正解ではなく実験に変えると、何ができますか。',
@@ -22,6 +25,8 @@ const thirdQuestions=[
 const parse=(key,fallback)=>{try{return JSON.parse(localStorage.getItem(key))??fallback}catch{return fallback}};
 const specimens=()=>parse(STORAGE_KEY,[]);
 const saveSpecimens=value=>localStorage.setItem(STORAGE_KEY,JSON.stringify(value));
+const relationships=()=>parse(RELATIONSHIP_KEY,[]);
+const saveRelationships=value=>localStorage.setItem(RELATIONSHIP_KEY,JSON.stringify(value));
 const escapeHtml=value=>String(value??'').replace(/[&<>'"]/g,char=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[char]));
 const weatherMark=value=>({'晴れ':'○','薄曇り':'◐','雨':'╱','風':'≈','嵐':'✳','わからない':'?'}[value]||'·');
 
@@ -35,6 +40,7 @@ function showPanel(name){
   panels.forEach(panel=>{const active=panel.dataset.panel===name; panel.hidden=!active; panel.classList.toggle('is-active',active)});
   navButtons.forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.view===name)));
   if(name==='collection') renderSpecimens();
+  if(name==='connect') renderRelationships();
   if(name==='step') renderStep();
   document.querySelector(`[data-panel="${name}"]`).scrollIntoView({behavior:'smooth',block:'start'});
 }
@@ -70,6 +76,7 @@ function renderSpecimens(){
   </article>`).join('');
   list.querySelectorAll('[data-delete]').forEach(button=>button.addEventListener('click',()=>{
     const next=specimens().filter(item=>item.id!==button.dataset.delete); saveSpecimens(next); renderSpecimens(); showToast('標本を削除しました。');
+    saveRelationships(relationships().filter(link=>link.from!==button.dataset.delete&&link.to!==button.dataset.delete));
   }));
 }
 
@@ -81,7 +88,40 @@ document.querySelectorAll('[data-filter]').forEach(button=>button.addEventListen
 
 document.querySelector('#clear-button').addEventListener('click',()=>{
   if(!specimens().length)return;
-  if(window.confirm('この端末に保存した標本を、すべて削除しますか？')){localStorage.removeItem(STORAGE_KEY);renderSpecimens();showToast('すべて削除しました。')}
+  if(window.confirm('この端末に保存した標本と関係線を、すべて削除しますか？')){localStorage.removeItem(STORAGE_KEY);localStorage.removeItem(RELATIONSHIP_KEY);renderSpecimens();showToast('すべて削除しました。')}
+});
+
+function specimenLabel(item){
+  const first=(item.observation||'').split('\n')[0].replace(/^QUESTION｜/,'');
+  return `${item.id}｜${first.slice(0,38)}${first.length>38?'…':''}`;
+}
+
+function renderRelationships(){
+  const all=specimens();
+  const selects=[relationshipForm.elements.from,relationshipForm.elements.to];
+  const options=all.map(item=>`<option value="${escapeHtml(item.id)}">${escapeHtml(specimenLabel(item))}</option>`).join('');
+  selects.forEach((select,index)=>{const previous=select.value;select.innerHTML=`<option value="">標本を選ぶ</option>${options}`;select.value=previous;if(index===1&&!select.value&&all[1])select.value=all[1].id});
+  if(all.length<2){relationshipMap.innerHTML='<p class="empty-map">関係を結ぶには、二つ以上の標本が必要です。<br>まずFIELD NOTEへ、小さな記録を置いてみましょう。</p>';return}
+  const byId=Object.fromEntries(all.map(item=>[item.id,item]));
+  const links=relationships().filter(link=>byId[link.from]&&byId[link.to]);
+  if(!links.length){relationshipMap.innerHTML='<p class="empty-map">まだ関係線はありません。<br>正解を決めず、「そう見える」を一本だけ結んでみましょう。</p>';return}
+  relationshipMap.innerHTML=links.map(link=>`<article class="relationship-card">
+    <div class="relationship-node"><span>${escapeHtml(link.from)}</span><p>${escapeHtml(specimenLabel(byId[link.from]).split('｜').slice(1).join('｜'))}</p></div>
+    <div class="relationship-line"><i></i><strong>${escapeHtml(link.relation)}</strong><i></i></div>
+    <div class="relationship-node"><span>${escapeHtml(link.to)}</span><p>${escapeHtml(specimenLabel(byId[link.to]).split('｜').slice(1).join('｜'))}</p></div>
+    ${link.note?`<p class="relationship-note">NOTE / ${escapeHtml(link.note)}</p>`:''}
+    <button type="button" data-delete-link="${escapeHtml(link.id)}">UNLINK / 線を外す</button>
+  </article>`).join('');
+  relationshipMap.querySelectorAll('[data-delete-link]').forEach(button=>button.addEventListener('click',()=>{saveRelationships(relationships().filter(link=>link.id!==button.dataset.deleteLink));renderRelationships();showToast('関係線を外しました。')}));
+}
+
+relationshipForm.addEventListener('submit',event=>{
+  event.preventDefault(); const data=new FormData(relationshipForm);
+  const from=data.get('from'),to=data.get('to');
+  if(from===to){showToast('別の二つの標本を選んでください。');return}
+  const all=relationships();
+  all.unshift({id:`RL-${String(Date.now()).slice(-8)}`,from,to,relation:data.get('relation'),note:data.get('note').trim(),createdAt:new Date().toISOString()});
+  saveRelationships(all); relationshipForm.elements.note.value=''; renderRelationships(); showToast('標本のあいだに、関係線を結びました。');
 });
 
 document.querySelector('#export-button').addEventListener('click',()=>{

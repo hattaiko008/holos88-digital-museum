@@ -32,8 +32,9 @@
     <nav class="mode-nav" aria-label="記録メニュー">
       <button type="button" data-view="observe" aria-pressed="true"><span>01</span>FIELD NOTE<small>観察する</small></button>
       <button type="button" data-view="collection" aria-pressed="false"><span>02</span>COLLECTION<small>収蔵を見る</small></button>
-      <button type="button" data-view="voices" aria-pressed="false"><span>03</span>THREE VOICES<small>見方をずらす</small></button>
-      <button type="button" data-view="step" aria-pressed="false"><span>04</span>72-HOUR STEP<small>小さく試す</small></button>
+      <button type="button" data-view="connect" aria-pressed="false"><span>03</span>CONNECT<small>関係を結ぶ</small></button>
+      <button type="button" data-view="voices" aria-pressed="false"><span>04</span>THREE VOICES<small>見方をずらす</small></button>
+      <button type="button" data-view="step" aria-pressed="false"><span>05</span>72-HOUR STEP<small>小さく試す</small></button>
     </nav>
 
     <section class="view is-active" data-panel="observe" aria-labelledby="observe-title">
@@ -104,6 +105,32 @@
       <div class="collection-actions">
         <button type="button" id="export-button">EXPORT NOTES <span>記録を書き出す</span></button>
         <button type="button" id="clear-button" class="quiet">CLEAR ALL <span>すべて削除</span></button>
+      </div>
+    </section>
+
+    <section class="view" data-panel="connect" aria-labelledby="connect-title" hidden>
+      <div class="view-heading">
+        <p class="catalogue">RELATIONSHIP MAP / PRIVATE</p>
+        <h2 id="connect-title">WHAT<br>CONNECTS?</h2>
+        <p>標本と標本のあいだにあるものを見る。</p>
+      </div>
+      <div class="connect-workspace">
+        <form id="relationship-form" class="relationship-form">
+          <label>FROM<span>ひとつ目の標本</span><select name="from" required></select></label>
+          <label>RELATIONSHIP<span>どんな関係に見えますか</span>
+            <select name="relation" required>
+              <option value="支えている">SUPPORTS｜支えている</option>
+              <option value="奪っている">TAKES｜奪っている</option>
+              <option value="同時に起きる">APPEARS WITH｜同時に起きる</option>
+              <option value="原因かもしれない">MAY CAUSE｜原因かもしれない</option>
+              <option value="まだ分からない">UNKNOWN｜まだ分からない</option>
+            </select>
+          </label>
+          <label>TO<span>ふたつ目の標本</span><select name="to" required></select></label>
+          <label class="wide">NOTE<span>そう思った理由・任意</span><textarea name="note" rows="2" maxlength="240"></textarea></label>
+          <button type="submit">CONNECT THESE SPECIMENS <span>この関係を結ぶ</span></button>
+        </form>
+        <div id="relationship-map" class="relationship-map" aria-live="polite"></div>
       </div>
     </section>
 
