@@ -86,3 +86,9 @@
 .reading-page .michikusa{background:var(--article-tint,#d9d6c6)}
 .reading-page .michi-grid a:hover{background:rgba(255,255,255,.28)}
 @media(max-width:760px){.moving-windows{margin:5rem -1rem 6rem;padding:0 1rem}.moving-windows header{align-items:flex-end}.moving-windows h3{font-size:14vw}.rail-controls button{width:48px;height:46px}.rail-card{flex-basis:82vw;height:480px}.rail-card:nth-child(even){height:430px}.reading-page .source-window{background:linear-gradient(90deg,var(--article-tint,#eee) 0 12px,transparent 12px);padding-left:1.25rem}}
+/* Dark article exits always switch to high-contrast light type. */
+.article-dark .michikusa{color:#f7f3ea}
+.article-dark .michikusa .title-ja,.article-dark .michikusa .eyebrow,.article-dark .michi-grid span,.article-dark .michi-grid small{color:rgba(247,243,234,.78)}
+.article-dark .michi-grid{border-color:rgba(247,243,234,.5)}
+.article-dark .michi-grid a{border-color:rgba(247,243,234,.42)}
+.article-dark .michi-grid a:hover{background:rgba(255,255,255,.08)}
