@@ -78,3 +78,12 @@ FACT / STORY / POSSIBILITY
 
 無料試読版は、この8ページをそのまま小さな完成品として成立させる。
 
+## 実装記録
+
+2026-09-24、APP TO PAPER 01として8ページの初版を制作。
+
+- 成果物：`output/pdf/life-specimen-notebook-preview-01.pdf`
+- 判型：A4／全8ページ
+- 状態：初回デザインレビュー用
+- デザイン原本：LIFE SPECIMEN Web App
+- 次回確認：日本語の言い回し、実際の書き込み量、完全版への接続
