@@ -1,4 +1,6 @@
 :root{--jp-muted:#5d605b}
+.brand{display:inline-flex;align-items:baseline;gap:.24rem;letter-spacing:-.08em}
+.brand .brand-number{font:9px var(--sans);letter-spacing:0;position:relative;top:.42em}
 .app-name strong{font-size:1.15rem}
 .app-name span{font-size:12px;color:var(--jp-muted)}
 .privacy{font-size:10px;color:var(--jp-muted)}
