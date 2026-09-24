@@ -1,6 +1,6 @@
 # HOLOS 88｜ARTICLE QUEUE 01
 
-Status: pre-publication sample stock  
+Status: pre-publication sample stock
 Date: 2026-09-19
 
 ## In draft
@@ -77,6 +77,28 @@ OPEN QUESTION
 ```
 
 読者が、自分でどの層を受け取るか選べるように書く。医療・健康・投資・法律に関わる助言や効果の保証はしない。
+
+## WHOLE EARTH NETWORK｜development drafts
+
+- `THE MAN WHO CONNECTED ROOMS` — Stewart Brandを「接続者」として読む。
+- `THE WOMAN BESIDE THE TRUCK` — Lois Jenningsと、創業神話から消える共同制作。
+- `THREE NIGHTS BEFORE THE SUMMER OF LOVE` — Trips Festival、音、光、身体、参加。
+- `LEAVING THE CITY, CARRYING A CATALOG` — コミューンと生活の知識。
+- `THE DOME THAT LEAKED` — Fuller、ドーム、修繕、気候。
+- `WHO WORKED IN UTOPIA?` — 理想郷を支えるケアと労働。
+- `THE GRATEFUL DEAD WAS A NETWORK` — 音楽、録音交換、移動する共同体。
+- `TWO DOORS OPENED IN 1968` — Whole Earth CatalogとMother of All Demos。
+- `SPACEWAR, HACKERS, AND A NEW IMAGE OF THE MACHINE` — 冷戦の機械と自由の物語。
+- `THE FREEDOM THAT FIT THE MARKET` — 自律、分散、自己責任、プラットフォーム経済。
+
+個別草稿：`content/drafts/echo/`
+連載地図：`content/briefs/whole-earth-network-lineage-01.md`
+
+## THE LIVING WHOLE EARTH｜next branch
+
+気候変動、土、パーマカルチャー、オーガニック、種、農地と生息地、スピリチュアル・エコロジー、先住民の知、エコビレッジ、リジェネラティブという言葉を扱う10本。
+
+- 設計：`content/briefs/whole-earth-living-planet-branch-01.md`
 
 ## PLACE / GLOBE memo
 
