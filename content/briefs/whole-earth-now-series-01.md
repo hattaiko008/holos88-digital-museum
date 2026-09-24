@@ -4,6 +4,16 @@
 
 HOLOS 88の `EDITORIAL LINEAGE` から育つ連載。Whole Earth Catalogを成功した過去のデザインとして保存するのではなく、その思想が現在の地球へ何を渡し、何を渡し損ねたのかを問い直す。
 
+## NAME AT THE CENTER
+
+**HOLOS = WHOLE**
+
+どちらも「全体」を指す。ただし、HOLOSにおけるWholeは、異なるものを大量に混ぜることではない。
+
+> WHOLE = EVERYTHING EXISTS IN RELATIONSHIP.
+
+すべてが関係のなかに存在していること。この連載は、Whole Earthの歴史を紹介すると同時に、HOLOS 88が自分の名前を現在の地球の前で問い直す場所でもある。
+
 中心の問い：
 
 > 道具と情報を手にした人間は、地球との関係まで上手になっただろうか。
