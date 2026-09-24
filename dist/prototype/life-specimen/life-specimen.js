@@ -227,6 +227,7 @@ function wireDirectionPlanner(){
     const area=document.querySelector('#direction-focus-area').value; const choice=directions()[area]||'OBSERVE';
     const jp=areaNames[area]; const directionLabel=Object.fromEntries(directionOptions)[choice];
     stepForm.elements.question.value=`${area}｜${jp}を「${directionLabel}」方向で考える`;
+    stepForm.elements.focusArea.value=area; stepForm.elements.direction.value=choice;
     showMethods(area,choice); showPanel('step');
     showToast('方向を72時間の実験へ渡しました。次は小さな行動を一つ。');
   });
@@ -234,7 +235,7 @@ function wireDirectionPlanner(){
 
 function wireSampleMethods(){
   const button=document.querySelector('#sample-to-methods'); if(!button)return;
-  button.addEventListener('click',()=>{showMethods('TIME','MORE');stepForm.elements.question.value='TIME｜時間を「増やす」方向で考える';showPanel('step');showToast('TIMEを増やす、三つの方法の見本です。')});
+  button.addEventListener('click',()=>{showMethods('TIME','MORE');stepForm.elements.question.value='TIME｜時間を「増やす」方向で考える';stepForm.elements.focusArea.value='TIME';stepForm.elements.direction.value='MORE';showPanel('step');showToast('TIMEを増やす、三つの方法の見本です。')});
 }
 const sampleLinks=[
   {id:'SL-01',from:'SAMPLE-02',to:'SAMPLE-01',relation:'奪っている',note:'頼まれる前に動く時間が積み重なっている。'},
@@ -305,7 +306,7 @@ document.querySelector('#export-button').addEventListener('click',()=>{
 
 stepForm.addEventListener('submit',event=>{
   event.preventDefault(); const data=new FormData(stepForm);
-  const experiment={question:data.get('question').trim(),action:data.get('action').trim(),when:data.get('when'),observe:data.get('observe').trim(),createdAt:new Date().toISOString()};
+  const experiment={question:data.get('question').trim(),action:data.get('action').trim(),when:data.get('when'),observe:data.get('observe').trim(),focusArea:data.get('focusArea'),direction:data.get('direction'),createdAt:new Date().toISOString()};
   localStorage.setItem(STEP_KEY,JSON.stringify(experiment));renderStep();showToast('72時間の実験を置きました。');
 });
 
@@ -313,8 +314,14 @@ function renderStep(){
   const step=parse(STEP_KEY,null);
   if(!step){activeStep.innerHTML='';return}
   const when=new Date(step.when); const valid=!Number.isNaN(when.valueOf());
-  activeStep.innerHTML=`<article class="experiment"><p class="catalogue">ACTIVE EXPERIMENT</p><p class="due">${valid?when.toLocaleString('ja-JP',{month:'short',day:'numeric',hour:'2-digit',minute:'2-digit'}):'日時未設定'}</p><h3>${escapeHtml(step.action)}</h3>${step.question?`<p>QUESTION / ${escapeHtml(step.question)}</p>`:''}${step.observe?`<p>OBSERVE / ${escapeHtml(step.observe)}</p>`:''}<button type="button" id="complete-step">CLOSE / 実験を閉じる</button></article>`;
-  document.querySelector('#complete-step').addEventListener('click',()=>{localStorage.removeItem(STEP_KEY);renderStep();showToast('実験を閉じました。気づきを標本に残してみましょう。')});
+  activeStep.innerHTML=`<article class="experiment"><p class="catalogue">ACTIVE EXPERIMENT</p><p class="due">${valid?when.toLocaleString('ja-JP',{month:'short',day:'numeric',hour:'2-digit',minute:'2-digit'}):'日時未設定'}</p><h3>${escapeHtml(step.action)}</h3>${step.question?`<p>QUESTION / ${escapeHtml(step.question)}</p>`:''}${step.observe?`<p>OBSERVE / ${escapeHtml(step.observe)}</p>`:''}</article><form id="experiment-review" class="experiment-review"><p class="catalogue">RETURN / EXPERIMENT TO SPECIMEN</p><h3>WHAT DID REALITY SAY?</h3><p class="review-lead">現実は、どんな返事をしましたか。</p><label>WHAT HAPPENED<span>実際に起きたこと</span><textarea name="result" rows="4" maxlength="600" required></textarea></label><div class="review-grid"><label>BODY WEATHER<span>実験後の心身</span><select name="weather"><option>晴れ</option><option>薄曇り</option><option>雨</option><option>風</option><option>嵐</option><option selected>わからない</option></select></label><label>NEXT<span>次はどうしますか</span><select name="next"><option value="CONTINUE">CONTINUE｜続ける</option><option value="CHANGE">CHANGE｜変える</option><option value="CLOSE">CLOSE｜終える</option></select></label></div><label>ONE LINE<span>次の自分へ残す一言・任意</span><input name="note" type="text" maxlength="180"></label><button type="submit">RETURN TO COLLECTION <span>結果を標本として収蔵する</span></button></form>`;
+  document.querySelector('#experiment-review').addEventListener('submit',event=>{
+    event.preventDefault(); const data=new FormData(event.currentTarget); const all=specimens();
+    const next=data.get('next'); const result=data.get('result').trim(); const note=data.get('note').trim();
+    const observation=[`EXPERIMENT｜${step.action}`,`WHAT HAPPENED｜${result}`,`NEXT｜${next}`,note&&`ONE LINE｜${note}`].filter(Boolean).join('\n\n');
+    all.unshift({id:`EX-${String(Date.now()).slice(-8)}`,createdAt:new Date().toISOString(),observedOn:new Date().toISOString().slice(0,10),place:'',season:'実験',weather:data.get('weather'),observation,areas:step.focusArea?[step.focusArea]:[]});
+    saveSpecimens(all); localStorage.removeItem(STEP_KEY); stepForm.reset(); renderStep(); showToast('現実からの返事を、標本として収蔵しました。'); showPanel('collection');
+  });
 }
 
 document.querySelector('#another-question').addEventListener('click',()=>{

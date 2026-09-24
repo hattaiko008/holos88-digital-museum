@@ -189,6 +189,8 @@ DIRECTION LENSでは、各領域をOBSERVE / KEEP / LESS / MORE / RELEASEへ本�
 
 HOW / METHOD CARDSは、選んだ領域と方向に対して三つの方法を提示する。各方法にWHY / HOW / OBSERVE / IF NOTを付け、行動、観察、縮小案まで具体化する。方法カードからHOLOS Museumの関連展示へMICHIKUSAできる窓を置き、知識を得たあと再び72時間の実験とLifeへ戻れる循環にする。
 
+72-HOUR STEPの終了時には、WHAT HAPPENED / BODY WEATHER / NEXT（CONTINUE・CHANGE・CLOSE）を記録する。結果を新しい標本としてCOLLECTIONへ戻し、次の関係線とカテゴリー地図へ反映する。予想と現実の差を本人の観察履歴として残す。
+
 ### PHASE 3｜MEMBER WEB APP
 
 Ko-fiまたは独自会員と接続する。
