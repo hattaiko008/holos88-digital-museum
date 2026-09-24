@@ -102,3 +102,22 @@
 .article-hero-text .article-title-ja p:first-child{font-size:1.68rem;line-height:1.55;margin-bottom:.8rem}
 .article-hero-text .article-title-ja p:last-child{font-size:1.08rem;line-height:1.9}
 @media(max-width:760px){.editorial-stage .ja{font-size:1.18rem}.editorial-stage article p:not(.mode):not(.stage-no):not(.market-number):not(.ja){font-size:13px}.article-hero-text .article-title-ja p:first-child{font-size:1.4rem}.article-hero-text .article-title-ja p:last-child{font-size:1rem}}
+
+/* Magazine refinement: quieter decks and a denser second reading layer. */
+.cover h1.cover-cabinet span{font-size:clamp(3rem,5.8vw,7.2rem)}
+.cover h1.cover-cabinet span:first-child{transform:translateX(-4vw)}
+.editorial-stage article p:not(.mode):not(.stage-no):not(.market-number):not(.ja){font-size:12px;line-height:1.75;color:inherit;opacity:.78}
+.stage-field div p:not(.mode){max-width:27rem}
+.article-hero-text{min-height:62vh;grid-template-columns:.72fr 2.28fr;padding-top:4vw;padding-bottom:4vw}
+.article-hero-text h1{font-size:clamp(4.5rem,8.8vw,10rem);line-height:.82;max-width:13ch}
+.article-hero-text .article-title-ja{max-width:34rem}
+.article-hero-text .article-title-ja p:first-child{font-size:1.42rem;line-height:1.55}
+.article-hero-text .article-title-ja p:last-child{font-size:.92rem;line-height:1.75}
+.article-body,.article-body-generated{max-width:660px;font-size:16px;line-height:2;margin-top:6.5rem;margin-bottom:7rem}
+.article-body>p{margin-bottom:1.05em}
+.article-body-generated h2{font-size:clamp(2.35rem,4.4vw,4.6rem);line-height:1;margin:2.8em -3rem .8em}
+.article-body-generated h3{font-size:.92rem;line-height:1.65;margin-top:2.7rem}
+.article-body-generated .opening{font-size:1.12em}
+.article-body-generated .section-ja{font-size:.84rem;margin-top:-1.5rem;margin-bottom:2.5rem}
+.source-window{margin-left:5rem;margin-right:-5rem}
+@media(max-width:760px){.editorial-stage article p:not(.mode):not(.stage-no):not(.market-number):not(.ja){font-size:12px}.article-hero-text{min-height:auto;padding:3rem 1rem 3.5rem}.article-hero-text h1{font-size:16vw;line-height:.84}.article-hero-text .article-title-ja p:first-child{font-size:1.28rem}.article-hero-text .article-title-ja p:last-child{font-size:.9rem}.article-body,.article-body-generated{font-size:16px;line-height:1.92;margin-top:4.5rem}.article-body-generated h2{font-size:11.5vw;margin:2.8em 0 .8em}.source-window{margin-left:0;margin-right:0}}
