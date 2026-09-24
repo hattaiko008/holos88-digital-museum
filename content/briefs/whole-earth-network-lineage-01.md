@@ -241,3 +241,10 @@ Long Now Foundationを入口に、短期的な反応で動くデジタル文化�
 > カウンターカルチャーは、コンピュータを人間の側へ取り戻した。  
 > では私たちは今、そのコンピュータを、地球の側へ戻せるだろうか。
 
+## TIME ATLAS CONNECTION
+
+この連載は、文化・技術・文明を複数の時間軸で重ねる `TIME ATLAS` の最初の実装候補とする。
+
+- `content/briefs/time-atlas-civilization-01.md`
+- 最初の年表：`COUNTERCULTURE TO CYBERCULTURE`
+- 中心年：1966 / 1968 / 1972 / 1984–85 / 1993 / 2005 / 現在
