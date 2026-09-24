@@ -2,6 +2,7 @@ const STORAGE_KEY='holos88.lifeSpecimens.v1';
 const STEP_KEY='holos88.lifeExperiment.v1';
 const RELATIONSHIP_KEY='holos88.lifeRelationships.v1';
 const DIRECTION_KEY='holos88.lifeDirections.v1';
+const SEASONAL_LETTER_KEY='holos88.seasonalLetter.v1';
 const panels=[...document.querySelectorAll('[data-panel]')];
 const navButtons=[...document.querySelectorAll('[data-view]')];
 const form=document.querySelector('#specimen-form');
@@ -60,10 +61,21 @@ function makeDailyMessage(item){
   return `${weatherNotes[item.weather]||weatherNotes['わからない']} ${messages[area]}`;
 }
 
+function makeSeasonalLetter(season){
+  const letters={
+    春:'春は、身体も暮らしも外へ向かい始める季節。急に軽くなろうとせず、朝の光を少し長く浴びて、冬から持ち越したものを一つずつほどいてみましょう。',
+    夏:'夏は、外の熱に気を取られるあいだも身体の内側で水を使います。冷やすことだけでなく、眠りと水分と、何もしない日陰を予定に入れて。',
+    秋:'秋は、広がったものを静かに集め直す季節。日暮れが早くなるぶん、夜の予定を一つ減らし、温かいものを身体へ戻してみましょう。',
+    冬:'冬は、止まって見えるものが根を育てる季節。結果の見えない時間を急かさず、首、手首、足首を温めて、眠りを少し長めに。',
+    '季節の間':'季節の境目は、昨日までの調子が急に合わなくなる頃。決まった正解より、今日の空気と身体の返事を確かめてみましょう。'
+  };
+  return letters[season]||letters['季節の間'];
+}
+
 function showDailyMessage(item){
   document.querySelector('.daily-message-layer')?.remove();
   const layer=document.createElement('div'); layer.className='daily-message-layer';
-  layer.innerHTML=`<section role="dialog" aria-modal="true" aria-labelledby="daily-message-title"><button type="button" class="daily-message-close" aria-label="閉じる">×</button><p class="catalogue">A LETTER FROM HOLOS / ${escapeHtml(item.season)}</p><h2 id="daily-message-title">TODAY'S<br>MESSAGE</h2><blockquote>${escapeHtml(item.holosMessage)}</blockquote><p>今日の記録から届いた、小さな便りです。答えではないので、持ち帰らなくても大丈夫。</p><button type="button" class="daily-message-done">KEEP THIS DAY <span>今日のページへ戻る</span></button></section>`;
+  layer.innerHTML=`<section role="dialog" aria-modal="true" aria-labelledby="daily-message-title"><button type="button" class="daily-message-close" aria-label="閉じる">×</button><p class="catalogue">A LETTER FROM HOLOS / ${escapeHtml(item.season)}</p><h2 id="daily-message-title">TODAY'S<br>MESSAGE</h2><blockquote>${escapeHtml(item.holosMessage)}</blockquote><p>今日の記録から届いた、小さな便りです。答えではないので、持ち帰らなくても大丈夫。</p>${item.seasonalMessage?`<aside class="seasonal-letter"><span>SEASONAL LETTER / 季節の養生</span><p>${escapeHtml(item.seasonalMessage)}</p></aside>`:''}<button type="button" class="daily-message-done">KEEP THIS DAY <span>今日のページへ戻る</span></button></section>`;
   document.body.append(layer);
   const close=()=>layer.remove();
   layer.querySelector('.daily-message-close').addEventListener('click',close);
@@ -83,6 +95,8 @@ function showPanel(name){
 navButtons.forEach(button=>button.addEventListener('click',()=>showPanel(button.dataset.view)));
 
 form.elements.observedOn.value=new Date().toISOString().slice(0,10);
+form.elements.seasonalLetter.checked=localStorage.getItem(SEASONAL_LETTER_KEY)==='true';
+form.elements.seasonalLetter.addEventListener('change',()=>localStorage.setItem(SEASONAL_LETTER_KEY,String(form.elements.seasonalLetter.checked)));
 form.addEventListener('submit',event=>{
   event.preventDefault();
   const data=new FormData(form);
@@ -94,9 +108,10 @@ form.addEventListener('submit',event=>{
     weather:data.get('weather')||'わからない',entryType:data.get('entryType')||'NOTE',observation:data.get('observation').trim(),areas:data.getAll('areas')
   };
   item.holosMessage=makeDailyMessage(item);
+  if(data.get('seasonalLetter')==='yes')item.seasonalMessage=makeSeasonalLetter(item.season);
   all.unshift(item); saveSpecimens(all); form.reset();
   form.elements.observedOn.value=new Date().toISOString().slice(0,10);
-  form.elements.season.value='秋'; showToast('今日の言葉を、この端末に残しました。'); showPanel('collection'); showDailyMessage(item);
+  form.elements.season.value='秋'; form.elements.seasonalLetter.checked=localStorage.getItem(SEASONAL_LETTER_KEY)==='true'; showToast('今日の言葉を、この端末に残しました。'); showPanel('collection'); showDailyMessage(item);
 });
 
 function renderSpecimens(){
