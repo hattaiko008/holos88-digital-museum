@@ -187,6 +187,8 @@ RELATIONSHIP MAPは、一つの標本へ複数の関係線を結べる。家族�
 
 DIRECTION LENSでは、各領域をOBSERVE / KEEP / LESS / MORE / RELEASEへ本人が配置する。今季動かす領域を一つ選ぶと、その意図を72-HOUR STEPへ渡す。可視化を評価で終わらせず、本人が選んだ小さな実験へ戻す。
 
+HOW / METHOD CARDSは、選んだ領域と方向に対して三つの方法を提示する。各方法にWHY / HOW / OBSERVE / IF NOTを付け、行動、観察、縮小案まで具体化する。方法カードからHOLOS Museumの関連展示へMICHIKUSAできる窓を置き、知識を得たあと再び72時間の実験とLifeへ戻れる循環にする。
+
 ### PHASE 3｜MEMBER WEB APP
 
 Ko-fiまたは独自会員と接続する。

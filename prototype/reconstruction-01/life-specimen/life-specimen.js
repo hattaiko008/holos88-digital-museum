@@ -9,6 +9,7 @@ const list=document.querySelector('#specimen-list');
 const count=document.querySelector('#specimen-count');
 const stepForm=document.querySelector('#step-form');
 const activeStep=document.querySelector('#active-step');
+const methodShelf=document.querySelector('#method-shelf');
 const voicesForm=document.querySelector('#voices-form');
 const thirdQuestionText=document.querySelector('#third-question-text');
 const relationshipForm=document.querySelector('#relationship-form');
@@ -164,12 +165,59 @@ function wireAreaMap(all,links){
 }
 
 const directionOptions=[['OBSERVE','もう少し見る'],['KEEP','残す'],['LESS','減らす'],['MORE','増やす'],['RELEASE','手放す']];
+const methodPatterns={
+  OBSERVE:[
+    {en:'COUNT WHAT HAPPENS',jp:'三日だけ数える',why:'感覚だけでは、量や頻度を大きく見積もることがあります。',action:area=>`${area}に関する出来事を、三日間だけ回数で記録する`,observe:'いつ、何の前後で起きたか',fallback:'一日だけ、正の字で数える'},
+    {en:'BEFORE / AFTER',jp:'前後の天気を見る',why:'出来事そのものより、その前後に変化が現れることがあります。',action:area=>`${area}に触れる前と後で、身体と気分の天気を一言ずつ記録する`,observe:'力が戻るか、減るか、変わらないか',fallback:'終わった後だけ記録する'},
+    {en:'CHECK ONE FACT',jp:'事実を一つ確かめる',why:'想像している条件と、実際の条件が違う可能性があります。',action:area=>`${area}について、数字・期限・相手の意向のどれか一つを確認する`,observe:'確認前と確認後で、考えがどう変わったか',fallback:'確認先と質問文だけを決める'}
+  ],
+  KEEP:[
+    {en:'PROTECT THE TIME',jp:'先に守る',why:'残したいものは、空いた時間へ置くと後回しになりがちです。',action:area=>`${area}を守る時間を、予定表へ20分だけ先に置く`,observe:'何が割り込もうとしたか',fallback:'20分を10分にする'},
+    {en:'NAME THE SUPPORT',jp:'支えている条件を知る',why:'続いている理由が分かると、偶然に頼らず残せます。',action:area=>`${area}を支えている人・場所・習慣を三つ書く`,observe:'なくなると最も困る条件は何か',fallback:'一つだけ書く'},
+    {en:'MAKE A MINIMUM',jp:'最小版を決める',why:'忙しい週にも残せる大きさが、継続の土台になります。',action:area=>`${area}を続けたと言える最小の形を一つ決め、今週一度行う`,observe:'無理なく再現できたか',fallback:'時間か量を半分にする'}
+  ],
+  LESS:[
+    {en:'REMOVE ONE',jp:'一回だけ減らす',why:'全部やめなくても、一回減らすと実際の影響を観察できます。',action:area=>`${area}に使っている予定や作業を、今週一回だけ減らす`,observe:'困ったことと、戻ってきた時間や力',fallback:'中止せず、時間を半分にする'},
+    {en:'DELAY THE YES',jp:'即答をやめる',why:'反射的な承諾を止めると、自分で選ぶ余白が生まれます。',action:area=>`${area}に関する頼まれごとへ「確認して返事します」と一度だけ答える`,observe:'待ったあとの判断が変わったか',fallback:'返事の前に一度深呼吸する'},
+    {en:'CHANGE THE ORDER',jp:'順番を変える',why:'量を変えられなくても、順序で負担が変わることがあります。',action:area=>`${area}の用事を一つ、自分の大切な予定の後ろへ移す`,observe:'気分、集中、罪悪感の変化',fallback:'開始を15分だけ遅らせる'}
+  ],
+  MORE:[
+    {en:'PLACE IT FIRST',jp:'先に20分置く',why:'増やしたいものを空き時間へ任せると、なかなか始まりません。',action:area=>`${area}のための20分を、72時間以内の予定表へ先に置く`,observe:'実行できたか、何が割り込んだか',fallback:'20分を10分にする'},
+    {en:'PREPARE THE PLACE',jp:'始めやすくしておく',why:'意志より、始めるまでの手間を減らす方が効くことがあります。',action:area=>`${area}を始めるための道具や場所を、今夜ひとつ準備する`,observe:'翌日、始めるまでの時間が短くなったか',fallback:'必要なものを一か所へ集めるだけ'},
+    {en:'ASK FOR A SMALL YES',jp:'小さく人を頼る',why:'一人で全部整えるより、小さな協力で現実へ触れられます。',action:area=>`${area}について、一人に15分だけ相談・依頼・予約の連絡をする`,observe:'相手の反応と、自分の身体の反応',fallback:'送る文章の下書きだけ作る'}
+  ],
+  RELEASE:[
+    {en:'STOP ONCE',jp:'一度だけやめる',why:'永久に手放す前に、一度ない状態を経験できます。',action:area=>`${area}で惰性になっていることを、今週一度だけ行わない`,observe:'本当に困ったか、誰が困ったか',fallback:'完全にやめず半分にする'},
+    {en:'REMOVE THE CUE',jp:'目に入る入口を外す',why:'行動は意志より、目に入るきっかけに動かされることがあります。',action:area=>`${area}で手放したいものの通知・道具・予定を一つ見えない場所へ移す`,observe:'思い出す回数と、戻ってきた余白',fallback:'通知を一日だけ切る'},
+    {en:'NAME THE BOUNDARY',jp:'境界を一文にする',why:'曖昧な違和感を一文にすると、交渉できる条件になります。',action:area=>`${area}で「ここまではする／ここからはしない」を一文で書く`,observe:'誰に、いつ伝える必要があるか',fallback:'まず自分だけが読める場所へ書く'}
+  ]
+};
+const museumWindows={
+  WORK:{href:'/articles/horse-time.html',en:'HORSE / LABOR / TIME',jp:'馬と人間のあいだにある、働く身体と時間',note:'仕事を「量」だけで見ず、身体、技術、世話、歴史の関係から眺めます。'},
+  BODY:{href:'/stories/archaeology-of-fear.html',en:'BODY HAS ANOTHER CLOCK',jp:'恐怖の考古学',note:'出来事の時間と、身体が生きる時間は同じ速さでは進みません。'},
+  RELATIONSHIPS:{href:'/objects/survivor-tree.html',en:'CARE CONTINUES AFTER THE EVENT',jp:'SURVIVOR TREE',note:'関係は一度の出来事ではなく、その後に続く手入れによって育つことがあります。'},
+  HOME:{href:'/prototype/life-note.html',en:'RAIN / HORSE / KITCHEN / LIFE',jp:'最近、雨ばっかり。',note:'暮らしの小さな場面から、季節、動物、食べもの、世界へ道草します。'},
+  MONEY:{href:'/articles/five-percent.html',en:'FIVE PERCENT, AND BEYOND',jp:'5％という数字の、その向こう',note:'別々の市場の数字が、Lifeでは同じ財布の中で出会います。'},
+  TIME:{href:'/articles/horse-time.html',en:'WHOSE TIME IS IT?',jp:'馬の時間、人間の時間',note:'効率だけでは測れない時間を、動物と人間の関係から見直します。'}
+};
+
+function showMethods(area,choice){
+  const jp=areaNames[area],cards=methodPatterns[choice]||methodPatterns.OBSERVE;
+  const window=museumWindows[area];
+  methodShelf.hidden=false;
+  methodShelf.innerHTML=`<header><p><span>HOW / METHOD CARDS</span><strong>${area}｜${jp} × ${choice}</strong></p><small>一つだけ選び、72時間の実験へ置きます。</small></header><div class="method-grid">${cards.map((method,index)=>`<article><p class="method-number">0${index+1}</p><h3>${method.en}</h3><h4>${method.jp}</h4><dl><dt>WHY</dt><dd>${method.why}</dd><dt>HOW</dt><dd>${method.action(jp)}</dd><dt>OBSERVE</dt><dd>${method.observe}</dd><dt>IF NOT</dt><dd>${method.fallback}</dd></dl><button type="button" data-method-index="${index}">TRY THIS METHOD <span>この方法を試す</span></button></article>`).join('')}</div><aside class="museum-window"><div><span>MICHIKUSA / HOLOS MUSEUM</span><h3>${window.en}</h3><p>${window.jp}</p></div><div><p>${window.note}</p><a href="${window.href}" target="_blank" rel="noopener">OPEN ANOTHER WINDOW <span>もう一つの窓を開く ↗</span></a></div></aside>`;
+  methodShelf.querySelectorAll('[data-method-index]').forEach(button=>button.addEventListener('click',()=>{
+    const method=cards[Number(button.dataset.methodIndex)];
+    stepForm.elements.action.value=method.action(jp); stepForm.elements.observe.value=method.observe;
+    stepForm.elements.action.focus(); showToast('方法を実験欄へ置きました。自分の言葉に直して使えます。');
+  }));
+}
 
 function buildDirectionPlanner(sample=false){
   const saved=sample?{WORK:'LESS',BODY:'KEEP',RELATIONSHIPS:'MORE',HOME:'OBSERVE',MONEY:'OBSERVE',TIME:'MORE'}:directions();
   const rows=Object.entries(areaNames).map(([area,jp])=>`<label><b>${area}</b><span>${jp}</span><select data-direction-area="${area}" ${sample?'disabled':''}>${directionOptions.map(([value,label])=>`<option value="${value}" ${saved[area]===value?'selected':''}>${value}｜${label}</option>`).join('')}</select></label>`).join('');
   const focusOptions=Object.entries(areaNames).map(([area,jp])=>`<option value="${area}">${area}｜${jp}</option>`).join('');
-  return `<section class="direction-planner${sample?' is-sample':''}"><header><span>DIRECTION LENS</span><h3>KEEP / LESS / MORE / RELEASE</h3><p>円の大きさを見たあとで、向かいたい方向は自分で選びます。</p></header><div class="direction-grid">${rows}</div>${sample?'<p class="sample-direction-note">SAMPLE / TIMEを増やすために、WORKを少し減らし、BODYを守る。円の大きさだけでは見えない「意志」を重ねた例です。</p>':`<div class="direction-focus"><label>FOCUS THIS SEASON<span>今季、まず動かす領域</span><select id="direction-focus-area">${focusOptions}</select></label><button type="button" id="direction-to-step">MAKE A 72-HOUR STEP <span>小さな一歩へ進む</span></button></div>`}</section>`;
+  return `<section class="direction-planner${sample?' is-sample':''}"><header><span>DIRECTION LENS</span><h3>KEEP / LESS / MORE / RELEASE</h3><p>円の大きさを見たあとで、向かいたい方向は自分で選びます。</p></header><div class="direction-grid">${rows}</div>${sample?'<div class="sample-direction-note"><p>SAMPLE / TIMEを増やすために、WORKを少し減らし、BODYを守る。円の大きさだけでは見えない「意志」を重ねた例です。</p><button type="button" id="sample-to-methods">SEE THE HOW <span>方法の見本を見る</span></button></div>':`<div class="direction-focus"><label>FOCUS THIS SEASON<span>今季、まず動かす領域</span><select id="direction-focus-area">${focusOptions}</select></label><button type="button" id="direction-to-step">MAKE A 72-HOUR STEP <span>小さな一歩へ進む</span></button></div>`}</section>`;
 }
 
 function wireDirectionPlanner(){
@@ -179,9 +227,14 @@ function wireDirectionPlanner(){
     const area=document.querySelector('#direction-focus-area').value; const choice=directions()[area]||'OBSERVE';
     const jp=areaNames[area]; const directionLabel=Object.fromEntries(directionOptions)[choice];
     stepForm.elements.question.value=`${area}｜${jp}を「${directionLabel}」方向で考える`;
-    showPanel('step'); stepForm.elements.action.focus();
+    showMethods(area,choice); showPanel('step');
     showToast('方向を72時間の実験へ渡しました。次は小さな行動を一つ。');
   });
+}
+
+function wireSampleMethods(){
+  const button=document.querySelector('#sample-to-methods'); if(!button)return;
+  button.addEventListener('click',()=>{showMethods('TIME','MORE');stepForm.elements.question.value='TIME｜時間を「増やす」方向で考える';showPanel('step');showToast('TIMEを増やす、三つの方法の見本です。')});
 }
 const sampleLinks=[
   {id:'SL-01',from:'SAMPLE-02',to:'SAMPLE-01',relation:'奪っている',note:'頼まれる前に動く時間が積み重なっている。'},
@@ -206,6 +259,7 @@ function wireSampleButton(){
   button.addEventListener('click',()=>{
     relationshipMap.innerHTML=`<div class="sample-banner"><p><b>SAMPLE MAP</b><span>これは見本です。あなたの記録には保存されません。</span></p><button type="button" id="close-sample-map">CLOSE SAMPLE <span>見本を閉じる</span></button></div>${buildAreaMap(sampleSpecimens,sampleLinks)}${buildDirectionPlanner(true)}${buildNetwork(sampleSpecimens,sampleLinks)}${sampleCards()}`;
     wireAreaMap(sampleSpecimens,sampleLinks);
+    wireSampleMethods();
     document.querySelector('#close-sample-map').addEventListener('click',renderRelationships);
   });
 }
