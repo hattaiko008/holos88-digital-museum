@@ -19,7 +19,7 @@ Whole Earth Catalogのように、思想だけで終わらず、次に見られ�
 
 ECHOより軽く、hachicoの日記より静か。専門語を使う場合は、その場で意味が分かる文章にする。結論を教えるより、読者の観察が一つ増えることを目指す。
 
-Public creditは `EXPLAINED BY TEAM HOLOS`。各記事の入口に「TEAM HOLOSが、ちょっと解説します。」という共通の案内札を置く。
+Public creditは `EXPLAINED BY TEAM HOLOS`。各記事の入口に「TEAM HOLOSが、ちょこっと解説します。」という共通の案内札を置く。
 
 ## 初回収蔵
 
@@ -28,6 +28,13 @@ Public creditは `EXPLAINED BY TEAM HOLOS`。各記事の入口に「TEAM HOLOS�
 | よく忘れるために | 梅棹忠夫とカード箱 | TIME / HUMAN / TECHNOLOGY |
 | データになる前の野原 | 梅棹忠夫とカード箱 | KNOWLEDGE / EARTH / HUMAN |
 | 誰が、その物を動かせるのか | 梅棹忠夫とカード箱 | MUSEUM / HISTORY / POWER |
+| 覚えているのは誰か | 「私」と言うのは、誰か | MEMORY / SELF / TECHNOLOGY |
+| 夢の私は、どこにいる | 意識は、どこから始まるのか | DREAM / CONSCIOUSNESS / BODY |
+| 見ているのは誰か | 野生は、未開ではない | GAZE / HUMAN / OTHER |
+| 断れない贈り物 | 贈り物は、渡したところで終わらない | GIFT / OBLIGATION / RELATIONSHIP |
+| 植民地のまなざし | 野生は、未開ではない | HISTORY / POWER / ANTHROPOLOGY |
+| 火と器 | 岡本太郎と縄文 | JOMON / CRAFT / LIFE |
+| 問いは、私たちより長く残る | 最後の問いを、誰が持つのか | AI / FUTURE / RESPONSIBILITY |
 
 ## 増やし方
 
