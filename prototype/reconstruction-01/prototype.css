@@ -149,3 +149,17 @@
 @media(max-width:760px){.article-michikusa .article-body ul{grid-template-columns:1fr}.article-michikusa .article-body li{min-height:0}}
 .team-explains{max-width:660px;margin:3rem auto -2.5rem;padding:1rem 1.2rem;border-left:8px solid #796747;background:#e2dac9;font:13px/1.7 var(--jp)}.team-explains span{display:block;font:8px var(--sans);letter-spacing:.16em;margin-bottom:.45rem;color:#796747}
 @media(max-width:760px){.team-explains{margin:2rem 1.25rem -1.5rem}}
+
+/* A private, device-local path through the Museum. */
+.reading-trail{padding:clamp(4rem,8vw,8rem) 3vw;background:#1d201c;color:#f4f1e9;border-top:1px solid rgba(255,255,255,.2)}
+.reading-trail header{display:grid;grid-template-columns:1fr auto;gap:2rem;align-items:end;padding-bottom:2rem;border-bottom:1px solid rgba(255,255,255,.28)}
+.reading-trail header p,.trail-privacy{margin:0;font:8px/1.5 var(--sans);letter-spacing:.16em;color:rgba(255,255,255,.55)}
+.reading-trail h2{margin:1.2rem 0 0;font:400 clamp(4rem,9vw,10rem)/.76 var(--serif);letter-spacing:-.065em}
+.reading-trail button{appearance:none;border:1px solid rgba(255,255,255,.5);padding:.9rem 1.1rem;background:transparent;color:#fff;font:8px/1.4 var(--sans);letter-spacing:.14em;cursor:pointer}
+.reading-trail button[aria-pressed="true"]{background:#d8e71b;color:#161714;border-color:#d8e71b}
+.trail-intro{max-width:34rem;margin:2rem 0 3rem;font:13px/2 var(--jp);color:rgba(255,255,255,.72)}
+.reading-trail ol{list-style:none;margin:0 0 2rem;padding:0;border-top:1px solid rgba(255,255,255,.22)}
+.reading-trail li a{display:grid;grid-template-columns:3rem 1fr auto;gap:1rem;align-items:center;padding:1rem 0;border-bottom:1px solid rgba(255,255,255,.22)}
+.reading-trail li>a>span:first-child,.reading-trail li b{font:8px/1 var(--sans);letter-spacing:.12em;color:#b9c6a8}
+.reading-trail li strong,.reading-trail li small{display:block}.reading-trail li strong{font:400 1.05rem/1.25 var(--serif)}.reading-trail li small{margin-top:.25rem;font:10px/1.6 var(--jp);color:rgba(255,255,255,.58)}
+@media(max-width:760px){.reading-trail{padding:4rem 1rem}.reading-trail header{grid-template-columns:1fr}.reading-trail h2{font-size:18vw}.reading-trail header button{justify-self:start}}
