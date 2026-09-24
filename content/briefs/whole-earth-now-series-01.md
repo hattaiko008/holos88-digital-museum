@@ -67,6 +67,17 @@ Whole Earth Catalog、ACCESS TO TOOLS、カウンターカルチャーからシ�
 
 危機を消費させるニュースと、行動を可能にするメディアの違い。HOLOS 88自身の役割も問い直す。
 
+## PUBLICATION DRAFTS — 2026-09-25
+
+- `content/drafts/echo/paper-google.md`
+  - 検索と編集、名前のない問い、セレンディピティ。
+- `content/drafts/echo/who-chooses-the-tool.md`
+  - 道具の非中立性、編集権力、アクセスと関係への責任。
+- `content/drafts/echo/from-commune-to-platform.md`
+  - CatalogからWELL、現在のSNSへ。共同体の所有、広告、注意、ケア。
+
+3本は独立して読める。同時に、`知る → 選ぶ → 集まる`という順で読むと、Whole Earthの思想が情報、道具、共同体へ展開する小さな三部作になる。
+
 ## INTERNAL SOURCE DESK
 
 公開本文へ脚注を過剰に出す必要はないが、事実・固有の概念・発言は内部で出典を保持する。
