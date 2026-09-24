@@ -116,6 +116,7 @@
 .article-body,.article-body-generated{max-width:660px;font-size:16px;line-height:1.86;margin-top:6.5rem;margin-bottom:7rem}
 .article-body>p{margin-bottom:.72em}
 .article-body-generated h2{font-size:clamp(1.9rem,3.35vw,3.55rem);line-height:1.08;margin:3.2em -2rem .9em}
+.article-body-generated h2 .heading-en,.article-body-generated h3 .heading-en{display:block}.article-body-generated h2 .heading-ja,.article-body-generated h3 .heading-ja{display:block;margin-top:.55rem;font:600 .92rem/1.65 var(--jp);letter-spacing:.06em;color:rgba(17,17,15,.64)}
 .article-body-generated h3{font-size:.92rem;line-height:1.65;margin-top:2.7rem}
 .article-body-generated .opening{font-size:1.12em}
 .article-body-generated .section-ja{font-size:.84rem;margin-top:-1.5rem;margin-bottom:2.5rem}
