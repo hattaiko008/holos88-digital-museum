@@ -1,11 +1,11 @@
 # LIFE SPECIMEN｜PAYMENT & CONTENT LADDER 01
 
 更新日：2026-09-24  
-状態：設計案。決済リンク未接続
+状態：販売場所をKo-fiへ統一。アカウント接続前
 
 ## 結論
 
-HOLOS 88を中心に置き、Substackは無料メール、Ko-fiはPayPal決済と自動配布、PayPal Payment Linksは単発販売の補助として使う。
+HOLOS 88を中心に置き、Substackは無料メール、販売・Membership・デジタル配布はKo-fiへ統一する。PayPalはKo-fiの裏側で売上を受け取る決済口座としてのみ使う。
 
 ```text
 SNS / note / Pinterest
@@ -16,7 +16,7 @@ HOLOS 88 / LIFE SPECIMEN
         ↓
 もっと読みたい瞬間だけ、小さな有料の扉
         ↓
-Ko-fi Shop / Membership ── PayPal
+Ko-fi Shop / Membership
         ↓
 PERSONAL ATLAS / GUIDED LETTER
 ```
@@ -38,17 +38,17 @@ PERSONAL ATLAS / GUIDED LETTER
 
 ### Ko-fi
 
-- PayPalを接続する主要な販売場所
+- 購入者から見える唯一の販売場所
+- PayPalを受取口座として裏側で接続
 - PDF、音声、季節号、読み物の自動配布
 - Membership限定記事とアーカイブ
 - 単品商品、継続課金、購入履歴をまとめる
 
-### PayPal Payment Links
+### PayPal
 
-- 小さな単発商品、先行販売、個別サービスの決済
-- SNS、メール、HOLOS 88へ同じリンクを置ける
-- 決済だけではアプリ内の購入者判定やデジタル商品の自動配布が完結しないため、初期はKo-fiを組み合わせる
-- 将来LIFE SPECIMEN内で自動解錠する場合は、PayPalの支払い確認と会員IDを安全につなぐバックエンドを用意する
+- Ko-fiからの売上を受け取る決済口座
+- 購入者向けの商品リンクや販売ページには使用しない
+- 商品管理、購入履歴、デジタル配布の入口を分散させない
 
 ## 無料から有料への段階
 
@@ -132,7 +132,7 @@ PERSONAL ATLAS / GUIDED LETTER
 ### 最初
 
 - Ko-fiで決済と自動配布
-- PayPalへ直接入金
+- Ko-fiへ接続したPayPalで売上を受領
 - Substackで無料メール
 - LIFE SPECIMENから商品ページへ移動
 - 個別返信は、本人が明示して送った記録だけ
@@ -152,4 +152,3 @@ PERSONAL ATLAS / GUIDED LETTER
 3. `THE THIRD VOICE`：凝り固まった選択を別の窓から見るPDF
 
 この三つで、季節、継続記録、象徴的な読み解きの需要を小さく確認する。
-
