@@ -43,6 +43,24 @@
 .relationship-form button span{color:#c8cbc5}
 .relationship-map{margin-top:3rem}
 .network-figure{margin:0 0 4rem;border:1px solid var(--line);background:rgba(255,255,255,.25)}
+.area-map{border:1px solid var(--line);margin-bottom:2rem;background:rgba(255,255,255,.2)}
+.area-map header{display:flex;align-items:end;justify-content:space-between;gap:2rem;border-bottom:1px solid var(--line);padding:1rem 1.2rem}
+.area-map header>div:first-child>span{display:block;font-size:9px;letter-spacing:.15em;font-weight:700}
+.area-map header strong{display:block;font:1.4rem var(--display);font-weight:400;margin:.35rem 0}
+.area-map header small{display:block;font:12px var(--jp);color:var(--jp-muted)}
+.area-map-controls{display:flex;border:1px solid var(--line)}
+.area-map-controls button{border:0;border-right:1px solid var(--line);background:transparent;padding:.7rem .9rem;font-size:9px;letter-spacing:.08em;text-align:left}
+.area-map-controls button:last-child{border-right:0}
+.area-map-controls button span{display:block;font:11px var(--jp);color:var(--jp-muted);margin-top:.25rem}
+.area-map-controls button[aria-pressed=true]{background:var(--ink);color:var(--paper)}
+.area-map-controls button[aria-pressed=true] span{color:#c8cbc5}
+.area-map svg{display:block;width:100%;height:auto;max-height:430px}
+.area-bubble circle{fill:var(--paper);stroke:var(--ink);stroke-width:1.1}
+.area-bubble.is-largest circle{fill:var(--sage)}
+.area-bubble text{text-anchor:middle;pointer-events:none}
+.area-bubble .area-en{font:12px var(--sans);letter-spacing:.08em;fill:var(--ink)}
+.area-bubble .area-jp{font:12px var(--jp);fill:var(--jp-muted)}
+.area-bubble .area-value{font:16px var(--display);fill:var(--ink)}
 .network-figure figcaption{display:grid;grid-template-columns:1fr auto;border-bottom:1px solid var(--line);padding:1rem 1.2rem;gap:.35rem 2rem}
 .network-figure figcaption span{font-size:9px;letter-spacing:.15em;font-weight:700}
 .network-figure figcaption strong{font:1.15rem var(--display);font-weight:400}
@@ -78,4 +96,4 @@
 .relationship-note{grid-column:1/4;font:12px/1.7 var(--jp);color:var(--jp-muted);margin:1rem 0 0}
 .relationship-card>button{grid-column:3;border:0;background:transparent;justify-self:end;font-size:9px;margin-top:1rem}
 @media(max-width:780px){.mode-nav{grid-template-columns:repeat(2,1fr)}.voice-grid{grid-template-columns:1fr}}
-@media(max-width:780px){.relationship-form{grid-template-columns:1fr}.relationship-form .wide,.relationship-form button{grid-column:1}.relationship-card{grid-template-columns:1fr}.relationship-line{min-height:70px;flex-direction:column}.relationship-line i{width:1px}.relationship-note,.relationship-card>button{grid-column:1}.network-figure figcaption{grid-template-columns:1fr}.network-figure figcaption small{grid-column:1}.network-figure svg{min-height:280px}}
+@media(max-width:780px){.relationship-form{grid-template-columns:1fr}.relationship-form .wide,.relationship-form button{grid-column:1}.relationship-card{grid-template-columns:1fr}.relationship-line{min-height:70px;flex-direction:column}.relationship-line i{width:1px}.relationship-note,.relationship-card>button{grid-column:1}.network-figure figcaption{grid-template-columns:1fr}.network-figure figcaption small{grid-column:1}.network-figure svg{min-height:280px}.area-map header{display:block}.area-map-controls{margin-top:1rem}.area-map-controls button{flex:1}.area-map svg{min-height:290px}}

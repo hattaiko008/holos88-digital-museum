@@ -123,12 +123,42 @@ function buildNetwork(all,links){
 }
 
 const sampleSpecimens=[
-  {id:'SAMPLE-01',observation:'自分で選べる時間が足りない'},
-  {id:'SAMPLE-02',observation:'家族の用事を、先回りして引き受けている'},
-  {id:'SAMPLE-03',observation:'パートナーと話したあとは少し力が戻る'},
-  {id:'SAMPLE-04',observation:'仕事の締切が重なると、夜まで頭が止まらない'},
-  {id:'SAMPLE-05',observation:'疲れると、最初に肩と眠りへ出る'}
+  {id:'SAMPLE-01',observation:'自分で選べる時間が足りない',areas:['TIME']},
+  {id:'SAMPLE-02',observation:'家族の用事を、先回りして引き受けている',areas:['HOME','RELATIONSHIPS','TIME']},
+  {id:'SAMPLE-03',observation:'パートナーと話したあとは少し力が戻る',areas:['RELATIONSHIPS','BODY']},
+  {id:'SAMPLE-04',observation:'仕事の締切が重なると、夜まで頭が止まらない',areas:['WORK','TIME','BODY']},
+  {id:'SAMPLE-05',observation:'疲れると、最初に肩と眠りへ出る',areas:['BODY']}
 ];
+
+const areaNames={WORK:'仕事',BODY:'身体',RELATIONSHIPS:'関係',HOME:'暮らし',MONEY:'お金',TIME:'時間'};
+
+function buildAreaMap(all,links,metric='attention'){
+  const ids=new Set(all.map(item=>item.id));
+  const values=Object.fromEntries(Object.keys(areaNames).map(area=>[area,0]));
+  if(metric==='attention'){
+    all.forEach(item=>(item.areas||[]).forEach(area=>{if(area in values)values[area]+=1}));
+  }else{
+    const byId=Object.fromEntries(all.map(item=>[item.id,item]));
+    links.filter(link=>ids.has(link.from)&&ids.has(link.to)).forEach(link=>{
+      [...new Set([...(byId[link.from].areas||[]),...(byId[link.to].areas||[])])].forEach(area=>{if(area in values)values[area]+=1});
+    });
+  }
+  const max=Math.max(1,...Object.values(values));
+  const positions={WORK:[150,115],BODY:[450,90],RELATIONSHIPS:[750,115],HOME:[150,310],MONEY:[450,335],TIME:[750,310]};
+  const circles=Object.entries(areaNames).map(([area,jp])=>{
+    const [x,y]=positions[area],value=values[area],r=34+(value/max)*42;
+    return `<g class="area-bubble${value===max&&value>0?' is-largest':''}" transform="translate(${x} ${y})"><circle r="${r}"></circle><text class="area-en" y="-5">${area}</text><text class="area-jp" y="15">${jp}</text><text class="area-value" y="${r+19}">${value}</text></g>`;
+  }).join('');
+  const explanation=metric==='attention'?'記録に登場した回数':'関係線に含まれた回数';
+  return `<section class="area-map" data-current-metric="${metric}"><header><div><span>CATEGORY LENS</span><strong>LIFE AREAS</strong><small>円の大きさ＝${explanation}。大切さの順位ではありません。</small></div><div class="area-map-controls" role="group" aria-label="円の大きさを決める物差し"><button type="button" data-area-metric="attention" aria-pressed="${metric==='attention'}">ATTENTION<span>登場回数</span></button><button type="button" data-area-metric="connection" aria-pressed="${metric==='connection'}">CONNECTION<span>接続回数</span></button></div></header><svg viewBox="0 0 900 420" role="img" aria-label="六つの生活領域を円の大きさで示した地図">${circles}</svg></section>`;
+}
+
+function wireAreaMap(all,links){
+  document.querySelectorAll('[data-area-metric]').forEach(button=>button.addEventListener('click',()=>{
+    const current=document.querySelector('.area-map'); if(!current)return;
+    current.outerHTML=buildAreaMap(all,links,button.dataset.areaMetric); wireAreaMap(all,links);
+  }));
+}
 const sampleLinks=[
   {id:'SL-01',from:'SAMPLE-02',to:'SAMPLE-01',relation:'奪っている',note:'頼まれる前に動く時間が積み重なっている。'},
   {id:'SL-02',from:'SAMPLE-03',to:'SAMPLE-01',relation:'支えている',note:'話すことで考えが整理され、自分の時間へ戻りやすい。'},
@@ -150,7 +180,8 @@ function sampleCards(){
 function wireSampleButton(){
   const button=document.querySelector('#show-sample-map'); if(!button)return;
   button.addEventListener('click',()=>{
-    relationshipMap.innerHTML=`<div class="sample-banner"><p><b>SAMPLE MAP</b><span>これは見本です。あなたの記録には保存されません。</span></p><button type="button" id="close-sample-map">CLOSE SAMPLE <span>見本を閉じる</span></button></div>${buildNetwork(sampleSpecimens,sampleLinks)}${sampleCards()}`;
+    relationshipMap.innerHTML=`<div class="sample-banner"><p><b>SAMPLE MAP</b><span>これは見本です。あなたの記録には保存されません。</span></p><button type="button" id="close-sample-map">CLOSE SAMPLE <span>見本を閉じる</span></button></div>${buildAreaMap(sampleSpecimens,sampleLinks)}${buildNetwork(sampleSpecimens,sampleLinks)}${sampleCards()}`;
+    wireAreaMap(sampleSpecimens,sampleLinks);
     document.querySelector('#close-sample-map').addEventListener('click',renderRelationships);
   });
 }
@@ -164,7 +195,7 @@ function renderRelationships(){
   const byId=Object.fromEntries(all.map(item=>[item.id,item]));
   const links=relationships().filter(link=>byId[link.from]&&byId[link.to]);
   if(!links.length){relationshipMap.innerHTML='<div class="empty-map"><p>まだ関係線はありません。<br>正解を決めず、「そう見える」を一本だけ結んでみましょう。</p><button type="button" id="show-sample-map">VIEW SAMPLE MAP <span>見本の関係地図を見る</span></button></div>';wireSampleButton();return}
-  relationshipMap.innerHTML=buildNetwork(all,links)+links.map(link=>`<article class="relationship-card">
+  relationshipMap.innerHTML=buildAreaMap(all,links)+buildNetwork(all,links)+links.map(link=>`<article class="relationship-card">
     <div class="relationship-node"><span>${escapeHtml(link.from)}</span><p>${escapeHtml(specimenLabel(byId[link.from]).split('｜').slice(1).join('｜'))}</p></div>
     <div class="relationship-line"><i></i><strong>${escapeHtml(link.relation)}</strong><i></i></div>
     <div class="relationship-node"><span>${escapeHtml(link.to)}</span><p>${escapeHtml(specimenLabel(byId[link.to]).split('｜').slice(1).join('｜'))}</p></div>
@@ -172,6 +203,7 @@ function renderRelationships(){
     <button type="button" data-delete-link="${escapeHtml(link.id)}">UNLINK / 線を外す</button>
   </article>`).join('');
   relationshipMap.querySelectorAll('[data-delete-link]').forEach(button=>button.addEventListener('click',()=>{saveRelationships(relationships().filter(link=>link.id!==button.dataset.deleteLink));renderRelationships();showToast('関係線を外しました。')}));
+  wireAreaMap(all,links);
 }
 
 relationshipForm.addEventListener('submit',event=>{
