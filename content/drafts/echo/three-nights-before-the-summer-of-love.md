@@ -81,9 +81,19 @@ Grateful Deadの窓では、一夜の体験がツアーと録音交換によっ�
 
 ### MICHIKUSA
 
-- BUCHLA——鍵盤を持たない電子楽器
-- GRATEFUL DEAD——バンドの外側にできた共同体
-- EVENT AS PLATFORM——催しは、いつプラットフォームになるのか
+### HOLOS TEAMが、ちょこっと解説します。
+
+**[BUCHLA HAD NO KEYBOARD｜鍵盤を置かなかった電子楽器](/prototype/articles/buchla-had-no-keyboard.html)**
+
+ピアノのような鍵盤を置けば、演奏者は知っている音階へ戻りやすい。Don Buchlaは、まだ名前のない音へ行くため、楽器の入口そのものを考え直した。
+
+**[THE GRATEFUL DEAD WAS A NETWORK｜バンドの外側にできた共同体](/prototype/articles/the-grateful-dead-was-a-network.html)**
+
+一夜の即興は、録音テープ、ツアー、口コミによって長い関係へ変わった。音楽を所有することより、また同じ場所へ戻ってくる文化を見る。
+
+**[FROM COMMUNE TO PLATFORM｜催しは、いつプラットフォームになるのか](/prototype/articles/from-commune-to-platform.html)**
+
+人が集まり、自分たちで場の中身をつくる。その自由な広場が、いつ運営、料金、データ、規則を持つ「仕組み」へ変わるのか。
 
 ### SOURCE DESK
 
