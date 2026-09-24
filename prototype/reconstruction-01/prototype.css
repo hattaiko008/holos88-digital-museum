@@ -53,3 +53,15 @@
 .article-life .article-body p,.article-life .article-body p:nth-of-type(3n){max-width:none;margin-left:0;text-align:left}
 .article-life .article-body-generated h2{margin-left:0;margin-right:0}
 @media(max-width:760px){.editorial-stage{gap:10px;background:transparent}.editorial-stage article{margin-bottom:10px}.article-life .article-body{padding-left:1.25rem;padding-right:1.25rem}}
+
+/* MICHIKUSA uses a quiet field photograph instead of decorative symbols. */
+.michikusa-garden{position:relative;isolation:isolate;background:none;overflow:hidden}
+.michikusa-garden:before{content:"";position:absolute;inset:0;z-index:-2;background:url('/assets/horse.jpg') center 78%/cover no-repeat;filter:grayscale(1) saturate(.25);opacity:.18}
+.michikusa-garden:after{content:"";position:absolute;inset:0;z-index:-1;background:rgba(244,241,233,.72)}
+.michikusa-garden header h3 span{display:none}
+.michikusa-garden nav a{background:rgba(244,241,233,.48);backdrop-filter:blur(1px)}
+.michikusa-garden nav a:hover{background:rgba(229,225,205,.88)}
+@media(max-width:760px){.michikusa-garden{background:none}.michikusa-garden:before{background-position:center 82%;opacity:.16}}
+.michikusa-garden:before{opacity:.28}
+.michikusa-garden:after{background:rgba(244,241,233,.56)}
+@media(max-width:760px){.michikusa-garden:before{opacity:.23}}
