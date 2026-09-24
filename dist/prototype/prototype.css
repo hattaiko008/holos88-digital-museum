@@ -113,14 +113,14 @@
 .article-hero-text .article-title-ja{max-width:34rem}
 .article-hero-text .article-title-ja p:first-child{font-size:1.42rem;line-height:1.55}
 .article-hero-text .article-title-ja p:last-child{font-size:.92rem;line-height:1.75}
-.article-body,.article-body-generated{max-width:660px;font-size:16px;line-height:2;margin-top:6.5rem;margin-bottom:7rem}
-.article-body>p{margin-bottom:1.05em}
+.article-body,.article-body-generated{max-width:660px;font-size:16px;line-height:1.86;margin-top:6.5rem;margin-bottom:7rem}
+.article-body>p{margin-bottom:.72em}
 .article-body-generated h2{font-size:clamp(1.9rem,3.35vw,3.55rem);line-height:1.08;margin:3.2em -2rem .9em}
 .article-body-generated h3{font-size:.92rem;line-height:1.65;margin-top:2.7rem}
 .article-body-generated .opening{font-size:1.12em}
 .article-body-generated .section-ja{font-size:.84rem;margin-top:-1.5rem;margin-bottom:2.5rem}
 .source-window{margin-left:5rem;margin-right:-5rem}
-@media(max-width:760px){.editorial-stage article p:not(.mode):not(.stage-no):not(.market-number):not(.ja){font-size:12px}.article-hero-text{min-height:auto;padding:3rem 1rem 3.5rem}.article-hero-text h1{font-size:16vw;line-height:.84}.article-hero-text .article-title-ja p:first-child{font-size:1.28rem}.article-hero-text .article-title-ja p:last-child{font-size:.9rem}.article-body,.article-body-generated{font-size:16px;line-height:1.92;margin-top:4.5rem}.article-body-generated h2{font-size:9.5vw;margin:3em 0 .9em}.source-window{margin-left:0;margin-right:0}}
+@media(max-width:760px){.editorial-stage article p:not(.mode):not(.stage-no):not(.market-number):not(.ja){font-size:12px}.article-hero-text{min-height:auto;padding:3rem 1rem 3.5rem}.article-hero-text h1{font-size:16vw;line-height:.84}.article-hero-text .article-title-ja p:first-child{font-size:1.28rem}.article-hero-text .article-title-ja p:last-child{font-size:.9rem}.article-body,.article-body-generated{font-size:16px;line-height:1.82;margin-top:4.5rem}.article-body-generated h2{font-size:9.5vw;margin:3em 0 .9em}.source-window{margin-left:0;margin-right:0}}
 
 .reading-shelf{margin:3rem 3vw 0;padding:5rem 3vw;background:#e4dfd4;color:var(--ink);display:grid;grid-template-columns:.7fr 1.3fr;column-gap:5vw;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
 .reading-shelf header h2{font:400 clamp(4rem,7.5vw,8rem)/.78 var(--serif);letter-spacing:-.07em;margin:2rem 0 1.5rem}.reading-shelf ol{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
