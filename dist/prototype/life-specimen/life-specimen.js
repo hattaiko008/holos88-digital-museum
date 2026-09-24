@@ -96,6 +96,32 @@ function specimenLabel(item){
   return `${item.id}｜${first.slice(0,38)}${first.length>38?'…':''}`;
 }
 
+function buildNetwork(all,links){
+  const byId=Object.fromEntries(all.map(item=>[item.id,item]));
+  const ids=[...new Set(links.flatMap(link=>[link.from,link.to]))];
+  if(ids.length<2)return '';
+  const degree=Object.fromEntries(ids.map(id=>[id,0]));
+  links.forEach(link=>{degree[link.from]+=1;degree[link.to]+=1});
+  const center=[...ids].sort((a,b)=>degree[b]-degree[a])[0];
+  const others=ids.filter(id=>id!==center);
+  const positions={[center]:{x:450,y:260}};
+  others.forEach((id,index)=>{
+    const angle=-Math.PI/2+(Math.PI*2*index/others.length);
+    positions[id]={x:450+Math.cos(angle)*315,y:260+Math.sin(angle)*185};
+  });
+  const relationLines=links.map(link=>{
+    const a=positions[link.from],b=positions[link.to]; if(!a||!b)return '';
+    const mx=(a.x+b.x)/2,my=(a.y+b.y)/2;
+    return `<g class="map-link"><line x1="${a.x}" y1="${a.y}" x2="${b.x}" y2="${b.y}" marker-end="url(#arrow)"></line><rect x="${mx-48}" y="${my-12}" width="96" height="22" rx="11"></rect><text x="${mx}" y="${my+4}">${escapeHtml(link.relation)}</text></g>`;
+  }).join('');
+  const nodes=ids.map(id=>{
+    const item=byId[id],p=positions[id]; const raw=specimenLabel(item).split('｜').slice(1).join('｜');
+    const snippet=raw.length>15?`${raw.slice(0,15)}…`:raw;
+    return `<g class="map-node${id===center?' is-center':''}" transform="translate(${p.x} ${p.y})"><circle r="${id===center?72:58}"></circle><text class="node-id" y="-10">${escapeHtml(id)}</text><text class="node-label" y="14">${escapeHtml(snippet)}</text><title>${escapeHtml(raw)}</title></g>`;
+  }).join('');
+  return `<figure class="network-figure"><figcaption><span>RELATIONSHIP NETWORK</span><strong>${ids.length} specimens / ${links.length} connections</strong><small>もっとも多く結ばれた標本を、中心に表示しています。</small></figcaption><svg viewBox="0 0 900 520" role="img" aria-label="収蔵した標本の関係地図"><defs><marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z"></path></marker></defs>${relationLines}${nodes}</svg></figure>`;
+}
+
 function renderRelationships(){
   const all=specimens();
   const selects=[relationshipForm.elements.from,relationshipForm.elements.to];
@@ -105,7 +131,7 @@ function renderRelationships(){
   const byId=Object.fromEntries(all.map(item=>[item.id,item]));
   const links=relationships().filter(link=>byId[link.from]&&byId[link.to]);
   if(!links.length){relationshipMap.innerHTML='<p class="empty-map">まだ関係線はありません。<br>正解を決めず、「そう見える」を一本だけ結んでみましょう。</p>';return}
-  relationshipMap.innerHTML=links.map(link=>`<article class="relationship-card">
+  relationshipMap.innerHTML=buildNetwork(all,links)+links.map(link=>`<article class="relationship-card">
     <div class="relationship-node"><span>${escapeHtml(link.from)}</span><p>${escapeHtml(specimenLabel(byId[link.from]).split('｜').slice(1).join('｜'))}</p></div>
     <div class="relationship-line"><i></i><strong>${escapeHtml(link.relation)}</strong><i></i></div>
     <div class="relationship-node"><span>${escapeHtml(link.to)}</span><p>${escapeHtml(specimenLabel(byId[link.to]).split('｜').slice(1).join('｜'))}</p></div>
