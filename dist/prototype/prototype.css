@@ -66,3 +66,4 @@
 .michikusa-garden:after{background:rgba(244,241,233,.56)}
 @media(max-width:760px){.michikusa-garden:before{opacity:.23}}
 .hachico-copy .title-star{display:inline-block;font:400 .3em/1 var(--sans);vertical-align:.38em;letter-spacing:0;margin:0 .16em}
+.hachico-copy .title-star{font-size:.72em;vertical-align:.08em;margin:0 .08em}
