@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>TIME ATLAS — HOLOS 88</title>
+  <meta name="description" content="地球儀を回し、場所と時間からHOLOS 88の記事を巡るTIME ATLAS試作。">
+  <link rel="stylesheet" href="../prototype.css">
+  <link rel="stylesheet" href="./time-atlas.css">
+</head>
+<body class="atlas-page">
+  <a class="skip-link" href="#atlas">地球儀へ</a>
+  <header class="atlas-header">
+    <a class="atlas-logo" href="../index.html">HOLOS<sub>88</sub></a>
+    <p>TIME ATLAS / PROTOTYPE 01</p>
+    <a href="../index.html#atlas">CLOSE ×</a>
+  </header>
+
+  <main id="atlas" class="atlas-main">
+    <section class="atlas-intro">
+      <p class="atlas-kicker">PLACE × TIME × RELATIONSHIP</p>
+      <h1>WHERE DID<br>THE IDEA<br>BEGIN?</h1>
+      <p class="atlas-title-ja">その思想は、地球のどこで始まったのか。</p>
+      <p class="atlas-lead">地球儀を動かし、白いピンを選んでください。ひとつの場所から、人物、音楽、道具、時代、そして別の土地へ進めます。</p>
+    </section>
+
+    <section class="globe-stage" aria-labelledby="globe-title">
+      <div class="globe-tools">
+        <div>
+          <p id="globe-title">COUNTERCULTURE TO CYBERCULTURE</p>
+          <span>1966—1998 / FIRST CONSTELLATION</span>
+        </div>
+        <button id="reset-globe" type="button">RETURN TO WHOLE EARTH ↺</button>
+      </div>
+
+      <div class="globe-layout">
+        <div id="globe" class="globe" role="img" aria-label="回転できる地球儀。Whole Earthと初期コンピュータ文化に関係する場所をピンで表示。">
+          <p class="globe-loading">LOADING THE EARTH…</p>
+        </div>
+        <aside class="place-window" aria-live="polite">
+          <p class="place-number" id="place-number">01 / 07</p>
+          <p class="place-year" id="place-year">1966</p>
+          <h2 id="place-title">TRIPS FESTIVAL</h2>
+          <p class="place-location" id="place-location">SAN FRANCISCO / UNITED STATES</p>
+          <p class="place-note" id="place-note">音、光、電子楽器、踊る身体。のちに別々の文化と呼ばれるものが、三夜だけ同じ空間にいた。</p>
+          <a id="place-link" href="../articles/whole-earth-catalog.html">ENTER THIS WINDOW ↗</a>
+        </aside>
+      </div>
+
+      <nav class="place-index" aria-label="地球儀に表示する場所">
+        <button type="button" data-place="trips" aria-pressed="true"><span>1966</span> SAN FRANCISCO</button>
+        <button type="button" data-place="catalog"><span>1968</span> MENLO PARK</button>
+        <button type="button" data-place="demo"><span>1968</span> SAN FRANCISCO</button>
+        <button type="button" data-place="well"><span>1985</span> SAUSALITO</button>
+        <button type="button" data-place="wired"><span>1993</span> SAN FRANCISCO</button>
+        <button type="button" data-place="longnow"><span>1996</span> SAN FRANCISCO</button>
+        <button type="button" data-place="whole"><span>NOW</span> WHOLE EARTH</button>
+      </nav>
+    </section>
+
+    <section class="earth-portals" aria-labelledby="portal-title">
+      <header>
+        <p>THREE WAYS TO TURN THE EARTH</p>
+        <h2 id="portal-title">EARTH<br>PORTALS</h2>
+        <p>同じ地球を、音、過去の地図、現在の大気から見る。</p>
+      </header>
+      <div class="portal-list">
+        <a href="https://radio.garden/" rel="noreferrer"><span>01 / LISTEN</span><strong>RADIO GARDEN</strong><small>いま、この場所で流れている声を聴く。</small><b>OPEN THE LIVING EARTH ↗</b></a>
+        <a href="https://www.oldmapsonline.org/" rel="noreferrer"><span>02 / REMEMBER</span><strong>OLD MAPS ONLINE</strong><small>この土地が、かつてどう描かれていたかを見る。</small><b>OPEN THE PAST EARTH ↗</b></a>
+        <a href="https://earth.nullschool.net/" rel="noreferrer"><span>03 / BREATHE</span><strong>EARTH NULLSCHOOL</strong><small>風、海、気象。国境を越えて動く現在を見る。</small><b>OPEN THE MOVING EARTH ↗</b></a>
+      </div>
+      <p class="portal-note">EXTERNAL ARCHIVES / 各サービスのリンク・埋め込み・利用条件は公開前に個別確認します。</p>
+    </section>
+
+    <footer class="atlas-footer">
+      <p>TURN THE GLOBE. FOLLOW A THREAD. RETURN TO LIFE.</p>
+      <p>地球儀を回す。一本の線を辿る。そして、Lifeへ帰る。</p>
+    </footer>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/topojson-client@3.1.0/dist/topojson-client.min.js"></script>
+  <script src="./time-atlas.js"></script>
+</body>
+</html>

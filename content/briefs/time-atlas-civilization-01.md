@@ -124,6 +124,18 @@
 - `BRONZE AGE × MEDITERRANEAN`
 - `SAME SKY × DIFFERENT CALENDARS`
 
+## EARTH PORTALS
+
+地球儀はHOLOS 88の記事だけで閉じない。信頼できる外部のRabbit Holeへ渡す。
+
+- **LISTEN / RADIO GARDEN**：その場所で現在流れているラジオを聴く。
+- **REMEMBER / OLD MAPS ONLINE**：その土地の歴史地図を年代から探す。
+- **BREATHE / EARTH NULLSCHOOL**：現在の風、海、気象、大気を見る。
+- **OBSERVE / GLOBAL FISHING WATCH**：海上の漁業活動と資源の関係を見る候補。
+- **TRACE / OPENHISTORICALMAP**：場所の変化を協働で記録する地図への候補。
+
+初期実装では公式サイトへの明示的なリンクを使う。埋め込み、API、位置情報の受け渡しは、各サービスの利用規約、権利、安定性、費用を確認後に判断する。
+
 ## FIRST TIMELINE COLLECTIONS
 
 ### 01 — COUNTERCULTURE TO CYBERCULTURE
@@ -213,4 +225,3 @@ HOLOSのTIME ATLASは、どこからでも入れる。
 歴史は、終わった出来事の収蔵庫ではない。
 
 私たちが今日選んでいることの、長い影である。
-
