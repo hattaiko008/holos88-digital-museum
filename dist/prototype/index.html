@@ -18,23 +18,30 @@
   </header>
 
   <main id="main">
-    <section class="cover" aria-labelledby="cover-title">
-      <figure class="cover-image">
-        <img src="/assets/horse.jpg" alt="薄暗い野原を走る白い馬" width="562" height="1000">
-        <figcaption>FIELD NOTE / HORSE / AUTUMN RAIN</figcaption>
-      </figure>
-      <div class="cover-copy">
-        <p class="eyebrow">LIFE · SEASON · ANIMALS</p>
-        <h1 id="cover-title"><span>THE WEATHER</span><span>OF A LIFE</span></h1>
-        <p class="title-ja">最近、雨ばっかり。</p>
-        <p class="standfirst">雨から馬へ。馬から金木犀へ。ひとつの秋の日に、世界はいくつもの入口を開けている。</p>
-        <div class="cover-actions">
-          <a class="primary" href="/prototype/articles/horse-time.html">この窓を読む <span>↗</span></a>
-          <a href="#read">いま読む</a>
-          <a href="#museum">Museumへ</a>
-        </div>
+    <section class="category-cover" aria-label="HOLOS 88のカテゴリーから読む" data-category-cover>
+      <div class="category-slides">
+        <article class="category-slide is-active" data-category-slide aria-hidden="false">
+          <figure><img src="/assets/study01-384116.jpg" alt="蝶と貝を描いた古い博物画"><figcaption>COLLECTION / NATURAL HISTORY PLATE</figcaption></figure>
+          <div class="category-copy"><p class="eyebrow">01 / KNOWLEDGE · 記憶と知性</p><h1 id="cover-title">THE CABINET<br>THAT THOUGHT</h1><p class="title-ja">AIより前に、思考するカード箱があった</p><p>梅棹忠夫のカードから、博物館と生成AIへ。知識は、置き場所を変えると動きはじめる。</p><a href="/prototype/articles/cabinet.html">ENTER KNOWLEDGE <span>↗</span></a></div>
+        </article>
+        <article class="category-slide" data-category-slide aria-hidden="true">
+          <figure><img src="/assets/study01-696380.jpg" alt="大樹を描いた古い版画"><figcaption>HUMAN / ART / MEMORY</figcaption></figure>
+          <div class="category-copy"><p class="eyebrow">02 / HUMAN · 人間と社会</p><h2>TARO FOUND<br>JŌMON</h2><p class="title-ja">太郎は、縄文を見つけた</p><p>古い造形を「過去」に閉じ込めず、現在を揺らす力として見る。岡本太郎の眼から、人間の別の姿へ。</p><a href="/prototype/articles/taro-jomon.html">ENTER HUMAN <span>↗</span></a></div>
+        </article>
+        <article class="category-slide" data-category-slide aria-hidden="true">
+          <figure><img src="/assets/seed.jpg" alt="小さな種と定規"><figcaption>EARTH / BOTANY / SPECIMEN</figcaption></figure>
+          <div class="category-copy"><p class="eyebrow">03 / EARTH · 地球と自然</p><h2>SEED</h2><p class="title-ja">蒔かぬ種は生えぬ。</p><p>語源、絵画、農の手仕事、発芽を待つ時間。ひと粒から、生命を取り巻く条件を辿る。</p><a href="/prototype/articles/seed.html">ENTER EARTH <span>↗</span></a></div>
+        </article>
+        <article class="category-slide" data-category-slide aria-hidden="true">
+          <figure><img src="/assets/water.jpg" alt="静かな水面"><figcaption>TIME / PHILOSOPHY / DURATION</figcaption></figure>
+          <div class="category-copy"><p class="eyebrow">04 / TIME · 時間と記憶</p><h2>DURATION</h2><p class="title-ja">待つことは、何もしないことではない。</p><p>時計が刻む時間と、生きものの内側でほどける時間。ベルクソンから、種と和時計へ。</p><a href="/prototype/articles/duration.html">ENTER TIME <span>↗</span></a></div>
+        </article>
+        <article class="category-slide" data-category-slide aria-hidden="true">
+          <figure><img src="/assets/moon.jpg" alt="夜空に浮かぶ月"><figcaption>COSMOS / MOON / SEASON</figcaption></figure>
+          <div class="category-copy"><p class="eyebrow">05 / COSMOS · 天体と未知</p><h2>MOON<br>TO STARS</h2><p class="title-ja">月を見たあと、星を待つ。</p><p>満月、秋の星座、古い星の名。空を見上げることから、人が時間を読んできた痕跡へ。</p><a href="/prototype/articles/moon-to-stars.html">ENTER COSMOS <span>↗</span></a></div>
+        </article>
       </div>
-      <p class="issue-mark" aria-hidden="true">01</p>
+      <div class="category-nav"><p><span data-cover-current>01</span> / 05</p><div role="group" aria-label="カテゴリーを選ぶ"><button type="button" data-cover-prev aria-label="前のカテゴリー">←</button><button type="button" data-cover-next aria-label="次のカテゴリー">→</button></div><p class="category-stop">FIVE WINDOWS · THEN REST</p></div>
     </section>
 
     <section class="edition front-layer" id="read" aria-labelledby="read-title">
@@ -48,7 +55,7 @@
           <a href="/prototype/articles/cabinet.html"><p class="mode">MUSEUM ESSAY · ECHO</p><p class="stage-no">01</p><h3>THE CABINET<br>THAT THOUGHT</h3><p class="ja">AIより前に、思考するカード箱があった</p><p>梅棹忠夫の知的生産から、カード、博物館、生成AIへ。<br>思考は、どこに置かれ、どう動きはじめるのか。</p><span>DEEP DIVE ↗</span></a>
         </article>
         <article class="stage-field">
-          <a href="/prototype/articles/horse-time.html"><img src="/assets/horse.jpg" alt="野原を走る白い馬" width="562" height="1000"><div><p class="mode">FIELD NOTES · hachico</p><h3>最近、雨ばっかり。</h3><p>雨、馬、金木犀。Lifeから世界を見る。<br>季節の違和感が、食卓と地球へつながっていく一日。</p><span>5 MINUTES ↗</span></div></a>
+          <a href="/prototype/articles/archaeology-of-fear.html"><img src="/assets/study01-696380.jpg" alt="大樹を描いた古い版画" width="568" height="338"><div><p class="mode">MUSEUM FEATURE · ECHO</p><h3>恐怖の考古学</h3><p>9.11の跡地で見つかったのは、石ではなく種だった。<br>恐怖の歴史を、記憶と生命から読み直す。</p><span>ENTER THE ARCHIVE ↗</span></div></a>
         </article>
         <article class="stage-market">
           <a href="/prototype/articles/five-percent.html"><p class="mode">MARKET WINDOW · 8:45</p><p class="market-number">5%</p><h3>数字の、その向こう</h3><p>遠くの市場と、同じ日の財布。<br>金利の数字が、暮らしの中で何と出会うのか。</p><span>OBSERVE ↗</span></a>
@@ -60,18 +67,6 @@
           <a href="/prototype/articles/kaleidoscope.html"><p class="mode">SMALL MICHIKUSA</p><h3>同じ欠片を、<br>少しだけ回してみる。</h3><p>万華鏡は、HOLOS 88を読むための小さな鍵。<br>同じ世界も、関係を少し回すと別の像になる。</p><span>TAKE A SIDE PATH ↗</span></a>
         </article>
       </div>
-      <aside class="hachico-window" id="hachico" aria-labelledby="hachico-title">
-        <a class="hachico-image" href="/prototype/articles/horse-time.html"><img src="/assets/horse.jpg" alt="野原を走る白い馬" width="562" height="1000"></a>
-        <div class="hachico-copy">
-          <p class="eyebrow">LIFE WINDOW / NOTES BY hachico</p>
-          <p class="hachico-mark" aria-hidden="true">h.</p>
-          <h3 id="hachico-title">FROM<br>WHERE<br>I <span class="title-star" aria-hidden="true">☆</span> LIVE</h3>
-          <p class="title-ja">暮らしている場所から。</p>
-          <p>雨の日、犬と猫、台所、季節の気配。hachicoの窓では、暮らしから世界を見ます。日々の雑記と、暦や養生の読み物。少し近くて、少しあたたかい声です。</p>
-          <a class="hachico-read" href="/prototype/articles/horse-time.html"><span>DAY NOTE 01</span><b>最近、雨ばっかり。</b><i>読む ↗</i></a>
-        </div>
-      </aside>
-
       <aside class="michikusa-garden" id="michikusa" aria-labelledby="michikusa-title">
         <header><p class="eyebrow">A GARDEN OF SIDE PATHS</p><h3 id="michikusa-title">MICHIKUSA</h3><p class="title-ja">次の好奇心が、枝分かれする場所。</p></header>
         <p class="michikusa-intro">読み終えて戻るのではなく、少し横へ。ひとつの言葉から、思いがけない別の窓へ歩いていきます。</p>
@@ -157,10 +152,21 @@
   <script>
     (() => {
       const rail=document.querySelector('[data-window-rail]');
-      if(!rail)return;
-      const move=direction=>rail.scrollBy({left:direction*Math.max(rail.clientWidth*.72,280),behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'});
-      document.querySelector('[data-rail-prev]')?.addEventListener('click',()=>move(-1));
-      document.querySelector('[data-rail-next]')?.addEventListener('click',()=>move(1));
+      if(rail){
+        const move=direction=>rail.scrollBy({left:direction*Math.max(rail.clientWidth*.72,280),behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'});
+        document.querySelector('[data-rail-prev]')?.addEventListener('click',()=>move(-1));
+        document.querySelector('[data-rail-next]')?.addEventListener('click',()=>move(1));
+      }
+      const cover=document.querySelector('[data-category-cover]');
+      if(cover){
+        const slides=[...cover.querySelectorAll('[data-category-slide]')],counter=cover.querySelector('[data-cover-current]');
+        let index=0,timer=null,manual=false;
+        const show=next=>{index=Math.max(0,Math.min(slides.length-1,next));slides.forEach((slide,i)=>{slide.classList.toggle('is-active',i===index);slide.setAttribute('aria-hidden',i===index?'false':'true')});counter.textContent=String(index+1).padStart(2,'0')};
+        const stop=()=>{manual=true;if(timer)clearInterval(timer)};
+        cover.querySelector('[data-cover-prev]').addEventListener('click',()=>{stop();show(index-1)});
+        cover.querySelector('[data-cover-next]').addEventListener('click',()=>{stop();show(index+1)});
+        if(!matchMedia('(prefers-reduced-motion: reduce)').matches)timer=setInterval(()=>{if(manual||index===slides.length-1){clearInterval(timer);return}show(index+1)},6500);
+      }
     })();
   </script>
 </body>

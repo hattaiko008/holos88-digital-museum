@@ -18,23 +18,30 @@
   </header>
 
   <main id="main">
-    <section class="cover" aria-labelledby="cover-title">
-      <figure class="cover-image">
-        <img src="/assets/study01-384116.jpg" alt="蝶と貝を描いた古い博物画" width="568" height="418">
-        <figcaption>STUDY PLATE / BUTTERFLY / SHELL / COLLECTION</figcaption>
-      </figure>
-      <div class="cover-copy">
-        <p class="eyebrow">KNOWLEDGE · MEMORY · AI</p>
-        <h1 id="cover-title" class="cover-cabinet"><span>THE CABINET</span><span>THAT THOUGHT</span></h1>
-        <p class="title-ja">AIより前に、思考するカード箱があった</p>
-        <p class="standfirst">梅棹忠夫のカードは、記憶を外へ置き、離れた知識を出会わせた。その小さな箱から、博物館と生成AIの現在を見ます。</p>
-        <div class="cover-actions">
-          <a class="primary" href="/prototype/articles/cabinet.html">この窓を読む <span>↗</span></a>
-          <a href="#read">いま読む</a>
-          <a href="#museum">Museumへ</a>
-        </div>
+    <section class="category-cover" aria-label="HOLOS 88のカテゴリーから読む" data-category-cover>
+      <div class="category-slides">
+        <article class="category-slide is-active" data-category-slide aria-hidden="false">
+          <figure><img src="/assets/study01-384116.jpg" alt="蝶と貝を描いた古い博物画"><figcaption>COLLECTION / NATURAL HISTORY PLATE</figcaption></figure>
+          <div class="category-copy"><p class="eyebrow">01 / KNOWLEDGE · 記憶と知性</p><h1 id="cover-title">THE CABINET<br>THAT THOUGHT</h1><p class="title-ja">AIより前に、思考するカード箱があった</p><p>梅棹忠夫のカードから、博物館と生成AIへ。知識は、置き場所を変えると動きはじめる。</p><a href="/prototype/articles/cabinet.html">ENTER KNOWLEDGE <span>↗</span></a></div>
+        </article>
+        <article class="category-slide" data-category-slide aria-hidden="true">
+          <figure><img src="/assets/study01-696380.jpg" alt="大樹を描いた古い版画"><figcaption>HUMAN / ART / MEMORY</figcaption></figure>
+          <div class="category-copy"><p class="eyebrow">02 / HUMAN · 人間と社会</p><h2>TARO FOUND<br>JŌMON</h2><p class="title-ja">太郎は、縄文を見つけた</p><p>古い造形を「過去」に閉じ込めず、現在を揺らす力として見る。岡本太郎の眼から、人間の別の姿へ。</p><a href="/prototype/articles/taro-jomon.html">ENTER HUMAN <span>↗</span></a></div>
+        </article>
+        <article class="category-slide" data-category-slide aria-hidden="true">
+          <figure><img src="/assets/seed.jpg" alt="小さな種と定規"><figcaption>EARTH / BOTANY / SPECIMEN</figcaption></figure>
+          <div class="category-copy"><p class="eyebrow">03 / EARTH · 地球と自然</p><h2>SEED</h2><p class="title-ja">蒔かぬ種は生えぬ。</p><p>語源、絵画、農の手仕事、発芽を待つ時間。ひと粒から、生命を取り巻く条件を辿る。</p><a href="/prototype/articles/seed.html">ENTER EARTH <span>↗</span></a></div>
+        </article>
+        <article class="category-slide" data-category-slide aria-hidden="true">
+          <figure><img src="/assets/water.jpg" alt="静かな水面"><figcaption>TIME / PHILOSOPHY / DURATION</figcaption></figure>
+          <div class="category-copy"><p class="eyebrow">04 / TIME · 時間と記憶</p><h2>DURATION</h2><p class="title-ja">待つことは、何もしないことではない。</p><p>時計が刻む時間と、生きものの内側でほどける時間。ベルクソンから、種と和時計へ。</p><a href="/prototype/articles/duration.html">ENTER TIME <span>↗</span></a></div>
+        </article>
+        <article class="category-slide" data-category-slide aria-hidden="true">
+          <figure><img src="/assets/moon.jpg" alt="夜空に浮かぶ月"><figcaption>COSMOS / MOON / SEASON</figcaption></figure>
+          <div class="category-copy"><p class="eyebrow">05 / COSMOS · 天体と未知</p><h2>MOON<br>TO STARS</h2><p class="title-ja">月を見たあと、星を待つ。</p><p>満月、秋の星座、古い星の名。空を見上げることから、人が時間を読んできた痕跡へ。</p><a href="/prototype/articles/moon-to-stars.html">ENTER COSMOS <span>↗</span></a></div>
+        </article>
       </div>
-      <p class="issue-mark" aria-hidden="true">01</p>
+      <div class="category-nav"><p><span data-cover-current>01</span> / 05</p><div role="group" aria-label="カテゴリーを選ぶ"><button type="button" data-cover-prev aria-label="前のカテゴリー">←</button><button type="button" data-cover-next aria-label="次のカテゴリー">→</button></div><p class="category-stop">FIVE WINDOWS · THEN REST</p></div>
     </section>
 
     <section class="edition front-layer" id="read" aria-labelledby="read-title">
@@ -145,10 +152,21 @@
   <script>
     (() => {
       const rail=document.querySelector('[data-window-rail]');
-      if(!rail)return;
-      const move=direction=>rail.scrollBy({left:direction*Math.max(rail.clientWidth*.72,280),behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'});
-      document.querySelector('[data-rail-prev]')?.addEventListener('click',()=>move(-1));
-      document.querySelector('[data-rail-next]')?.addEventListener('click',()=>move(1));
+      if(rail){
+        const move=direction=>rail.scrollBy({left:direction*Math.max(rail.clientWidth*.72,280),behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'});
+        document.querySelector('[data-rail-prev]')?.addEventListener('click',()=>move(-1));
+        document.querySelector('[data-rail-next]')?.addEventListener('click',()=>move(1));
+      }
+      const cover=document.querySelector('[data-category-cover]');
+      if(cover){
+        const slides=[...cover.querySelectorAll('[data-category-slide]')],counter=cover.querySelector('[data-cover-current]');
+        let index=0,timer=null,manual=false;
+        const show=next=>{index=Math.max(0,Math.min(slides.length-1,next));slides.forEach((slide,i)=>{slide.classList.toggle('is-active',i===index);slide.setAttribute('aria-hidden',i===index?'false':'true')});counter.textContent=String(index+1).padStart(2,'0')};
+        const stop=()=>{manual=true;if(timer)clearInterval(timer)};
+        cover.querySelector('[data-cover-prev]').addEventListener('click',()=>{stop();show(index-1)});
+        cover.querySelector('[data-cover-next]').addEventListener('click',()=>{stop();show(index+1)});
+        if(!matchMedia('(prefers-reduced-motion: reduce)').matches)timer=setInterval(()=>{if(manual||index===slides.length-1){clearInterval(timer);return}show(index+1)},6500);
+      }
     })();
   </script>
 </body>
