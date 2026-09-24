@@ -46,6 +46,32 @@ function showToast(message){
   document.body.append(toast); window.setTimeout(()=>toast.remove(),2600);
 }
 
+function makeDailyMessage(item){
+  const area=item.areas?.[0]||'TIME';
+  const messages={
+    WORK:'今日、終わらなかったものより、あなたが守ったものを一つ数えてみてください。',
+    BODY:'身体は、頭より少し早く季節を知っています。小さな違和感も、今日の大切な知らせです。',
+    RELATIONSHIPS:'誰かとのあいだに生まれた気持ちは、あなた一人の責任ではありません。少し余白を残しておきましょう。',
+    HOME:'暮らしは、完成させるものではなく、毎日少しずつ住み直す場所なのかもしれません。',
+    MONEY:'数字の奥には、守りたいものや育てたいものがあります。今日はそちらにも目を向けて。',
+    TIME:'時間が足りない日は、すでに誰かや何かへ渡していた時間を思い出してみてください。'
+  };
+  const weatherNotes={晴れ:'光のある日は、遠くまで見ようとしなくても大丈夫。',薄曇り:'輪郭がぼんやりする日は、決めないことも一つの知恵です。',雨:'雨の日の土のように、見えないところで受け取っているものがあります。',風:'心が揺れる日は、何を手放したいのかが見えやすくなります。',嵐:'今日は整えなくて大丈夫。まず、安全で静かな場所を一つ。',わからない:'名前のつかない気分は、そのまま置いておけます。'};
+  return `${weatherNotes[item.weather]||weatherNotes['わからない']} ${messages[area]}`;
+}
+
+function showDailyMessage(item){
+  document.querySelector('.daily-message-layer')?.remove();
+  const layer=document.createElement('div'); layer.className='daily-message-layer';
+  layer.innerHTML=`<section role="dialog" aria-modal="true" aria-labelledby="daily-message-title"><button type="button" class="daily-message-close" aria-label="閉じる">×</button><p class="catalogue">A LETTER FROM HOLOS / ${escapeHtml(item.season)}</p><h2 id="daily-message-title">TODAY'S<br>MESSAGE</h2><blockquote>${escapeHtml(item.holosMessage)}</blockquote><p>今日の記録から届いた、小さな便りです。答えではないので、持ち帰らなくても大丈夫。</p><button type="button" class="daily-message-done">KEEP THIS DAY <span>今日のページへ戻る</span></button></section>`;
+  document.body.append(layer);
+  const close=()=>layer.remove();
+  layer.querySelector('.daily-message-close').addEventListener('click',close);
+  layer.querySelector('.daily-message-done').addEventListener('click',close);
+  layer.addEventListener('click',event=>{if(event.target===layer)close()});
+  layer.querySelector('.daily-message-done').focus();
+}
+
 function showPanel(name){
   panels.forEach(panel=>{const active=panel.dataset.panel===name; panel.hidden=!active; panel.classList.toggle('is-active',active)});
   navButtons.forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.view===name)));
@@ -67,9 +93,10 @@ form.addEventListener('submit',event=>{
     observedOn:data.get('observedOn'),place:data.get('place').trim(),season:data.get('season'),
     weather:data.get('weather')||'わからない',entryType:data.get('entryType')||'NOTE',observation:data.get('observation').trim(),areas:data.getAll('areas')
   };
+  item.holosMessage=makeDailyMessage(item);
   all.unshift(item); saveSpecimens(all); form.reset();
   form.elements.observedOn.value=new Date().toISOString().slice(0,10);
-  form.elements.season.value='秋'; showToast('標本を、この端末に収蔵しました。'); showPanel('collection');
+  form.elements.season.value='秋'; showToast('今日の言葉を、この端末に残しました。'); showPanel('collection'); showDailyMessage(item);
 });
 
 function renderSpecimens(){
@@ -84,7 +111,7 @@ function renderSpecimens(){
   if(!shown.length){list.innerHTML='<p class="empty">まだ記録はありません。<br>一言だけでも、今日のことを少し話しても。最初の一日を置いてみましょう。</p>';return}
   if(collectionMode==='diary'){
     list.classList.add('is-diary-log');
-    list.innerHTML=`<section class="diary-log-head"><p class="catalogue">YOUR DAYS, IN YOUR WORDS</p><h3>DIARY LOG</h3><p>短いメモも、長い日記も、同じ時間の続きとして読めます。</p></section>${shown.map(item=>`<article class="diary-entry"><header><time>${escapeHtml(item.observedOn)}</time><span>${weatherMark(item.weather)} ${escapeHtml(item.weather)}</span></header><p>${escapeHtml(item.observation)}</p><footer>${item.areas.map(area=>`<span>${escapeHtml(area)}</span>`).join('')}</footer><button type="button" data-delete="${escapeHtml(item.id)}">DELETE / 削除</button></article>`).join('')}${buildMedicine(shown)}`;
+    list.innerHTML=`<section class="diary-log-head"><p class="catalogue">YOUR DAYS, IN YOUR WORDS</p><h3>DIARY LOG</h3><p>短いメモも、長い日記も、同じ時間の続きとして読めます。</p></section>${shown.map(item=>`<article class="diary-entry"><header><time>${escapeHtml(item.observedOn)}</time><span>${weatherMark(item.weather)} ${escapeHtml(item.weather)}</span></header><div class="diary-words"><p>${escapeHtml(item.observation)}</p>${item.holosMessage?`<aside><span>HOLOS MESSAGE</span>${escapeHtml(item.holosMessage)}</aside>`:''}</div><footer>${item.areas.map(area=>`<span>${escapeHtml(area)}</span>`).join('')}</footer><button type="button" data-delete="${escapeHtml(item.id)}">DELETE / 削除</button></article>`).join('')}${buildMedicine(shown)}`;
   }else{
     list.classList.remove('is-diary-log');
     list.innerHTML=shown.map(item=>`<article class="specimen-card">
@@ -93,6 +120,7 @@ function renderSpecimens(){
     <blockquote>${escapeHtml(item.observation)}</blockquote>
     ${item.place?`<p class="place">PLACE / ${escapeHtml(item.place)}</p>`:''}
     <div class="tags">${item.areas.map(area=>`<span>${escapeHtml(area)}</span>`).join('')||'<span>UNCLASSIFIED</span>'}</div>
+    ${item.holosMessage?`<p class="saved-message"><span>HOLOS MESSAGE</span>${escapeHtml(item.holosMessage)}</p>`:''}
     <button type="button" data-delete="${escapeHtml(item.id)}">DELETE / 削除</button>
   </article>`).join('')+buildMedicine(shown);
   }
