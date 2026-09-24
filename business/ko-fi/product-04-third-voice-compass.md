@@ -107,9 +107,9 @@ CHOICE｜人間が選ぶ
 - 予定価格：2,800〜3,800円
 - 一人で一つの問いを整理する入門版
 
-### ココナラ
+### Ko-fi Commissions
 
-**THE THIRD VOICE SESSION｜ブランド／人生の羅針盤を一枚にします**
+**THE THIRD VOICE PERSONAL｜ブランド／人生の羅針盤を一枚にします**
 
 - 事前質問
 - Echoによる第三の問いの選定
@@ -161,4 +161,3 @@ Kindle向けに出す場合は、ワークシートそのものではなく、�
 これは占い商品をHOLOSへ持ち込むための商品ではない。
 
 **MICRO ⇄ MACRO、LIFE ⇄ WORLD、FACT ⇄ IMAGINATION**を往復し、最後にLifeへ戻るための実用的な道具である。
-

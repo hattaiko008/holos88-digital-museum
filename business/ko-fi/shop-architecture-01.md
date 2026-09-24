@@ -18,7 +18,15 @@
 
 Shopは「道具を渡す場所」、Commissionsは「一緒に使って仕上げる場所」、Membershipは「新しい窓が定期的に届く場所」とする。すべて同じKo-fiページ内に置く。
 
-## 最初の3商品
+## LAUNCH SHELF｜最初の3商品
+
+1. **SEASONAL LETTER｜秋分から霜降へ**：680円
+2. **28 DAYS｜MONTHLY LETTER KIT**：1,800円
+3. **THE THIRD VOICE｜Starter Workbook**：3,800円
+
+季節の読み物、継続記録、深い自己対話という三段階を、小さな価格差で体験できる棚にする。登録原稿は`launch-shelf-01.md`と`listing-01〜03`を正とする。
+
+## SECOND SHELF｜次に育てる3商品
 
 ### 01｜TWO ROADS
 
@@ -126,12 +134,12 @@ HOLOS側では「自分で使う」「あなたのために作る」の二つを
 - 顧客の声を事例として使う許可
 - 個別サービスの最終納品
 
-## 発売順
+## SECOND SHELFの発売順
 
 1. **RELATIONSHIP MAP KIT**：HOLOSらしさが最も見え、個別サービスとの差も明確。
 2. **BRAND LANGUAGE KIT**：単価が高く、コンサル・編集仕事への入口になる。
 3. **TWO ROADS**：買いやすい入口として、前二商品への回遊を作る。
-4. 無料版と3商品が揃った時点でBUNDLEを公開。
+4. SECOND SHELFの3商品が揃った時点でBUNDLEを公開。
 5. **THE THIRD VOICE**：前3商品の方法を統合し、ブランドと人生設計へ広げる上位ワークブックとして制作する。
 
 THE THIRD VOICEは、Ko-fi ShopのPDF、Ko-fi Commissionsの個別版、KDPの書き込み式ペーパーバックへ展開する。ただし、旧She Creates翻訳資料は研究素材に限定し、権利確認なしに文章・図表・ページを転用しない。
