@@ -20,6 +20,7 @@ const relationshipForm=document.querySelector('#relationship-form');
 const relationshipMap=document.querySelector('#relationship-map');
 let currentFilter='ALL';
 let seasonSampleOpen=false;
+let collectionMode='museum';
 const thirdQuestions=[
   '正解ではなく実験に変えると、何ができますか。',
   '10年後の自分は、この問題を何と呼ぶでしょう。',
@@ -64,7 +65,7 @@ form.addEventListener('submit',event=>{
     id:`LS-${String(Date.now()).slice(-8)}`,
     createdAt:new Date().toISOString(),
     observedOn:data.get('observedOn'),place:data.get('place').trim(),season:data.get('season'),
-    weather:data.get('weather')||'わからない',observation:data.get('observation').trim(),areas:data.getAll('areas')
+    weather:data.get('weather')||'わからない',entryType:data.get('entryType')||'NOTE',observation:data.get('observation').trim(),areas:data.getAll('areas')
   };
   all.unshift(item); saveSpecimens(all); form.reset();
   form.elements.observedOn.value=new Date().toISOString().slice(0,10);
@@ -74,20 +75,27 @@ form.addEventListener('submit',event=>{
 function renderSpecimens(){
   if(seasonSampleOpen){renderSeasonSample();return}
   filterBar.hidden=false; exportButton.hidden=false; clearButton.hidden=false;
+  document.querySelector('.collection-view-bar').hidden=false;
   countLabel.textContent='点を、この端末に収蔵しています。';
   list.classList.remove('is-season-sample');
   document.querySelector('#season-sample-button').innerHTML='VIEW 28-DAY SAMPLE <span>使い続けた見本を見る</span>';
   const all=specimens(); count.textContent=all.length;
   const shown=currentFilter==='ALL'?all:all.filter(item=>item.areas.includes(currentFilter));
-  if(!shown.length){list.innerHTML='<p class="empty">まだ標本がありません。<br>今日ひっかかった一言から、置いてみましょう。</p>';return}
-  list.innerHTML=shown.map(item=>`<article class="specimen-card">
+  if(!shown.length){list.innerHTML='<p class="empty">まだ記録はありません。<br>一言だけでも、今日のことを少し話しても。最初の一日を置いてみましょう。</p>';return}
+  if(collectionMode==='diary'){
+    list.classList.add('is-diary-log');
+    list.innerHTML=`<section class="diary-log-head"><p class="catalogue">YOUR DAYS, IN YOUR WORDS</p><h3>DIARY LOG</h3><p>短いメモも、長い日記も、同じ時間の続きとして読めます。</p></section>${shown.map(item=>`<article class="diary-entry"><header><time>${escapeHtml(item.observedOn)}</time><span>${weatherMark(item.weather)} ${escapeHtml(item.weather)}</span></header><p>${escapeHtml(item.observation)}</p><footer>${item.areas.map(area=>`<span>${escapeHtml(area)}</span>`).join('')}</footer><button type="button" data-delete="${escapeHtml(item.id)}">DELETE / 削除</button></article>`).join('')}${buildMedicine(shown)}`;
+  }else{
+    list.classList.remove('is-diary-log');
+    list.innerHTML=shown.map(item=>`<article class="specimen-card">
     <header><span class="id">${escapeHtml(item.id)}</span><time class="date">${escapeHtml(item.observedOn)}</time></header>
     <p class="weather" aria-label="心身の天気 ${escapeHtml(item.weather)}">${weatherMark(item.weather)}</p>
     <blockquote>${escapeHtml(item.observation)}</blockquote>
     ${item.place?`<p class="place">PLACE / ${escapeHtml(item.place)}</p>`:''}
     <div class="tags">${item.areas.map(area=>`<span>${escapeHtml(area)}</span>`).join('')||'<span>UNCLASSIFIED</span>'}</div>
     <button type="button" data-delete="${escapeHtml(item.id)}">DELETE / 削除</button>
-  </article>`).join('');
+  </article>`).join('')+buildMedicine(shown);
+  }
   list.querySelectorAll('[data-delete]').forEach(button=>button.addEventListener('click',()=>{
     const next=specimens().filter(item=>item.id!==button.dataset.delete); saveSpecimens(next); renderSpecimens(); showToast('標本を削除しました。');
     saveRelationships(relationships().filter(link=>link.from!==button.dataset.delete&&link.to!==button.dataset.delete));
@@ -102,21 +110,44 @@ const seasonSampleLinks=[
   {from:'MONTH-01',to:'MONTH-05',relation:'同時に起きる'},{from:'MONTH-05',to:'MONTH-13',relation:'原因かもしれない'},{from:'MONTH-13',to:'MONTH-15',relation:'変化した'},{from:'MONTH-03',to:'MONTH-12',relation:'繰り返している'},{from:'MONTH-12',to:'MONTH-21',relation:'変化した'},{from:'MONTH-09',to:'MONTH-16',relation:'支えている'},{from:'MONTH-10',to:'MONTH-11',relation:'反対の知恵'},{from:'MONTH-11',to:'MONTH-20',relation:'育っている'},{from:'MONTH-17',to:'MONTH-26',relation:'変化した'},{from:'MONTH-07',to:'MONTH-25',relation:'確かめた'}
 ];
 
+function buildMedicine(items,isSample=false){
+  if(!items.length)return '';
+  const areaCounts=items.flatMap(item=>item.areas||[]).reduce((acc,area)=>{acc[area]=(acc[area]||0)+1;return acc},{});
+  const area=Object.entries(areaCounts).sort((a,b)=>b[1]-a[1])[0]?.[0]||'TIME';
+  const medicines={
+    WORK:{element:'SOIL / 土',ritual:'机を離れて、土や葉のある場所を10分だけ歩く。答えは探さず、足の裏へ重さを戻します。',question:'成果を増やさなくても、今日ここにあるものは何でしょう。'},
+    BODY:{element:'WATER / 水',ritual:'温かい飲みものを一杯。飲み終わるまで、次の用事を始めない。身体が話し終える時間をつくります。',question:'身体は、言葉になる前に何を知らせていましたか。'},
+    RELATIONSHIPS:{element:'FIRE / 火',ritual:'小さな灯りを一つつけて、今日受け取ったものと、返さなくてよいものを一つずつ書きます。',question:'誰かを大切にすることと、自分を後回しにすることは同じでしょうか。'},
+    HOME:{element:'HEARTH / 炉辺',ritual:'家の一角だけを整え、そこへ好きなものを一つ置く。暮らしの中心を、小さく作り直します。',question:'この家で、いちばん呼吸が深くなる場所はどこでしょう。'},
+    MONEY:{element:'SEED / 種',ritual:'今日使ったお金を一つ選び、「何を育てたかったのか」を余白に書き添えます。',question:'足りないものではなく、すでに育てているものは何でしょう。'},
+    TIME:{element:'MOON / 月',ritual:'今夜は時計を見ない時間を20分だけつくる。月のように、満ち欠けする時間へ戻ります。',question:'急がなければ、自然に終わっていくものはありますか。'}
+  };
+  const medicine=medicines[area];
+  return `<section class="medicine-window${isSample?' is-sample':''}"><header><p><span>HOLOS MEDICINE / ${medicine.element}</span><strong>今日の、小さな処方箋</strong></p><small>${isSample?'28日分の言葉から、いま開いてみたい窓です。':'最近の記録から、いま開いてみたい窓です。'}</small></header><div><article><span>SMALL RITUAL</span><p>${medicine.ritual}</p></article><article><span>ONE QUESTION</span><p>${medicine.question}</p></article></div><footer>治すための答えではありません。季節と身体と、少し違う時間へ戻るための提案です。</footer></section>`;
+}
+
 function renderSeasonSample(){
   count.textContent=seasonSampleSpecimens.length;
   countLabel.textContent='日分の、見本の記録を展示しています。';
   filterBar.hidden=true; exportButton.hidden=true; clearButton.hidden=true;
-  list.classList.add('is-season-sample');
+  document.querySelector('.collection-view-bar').hidden=true;
+  list.classList.remove('is-diary-log'); list.classList.add('is-season-sample');
   document.querySelector('#season-sample-button').innerHTML='CLOSE 28-DAY SAMPLE <span>自分の収蔵庫へ戻る</span>';
   const weatherCounts=seasonSampleSpecimens.reduce((acc,item)=>{acc[item.weather]=(acc[item.weather]||0)+1;return acc},{});
   const weatherStrip=seasonSampleSpecimens.map(item=>`<span title="${item.observedOn} / ${item.weather}">${weatherMark(item.weather)}</span>`).join('');
   const weatherSummary=Object.entries(weatherCounts).map(([name,value])=>`<span>${name} ${value}</span>`).join('');
-  const recent=seasonSampleSpecimens.slice(-9).reverse().map(item=>`<article class="specimen-card"><header><span class="id">${item.id}</span><time class="date">${item.observedOn}</time></header><p class="weather">${weatherMark(item.weather)}</p><blockquote>${item.observation}</blockquote><div class="tags">${item.areas.map(area=>`<span>${area}</span>`).join('')}</div></article>`).join('');
-  list.innerHTML=`<section class="season-sample-head"><p class="catalogue">A MONTH IN THE PERSONAL MUSEUM</p><h3>28 DAYS.<br>28 SPECIMENS.</h3><p>毎日の小さな記録が、まだ名前のなかった繰り返しを見せ始めます。</p></section><section class="weather-history"><header><span>BODY WEATHER / 28 DAYS</span><p>${weatherSummary}</p></header><div>${weatherStrip}</div></section>${buildAreaMap(seasonSampleSpecimens,seasonSampleLinks)}<section class="emerging-patterns"><header><span>WHAT EMERGED?</span><h3>THREE PATTERNS</h3></header><div><article><b>01</b><h4>TIME × RELATIONSHIPS</h4><p>「時間がない」日は、時間そのものより、頼まれる前に誰かへ渡している日が多かった。</p></article><article><b>02</b><h4>WORK × BODY</h4><p>締切が重なると肩と眠りへ現れる。仕事の量は、身体の天気より一日遅れて気づかれていた。</p></article><article><b>03</b><h4>SMALL BOUNDARIES</h4><p>断る、交渉する、通知を切る。小さな境界を置いた日は、思っていたほど誰も困らなかった。</p></article></div></section><section class="sample-recent"><header><span>RECENT SPECIMENS</span><h3>最近の標本</h3></header><div>${recent}</div></section>`;
+  const sampleDiary=seasonSampleSpecimens.slice(-7).reverse().map(item=>`<article class="diary-entry"><header><time>${item.observedOn}</time><span>${weatherMark(item.weather)} ${item.weather}</span></header><p>${item.observation}</p><footer>${item.areas.map(area=>`<span>${area}</span>`).join('')}</footer></article>`).join('');
+  list.innerHTML=`<section class="season-sample-head"><p class="catalogue">A MONTH IN THE PERSONAL MUSEUM</p><h3>28 DAYS.<br>28 SPECIMENS.</h3><p>毎日を少しずつ置いておくと、「また同じところで立ち止まっていたな」と、自分のリズムが見えてきます。</p></section><section class="weather-history"><header><span>BODY WEATHER / 28 DAYS</span><p>${weatherSummary}</p></header><div>${weatherStrip}</div></section>${buildAreaMap(seasonSampleSpecimens,seasonSampleLinks)}<section class="emerging-patterns"><header><span>WHAT CAME INTO VIEW?</span><h3>見えてきたこと</h3></header><div><article><b>01</b><h4>TIME × RELATIONSHIPS</h4><p>「時間がない」と書いた日は、誰かの用事を先に引き受けていた日でもありました。</p></article><article><b>02</b><h4>WORK × BODY</h4><p>仕事が重なると、肩と眠りが先に知らせていました。頭が気づくより、身体は一日早かったようです。</p></article><article><b>03</b><h4>SMALL BOUNDARIES</h4><p>断る。相談する。通知を切る。ほんの小さな境界を置いても、思っていたほど誰も困りませんでした。</p></article></div></section>${buildMedicine(seasonSampleSpecimens,true)}<section class="sample-diary"><header><span>A WEEK IN WORDS</span><h3>この頃の日記</h3><p>一言の日も、少し長く書く日も、日付の順に読み返せます。</p></header>${sampleDiary}</section>`;
   wireAreaMap(seasonSampleSpecimens,seasonSampleLinks);
 }
 
 document.querySelector('#season-sample-button').addEventListener('click',()=>{seasonSampleOpen=!seasonSampleOpen;renderSpecimens();document.querySelector('[data-panel="collection"]').scrollIntoView({behavior:'smooth',block:'start'})});
+
+document.querySelectorAll('[data-collection-mode]').forEach(button=>button.addEventListener('click',()=>{
+  collectionMode=button.dataset.collectionMode;
+  document.querySelectorAll('[data-collection-mode]').forEach(item=>item.setAttribute('aria-pressed',String(item===button)));
+  renderSpecimens();
+}));
 
 document.querySelectorAll('[data-filter]').forEach(button=>button.addEventListener('click',()=>{
   currentFilter=button.dataset.filter;
