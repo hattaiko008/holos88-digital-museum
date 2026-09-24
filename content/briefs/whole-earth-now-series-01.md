@@ -78,6 +78,14 @@ Whole Earth Catalog、ACCESS TO TOOLS、カウンターカルチャーからシ�
 
 3本は独立して読める。同時に、`知る → 選ぶ → 集まる`という順で読むと、Whole Earthの思想が情報、道具、共同体へ展開する小さな三部作になる。
 
+## LINEAGE BRANCH
+
+人物、ヒッピー文化、音楽、コミューン、初期コンピュータ文化、WELL、シリコンバレーへの系譜は、別紙の連載地図へ展開する。
+
+- `content/briefs/whole-earth-network-lineage-01.md`
+- 連載名：`THE WHOLE EARTH NETWORK`
+- 中心の問い：国家や大企業の機械だったコンピュータは、いつ、どのように「個人を自由にする道具」として語られるようになったのか。
+
 ## INTERNAL SOURCE DESK
 
 公開本文へ脚注を過剰に出す必要はないが、事実・固有の概念・発言は内部で出典を保持する。
