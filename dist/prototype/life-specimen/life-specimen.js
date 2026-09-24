@@ -122,15 +122,48 @@ function buildNetwork(all,links){
   return `<figure class="network-figure"><figcaption><span>RELATIONSHIP NETWORK</span><strong>${ids.length} specimens / ${links.length} connections</strong><small>もっとも多く結ばれた標本を、中心に表示しています。</small></figcaption><svg viewBox="0 0 900 520" role="img" aria-label="収蔵した標本の関係地図"><defs><marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z"></path></marker></defs>${relationLines}${nodes}</svg></figure>`;
 }
 
+const sampleSpecimens=[
+  {id:'SAMPLE-01',observation:'自分で選べる時間が足りない'},
+  {id:'SAMPLE-02',observation:'家族の用事を、先回りして引き受けている'},
+  {id:'SAMPLE-03',observation:'パートナーと話したあとは少し力が戻る'},
+  {id:'SAMPLE-04',observation:'仕事の締切が重なると、夜まで頭が止まらない'},
+  {id:'SAMPLE-05',observation:'疲れると、最初に肩と眠りへ出る'}
+];
+const sampleLinks=[
+  {id:'SL-01',from:'SAMPLE-02',to:'SAMPLE-01',relation:'奪っている',note:'頼まれる前に動く時間が積み重なっている。'},
+  {id:'SL-02',from:'SAMPLE-03',to:'SAMPLE-01',relation:'支えている',note:'話すことで考えが整理され、自分の時間へ戻りやすい。'},
+  {id:'SL-03',from:'SAMPLE-04',to:'SAMPLE-01',relation:'奪っている',note:'勤務時間外にも、頭の中では仕事が続いている。'},
+  {id:'SL-04',from:'SAMPLE-04',to:'SAMPLE-05',relation:'同時に起きる',note:'締切が重なる週は、肩のこわばりと眠りの浅さも増える。'},
+  {id:'SL-05',from:'SAMPLE-05',to:'SAMPLE-03',relation:'原因かもしれない',note:'疲れているほど、会話を避けてしまうことがある。'}
+];
+
+function sampleCards(){
+  const byId=Object.fromEntries(sampleSpecimens.map(item=>[item.id,item]));
+  return sampleLinks.map(link=>`<article class="relationship-card is-sample">
+    <div class="relationship-node"><span>${link.from}</span><p>${escapeHtml(byId[link.from].observation)}</p></div>
+    <div class="relationship-line"><i></i><strong>${escapeHtml(link.relation)}</strong><i></i></div>
+    <div class="relationship-node"><span>${link.to}</span><p>${escapeHtml(byId[link.to].observation)}</p></div>
+    <p class="relationship-note">NOTE / ${escapeHtml(link.note)}</p>
+  </article>`).join('');
+}
+
+function wireSampleButton(){
+  const button=document.querySelector('#show-sample-map'); if(!button)return;
+  button.addEventListener('click',()=>{
+    relationshipMap.innerHTML=`<div class="sample-banner"><p><b>SAMPLE MAP</b><span>これは見本です。あなたの記録には保存されません。</span></p><button type="button" id="close-sample-map">CLOSE SAMPLE <span>見本を閉じる</span></button></div>${buildNetwork(sampleSpecimens,sampleLinks)}${sampleCards()}`;
+    document.querySelector('#close-sample-map').addEventListener('click',renderRelationships);
+  });
+}
+
 function renderRelationships(){
   const all=specimens();
   const selects=[relationshipForm.elements.from,relationshipForm.elements.to];
   const options=all.map(item=>`<option value="${escapeHtml(item.id)}">${escapeHtml(specimenLabel(item))}</option>`).join('');
   selects.forEach((select,index)=>{const previous=select.value;select.innerHTML=`<option value="">標本を選ぶ</option>${options}`;select.value=previous;if(index===1&&!select.value&&all[1])select.value=all[1].id});
-  if(all.length<2){relationshipMap.innerHTML='<p class="empty-map">関係を結ぶには、二つ以上の標本が必要です。<br>まずFIELD NOTEへ、小さな記録を置いてみましょう。</p>';return}
+  if(all.length<2){relationshipMap.innerHTML='<div class="empty-map"><p>関係を結ぶには、二つ以上の標本が必要です。<br>まずFIELD NOTEへ、小さな記録を置いてみましょう。</p><button type="button" id="show-sample-map">VIEW SAMPLE MAP <span>見本の関係地図を見る</span></button></div>';wireSampleButton();return}
   const byId=Object.fromEntries(all.map(item=>[item.id,item]));
   const links=relationships().filter(link=>byId[link.from]&&byId[link.to]);
-  if(!links.length){relationshipMap.innerHTML='<p class="empty-map">まだ関係線はありません。<br>正解を決めず、「そう見える」を一本だけ結んでみましょう。</p>';return}
+  if(!links.length){relationshipMap.innerHTML='<div class="empty-map"><p>まだ関係線はありません。<br>正解を決めず、「そう見える」を一本だけ結んでみましょう。</p><button type="button" id="show-sample-map">VIEW SAMPLE MAP <span>見本の関係地図を見る</span></button></div>';wireSampleButton();return}
   relationshipMap.innerHTML=buildNetwork(all,links)+links.map(link=>`<article class="relationship-card">
     <div class="relationship-node"><span>${escapeHtml(link.from)}</span><p>${escapeHtml(specimenLabel(byId[link.from]).split('｜').slice(1).join('｜'))}</p></div>
     <div class="relationship-line"><i></i><strong>${escapeHtml(link.relation)}</strong><i></i></div>
