@@ -43,7 +43,8 @@
 - つながっている5〜8個の要素
 - NOW／LATER／COMPOST／LET GO の仕分け
 - 次に試す、小さな一歩
-- 600〜800字程度の編集メモ
+- 1,000〜1,500字程度の編集メモ
+- Mapを今後自分で更新するための「見方と使い方」
 
 一般的なマインドマップのように、中心から枝を均等に広げるとは限りません。原因と結果、過去と未来、Lifeと仕事など、内容に合わせて関係を見える形にします。
 
@@ -94,7 +95,7 @@ COMPOST
 LET GO
 ONE NEXT STEP
 EDITORIAL NOTE
+HOW TO UPDATE THIS MAP
 PRIVACY CHECK
 HUMAN APPROVAL
 ```
-
