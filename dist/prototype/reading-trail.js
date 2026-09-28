@@ -1,6 +1,19 @@
 (()=>{
   const root=document.querySelector('[data-reading-trail]');
   if(!root)return;
+  if(location.hostname==='127.0.0.1'||location.hostname==='localhost'){
+    const articleName=location.pathname.split('/').pop();
+    if(articleName&&articleName.endsWith('.html')){
+      const edit=document.createElement('a');
+      edit.className='local-edit-article';
+      edit.href=`/prototype/editor-desk.html?article=${encodeURIComponent(articleName)}`;
+      edit.target='_blank';
+      edit.rel='noopener';
+      edit.textContent='この記事を編集 ✎';
+      edit.title='MANUSCRIPT DESKで、いま読んでいる記事を開きます';
+      document.body.append(edit);
+    }
+  }
   const key='holos88-reading-trail-v1';
   const current={slug:root.dataset.slug,title:root.dataset.title,titleJa:root.dataset.titleJa,href:location.pathname,visitedAt:new Date().toISOString(),saved:false};
   let trail=[];

@@ -21,7 +21,7 @@ let refs=0;
 for(const p of pages){
  const html=await readFile(p,'utf8');const ids=[...html.matchAll(/\bid="([^"]+)"/g)].map(m=>m[1]);assert.equal(new Set(ids).size,ids.length);
  for(const m of html.matchAll(/\b(?:href|src)="([^"]+)"/g)){
-  const link=m[1].replaceAll('&amp;','&');if(/^(https?:|data:)/.test(link))continue;
+  const link=m[1].replaceAll('&amp;','&');if(/^(https?:|data:|mailto:|tel:)/.test(link))continue;
   const target=new URL(link,'http://local/'+p.pathname.slice(dist.pathname.length));
   const path=target.pathname==='/'?'index.html':target.pathname.slice(1);const file=new URL(path,dist);await stat(file);
   if(target.hash){const dest=await readFile(file,'utf8');assert(dest.includes(`id="${target.hash.slice(1)}"`),link);}

@@ -208,3 +208,27 @@ SEE → MICHIKUSA → CONNECT → RETURN → SEE AGAIN
 今は大規模改造をしない。まず記事を増やし、違いが見えてからMuseumの分類を決める。
 
 最後の確認：その記事は、世界を説明しすぎていないか。世界との関係を、もう一つ見えるようにしているか。
+
+## The Bag, The Field, and Memory / ECHO
+
+- [x] THE POTATOES DID IT / ジャガイモが悪いんだ。
+- [x] THE CROWD FARM / 群衆を栽培する農場
+- [x] THE PAIN IS REAL, THE ENEMY IS MADE / 痛みは本物。敵は作られる。
+- [x] APOLOGY IS NOT A RECEIPT / 謝罪は、領収書ではない。
+- [x] CONTEMPT AS A REFUND / 蔑視という払い戻し
+- [x] THE OTHER SINO-JAPANESE WAR / もう一つの日清戦争
+- [x] THE SOCIETY OF DECEMBER TEN / 歓声は、誰が用意したのか。
+
+## Political Psychology / TEAM HOLOS COLUMN
+
+Source map: `content/editorial/political-psychology-series.md`
+
+- [x] THE ROPE THAT LETS A SHIP LEAVE / 船をつなぐ綱は、船を留めるためだけにあるのか（愛着・安全保障）
+- [x] WHO IS FEEDING WHOM? / 世話をしているのは、どちらだろう。（ケア・自己消失・共依存）
+- [ ] THE TWO WHO CANNOT LET GO / 支配する側も、依存している
+- [x] THE BUTTON WE STOPPED PRESSING / 押すのをやめたボタン（学習性無力感・政治的諦め）
+- [x] THE CHAIR THAT BECAME MORE BEAUTIFUL AFTER WE BOUGHT IT / 買ったあとで、美しくなる椅子（自己正当化・認知的不協和）
+- [ ] THE COMFORT OF A STRONG HAND / 強い指導者は、なぜ安心に見えるのか
+- [ ] THE WAR THAT STAYED IN THE BODY / 戦争は終わっても、身体は終戦しない
+- [ ] A BORDER IS NOT A WALL / 境界線は、別れではない
+- [ ] WHOSE EYES MAKE US REAL? / 私たちは、誰に認められて存在するのか

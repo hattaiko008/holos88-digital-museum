@@ -1,0 +1,64 @@
+.article-tools {
+  display: flex;
+  flex: 1 1 100%;
+  gap: 1rem;
+  align-items: end;
+  padding: 1rem 0 .25rem;
+}
+
+.article-tools[hidden] { display: none; }
+.article-tools>label {
+  display: flex;
+  flex-direction: column;
+  gap: .45rem;
+  font: 9px Arial, sans-serif;
+  letter-spacing: .14em;
+  color: #4b6049;
+}
+.article-tools>label:first-child { flex: .65; }
+.article-tools input {
+  width: 100%;
+  padding: .85rem .9rem;
+  border: 1px solid rgba(31, 32, 28, .25);
+  background: rgba(255, 255, 255, .62);
+  color: #1f201c;
+  font: 13px "Hiragino Mincho ProN", "Yu Mincho", serif;
+}
+
+.article-picker {
+  display: flex;
+  flex: 1.35;
+  font: 9px Arial, sans-serif;
+  letter-spacing: .14em;
+  color: #4b6049;
+}
+
+.article-picker select {
+  width: 100%;
+  min-width: 20rem;
+  max-width: 100%;
+  padding: .85rem 2.5rem .85rem .9rem;
+  border: 1px solid rgba(31, 32, 28, .25);
+  background: rgba(255, 255, 255, .62);
+  color: #1f201c;
+  font: 13px "Hiragino Mincho ProN", "Yu Mincho", serif;
+}
+
+.article-picker[hidden] { display: none; }
+.controls .error { color: #963d32; }
+#dirty-state{margin-left:.7rem;padding:.3rem .55rem;border:1px solid rgba(31,32,28,.2);color:#686860}
+#dirty-state.is-dirty{border-color:#963d32;color:#963d32;background:rgba(150,61,50,.07)}
+.edit-help{margin:1.4rem 0 0;font-size:.78rem;color:#686860}
+.block-head{display:flex;align-items:center;justify-content:space-between;gap:1rem}
+.visibility-toggle{padding:.45rem .7rem;border:1px solid rgba(75,96,73,.35);background:transparent;color:#4b6049;font:9px Arial,sans-serif;letter-spacing:.08em;cursor:pointer}
+.visibility-toggle:hover{background:rgba(75,96,73,.07)}
+.edit-block.is-private{border-color:rgba(150,61,50,.45);background:repeating-linear-gradient(-45deg,rgba(150,61,50,.035),rgba(150,61,50,.035) 8px,transparent 8px,transparent 16px)}
+.edit-block.is-private .visibility-toggle{border-color:#963d32;background:#963d32;color:#fff}
+.edit-block.is-private .edit-copy{opacity:.68}
+.edit-block.is-private .block-label::after{content:' / PRIVATE';color:#963d32}
+
+@media (max-width: 760px) {
+  .article-tools { width: 100%; flex-direction: column; align-items: stretch; }
+  .article-picker { width: 100%; }
+  .article-picker select { min-width: 0; width: 100%; }
+}
