@@ -6,8 +6,8 @@ Reference issue: ISSUE 001
 
 ## Editorial principle
 
-**権力には、鋭く。暮らす人には、温かく。**  
-FACTS FOR THE PUBLIC · QUESTIONS FOR POWER
+**権力には、鋭く。人には、やさしく。**  
+SHARP WITH POWER · KIND TO PEOPLE
 
 事実を確認し、権力を持つ側へより重い説明責任を求める。断定できないことは断定しない。生活者を無知として嘲笑せず、知るための入口と問いを手渡す。
 

@@ -232,3 +232,9 @@ Source map: `content/editorial/political-psychology-series.md`
 - [ ] THE WAR THAT STAYED IN THE BODY / 戦争は終わっても、身体は終戦しない
 - [ ] A BORDER IS NOT A WALL / 境界線は、別れではない
 - [ ] WHOSE EYES MAKE US REAL? / 私たちは、誰に認められて存在するのか
+
+## Disaster / Land, Memory, and Daily Life
+
+- [ ] 地震や災害を、速報の反復ではなく、土地、身体、暮らし、備え、記憶、復旧の関係から折々扱う。
+- [ ] 発災直後の情報は公的機関の一次情報を優先し、体験、事実、推測を分ける。被災した人の尊厳と安全を優先し、恐怖を煽る見出しや未確認画像を使わない。
+- [ ] 候補：揺れた朝の身体／土地が記憶していること／非常袋の中の生活史／復旧を支える見えない仕事／災害のあとに残る音。

@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /prototype/editor-desk
+Disallow: /prototype/publication-preview.html
+Sitemap: https://holos88.com/sitemap.xml

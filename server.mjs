@@ -1,11 +1,17 @@
 import http from 'node:http';
-import {readFile, readdir, writeFile} from 'node:fs/promises';
+import {readFile, readdir, writeFile, appendFile, mkdir} from 'node:fs/promises';
 import path from 'node:path';
 const root = path.resolve(import.meta.dirname, 'dist');
 const sourceArticles = path.resolve(import.meta.dirname, 'prototype/reconstruction-01/articles');
 const publicArticles = path.resolve(root, 'prototype/articles');
 const sourcePages = path.resolve(import.meta.dirname, 'prototype/reconstruction-01');
 const publicPages = path.resolve(root, 'prototype');
+const editorialStateFile = path.resolve(import.meta.dirname, 'content/editorial-status.json');
+const feedbackDirectory = path.resolve(import.meta.dirname, 'content/feedback');
+const feedbackInbox = path.resolve(feedbackDirectory, 'inbox.jsonl');
+const feedbackReplyQueue = path.resolve(feedbackDirectory, 'reply-queue.jsonl');
+const feedbackReplyTemplates = path.resolve(feedbackDirectory, 'auto-reply-templates.json');
+const feedbackRate = new Map();
 const types = {'.html':'text/html; charset=utf-8','.css':'text/css; charset=utf-8','.js':'text/javascript; charset=utf-8','.jpg':'image/jpeg','.svg':'image/svg+xml','.json':'application/json'};
 const articlePath = (directory, name) => {
   if (!name || path.basename(name) !== name || !name.endsWith('.html')) return null;
@@ -25,6 +31,43 @@ http.createServer(async(req,res)=>{
   try {
     const url = new URL(req.url,'http://localhost');
     const pathname = decodeURIComponent(url.pathname);
+    if (pathname === '/api/feedback' && req.method === 'POST') {
+      const now=Date.now(),client=req.socket.remoteAddress||'local',recent=(feedbackRate.get(client)||[]).filter(time=>now-time<60_000);
+      if(recent.length>=6){json(res,429,{error:'Too many submissions'});return;}
+      let body='';
+      for await (const chunk of req) {
+        body+=chunk;
+        if(Buffer.byteLength(body)>20_000){json(res,413,{error:'Feedback is too large'});return;}
+      }
+      const data=JSON.parse(body),article=String(data.article||''),title=String(data.title||''),comment=String(data.comment||'').trim(),request=String(data.request||'').trim(),rating=Number(data.rating||0),replyRequested=data.replyRequested===true,email=replyRequested?String(data.email||'').trim():'';
+      const validEmail=!email||(/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)&&email.length<=254);
+      if(!article.endsWith('.html')||article.length>180||title.length>300||comment.length>800||request.length>300||!Number.isInteger(rating)||rating<0||rating>5||(!rating&&!comment&&!request)||!validEmail||(replyRequested&&!email)){json(res,400,{error:'Invalid feedback'});return;}
+      await mkdir(feedbackDirectory,{recursive:true});
+      const receivedAt=new Date(now).toISOString();
+      await appendFile(feedbackInbox,JSON.stringify({article,title,rating,comment,request,replyRequested,receivedAt})+'\n','utf8');
+      if(replyRequested){
+        const templates=JSON.parse(await readFile(feedbackReplyTemplates,'utf8'));
+        const templateId=comment.length>=200?'letter':request?'curiosity':comment?'note':'star';
+        const template=templates.find(item=>item.id===templateId)||templates[0];
+        await appendFile(feedbackReplyQueue,JSON.stringify({email,article,title,templateId,subject:template.subject,body:template.body,status:'pending-provider',createdAt:receivedAt})+'\n','utf8');
+      }
+      feedbackRate.set(client,[...recent,now]);
+      json(res,201,{received:true,replyQueued:replyRequested});return;
+    }
+    if (pathname === '/__editor/status' && req.method === 'GET') {
+      json(res,200,JSON.parse(await readFile(editorialStateFile,'utf8')));return;
+    }
+    if (pathname === '/__editor/status' && req.method === 'PUT') {
+      let body='';
+      for await (const chunk of req) {
+        body+=chunk;
+        if (Buffer.byteLength(body)>2_000_000) {json(res,413,{error:'Status data is too large'});return;}
+      }
+      const data=JSON.parse(body);
+      if (!data || !Array.isArray(data.articles)) {json(res,400,{error:'Invalid status data'});return;}
+      await writeFile(editorialStateFile,JSON.stringify(data,null,2)+'\n','utf8');
+      json(res,200,{saved:true});return;
+    }
     if (pathname === '/__editor/articles' && req.method === 'GET') {
       const articleNames = (await readdir(sourceArticles)).filter(name => name.endsWith('.html'));
       const pageNames = (await readdir(sourcePages)).filter(name => name.endsWith('.html') && (name.startsWith('watch-the-now-') || name.includes('letter'))).map(name => `pages/${name}`);

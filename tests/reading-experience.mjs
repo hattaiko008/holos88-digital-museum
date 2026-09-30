@@ -7,14 +7,17 @@ const d=JSON.parse(await readFile(new URL('content/articles.json',root),'utf8'))
 for(const a of d.articles.filter(a=>a.master)){
  const raw=await readFile(new URL(a.master.path,root),'utf8');
  assert.equal(createHash('sha256').update(raw).digest('hex'),a.master.sha256);
- const expected=raw.split(/\r?\n/).slice(a.master.body_start_line-1,a.master.body_end_line).filter(x=>x&&x!=='SOURCE WINDOW');
- const actual=a.body.flatMap(b=>b.type==='source'?[a.sources.find(s=>s.id===b.source_id).summary]:b.type==='flow'?b.items:b.type==='break'?[]:[b.text]);
- assert.deepEqual(actual,expected,'Publication master text and paragraph order: '+a.id);
+ if(!a.revision){
+  const expected=raw.split(/\r?\n/).slice(a.master.body_start_line-1,a.master.body_end_line).filter(x=>x&&x!=='SOURCE WINDOW');
+  const actual=a.body.flatMap(b=>b.type==='source'?[a.sources.find(s=>s.id===b.source_id).summary]:b.type==='flow'?b.items:b.type==='break'?[]:[b.text]);
+  assert.deepEqual(actual,expected,'Publication master text and paragraph order: '+a.id);
+ }
  const html=await readFile(new URL('dist'+a.route,root),'utf8');
  for(const b of a.body.filter(b=>b.emphasis==='strong'))assert(html.includes(`<strong>${b.text}</strong>`));
  assert.equal((html.match(/class="source-window"/g)||[]).length,a.sources.length);
  assert.equal((html.match(/class="flow-insert"/g)||[]).length,a.body.filter(b=>b.type==='flow').length);
- assert(a.sources.every(s=>s.url===null&&s.verification_status==='pending-source-desk'));
+ if(!a.revision)assert(a.sources.every(s=>s.url===null&&s.verification_status==='pending-source-desk'));
+ else assert(a.sources.every(s=>s.url&&s.verification_status==='verified-primary'));
  assert(!html.includes('本文準備中'));
  assert(!html.includes('class="satori-view"'));assert(!html.includes('<audio'));
 }
@@ -26,7 +29,11 @@ const stopped=createCoverState(false);stopped.stop();stopped.advance();assert.eq
 const h=JSON.parse(await readFile(new URL('content/home.json',root),'utf8'));
 assert.equal(h.cover.interval_ms,12000);assert.equal(h.cover.scenes.length,5);assert.equal(h.orbit.objects.length,6);
 const logo=await readFile(new URL('dist'+h.orbit.logo.src,root));assert.equal(createHash('sha256').update(logo).digest('hex'),h.orbit.logo.sha256);
-const home=await readFile(new URL('dist/index.html',root),'utf8');
+const home=await readFile(new URL('dist/legacy/index.html',root),'utf8');
+const publicHome=await readFile(new URL('dist/index.html',root),'utf8');
+assert(publicHome.includes('<title>HOLOS 88 — A Museum of Relationships</title>'));
+assert(publicHome.includes('href="/prototype/prototype.css"'));
+assert(publicHome.includes('href="/" aria-label="HOLOS 88 home"'));
 for(const a of d.articles)assert(home.includes(`href="${a.route}"`));
 assert(!/<section[^>]+class="cover-scene[^>]+hidden/.test(home),'Static covers accessible without JS');
 assert(!home.includes('autoplay'));

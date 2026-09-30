@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#f1ede3"/>
+  <rect x="24" y="24" width="1152" height="582" fill="none" stroke="#162328" stroke-width="2"/>
+  <text x="72" y="102" fill="#7f3e48" font-family="Arial,Helvetica,sans-serif" font-size="16" letter-spacing="5">A MUSEUM OF RELATIONSHIPS</text>
+  <text x="62" y="355" fill="#162328" font-family="Georgia,'Times New Roman',serif" font-size="210" letter-spacing="-14">HOLOS</text>
+  <text x="943" y="350" fill="#7f3e48" font-family="Arial,Helvetica,sans-serif" font-size="54">88</text>
+  <line x1="72" y1="426" x2="1128" y2="426" stroke="#162328" stroke-width="2"/>
+  <text x="72" y="486" fill="#162328" font-family="Georgia,'Hiragino Mincho ProN',serif" font-size="27">読む。収蔵する。関係を辿る。</text>
+  <text x="72" y="557" fill="#162328" font-family="Arial,Helvetica,sans-serif" font-size="14" letter-spacing="3">OPENING EDITION / 27 WINDOWS</text>
+  <text x="982" y="557" fill="#162328" font-family="Arial,Helvetica,sans-serif" font-size="14" letter-spacing="2">HOLOS88.COM</text>
+</svg>

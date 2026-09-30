@@ -44,6 +44,9 @@ ECHO名義にはしない。hachicoの日常エッセイとも文体を分ける
 - 身体の部位を使った比喩を、キャッチコピーとして安易に使わない。
 - 意味を作りすぎた短文、広告コピーらしい言い切り、説明のための詩的表現を避ける。
 - まず内容を普通の日本語で正確に書く。コピーは本文から自然に見つかる場合だけ置く。
+- 初回のフォーマット調整で、日本語の文調も必ず整える。意味と事実関係は保ったまま、硬い名詞句、直訳調、重い接続、説明臭い言い回しを、読み手がつまずかない自然な標準語へ直す。
+- 専門性を薄めるための言い換えはしない。専門語は残し、その前後だけを生活者が読める呼吸に整える。
+- hachico固有の余韻や少し変わった言い順は、誤読を生まない限り均しすぎない。
 - hachicoが最終コピーを直しやすいよう、仮題は簡潔で説明的にしてよい。
 - 「ほんの少しポエティック」は本文全体のルールではなく、自然に出た一文を結びに残す程度。
 ## Byline / editorial unit
@@ -67,3 +70,14 @@ ECHO名義にはしない。hachicoの日常エッセイとも文体を分ける
 - Discuss both deficiency and excess. Use iron overload/hemochromatosis, zinc-induced copper deficiency, high-dose B6 neuropathy and vitamin D toxicity where relevant.
 - Treat evidence as updateable. Record publication/update dates and distinguish observational studies, trials, systematic reviews, guidance and mechanistic research.
 - Keep The Nutrition Society, Academy of Nutrition Sciences, British Nutrition Foundation, NHS, UK government guidance, NIH ODS and other primary/official sources in the standing source set.
+
+## Standard reader note
+
+SHE CREATESの身体・食・植物・養生を扱う記事では、本文末尾に次の注記を小さく掲載する。専門家監修や出典照合は、実施済みの範囲をSOURCE DESKや制作管理側で別途記録し、この共通注記へ混在させない。
+
+> EDITORIAL NOTE — 編集・文：hachico。本レターは季節と暮らしを観察するための教育・文化コンテンツです。内容の受け取り方や身体の反応には個人差があり、特定の効果・効能を保証するものではありません。診断や治療を目的とせず、症状、服薬、妊娠・授乳、持病については、医師・薬剤師などの医療専門職へご相談ください。
+
+- 医薬品・医薬部外品・化粧品・健康食品等について、承認されていない治療効果や効能を断定しない。
+- 個人の体験を一般的な結果として示さない。
+- 監修済みと表示するのは、担当者と確認範囲が確定した場合だけにする。
+

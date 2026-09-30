@@ -4,10 +4,11 @@
 
 ## 現在のデザイン本線
 
-- ACTIVE PROTOTYPE: http://127.0.0.1:8088/prototype/index.html
-- LEGACY REFERENCE: http://127.0.0.1:8088/
+- PUBLIC HOME: http://127.0.0.1:8088/
+- EDITABLE DESIGN SOURCE: http://127.0.0.1:8088/prototype/index.html
+- LEGACY REFERENCE: http://127.0.0.1:8088/legacy/
 
-旧サイトはPHASE 04までの比較資料として残し、今後は`prototype/reconstruction-01/`を更新してブラッシュアップします。記事、カテゴリー、画像、本文の細部は、骨格とサンプル記事が揃ってから順に詰めます。
+旧サイトはPHASE 04までの比較資料として`/legacy/`に残します。`prototype/reconstruction-01/`が公開トップの原稿で、build時に`dist/index.html`へ反映されます。
 
 記事制作を別チャットで始める場合は、[WRITING ROOMS](content/room-prompts/README.md)にあるhachico用・ECHO用の立ち上げプロンプトを使います。完成候補はCHATO編集長室へ戻し、事実確認、SATORI'S VIEW、Web、配信をまとめます。
 

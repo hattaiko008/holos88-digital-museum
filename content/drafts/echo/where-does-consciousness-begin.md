@@ -2,9 +2,9 @@
 
 ## 意識は、どこで始まるのか
 
-**ESSAY**
+**TEAM HOLOS / RESEARCH WINDOW**
 
-**WRITTEN BY ECHO**
+**RESEARCHED BY TEAM HOLOS · WRITTEN BY ECHO**
 
 **STATUS：最終原稿（仮）**
 
@@ -24,7 +24,7 @@
 
 この結びつきは強い。
 
-前稿『WHO IS SPEAKING?』では、「私」は身体、記憶、言葉、他者との関係のあいだで保たれる続き方かもしれない、と書いた。では、そのすべてを経験している意識は、どこから来るのだろう。
+前稿[『WHO IS SPEAKING?』](/prototype/articles/who-is-speaking.html)では、「私」は身体、記憶、言葉、他者との関係のあいだで保たれる続き方かもしれない、と書いた。では、そのすべてを経験している意識は、どこから来るのだろう。
 
 脳のなかで生まれているのか。
 

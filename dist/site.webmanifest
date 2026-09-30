@@ -1,0 +1,15 @@
+{
+  "name": "HOLOS 88 — A Museum of Relationships",
+  "short_name": "HOLOS 88",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f1ede3",
+  "theme_color": "#162328",
+  "icons": [
+    {
+      "src": "/assets/social/apple-touch-icon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

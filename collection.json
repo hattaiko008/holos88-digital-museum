@@ -344,6 +344,290 @@
         "alt": "Memory：画像準備中"
       },
       "status": "prototype"
+    },
+    {
+      "id": "H88-0011",
+      "slug": "card-box",
+      "title": "Card Box",
+      "titleJa": "カード箱",
+      "types": [
+        "OBJECTS",
+        "IDEAS"
+      ],
+      "date": null,
+      "place": "Kyoto / Desk",
+      "species": null,
+      "material": "Paper / Wood",
+      "creatorMaker": null,
+      "associatedEvents": [],
+      "sources": [
+        "https://www.minpaku.ac.jp/teacher/school/minpack/contents/umesao"
+      ],
+      "rights": null,
+      "relatedObjectIds": [
+        "H88-0010"
+      ],
+      "relatedStoryIds": [
+        "cabinet"
+      ],
+      "caption": "A movable system for notes, comparison, and thought.",
+      "image": {
+        "kind": "placeholder",
+        "src": null,
+        "creator": null,
+        "title": null,
+        "date": null,
+        "institution": null,
+        "sourceUrl": null,
+        "rights": null,
+        "licenseUrl": null,
+        "alt": "Card Box：実資料画像準備中"
+      },
+      "status": "prototype"
+    },
+    {
+      "id": "H88-0012",
+      "slug": "consciousness",
+      "title": "Consciousness",
+      "titleJa": "意識",
+      "types": [
+        "IDEAS",
+        "MIND"
+      ],
+      "date": null,
+      "place": null,
+      "species": null,
+      "material": null,
+      "creatorMaker": null,
+      "associatedEvents": [],
+      "sources": [
+        "https://www.nature.com/articles/nrn.2016.22"
+      ],
+      "rights": null,
+      "relatedObjectIds": [
+        "H88-0010"
+      ],
+      "relatedStoryIds": [
+        "consciousness"
+      ],
+      "caption": "Subjective experience · 主観的経験",
+      "image": {
+        "kind": "placeholder",
+        "src": null,
+        "creator": null,
+        "title": null,
+        "date": null,
+        "institution": null,
+        "sourceUrl": null,
+        "rights": null,
+        "licenseUrl": null,
+        "alt": "Consciousness：図版ではなく概念収蔵"
+      },
+      "status": "prototype"
+    },
+    {
+      "id": "H88-0013",
+      "slug": "self",
+      "title": "Self",
+      "titleJa": "自己",
+      "types": [
+        "IDEAS",
+        "SELF"
+      ],
+      "date": null,
+      "place": null,
+      "species": null,
+      "material": null,
+      "creatorMaker": null,
+      "associatedEvents": [],
+      "sources": [
+        "https://plato.stanford.edu/entries/self-consciousness/"
+      ],
+      "rights": null,
+      "relatedObjectIds": [
+        "H88-0012"
+      ],
+      "relatedStoryIds": [
+        "who-is-speaking"
+      ],
+      "caption": "Language, memory, body, and relation · 言葉、記憶、身体、関係",
+      "image": {
+        "kind": "placeholder",
+        "src": null,
+        "creator": null,
+        "title": null,
+        "date": null,
+        "institution": null,
+        "sourceUrl": null,
+        "rights": null,
+        "licenseUrl": null,
+        "alt": "Self：図版ではなく概念収蔵"
+      },
+      "status": "prototype"
+    },
+    {
+      "id": "H88-0014",
+      "slug": "hypericum-perforatum-plate",
+      "title": "Hypericum perforatum",
+      "titleJa": "セントジョーンズワート植物図",
+      "types": [
+        "PLANTS",
+        "MEDICINE"
+      ],
+      "date": "1887",
+      "place": "United States",
+      "species": "Hypericum perforatum",
+      "material": "Botanical illustration / print",
+      "creatorMaker": "Charles F. Millspaugh",
+      "associatedEvents": [],
+      "sources": [
+        "https://cdn2.picryl.com/photo/1887/03/01/american-medicinal-plants-1-0175-30-8ac087-1024.png"
+      ],
+      "rights": "Public Domain",
+      "relatedObjectIds": [
+        "H88-0015"
+      ],
+      "relatedStoryIds": [
+        "before-a-plant-became-a-remedy"
+      ],
+      "caption": "A plant before it becomes a remedy · 効能より前にある、植物の全体像",
+      "accessNote": "Museum card is public. A future paid edition may restrict access to extended commentary or downloadable material.",
+      "image": {
+        "kind": "external-archive",
+        "src": "https://cdn2.picryl.com/photo/1887/03/01/american-medicinal-plants-1-0175-30-8ac087-1024.png",
+        "creator": "Charles F. Millspaugh",
+        "title": "Hypericum perforatum plate, American Medicinal Plants",
+        "date": "1887",
+        "institution": "Public domain digital archive / PICRYL",
+        "sourceUrl": "https://cdn2.picryl.com/photo/1887/03/01/american-medicinal-plants-1-0175-30-8ac087-1024.png",
+        "rights": "Public Domain",
+        "licenseUrl": null,
+        "alt": "セントジョーンズワートの全草と花、根、種子を描いた1887年の植物図"
+      },
+      "status": "collected"
+    },
+    {
+      "id": "H88-0015",
+      "slug": "hypericum-parts-plate",
+      "title": "The Plant in Parts",
+      "titleJa": "植物を部位から見る",
+      "types": [
+        "PLANTS",
+        "ILLUSTRATION"
+      ],
+      "date": "1887",
+      "place": "United States",
+      "species": "Hypericum perforatum",
+      "material": "Botanical illustration / print",
+      "creatorMaker": "Charles F. Millspaugh",
+      "associatedEvents": [],
+      "sources": [
+        "https://cdn2.picryl.com/photo/1887/12/31/american-medicinal-plants-an-illustrated-and-descriptive-guide-to-the-american-3968a5-1024.jpg"
+      ],
+      "rights": "Public Domain",
+      "relatedObjectIds": [
+        "H88-0014"
+      ],
+      "relatedStoryIds": [
+        "before-a-plant-became-a-remedy"
+      ],
+      "caption": "Species, part, process, dose · 種、部位、製法、量を見分ける",
+      "accessNote": "Museum card is public. A future paid edition may restrict access to extended commentary or downloadable material.",
+      "image": {
+        "kind": "external-archive",
+        "src": "https://cdn2.picryl.com/photo/1887/12/31/american-medicinal-plants-an-illustrated-and-descriptive-guide-to-the-american-3968a5-1024.jpg",
+        "creator": "Charles F. Millspaugh",
+        "title": "American Medicinal Plants botanical plate",
+        "date": "1887",
+        "institution": "Public domain digital archive / PICRYL",
+        "sourceUrl": "https://cdn2.picryl.com/photo/1887/12/31/american-medicinal-plants-an-illustrated-and-descriptive-guide-to-the-american-3968a5-1024.jpg",
+        "rights": "Public Domain",
+        "licenseUrl": null,
+        "alt": "セントジョーンズワートの花、葉、根と各部の拡大図"
+      },
+      "status": "collected"
+    },
+    {
+      "id": "H88-0016",
+      "slug": "gastro-intestinal-tract",
+      "title": "Gastro-intestinal Tract",
+      "titleJa": "消化管",
+      "types": [
+        "BODY",
+        "ANATOMY"
+      ],
+      "date": "1918",
+      "place": null,
+      "species": "Homo sapiens",
+      "material": "Anatomical illustration",
+      "creatorMaker": "Henry Gray / later edition illustration",
+      "associatedEvents": [],
+      "sources": [
+        "https://commons.wikimedia.org/wiki/File:Gastro-intestinal_tract.png"
+      ],
+      "rights": "Public Domain",
+      "relatedObjectIds": [
+        "H88-0017"
+      ],
+      "relatedStoryIds": [
+        "before-another-supplement"
+      ],
+      "caption": "A nutrient has a journey · 栄養素は、口から入って終わりではない",
+      "accessNote": "Museum card is public. A future paid edition may restrict access to extended commentary or downloadable material.",
+      "image": {
+        "kind": "local-archive",
+        "src": "/assets/collection/gastro-intestinal-tract.png",
+        "creator": "Henry Gray / later edition illustration",
+        "title": "Gastro-intestinal tract",
+        "date": "1918",
+        "institution": "Wikimedia Commons",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Gastro-intestinal_tract.png",
+        "rights": "Public Domain",
+        "licenseUrl": null,
+        "alt": "グレイ解剖学をもとにした消化管の図"
+      },
+      "status": "collected"
+    },
+    {
+      "id": "H88-0017",
+      "slug": "stomach-gray-1918",
+      "title": "The Stomach",
+      "titleJa": "胃",
+      "types": [
+        "BODY",
+        "ANATOMY"
+      ],
+      "date": "1918",
+      "place": null,
+      "species": "Homo sapiens",
+      "material": "Anatomical illustration",
+      "creatorMaker": "Henry Gray / later edition illustration",
+      "associatedEvents": [],
+      "sources": [
+        "https://commons.wikimedia.org/wiki/File:Gray1050-stomach.png"
+      ],
+      "rights": "Public Domain",
+      "relatedObjectIds": [
+        "H88-0016"
+      ],
+      "relatedStoryIds": [
+        "before-another-supplement"
+      ],
+      "caption": "The stomach is not a bag · 胃は、ただの貯蔵袋ではない",
+      "accessNote": "Museum card is public. A future paid edition may restrict access to extended commentary or downloadable material.",
+      "image": {
+        "kind": "local-archive",
+        "src": "/assets/collection/gray-stomach-1918.png",
+        "creator": "Henry Gray / later edition illustration",
+        "title": "The stomach",
+        "date": "1918",
+        "institution": "Wikimedia Commons",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Gray1050-stomach.png",
+        "rights": "Public Domain",
+        "licenseUrl": null,
+        "alt": "グレイ解剖学に収録された胃の図"
+      },
+      "status": "collected"
     }
   ],
   "exploreBy": [

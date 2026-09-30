@@ -13,6 +13,16 @@
   const titleField = document.querySelector('#document-title');
   const descriptionField = document.querySelector('#meta-description');
   const dirtyState = document.querySelector('#dirty-state');
+  const pipelineList = document.querySelector('#pipeline-list');
+  const pipelineCounts = document.querySelector('#pipeline-counts');
+  const stageFilter = document.querySelector('#stage-filter');
+  const pipelineSearch = document.querySelector('#pipeline-search');
+  const publicationStage = document.querySelector('#publication-stage');
+  const publicationLocation = document.querySelector('#publication-location');
+  const publicationNote = document.querySelector('#publication-note');
+  const publicationSummary = document.querySelector('#publication-summary');
+  const savePublication = document.querySelector('#save-publication');
+  const publicationChecks = [...document.querySelectorAll('[data-check]')];
 
   let sourceDirectory = null;
   let publicDirectory = null;
@@ -25,6 +35,7 @@
   let currentName = '';
   let dirty = false;
   let serverMode = false;
+  let editorialState = {stages:[], articles:[]};
   const requestedArticle = new URLSearchParams(location.search).get('article');
 
   const setStatus = (message, error = false) => {
@@ -36,6 +47,70 @@
     dirty = value;
     dirtyState.textContent = value ? '未保存の変更あり' : '保存済み';
     dirtyState.classList.toggle('is-dirty', value);
+  };
+
+  const currentEditorial = () => editorialState.articles.find(item => item.file === currentName);
+  const completedChecks = item => Object.values(item?.checks || {}).filter(Boolean).length;
+  const stageLabel = id => editorialState.stages.find(item => item.id === id)?.label || id || '未設定';
+
+  const renderPipeline = () => {
+    if (!editorialState.articles.length) return;
+    const query = pipelineSearch.value.trim().toLocaleLowerCase('ja');
+    const stage = stageFilter.value;
+    const filtered = editorialState.articles.filter(item => (!stage || item.stage === stage) && (!query || `${item.title} ${item.series} ${item.file}`.toLocaleLowerCase('ja').includes(query)));
+    pipelineCounts.innerHTML = editorialState.stages.map(item => `<button type="button" data-stage-count="${item.id}"><b>${editorialState.articles.filter(article => article.stage === item.id).length}</b><span>${item.label}</span></button>`).join('');
+    pipelineList.innerHTML = filtered.length ? filtered.map(item => `<article class="pipeline-item" data-stage="${item.stage}"><div><span class="stage-mark">${stageLabel(item.stage)}</span><small>${item.series || 'HOLOS 88'}</small></div><h3>${item.title}</h3><p>${completedChecks(item)} / 5 CHECKED${item.location ? ` · ${item.location}` : ''}</p><button type="button" data-open-article="${item.file}">確認・編集する →</button></article>`).join('') : '<p class="pipeline-empty">この条件の記事はありません。</p>';
+  };
+
+  const loadEditorialState = async () => {
+    try {
+      let response = await fetch('/__editor/status', {cache:'no-store'});
+      if (!response.ok) response = await fetch('/prototype/editorial-status.json', {cache:'no-store'});
+      if (!response.ok) return;
+      editorialState = await response.json();
+      const local = localStorage.getItem('holos-editorial-status');
+      if (local) {
+        const localState = JSON.parse(local);
+        const sourceByFile = new Map(editorialState.articles.map(item => [item.file,item]));
+        editorialState.articles = localState.articles.map(item => {
+          const sourceItem=sourceByFile.get(item.file);
+          return sourceItem && Date.parse(sourceItem.updated||0)>Date.parse(item.updated||0) ? sourceItem : item;
+        });
+        localStorage.setItem('holos-editorial-status', JSON.stringify(editorialState));
+      }
+      publicationStage.innerHTML = editorialState.stages.map(item => `<option value="${item.id}">${item.label}</option>`).join('');
+      stageFilter.innerHTML = '<option value="">すべての状態</option>' + editorialState.stages.map(item => `<option value="${item.id}">${item.label}</option>`).join('');
+      renderPipeline();
+    } catch {}
+  };
+
+  const fillPublicationCard = () => {
+    const item = currentEditorial();
+    if (!item) { publicationSummary.textContent = 'この記事の進行記録はまだありません。'; return; }
+    publicationStage.value = item.stage;
+    publicationLocation.value = item.location || '';
+    publicationNote.value = item.note || '';
+    publicationChecks.forEach(input => { input.checked = Boolean(item.checks?.[input.dataset.check]); });
+    publicationSummary.textContent = `${completedChecks(item)} / 5項目確認済み · ${stageLabel(item.stage)}`;
+  };
+
+  const saveEditorialState = async () => {
+    const item = currentEditorial();
+    if (!item) return;
+    item.stage = publicationStage.value;
+    item.location = publicationLocation.value.trim();
+    item.note = publicationNote.value.trim();
+    item.checks = Object.fromEntries(publicationChecks.map(input => [input.dataset.check, input.checked]));
+    item.updated = new Date().toISOString();
+    localStorage.setItem('holos-editorial-status', JSON.stringify(editorialState));
+    let savedToFile=false;
+    try {
+      const response = await fetch('/__editor/status', {method:'PUT',headers:{'Content-Type':'application/json'},body:JSON.stringify(editorialState)});
+      savedToFile=response.ok;
+    } catch {}
+    publicationSummary.textContent = `${completedChecks(item)} / 5項目確認済み · ${stageLabel(item.stage)}`;
+    renderPipeline();
+    setStatus(savedToFile ? '記事の進行状況を管理ファイルへ保存しました。' : '記事の進行状況を、このブラウザへ保存しました。');
   };
 
   const getDirectory = async (root, parts) => {
@@ -59,8 +134,14 @@
   const render = () => {
     editor.innerHTML = '';
     bindings = [];
-    const nodes = [...doc.querySelectorAll(
+    let nodes = [...doc.querySelectorAll(
       '.article-hero>h1,.article-title-ja p,.byline,.team-explains,.article-body h1,.article-body h2,.article-body h3,.article-body p,.article-body li,.article-body blockquote'
+    )];
+
+    // SHE CREATES and other magazine pages use their own layout vocabulary
+    // instead of the standard .article-hero / .article-body structure.
+    if (!nodes.length) nodes = [...doc.querySelectorAll(
+      'main h1,main h2,main h3,main p,main li,main blockquote'
     )];
 
     nodes.forEach((node, index) => {
@@ -132,6 +213,7 @@
       previewButton.disabled = false;
       currentName = name;
       render();
+      fillPublicationCard();
       setDirty(false);
       setStatus('記事を開きました。言葉を直したら「原稿とWebへ保存」を押してください。');
     } catch (error) {
@@ -268,7 +350,17 @@
     const href=currentName.startsWith('pages/')
       ? `/prototype/${encodeURIComponent(currentName.slice(6))}`
       : `/prototype/articles/${encodeURIComponent(currentName)}`;
-    window.open(`${href}?editor-preview=${Date.now()}`, '_blank', 'noopener');
+    const width=Math.max(680,Math.round(screen.availWidth*.52));
+    const height=Math.max(700,screen.availHeight-80);
+    const left=Math.max(0,screen.availWidth-width);
+    const comparison=window.open(`${href}?editor-preview=${Date.now()}`, 'holos-article-comparison', `popup=yes,width=${width},height=${height},left=${left},top=20,scrollbars=yes,resizable=yes`);
+    if (comparison) {
+      comparison.focus();
+      setStatus('WEB版を別ウィンドウで開きました。編集机と並べて確認できます。');
+    } else {
+      window.open(`${href}?editor-preview=${Date.now()}`, '_blank', 'noopener');
+      setStatus('WEB版を別タブで開きました。ブラウザが別ウィンドウを止めた場合は、ポップアップを許可してください。');
+    }
   };
 
   folderButton.addEventListener('click', async () => { if (!(await connectLocalServer())) openFolder(); });
@@ -278,6 +370,11 @@
   descriptionField.addEventListener('input', () => setDirty(true));
   backupButton.addEventListener('click', backup);
   previewButton.addEventListener('click', preview);
+  savePublication.addEventListener('click', saveEditorialState);
+  stageFilter.addEventListener('change', renderPipeline);
+  pipelineSearch.addEventListener('input', renderPipeline);
+  pipelineCounts.addEventListener('click', event => { const button=event.target.closest('[data-stage-count]'); if(!button)return; stageFilter.value=button.dataset.stageCount; renderPipeline(); });
+  pipelineList.addEventListener('click', async event => { const button=event.target.closest('[data-open-article]'); if(!button)return; articleSelect.value=button.dataset.openArticle; await loadArticle(button.dataset.openArticle); document.querySelector('.controls').scrollIntoView({behavior:'smooth'}); });
   saveButton.addEventListener('click', save);
   addEventListener('keydown', event => {
     if ((event.metaKey || event.ctrlKey) && event.key.toLowerCase() === 's' && !saveButton.disabled) {
@@ -290,5 +387,6 @@
     event.preventDefault();
     event.returnValue = '';
   });
+  loadEditorialState();
   connectLocalServer();
 })();

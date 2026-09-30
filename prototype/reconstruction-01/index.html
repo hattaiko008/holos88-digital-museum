@@ -3,18 +3,18 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>HOLOS 88 — Reconstruction Study</title>
-  <meta name="description" content="HOLOS 88 再構築デザイン試作。">
+  <title>HOLOS 88 — A Museum of Relationships</title>
+  <meta name="description" content="思想、科学、歴史、自然、季節と暮らしを、ひとつの問いから横断して読むデジタルミュージアム。">
   <link rel="stylesheet" href="/prototype/prototype.css">
 </head>
-<body>
+<body id="top">
   <a class="skip" href="#main">本文へ</a>
   <header class="site-head">
-    <a class="wordmark" href="/prototype/index.html" aria-label="HOLOS 88 prototype home"><span>HOLOS</span><sup>88</sup></a>
+    <a class="wordmark" href="/" aria-label="HOLOS 88 home"><span>HOLOS</span><sup>88</sup></a>
     <nav aria-label="主要ナビゲーション">
-      <a href="#read">READ</a><a href="#michikusa">MICHIKUSA</a><a href="#museum">MUSEUM</a><a href="#atlas">ATLAS</a>
+      <a href="#read">READ</a><a href="#michikusa">MICHIKUSA</a><a href="#museum">MUSEUM</a><a href="#atlas">ATLAS</a><a href="/en/" lang="en" hreflang="en">EN</a>
     </nav>
-    <button class="search" type="button" aria-label="検索（試作）">SEARCH <span aria-hidden="true">⌕</span></button>
+    <button class="search" type="button" aria-label="検索">SEARCH <span aria-hidden="true">⌕</span></button>
   </header>
 
   <main id="main">
@@ -44,6 +44,7 @@
       <div class="category-nav"><p><span data-cover-current>01</span> / 05</p><div role="group" aria-label="カテゴリーを選ぶ"><button type="button" data-cover-prev aria-label="前のカテゴリー">←</button><button type="button" data-cover-next aria-label="次のカテゴリー">→</button></div><p class="category-stop">FIVE WINDOWS · THEN REST</p></div>
     </section>
 
+    <span id="article-windows" aria-hidden="true"></span>
     <section class="edition front-layer" id="read" aria-labelledby="read-title">
       <div class="section-head">
         <div><p class="eyebrow">FRONT PAGE / LAYER 01</p><h2 id="read-title">READ</h2><p>いま、手渡したい窓</p></div>
@@ -72,16 +73,16 @@
           <a href="/prototype/articles/cabinet.html"><p class="mode">MUSEUM ESSAY · ECHO</p><p class="stage-no">01</p><h3>THE CABINET<br>THAT THOUGHT</h3><p class="ja">AIより前に、思考するカード箱があった</p><p>梅棹忠夫の知的生産から、カード、博物館、生成AIへ。<br>思考は、どこに置かれ、どう動きはじめるのか。</p><span>DEEP DIVE ↗</span></a>
         </article>
         <article class="stage-field" id="feature-window">
-          <a href="/prototype/articles/archaeology-of-fear.html"><img src="/assets/study01-696380.jpg" alt="大樹を描いた古い版画" width="568" height="338"><div><p class="mode">MUSEUM FEATURE · ECHO</p><h3>恐怖の考古学</h3><p>9.11の跡地で見つかったのは、石ではなく種だった。<br>恐怖の歴史を、記憶と生命から読み直す。</p><span>ENTER THE ARCHIVE ↗</span></div></a>
+          <a href="/prototype/articles/archaeology-of-fear.html"><img src="/assets/study01-696380.jpg" alt="大樹を描いた古い版画" width="568" height="338"><div><p class="mode">MUSEUM FEATURE · ECHO</p><h3>恐怖のあとに、何が残るのか</h3><p>25年後、一本の樹木から世界を見る。<br>記憶から身体、制度、土地へと関係を辿る。</p><span>ENTER THE ARCHIVE ↗</span></div></a>
         </article>
         <article class="stage-market" id="market-window">
-          <a href="/prototype/watch-the-now-2026-09-26.html"><p class="mode">WATCH THE NOW · ISSUE 001</p><p class="market-number">NOW</p><h3>権力には、鋭く。<br>暮らす人には、温かく。</h3><p>ニュースを要約するのではなく、その出来事から何が見えるかを問う。</p><span>READ THIS WEEK ↗</span></a>
+          <a href="/prototype/watch-the-now-2026-09-26.html"><p class="mode">WATCH THE NOW · ISSUE 001</p><p class="market-number">NOW</p><h3>権力には、鋭く。<br>人には、やさしく。</h3><p>ニュースを要約するのではなく、その出来事から何が見えるかを問う。</p><span>READ THIS WEEK ↗</span></a>
         </article>
         <article class="stage-almanac" id="almanac-window">
           <a href="/prototype/articles/moon-to-stars.html"><p class="mode">ALMANAC OF LIFE</p><h3>MOON<br>TO STARS</h3><p class="ja">月を見たあと、星を待つ。</p><p>月を見上げ、古い星の名前と秋の時間を辿る。<br>季節の読み物から、Letterと28 DAYSへ。</p><span>WITH THE SEASON ↗</span></a>
         </article>
         <article class="stage-michikusa">
-          <a href="/prototype/articles/kaleidoscope.html"><p class="mode">SMALL MICHIKUSA</p><h3>同じ欠片を、<br>少しだけ回してみる。</h3><p>万華鏡は、HOLOS 88を読むための小さな鍵。<br>同じ世界も、関係を少し回すと別の像になる。</p><span>TAKE A SIDE PATH ↗</span></a>
+          <a href="/prototype/articles/horse-time.html"><p class="mode">SMALL MICHIKUSA</p><h3>いつもの時間を、<br>少しだけ外れてみる。</h3><p>馬の時間へ寄り道すると、同じ一日にも、別の速度があることに気づきます。</p><span>TAKE A SIDE PATH ↗</span></a>
         </article>
       </div>
 
@@ -118,20 +119,25 @@
             <circle class="orbit-centre" cx="600" cy="410" r="5"/>
           </svg>
           <nav aria-label="MICHIKUSAから読む">
-          <a href="/prototype/articles/kaleidoscope.html"><small>IMAGE / RELATIONSHIP</small><b>万華鏡</b><span>同じ欠片を、少しだけ回す ↗</span></a>
-          <a href="/prototype/articles/wadokei.html"><small>TIME / EDO</small><b>和時計</b><span>季節で伸び縮みした時間 ↗</span></a>
-          <a href="/prototype/articles/germination.html"><small>BOTANY / WAITING</small><b>発芽</b><span>まだ見えない時間を辿る ↗</span></a>
-          <a href="/prototype/articles/who-is-speaking.html"><small>AI / SELF</small><b>「私」は誰か</b><span>言葉から自我の方へ ↗</span></a>
-          <a href="/prototype/articles/forgetting-well.html"><small>MEMORY / TOOL</small><b>よく忘れるために</b><span>頭へ余白を返す ↗</span></a>
-          <a href="/prototype/articles/the-field-before-data.html"><small>FIELD / DATA</small><b>データになる前の野原</b><span>数字の手前へ戻る ↗</span></a>
-          <a href="/prototype/articles/who-may-move-the-object.html"><small>MUSEUM / POWER</small><b>誰が、その物を動かせるのか</b><span>収蔵と返還を考える ↗</span></a>
-          <a href="/prototype/articles/who-remembers.html"><small>MEMORY / SELF</small><b>覚えているのは誰か</b><span>記憶と「私」の境目へ ↗</span></a>
-          <a href="/prototype/articles/dream-where-am-i.html"><small>DREAM / CONSCIOUSNESS</small><b>夢の私は、どこにいる</b><span>眠る脳の窓へ ↗</span></a>
-          <a href="/prototype/articles/gift-cannot-refuse.html"><small>GIFT / OBLIGATION</small><b>断れない贈り物</b><span>好意の中の力を見る ↗</span></a>
-            <a href="/prototype/articles/fire-and-vessel.html"><small>JOMON / LIFE</small><b>火と器</b><span>縄文の台所を覗く ↗</span></a>
+            <a href="/prototype/articles/horse-time.html"><small>ANIMAL / EVERYDAY</small><b>最近、雨ばっかり。</b><span>馬の時間へ寄り道する ↗</span></a>
+            <a href="/prototype/articles/cabinet.html"><small>CARD / KNOWLEDGE</small><b>思考するカード箱</b><span>知識の置き場所を変える ↗</span></a>
+            <a href="/prototype/articles/hegel-recognition.html"><small>PHILOSOPHY / SELF</small><b>認められたい私たち</b><span>他者の眼差しへ歩く ↗</span></a>
+            <a href="/prototype/articles/consciousness.html"><small>SCIENCE / MIND</small><b>意識は、どこで始まるのか</b><span>脳と世界の境目へ ↗</span></a>
+            <a href="/prototype/articles/symbols-do-not-diagnose-us.html"><small>SYMBOL / INTERPRETATION</small><b>象徴は、私たちを診断しない</b><span>意味と断定の間へ ↗</span></a>
+            <a href="/prototype/articles/season-is-not-a-prescription.html"><small>SEASON / BODY</small><b>季節は処方箋ではない</b><span>暦と身体を読み分ける ↗</span></a>
+            <a href="/prototype/articles/five-percent.html"><small>ECONOMY / KITCHEN</small><b>5％という数字の、その向こう</b><span>市場から台所へ ↗</span></a>
+            <a href="/prototype/articles/apology-receipt.html"><small>CARE / RESPONSIBILITY</small><b>謝罪したあと、何を変えたのか</b><span>言葉の次の行為へ ↗</span></a>
+            <a href="/prototype/articles/who-is-speaking.html"><small>AI / SELF</small><b>「私」と言うのは、誰か</b><span>言葉から自我の方へ ↗</span></a>
+            <a href="/prototype/articles/the-body-keeps-more-than-one-clock.html"><small>BODY / TIME</small><b>身体は、いくつもの時計を持つ</b><span>光と季節の時間へ ↗</span></a>
+            <a href="/prototype/articles/archaeology-of-fear.html"><small>MEMORY / LIFE</small><b>恐怖のあとに、何が残るのか</b><span>一本の樹木から辿る ↗</span></a>
+            <a href="/prototype/articles/the-judge-who-would-not-bow.html"><small>LAW / INDEPENDENCE</small><b>法の前で、頭を下げなかった人</b><span>声と制度の強さへ ↗</span></a>
+            <a href="/prototype/articles/the-red-carpet-is-a-map.html"><small>DIPLOMACY / POWER</small><b>赤絨毯は、力関係を描く地図</b><span>儀礼の内側へ歩く ↗</span></a>
+            <a href="/prototype/articles/who-is-feeding-whom.html"><small>CARE / RELATIONSHIP</small><b>世話をしているのは、どちらだろう。</b><span>共依存とケアの間へ ↗</span></a>
+            <a href="/prototype/articles/the-melancholy-of-shorter-days.html"><small>LIGHT / SEASON</small><b>日が短くなる季節の憂鬱</b><span>光と心の関係へ ↗</span></a>
+            <a href="/prototype/articles/before-a-plant-became-a-remedy.html"><small>PLANT / MEDICINE</small><b>植物が薬になる、その前に</b><span>知恵と検証の間へ ↗</span></a>
           </nav>
         </div>
-        <a class="more-michikusa" href="#archive-preview-title"><span>MORE MICHIKUSA</span><b>さらに、道草する。</b><small>ここに見えているのは、いま開いている小径だけ。すべてのMICHIKUSA収蔵庫へ。</small><i>ENTER ALL PATHS →</i></a>
+        <a class="more-michikusa" href="/prototype/worlds.html"><span>MORE MICHIKUSA</span><b>さらに、道草する。</b><small>ここに見えているのは、いま開いている小径だけ。さらに多くの世界と記事へ。</small><i>ENTER ALL PATHS →</i></a>
       </aside>
       <aside class="between-entry" id="between" aria-labelledby="between-entry-title">
         <div class="between-guide"><p class="eyebrow">MUSEUM GUIDE</p><p class="between-mode">HOW TO</p><p class="between-index">∞</p></div>
@@ -159,8 +165,9 @@
       </section>
     </section>
 
+    <span id="relationships" aria-hidden="true"></span>
     <section class="deep-layer" id="threads" aria-labelledby="threads-title">
-      <div class="layer-intro"><p class="eyebrow">MUSEUM BELOW / LAYER 02</p><h2 id="threads-title">FOLLOW<br>A THREAD</h2><p>記事を探すのではなく、一本の関係を辿る。違う分野の窓が、同じ糸の上で出会います。</p><p><a href="/prototype/layer02-preview.html?v=rhythm-feeling-07">OPEN THE FULL LAYER 02 PREVIEW ↗</a></p></div>
+      <div class="layer-intro"><p class="eyebrow">MUSEUM BELOW / LAYER 02</p><h2 id="threads-title">FOLLOW<br>A THREAD</h2><p>記事を探すのではなく、一本の関係を辿る。違う分野の窓が、同じ糸の上で出会います。</p><p><a href="/prototype/worlds.html">WORLDS TO ENTERで関係を辿る ↗</a></p></div>
       <section class="moving-windows" id="moving" aria-labelledby="moving-title">
         <header><div><p class="eyebrow">NOW ON VIEW / RECENT WINDOWS</p><h3 id="moving-title">WINDOWS<br>IN MOTION</h3><p class="title-ja">いま開いている窓</p></div><div class="rail-controls" aria-label="記事を横へ送る"><button type="button" data-rail-prev aria-label="前の記事へ">←</button><button type="button" data-rail-next aria-label="次の記事へ">→</button></div></header>
         <div class="window-rail" data-window-rail tabindex="0">
@@ -184,20 +191,31 @@
       </div>
 
       <div class="mode-shelves" aria-labelledby="archive-preview-title">
-        <div class="shelf-title"><p class="eyebrow">EDITORIAL PREVIEW</p><h3 id="archive-preview-title">READING<br>ROOMS</h3><p>公開前草稿を含む仮展示。形式の棚と、主題のカテゴリーは別に育ちます。</p></div>
-        <section><h4>MUSEUM ESSAY</h4><a href="/prototype/articles/cabinet.html">梅棹忠夫とカード箱</a><a href="/prototype/articles/gift.html">モースと贈与</a><a href="/prototype/articles/wild-mind.html">レヴィ＝ストロース</a><a href="/prototype/articles/taro-jomon.html">岡本太郎と縄文</a><a href="/prototype/articles/consciousness.html">脳と意識</a><a href="/prototype/articles/horse.html">馬と人間</a></section>
+        <div class="shelf-title"><p class="eyebrow">OPEN COLLECTION</p><h3 id="archive-preview-title">READING<br>ROOMS</h3><p>公開中の読み物と、これから育つ主題の棚。新しい窓が開くたび、収蔵と関係が少しずつ増えていきます。</p></div>
+        <section><h4>MUSEUM ESSAY</h4><a href="/prototype/articles/cabinet.html">梅棹忠夫とカード箱</a><a href="/prototype/articles/gift.html">モースと贈与</a><a href="/prototype/articles/wild-mind.html">レヴィ＝ストロース</a><a href="/prototype/articles/taro-jomon.html">岡本太郎と縄文</a><a href="/prototype/articles/horse.html">馬と人間</a></section>
+        <section><h4>TEAM HOLOS / RESEARCH WINDOW</h4><a href="/prototype/articles/consciousness.html">意識は、どこで始まるのか</a><a href="/prototype/articles/who-is-speaking.html">「私」と言うのは、誰か</a></section>
         <section><h4>WHOLE EARTH, NOW?</h4><a href="/prototype/articles/whole-earth-catalog.html">Whole Earth Catalog<br>彼らが望んだ地球だろうか</a><a href="/prototype/articles/between-the-windows.html">窓と窓のあいだに</a><a href="/prototype/articles/kaleidoscope.html">万華鏡</a></section>
         <section><h4>MICHIKUSA</h4><a href="/prototype/articles/kaleidoscope.html">万華鏡</a><a href="/prototype/articles/forgetting-well.html">よく忘れるために</a><a href="/prototype/articles/the-field-before-data.html">データになる前の野原</a><a href="/prototype/articles/who-may-move-the-object.html">誰が、その物を動かせるのか</a><a href="/prototype/articles/who-remembers.html">覚えているのは誰か</a><a href="/prototype/articles/dream-where-am-i.html">夢の私は、どこにいる</a><a href="/prototype/articles/who-is-watching.html">見ているのは誰か</a><a href="/prototype/articles/gift-cannot-refuse.html">断れない贈り物</a><a href="/prototype/articles/the-colonial-gaze.html">植民地のまなざし</a><a href="/prototype/articles/fire-and-vessel.html">火と器</a><a href="/prototype/articles/a-question-outlives-us.html">問いは、私たちより長く残る</a><a href="/prototype/articles/wadokei.html">和時計</a><a href="/prototype/articles/germination.html">発芽</a></section>
         <section><h4>FIELD / ALMANAC / MARKET</h4><a href="/prototype/articles/horse-time.html">最近、雨ばっかり。</a><a href="/prototype/articles/moon-to-stars.html">月から星へ</a><a href="/prototype/articles/duration.html">待つ時間</a><a href="/prototype/articles/five-percent.html">5％の向こう</a><a href="/prototype/articles/land.html">土地は誰のものか</a><a href="/prototype/articles/millet.html">ミレーと労働</a></section>
         <section><h4>MIND / POLITICS / CARE</h4><a href="/prototype/articles/the-rope-that-lets-a-ship-leave.html">船をつなぐ綱</a><a href="/prototype/articles/who-is-feeding-whom.html">世話をしているのは、どちらだろう</a><a href="/prototype/articles/what-codependency-is-and-isnt.html">共依存とは何か</a><a href="/prototype/articles/the-button-we-stopped-pressing.html">押すのをやめたボタン</a><a href="/prototype/articles/the-chair-that-became-more-beautiful-after-we-bought-it.html">買ったあとで、美しくなる椅子</a></section>
-        <section><h4>BAG / FIELD / MEMORY</h4><a href="/prototype/articles/potatoes.html">ジャガイモが悪いんだ。</a><a href="/prototype/articles/crowd-farm.html">群衆を栽培する農場</a><a href="/prototype/articles/pain-enemy.html">痛みは本物。敵は作られる。</a><a href="/prototype/articles/apology-receipt.html">謝罪は、領収書ではない。</a><a href="/prototype/articles/contempt-refund.html">蔑視という払い戻し</a><a href="/prototype/articles/other-sino-japanese-war.html">もう一つの日清戦争</a><a href="/prototype/articles/december-ten.html">歓声は、誰が用意したのか。</a></section>
+        <section><h4>BAG / FIELD / MEMORY</h4><a href="/prototype/articles/potatoes.html">ジャガイモが悪いんだ。</a><a href="/prototype/articles/crowd-farm.html">群衆を栽培する農場</a><a href="/prototype/articles/pain-enemy.html">痛みは本物。敵は作られる。</a><a href="/prototype/articles/apology-receipt.html">謝罪したあと、何を変えたのか</a><a href="/prototype/articles/contempt-refund.html">蔑視という払い戻し</a><a href="/prototype/articles/other-sino-japanese-war.html">もう一つの日清戦争</a><a href="/prototype/articles/december-ten.html">歓声は、誰が用意したのか。</a></section>
       </div>
     </section>
 
+    <span id="collection" aria-hidden="true"></span>
     <section class="museum" id="museum" aria-labelledby="museum-title">
       <div class="museum-title"><p class="eyebrow">FROM THE COLLECTION</p><h2 id="museum-title">MUSEUM</h2><p>ものから、世界を見る</p></div>
-      <figure class="plate"><img src="/assets/study01-391117.jpg" alt="アルブレヒト・デューラーによる横向きの馬の銅版画" width="418" height="625"><figcaption>ALBRECHT DÜRER / THE LITTLE HORSE / 1505<br>THE METROPOLITAN MUSEUM OF ART / PUBLIC DOMAIN</figcaption></figure>
-      <div class="museum-copy"><p class="catalogue">OBJECT H88-0005</p><h3>HORSE</h3><p class="ja">馬</p><p>働く身体、移動する力、競技、治療、祈り。人間の歴史の隣を歩いてきた動物から、現在の関係を見直す。</p><a href="#atlas">関係を辿る ↘</a></div>
+      <div class="museum-shelf">
+        <article class="museum-entry museum-entry-tree" id="collection-survivor-tree">
+          <figure class="plate"><img src="/assets/survivor-tree.jpg" alt="2012年のSurvivor Tree。版画を思わせる単色で表示" width="1024" height="768"><figcaption>PUMPKINSKY / SURVIVOR TREE AT THE NATIONAL SEPTEMBER 11 MEMORIAL / 16 JULY 2012<br>WIKIMEDIA COMMONS / CC BY-SA 3.0 / PRINT TREATMENT FOR DISPLAY</figcaption></figure>
+          <div class="museum-copy"><p class="catalogue">OBJECT H88-0001</p><h3>SURVIVOR<br>TREE</h3><p class="ja">サバイバーツリー</p><p><i>Pyrus calleryana</i>。傷と新しい枝を同じ生の中に持ち、記憶、ケア、回復の単純ではない関係を見せる一本の樹木。</p><a href="/prototype/articles/archaeology-of-fear.html#article">記事「恐怖のあとに、何が残るのか」へ ↗</a></div>
+        </article>
+        <article class="museum-entry" id="collection-horse">
+          <figure class="plate"><img src="/assets/study01-391117.jpg" alt="アルブレヒト・デューラーによる横向きの馬の銅版画" width="418" height="625"><figcaption>ALBRECHT DÜRER / THE LITTLE HORSE / 1505<br>THE METROPOLITAN MUSEUM OF ART / PUBLIC DOMAIN</figcaption></figure>
+          <div class="museum-copy"><p class="catalogue">OBJECT H88-0005</p><h3>HORSE</h3><p class="ja">馬</p><p>働く身体、移動する力、競技、治療、祈り。人間の歴史の隣を歩いてきた動物から、現在の関係を見直す。</p><a href="/prototype/articles/horse.html">記事「馬と人間」へ ↗</a></div>
+        </article>
+      </div>
+      <a class="museum-all-link" href="/prototype/collection.html">VIEW ALL COLLECTION CARDS <span>→</span></a>
     </section>
 
     <section class="atlas" id="atlas" aria-labelledby="atlas-title">
@@ -211,25 +229,35 @@
     <section class="categories" aria-labelledby="categories-title">
       <p class="eyebrow">EXPLORE BY REALM</p><h2 id="categories-title">WORLDS TO ENTER</h2><p class="title-ja">世界への入口</p>
       <div class="realm-list">
-        <a href="#read"><span>LIFE</span><small>暮らしと生命</small><b>01</b></a>
-        <a href="#museum"><span>EARTH</span><small>地球と自然</small><b>02</b></a>
-        <a href="#read"><span>HUMAN</span><small>人間と社会</small><b>03</b></a>
-        <a href="#museum"><span>TIME</span><small>時間と記憶</small><b>04</b></a>
-        <a href="#read"><span>IMAGINATION</span><small>思想と表現</small><b>05</b></a>
-        <a href="#museum"><span>MAKING</span><small>手と技術</small><b>06</b></a>
-        <a href="#atlas"><span>COSMOS</span><small>天体と未知</small><b>07</b></a>
+        <a id="world-life" href="/prototype/worlds.html#world-life"><span>LIFE</span><small>暮らしと生命</small><b>01</b></a>
+        <a id="world-earth" href="/prototype/worlds.html#world-earth"><span>EARTH</span><small>地球と自然</small><b>02</b></a>
+        <a id="world-human" href="/prototype/worlds.html#world-human"><span>HUMAN</span><small>人間と社会</small><b>03</b></a>
+        <a id="world-time" href="/prototype/worlds.html#world-time"><span>TIME</span><small>時間と記憶</small><b>04</b></a>
+        <a id="world-imagination" href="/prototype/worlds.html#world-imagination"><span>IMAGINATION</span><small>思想と表現</small><b>05</b></a>
+        <a id="world-making" href="/prototype/worlds.html#world-making"><span>MAKING</span><small>手と技術</small><b>06</b></a>
+        <a id="world-cosmos" href="/prototype/worlds.html#world-cosmos"><span>COSMOS</span><small>天体と未知</small><b>07</b></a>
       </div>
     </section>
 
+    <section class="collection-archive collection-latest" id="collection-archive" aria-labelledby="collection-archive-title">
+      <header><div><p class="eyebrow">RECENTLY CATALOGUED / LATEST CARDS</p><h2 id="collection-archive-title">NEW<br>OBJECTS</h2></div><p>新しく収蔵したカードを、ここに少しだけ。これまでの収蔵品は、奥の「THE OBJECTS」でカルタのように一覧できます。</p></header>
+      <div class="collection-card-grid">
+        <a id="collection-lung-channel-taiyin" data-access="member-preview" href="/prototype/she-creates-seasonal-letter.html"><figure><img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/17th%20C%20Chinese%20acupuncture%20chart%2C%20lung%20channel%20of%20hand%20taiyin%20Wellcome%20L0034710.jpg?width=1000" alt="17世紀中国の手太陰肺経を示す木版図"></figure><small>H88-0028 · BODY / MERIDIAN · MEMBER PREVIEW</small><b>LUNG CHANNEL OF HAND TAIYIN</b><em>手太陰肺経図 · Wellcome Collection · CC BY 4.0</em></a>
+        <a id="collection-heart-lungs-gray" data-access="member-preview" href="/prototype/she-creates-seasonal-letter.html"><figure><img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Heart-and-lungs.jpg?width=1000" alt="グレイ解剖学に収録された心臓と肺の図"></figure><small>H88-0029 · BODY / ANATOMY · MEMBER PREVIEW</small><b>HEART AND LUNGS</b><em>Gray's Anatomy, 1918 · Public Domain</em></a>
+        <a id="collection-respiratory-cutter" data-access="member-preview" href="/prototype/she-creates-seasonal-letter.html"><figure><img src="https://www.gutenberg.org/files/30541/30541-h/images/f091.png" alt="気管から左右の気管支へ分岐する呼吸器の古い解剖図"></figure><small>H88-0030 · BODY / ANATOMY · MEMBER PREVIEW</small><b>RESPIRATORY TRACT</b><em>Calvin Cutter, 1858 · Public Domain</em></a>
+        <a id="collection-moon-movements-1850" data-access="member-preview" href="/prototype/she-creates-seasonal-letter.html"><figure><img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Phases%20et%20mouvemens%20de%20la%20lune.%20Dresse%20et%20dessine%20par%20E.%20Soulier%2C%20de%20Sauve.%20Chez%20J.%20Andriveau-Goujon%2C%20Paris%2C%20Rue%20du%20Bac%20%28IA%20dr%20phases-et-mouvemens-de-la-lune-dresse-et-dessine-par-e-soulier-de-sauve-01104377%29.jpg?width=1000" alt="1850年の月相と月の運行図"></figure><small>H88-0031 · COSMOS / MOON · MEMBER PREVIEW</small><b>PHASES ET MOUVEMENTS DE LA LUNE</b><em>E. Soulier de Sauve, 1850 · Public Domain</em></a>
+      </div>
+      <a class="collection-enter" href="/prototype/collection.html"><span>31 OBJECTS CATALOGUED</span><b>ENTER THE COLLECTION ARCHIVE</b><em>すべての収蔵カードを見る →</em></a>
+    </section>
     <section class="continue-holos" aria-labelledby="continue-holos-title">
-      <header><p class="eyebrow">TAKE THE MUSEUM INTO LIFE</p><h2 id="continue-holos-title">CONTINUE<br>WITH HOLOS</h2><p class="title-ja">Museumの続きを、あなたの暮らしへ。</p><p>SNSで見つけたら、まずnoteへ。日々の更新を受け取り、無料の手紙を読み、もっと深く歩きたいときはPatreonへ。HOLOS 88の入口は、ひとつの流れでつながっています。</p></header>
+      <header><p class="eyebrow">TAKE THE MUSEUM INTO LIFE</p><h2 id="continue-holos-title">CONTINUE<br>WITH HOLOS</h2><p class="title-ja">Museumの続きを、あなたの暮らしへ。</p><p>SNSで見つけたら、まずnoteへ。日々の更新と短い観察を読み、無料の手紙から、またHOLOS 88の新しい窓へ戻ってこられます。</p></header>
       <div class="continue-doors">
         <a class="door-note" href="https://note.com/holos_hachico" rel="external"><span>01 / DAILY NOTE</span><b>HACHICO ON NOTE</b><em>HOLOS 88 — 日々の文章と更新。</em><p>SNSから最初に届く、日本語の入口。エッセイ、短い観察、記事の更新をnoteにまとめています。</p><i>OPEN NOTE ↗</i></a>
         <a class="door-letter" href="https://holos88.substack.com" rel="external"><span>02 / FREE LETTER</span><b>THE NEXT WINDOW</b><em>Substackで受け取る、静かな便り。</em><p>noteで出会った窓の続きを、無料のレターで。新しい記事と次の道草をメールで受け取れます。</p><i>JOIN THE LETTER ↗</i></a>
-        <a class="door-kofi" href="https://www.patreon.com/c/HOLOS88" rel="external"><span>03 / SHOP &amp; DEEPER PRACTICE</span><b>HOLOS 88 ON PATREON</b><em>読み物、ワーク、28日間の実践へ。</em><p>単品のデジタル商品と、有料の深掘りコンテンツ。必要なときだけ、続きを選べます。</p><i>ENTER PATREON ↗</i></a>
-        <a class="door-app" href="/prototype/life-specimen/index.html"><span>04 / YOUR PRIVATE MUSEUM</span><b>LIFE SPECIMEN</b><em>あなたのための、小さな個人博物館。</em><p>日々の記録、関係、気づき、季節の変化を残し、自分のLifeをゆっくり見つめる試作アプリです。</p><i>OPEN THE APP ↗</i></a>
+        
+        
       </div>
-      <div class="kofi-preview" id="patreon-preview"><p>PATREON / MEMBERSHIP &amp; DIGITAL DESK — PAGE OPEN</p><span>FREE</span><b>読む・出会う</b><span>¥1,000</span><b>小さく試す</b><span>¥2,000</span><b>深く読む</b><span>¥4,000</span><b>28日間歩く</b><small>Patreonページは公開済み。会員プランと商品内容は、準備が整ったものから順に追加します。</small></div>
+      
     </section>
 
     <section class="letter" id="letter" aria-labelledby="letter-title">
@@ -246,24 +274,24 @@
           <li><b>02</b><span>A SPECIMEN<br><small>今日の小さな標本</small></span></li>
           <li><b>03</b><span>A SIDE PATH<br><small>次の好奇心への小径</small></span></li>
         </ul>
-        <form data-letter-preview>
-          <label for="email">EMAIL ADDRESS</label>
-          <div><input id="email" type="email" placeholder="hello@example.com" aria-describedby="letter-status"><button type="submit">KEEP MY TRAIL →</button></div>
-          <small id="letter-status">メール配信はSubstackで登録できます。noteの更新は<a href="https://note.com/holos_hachico" rel="external">Hachico ＠HOLOS 8 channel</a>から。MY HOLOSのオンライン保存機能は準備中です。</small>
-        </form>
+        <div class="letter-signup" data-letter-preview>
+          <p class="eyebrow">FREE NEWSLETTER / SUBSTACK</p>
+          <a class="letter-signup-button" href="https://holos88.substack.com" rel="external">SUBSCRIBE ON SUBSTACK ↗</a>
+          <small id="letter-status">登録はSubstackのページで完了します。noteの更新は<a href="https://note.com/holos_hachico" rel="external">Hachico ＠HOLOS 8 channel</a>から。MY HOLOSのオンライン保存機能は準備中です。</small>
+        </div>
       </div>
     </section>
   </main>
 
   <footer class="museum-footer">
-    <div class="footer-mark"><a class="wordmark" href="/prototype/index.html"><span>HOLOS</span><sup>88</sup></a><p>A NATURAL HISTORY OF NOW.<br>いま、という時代の博物誌。</p></div>
+    <div class="footer-mark"><a class="wordmark" href="/"><span>HOLOS</span><sup>88</sup></a><p>A NATURAL HISTORY OF NOW.<br>いま、という時代の博物誌。</p></div>
     <nav aria-label="Museum guide">
       <div><b>ENTER</b><a href="#read">READ</a><a href="#museum">MUSEUM</a><a href="#atlas">ATLAS</a><a href="#michikusa">MICHIKUSA</a></div>
       <div><b>ABOUT</b><a href="/prototype/articles/between-the-windows.html">BETWEEN THE WINDOWS</a><a href="#personal-threshold-title">MY HOLOS</a><a href="https://holos88.substack.com" rel="external">THE NEXT WINDOW / SUBSTACK ↗</a></div>
-      <div><b>DESK</b><a href="/prototype/life-specimen/index.html">LIFE SPECIMEN</a><a href="https://www.patreon.com/c/HOLOS88" rel="external">PATREON / SHOP ↗</a><a href="https://jp.pinterest.com/holos88_hachico/" rel="external">PINTEREST / VISUAL ARCHIVE ↗</a><a href="#">SOURCE DESK <small>準備中</small></a><a href="/prototype/contact.html">CONTACT</a></div>
+      <div><b>DESK</b><span>LIFE SPECIMEN / SHOP <small>準備中</small></span><a href="https://jp.pinterest.com/holos88_hachico/" rel="external">PINTEREST / VISUAL ARCHIVE ↗</a><span>SOURCE DESK <small>準備中</small></span><a href="/prototype/contact.html">CONTACT</a></div>
       <div><b>LEGAL</b><a href="/prototype/legal-commercial.html">特定商取引法に基づく表記</a><a href="/prototype/privacy.html">PRIVACY / プライバシー</a><a href="/prototype/terms.html">TERMS / 利用規約</a></div>
     </nav>
-    <div class="footer-closing"><p>世界は、やおよろず。<br>急いで通り過ぎるには、面白すぎる。</p><small>© 2026 HOLOS 88<br>LOCAL PROTOTYPE / CURATION IN PROGRESS</small></div>
+    <div class="footer-closing"><p>世界は♾️<br>急いで通り過ぎるには、面白すぎる。</p><small>© 2026 HOLOS 88<br>A MUSEUM OF RELATIONSHIPS / OPENING EDITION</small></div>
   </footer>
   <script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/topojson-client@3.1.0/dist/topojson-client.min.js"></script>
@@ -290,12 +318,6 @@
         }).catch(()=>{});
       }
 
-      const letterPreview=document.querySelector('[data-letter-preview]');
-      letterPreview?.addEventListener('submit',event=>{
-        event.preventDefault();
-        const status=document.querySelector('#letter-status');
-        if(status) status.textContent='ここから、便りとあなたの本棚がつながります。現在は公開前のイメージです。';
-      });
       const rail=document.querySelector('[data-window-rail]');
       if(rail){
         const move=direction=>rail.scrollBy({left:direction*Math.max(rail.clientWidth*.72,280),behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'});
@@ -334,7 +356,7 @@
       if(features){
         const slides=[...features.querySelectorAll('[data-feature-slide]')],counter=features.querySelector('[data-feature-current]'),enter=features.querySelector('[data-feature-enter]');
         let index=0,timer=null;
-        const show=next=>{index=(next+slides.length)%slides.length;slides.forEach((slide,i)=>{slide.classList.toggle('is-active',i===index);slide.setAttribute('aria-hidden',i===index?'false':'true')});counter.textContent=String(index+1).padStart(2,'0');enter.href=slides[index].href};
+        const show=next=>{index=(next+slides.length)%slides.length;slides.forEach((slide,i)=>{slide.classList.toggle('is-active',i===index);slide.setAttribute('aria-hidden',i===index?'false':'true')});counter.textContent=String(index+1).padStart(2,'0');if(enter)enter.href=slides[index].href};
         const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
         const stop=()=>{if(timer){clearInterval(timer);timer=null}};
         const start=()=>{if(reduced||timer)return;timer=setInterval(()=>show(index+1),7500)};
@@ -369,11 +391,11 @@
       const field=document.querySelector('.michikusa-field');
       if(field&&!matchMedia('(prefers-reduced-motion: reduce)').matches&&matchMedia('(min-width: 761px)').matches){
         const cards=[...field.querySelectorAll('nav a')];
-        const starts=[[.03,.13],[.27,.03],[.51,.15],[.77,.05],[.13,.39],[.41,.37],[.69,.32],[.82,.49],[.02,.69],[.34,.68],[.67,.72]];
-        const speeds=[[.34,-.13],[-.28,.17],[.25,.22],[-.36,-.14],[.2,-.29],[-.24,.31],[.33,.1],[-.27,.24],[.23,-.19],[-.31,-.11],[.29,-.25]];
+        const starts=[[-.17,.13],[.08,-.17],[.31,.11],[.58,-.12],[.83,.08],[1.04,.31],[-.12,.4],[.18,.38],[.45,.34],[.71,.43],[.94,.58],[-.2,.72],[.07,.8],[.37,.69],[.67,.76],[1.06,.82]];
+        const speeds=[[.34,-.13],[-.28,.17],[.25,.22],[-.36,-.14],[.2,-.29],[-.24,.31],[.33,.1],[-.27,.24],[.23,-.19],[-.31,-.11],[.29,-.25],[-.26,.16],[.2,.27],[-.32,.14],[.27,-.2],[-.22,-.28]];
         let visible=false,last=performance.now(),width=field.clientWidth,height=field.clientHeight;
-        const state=cards.map((card,i)=>{const item={card,x:starts[i][0]*width,y:starts[i][1]*height,vx:speeds[i][0],vy:speeds[i][1],paused:false};card.addEventListener('pointerenter',()=>item.paused=true);card.addEventListener('pointerleave',()=>item.paused=false);card.addEventListener('focus',()=>item.paused=true);card.addEventListener('blur',()=>item.paused=false);return item});
-        const render=now=>{const step=Math.min((now-last)/16.67,2);last=now;if(visible){state.forEach(item=>{if(!item.paused){item.x+=item.vx*step;item.y+=item.vy*step;const cw=item.card.offsetWidth,ch=item.card.offsetHeight;if(item.x>width+30)item.x=-cw-30;if(item.x+cw<-30)item.x=width+30;if(item.y>height+30)item.y=-ch-30;if(item.y+ch<-30)item.y=height+30}item.card.style.translate=`${item.x}px ${item.y}px`})}requestAnimationFrame(render)};
+        cards.sort(()=>Math.random()-.5).forEach(card=>field.querySelector('nav').append(card));const state=cards.map((card,i)=>{const base=starts[i%starts.length],speed=speeds[i%speeds.length],jitter=()=>Math.random()*.08-.04;const item={card,x:(base[0]+jitter())*width,y:(base[1]+jitter())*height,vx:speed[0]*(.72+Math.random()*.7)*(Math.random()>.2?1:-1),vy:speed[1]*(.72+Math.random()*.7)*(Math.random()>.2?1:-1),paused:false};card.style.setProperty('--wander-tilt',`${(Math.random()*4-2).toFixed(2)}deg`);card.addEventListener('pointerenter',()=>item.paused=true);card.addEventListener('pointerleave',()=>item.paused=false);card.addEventListener('focus',()=>item.paused=true);card.addEventListener('blur',()=>item.paused=false);return item});
+        const render=now=>{const step=Math.min((now-last)/16.67,2);last=now;if(visible){state.forEach(item=>{if(!item.paused){item.x+=item.vx*step;item.y+=item.vy*step;const cw=item.card.offsetWidth,ch=item.card.offsetHeight,edge=Math.max(120,width*.08);if(item.x>width+edge)item.x=-cw-edge;if(item.x+cw<-edge)item.x=width+edge;if(item.y>height+edge)item.y=-ch-edge;if(item.y+ch<-edge)item.y=height+edge}item.card.style.translate=`${item.x}px ${item.y}px`})}requestAnimationFrame(render)};
         new IntersectionObserver(entries=>visible=entries[0].isIntersecting,{rootMargin:'120px'}).observe(field);
         addEventListener('resize',()=>{width=field.clientWidth;height=field.clientHeight});
         requestAnimationFrame(render);

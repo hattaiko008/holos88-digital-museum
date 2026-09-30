@@ -2,3 +2,8 @@
 work/
 .pages-dist/
 tmp/
+content/feedback/inbox.jsonl
+
+content/feedback/reply-queue.jsonl
+node_modules/
+pnpm-lock.yaml

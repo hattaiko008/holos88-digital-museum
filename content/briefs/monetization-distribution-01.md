@@ -87,6 +87,17 @@ Automate drafts, resizing, metadata templates, scheduling suggestions, link chec
 
 Before opening paid services, prepare a 30-day content map using three finished articles: one hachico LIFE NOTE, one ECHO/Museum article, and one seasonal window. Measure saves, clicks, completed reads, email sign-ups and replies. Do not optimize for follower count alone.
 
+## Provisional two-door membership model — decide after the editorial preview
+
+Keep the two editorial temperatures as separate entrances instead of forcing every reader into one mixed subscription.
+
+- **SHE CREATES** — provisional ¥1,800/month. Body Almanac, seasonal care, embodied practice and the related app experience.
+- **WATCH THE NOW** — provisional ¥1,800/month. Current affairs, economy, politics, war and peace, culture, and the related app experience.
+- **BOTH WINDOWS** — bundle below ¥3,600/month. Test a clearly meaningful discount only after the amount and cadence of both desks are visible.
+- The app is included in each relevant membership; do not price it as a surprise add-on.
+- The free HOLOS LETTER remains complete in itself and lets readers discover which entrance suits them.
+- Treat these amounts as working figures. Finalize price, bundle discount, publishing cadence and cancellation terms together after several sample issues are complete.
+
 ## Sources checked
 
 - [Substack features](https://substack.com/features)

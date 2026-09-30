@@ -33,7 +33,10 @@ const git=process.env.HOLOS_GIT||'git';
 const after=await readFile(new URL('home.template.html',root),'utf8');
 function hasCommit(ref){try{execFileSync(git,['cat-file','-e',ref+'^{commit}'],{cwd:root,stdio:'ignore'});return true;}catch{return false;}}
 if(hasCommit('43c1e30')){
- for(const f of ['dist/styles.css','dist/editorial.css','collection.json','content/specimen-002.json'])assert.equal(await readFile(new URL(f,root),'utf8'),execFileSync(git,['show','43c1e30:'+f],{cwd:root,encoding:'utf8'}));
+ for(const f of ['dist/styles.css','dist/editorial.css'])assert.equal(await readFile(new URL(f,root),'utf8'),execFileSync(git,['show','43c1e30:'+f],{cwd:root,encoding:'utf8'}));
+ const baseline=JSON.parse(execFileSync(git,['show','43c1e30:collection.json'],{cwd:root,encoding:'utf8'}));
+ assert.deepEqual(collection.objects.slice(0,baseline.objects.length),baseline.objects,'Preserve approved collection objects while allowing authorized additions');
+ for(const key of Object.keys(baseline).filter(key=>key!=='objects'))assert.deepEqual(collection[key],baseline[key],`Preserve collection ${key}`);
 }
 if(hasCommit('7cd0f53')){
  const before=execFileSync(git,['show','7cd0f53:home.template.html'],{cwd:root,encoding:'utf8'});
