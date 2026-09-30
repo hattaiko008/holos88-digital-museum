@@ -149,6 +149,8 @@ HOLOS 88という、小さなデジタルMuseumを開きます。
 
 ## 投稿順
 
+Instagramから文章・Letter・支援へつなぐ詳細設計は `content/briefs/instagram-to-reading-path-2026-10.md` を正本とする。一投稿につき出口を一つにし、展示70%、入口20%、明確な招待10%を目安にする。
+
 ### 公開日
 
 1. URLとSSLを復旧。
