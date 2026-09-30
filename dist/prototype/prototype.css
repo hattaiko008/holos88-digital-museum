@@ -539,3 +539,53 @@ body.page-diplomacy .michikusa .eyebrow,body.page-diplomacy .michikusa .title-ja
   .article-michikusa.voice-team-holos .article-body{font-size:16.5px;line-height:1.9}
   .article-michikusa.voice-team-holos .article-body h2{margin-top:3.2rem}
 }
+
+/* Category format pass / 2026-09-30
+   Every draft keeps its own subject while sharing readable rhythm, contrast and spacing. */
+.reading-page[class*="format-theme-"]{
+  --format-paper:#f4f1e9;
+  --format-ink:#171714;
+  --format-accent:var(--article-accent,#76584d);
+  --format-tint:var(--article-tint,#ddd5ca);
+  background:var(--format-paper);
+  color:var(--format-ink);
+}
+.format-theme-paper{--format-paper:#f3eee3;--format-ink:#211c19;--format-accent:#875642;--format-tint:#e2d4c9}
+.format-theme-botany{--format-paper:#efeee3;--format-ink:#1d241b;--format-accent:#566b4b;--format-tint:#d7ddce}
+.format-theme-ai{--format-paper:#e9edef;--format-ink:#172128;--format-accent:#496776;--format-tint:#cbd9de}
+.format-theme-time{--format-paper:#edf0ef;--format-ink:#1a2328;--format-accent:#5b7180;--format-tint:#d4dfe2}
+.format-theme-life{--format-paper:#f1e9e2;--format-ink:#251c19;--format-accent:#8c5948;--format-tint:#dfcec2}
+.format-theme-market{--format-paper:#eeeadc;--format-ink:#201e16;--format-accent:#756024;--format-tint:#ded19c}
+.format-theme-museum{--format-paper:#e9eceb;--format-ink:#182126;--format-accent:#536a72;--format-tint:#ccd7d8}
+.format-theme-politics{--format-paper:#ece8df;--format-ink:#211b18;--format-accent:#8d402e;--format-tint:#dfc8bd}
+.format-theme-dark{--format-paper:#eee8df;--format-ink:#201a18;--format-accent:#984932;--format-tint:#dfc9be}
+.reading-page[class*="format-theme-"] .article-hero-text{background-color:var(--format-tint);color:var(--format-ink)}
+.reading-page[class*="format-theme-"] .article-hero-text h1{color:var(--format-accent);max-width:11ch;overflow-wrap:anywhere;text-wrap:balance}
+.reading-page[class*="format-theme-"] .article-title-ja p:last-child{color:color-mix(in srgb,var(--format-ink) 72%,transparent)}
+.reading-page[class*="format-theme-"] .article-body{max-width:760px;margin-block:clamp(5rem,9vw,9rem);font-size:clamp(17px,1.3vw,19px);line-height:1.95}
+.reading-page[class*="format-theme-"] .article-body>p{margin-bottom:1.45em}
+.reading-page[class*="format-theme-"] .article-body-generated h2{color:var(--format-accent);max-width:13ch;margin-top:clamp(3.2rem,8vw,7rem);margin-bottom:1.1rem;text-wrap:balance}
+.reading-page[class*="format-theme-"] .article-body-generated h3{color:var(--format-accent);margin-top:3.5rem}
+.reading-page[class*="format-theme-"] .source-window{border-color:color-mix(in srgb,var(--format-ink) 42%,transparent)}
+.reading-page[class*="format-theme-"] .michikusa{background:var(--format-tint);color:var(--format-ink)}
+.reading-page[class*="format-theme-"] .michikusa h2{color:var(--format-accent)}
+.format-theme-dark .article-hero-text{background:#191816;color:#f5f0e7}
+.format-theme-dark .article-hero-text h1{color:#d99681}
+.format-theme-dark .article-hero-text .article-title-ja p:last-child{color:rgba(245,240,231,.76)}
+.format-theme-politics .article-hero-text{background:linear-gradient(118deg,#27201d 0 54%,var(--format-tint) 54%);color:#f6f0e7}
+.format-theme-politics .article-hero-text h1{color:#e2a18d}
+.format-theme-politics .article-hero-text .article-title-ja p:last-child{color:rgba(246,240,231,.76)}
+.format-theme-ai .article-hero-text{background-image:linear-gradient(90deg,rgba(23,33,40,.08) 1px,transparent 1px),linear-gradient(rgba(23,33,40,.08) 1px,transparent 1px);background-size:36px 36px}
+.format-theme-botany .article-hero-text{background-image:radial-gradient(circle at 78% 18%,rgba(86,107,75,.2),transparent 34%)}
+.format-theme-time .article-hero-text{background-image:linear-gradient(115deg,transparent 0 66%,rgba(91,113,128,.18) 66% 67%,transparent 67%)}
+.format-theme-market .article-hero-text{background-image:repeating-linear-gradient(90deg,transparent 0,transparent calc(20% - 1px),rgba(32,30,22,.1) 20%)}
+.voice-hachico .article-body{font-family:var(--sans);line-height:2}
+.voice-team-holos:not(.article-michikusa) .article-body{max-width:800px}
+@media(max-width:760px){
+  .reading-page[class*="format-theme-"] .article-hero-text{min-height:auto;padding:2.5rem 1rem 3.5rem;background-size:auto}
+  .reading-page[class*="format-theme-"] .article-hero-text h1{font-size:clamp(3rem,14vw,5.2rem);line-height:.88;margin:3.5rem 0 2.5rem}
+  .reading-page[class*="format-theme-"] .article-title-ja p:first-child{font-size:1.25rem;line-height:1.55}
+  .reading-page[class*="format-theme-"] .article-body{margin-block:4.5rem;padding-inline:1.25rem;font-size:16.5px;line-height:1.92}
+  .reading-page[class*="format-theme-"] .article-body-generated h2{max-width:none;margin:3.8rem 0 1.2rem;font-size:clamp(2.25rem,11vw,3.55rem)}
+  .format-theme-politics .article-hero-text{background:linear-gradient(155deg,#27201d 0 72%,var(--format-tint) 72%)}
+}
