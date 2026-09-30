@@ -27,6 +27,7 @@ const json = (res, status, value) => {
   res.writeHead(status, {'Content-Type':'application/json; charset=utf-8','Cache-Control':'no-store'});
   res.end(JSON.stringify(value));
 };
+const port=Number(process.env.PORT||8088);
 http.createServer(async(req,res)=>{
   try {
     const url = new URL(req.url,'http://localhost');
@@ -93,9 +94,22 @@ http.createServer(async(req,res)=>{
       await Promise.all([writeFile(sourceFile,body,'utf8'),writeFile(publicFile,body,'utf8')]);
       json(res,200,{saved:true});return;
     }
+    if (pathname.startsWith('/prototype/articles/')) {
+      const sourceFile=articlePath(sourceArticles,path.basename(pathname));
+      if(sourceFile){
+        const body=await readFile(sourceFile);
+        res.writeHead(200,{'Content-Type':'text/html; charset=utf-8','Cache-Control':'no-store'});res.end(body);return;
+      }
+    }
+    const localEditorialFiles=new Set(['editor-desk.html','editor-desk.css','editor-desk-extra.css','editor-desk.js','prototype.css','reading-trail.js']);
+    if(pathname.startsWith('/prototype/')&&localEditorialFiles.has(path.basename(pathname))){
+      const sourceFile=path.join(sourcePages,path.basename(pathname));
+      const body=await readFile(sourceFile);
+      res.writeHead(200,{'Content-Type':types[path.extname(sourceFile)]||'application/octet-stream','Cache-Control':'no-store'});res.end(body);return;
+    }
     const file = path.resolve(root, '.' + (pathname === '/' ? '/index.html' : pathname));
     if (!file.startsWith(root + path.sep)) {res.writeHead(403);res.end('Forbidden');return;}
     const body = await readFile(file);
     res.writeHead(200, {'Content-Type':types[path.extname(file)] || 'application/octet-stream','Cache-Control':'no-cache'});res.end(body);
   } catch {res.writeHead(404);res.end('Not found');}
-}).listen(8088,'127.0.0.1',()=>console.log('HOLOS 88: http://127.0.0.1:8088'));
+}).listen(port,'127.0.0.1',()=>console.log(`HOLOS 88: http://127.0.0.1:${port}`));
