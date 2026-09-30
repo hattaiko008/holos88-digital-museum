@@ -55,17 +55,17 @@
       "file": "a-question-outlives-us.html",
       "title": "問いが、人より長く残る",
       "series": "MICHIKUSA",
-      "stage": "editing",
-      "location": "",
+      "stage": "final-review",
+      "location": "/prototype/articles/a-question-outlives-us.html",
       "checks": {
-        "text": false,
+        "text": true,
         "sources": false,
-        "visuals": false,
-        "layout": false,
-        "links": false
+        "visuals": true,
+        "layout": true,
+        "links": true
       },
-      "note": "",
-      "updated": null
+      "note": "TEAM HOLOS MICHIKUSA format: shared reading rhythm with field-specific palette; meaning preserved. Source Desk remains for final confirmation.",
+      "updated": "2026-09-30"
     },
     {
       "file": "access-for-whom.html",
@@ -199,17 +199,17 @@
       "file": "buchla-had-no-keyboard.html",
       "title": "鍵盤を置かなかった電子楽器",
       "series": "MICHIKUSA",
-      "stage": "editing",
-      "location": "",
+      "stage": "final-review",
+      "location": "/prototype/articles/buchla-had-no-keyboard.html",
       "checks": {
-        "text": false,
+        "text": true,
         "sources": false,
-        "visuals": false,
-        "layout": false,
-        "links": false
+        "visuals": true,
+        "layout": true,
+        "links": true
       },
-      "note": "",
-      "updated": null
+      "note": "TEAM HOLOS MICHIKUSA format: shared reading rhythm with field-specific palette; meaning preserved. Source Desk remains for final confirmation.",
+      "updated": "2026-09-30"
     },
     {
       "file": "cabinet.html",
@@ -327,17 +327,17 @@
       "file": "dream-where-am-i.html",
       "title": "眠っている私は、どこにいるのか",
       "series": "MICHIKUSA",
-      "stage": "editing",
-      "location": "",
+      "stage": "final-review",
+      "location": "/prototype/articles/dream-where-am-i.html",
       "checks": {
-        "text": false,
+        "text": true,
         "sources": false,
-        "visuals": false,
-        "layout": false,
-        "links": false
+        "visuals": true,
+        "layout": true,
+        "links": true
       },
-      "note": "",
-      "updated": null
+      "note": "TEAM HOLOS MICHIKUSA format: shared reading rhythm with field-specific palette; meaning preserved. Source Desk remains for final confirmation.",
+      "updated": "2026-09-30"
     },
     {
       "file": "duration.html",
@@ -391,17 +391,17 @@
       "file": "fire-and-vessel.html",
       "title": "火は、食べられる世界を広げた",
       "series": "MICHIKUSA",
-      "stage": "editing",
-      "location": "",
+      "stage": "final-review",
+      "location": "/prototype/articles/fire-and-vessel.html",
       "checks": {
-        "text": false,
+        "text": true,
         "sources": false,
-        "visuals": false,
-        "layout": false,
-        "links": false
+        "visuals": true,
+        "layout": true,
+        "links": true
       },
-      "note": "",
-      "updated": null
+      "note": "TEAM HOLOS MICHIKUSA format: shared reading rhythm with field-specific palette; meaning preserved. Source Desk remains for final confirmation.",
+      "updated": "2026-09-30"
     },
     {
       "file": "five-percent.html",
@@ -423,17 +423,17 @@
       "file": "forgetting-well.html",
       "title": "よく忘れるために",
       "series": "MICHIKUSA",
-      "stage": "editing",
-      "location": "",
+      "stage": "final-review",
+      "location": "/prototype/articles/forgetting-well.html",
       "checks": {
-        "text": false,
+        "text": true,
         "sources": false,
-        "visuals": false,
-        "layout": false,
-        "links": false
+        "visuals": true,
+        "layout": true,
+        "links": true
       },
-      "note": "",
-      "updated": null
+      "note": "TEAM HOLOS MICHIKUSA format: shared reading rhythm with field-specific palette; meaning preserved. Source Desk remains for final confirmation.",
+      "updated": "2026-09-30"
     },
     {
       "file": "free-information-has-a-body.html",
@@ -503,17 +503,17 @@
       "file": "gift-cannot-refuse.html",
       "title": "断れない贈り物",
       "series": "MICHIKUSA",
-      "stage": "editing",
-      "location": "",
+      "stage": "final-review",
+      "location": "/prototype/articles/gift-cannot-refuse.html",
       "checks": {
-        "text": false,
+        "text": true,
         "sources": false,
-        "visuals": false,
-        "layout": false,
-        "links": false
+        "visuals": true,
+        "layout": true,
+        "links": true
       },
-      "note": "",
-      "updated": null
+      "note": "TEAM HOLOS MICHIKUSA format: shared reading rhythm with field-specific palette; meaning preserved. Source Desk remains for final confirmation.",
+      "updated": "2026-09-30"
     },
     {
       "file": "gift.html",
@@ -967,17 +967,17 @@
       "file": "the-colonial-gaze.html",
       "title": "見ることは、中立ではない",
       "series": "MICHIKUSA",
-      "stage": "editing",
-      "location": "",
+      "stage": "final-review",
+      "location": "/prototype/articles/the-colonial-gaze.html",
       "checks": {
-        "text": false,
+        "text": true,
         "sources": false,
-        "visuals": false,
-        "layout": false,
-        "links": false
+        "visuals": true,
+        "layout": true,
+        "links": true
       },
-      "note": "",
-      "updated": null
+      "note": "TEAM HOLOS MICHIKUSA format: shared reading rhythm with field-specific palette; meaning preserved. Source Desk remains for final confirmation.",
+      "updated": "2026-09-30"
     },
     {
       "file": "the-cost-behind-the-screen.html",
@@ -1031,17 +1031,17 @@
       "file": "the-field-before-data.html",
       "title": "データになる前の野原",
       "series": "MICHIKUSA",
-      "stage": "editing",
-      "location": "",
+      "stage": "final-review",
+      "location": "/prototype/articles/the-field-before-data.html",
       "checks": {
-        "text": false,
+        "text": true,
         "sources": false,
-        "visuals": false,
-        "layout": false,
-        "links": false
+        "visuals": true,
+        "layout": true,
+        "links": true
       },
-      "note": "",
-      "updated": null
+      "note": "TEAM HOLOS MICHIKUSA format: shared reading rhythm with field-specific palette; meaning preserved. Source Desk remains for final confirmation.",
+      "updated": "2026-09-30"
     },
     {
       "file": "the-freedom-that-fit-the-market.html",
@@ -1383,33 +1383,33 @@
       "file": "who-is-watching.html",
       "title": "見ているのは、誰か",
       "series": "MICHIKUSA",
-      "stage": "editing",
-      "location": "",
+      "stage": "final-review",
+      "location": "/prototype/articles/who-is-watching.html",
       "checks": {
-        "text": false,
+        "text": true,
         "sources": false,
-        "visuals": false,
-        "layout": false,
-        "links": false
+        "visuals": true,
+        "layout": true,
+        "links": true
       },
-      "note": "",
-      "updated": null
+      "note": "TEAM HOLOS MICHIKUSA format: shared reading rhythm with field-specific palette; meaning preserved. Source Desk remains for final confirmation.",
+      "updated": "2026-09-30"
     },
     {
       "file": "who-may-move-the-object.html",
       "title": "誰が、その物を動かせるのか",
       "series": "MICHIKUSA",
-      "stage": "editing",
-      "location": "",
+      "stage": "final-review",
+      "location": "/prototype/articles/who-may-move-the-object.html",
       "checks": {
-        "text": false,
+        "text": true,
         "sources": false,
-        "visuals": false,
-        "layout": false,
-        "links": false
+        "visuals": true,
+        "layout": true,
+        "links": true
       },
-      "note": "",
-      "updated": null
+      "note": "TEAM HOLOS MICHIKUSA format: shared reading rhythm with field-specific palette; meaning preserved. Source Desk remains for final confirmation.",
+      "updated": "2026-09-30"
     },
     {
       "file": "who-moderates-the-commons.html",
@@ -1431,17 +1431,17 @@
       "file": "who-remembers.html",
       "title": "覚えているのは、誰か",
       "series": "MICHIKUSA",
-      "stage": "editing",
-      "location": "",
+      "stage": "final-review",
+      "location": "/prototype/articles/who-remembers.html",
       "checks": {
-        "text": false,
+        "text": true,
         "sources": false,
-        "visuals": false,
-        "layout": false,
-        "links": false
+        "visuals": true,
+        "layout": true,
+        "links": true
       },
-      "note": "",
-      "updated": null
+      "note": "TEAM HOLOS MICHIKUSA format: shared reading rhythm with field-specific palette; meaning preserved. Source Desk remains for final confirmation.",
+      "updated": "2026-09-30"
     },
     {
       "file": "who-speaks-for-the-river.html",

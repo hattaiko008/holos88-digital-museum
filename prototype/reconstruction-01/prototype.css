@@ -502,3 +502,40 @@ body.page-diplomacy .michikusa .eyebrow,body.page-diplomacy .michikusa .title-ja
   .site-head nav{gap:1.15rem}
   .site-head nav a,.search,.close-page{min-height:44px;display:grid;place-items:center}
 }
+
+/* MICHIKUSA / TEAM HOLOS — shared short-form system with field palettes. */
+.article-michikusa.voice-team-holos{
+  --michi-paper:#f2ede2;
+  --michi-ink:#1c1b18;
+  --michi-accent:#796747;
+  --michi-tint:#e2dac9;
+  background:var(--michi-paper);
+  color:var(--michi-ink);
+}
+.article-michikusa.voice-team-holos .article-hero-text{
+  min-height:min(820px,calc(100vh - 70px));
+  background-color:var(--michi-tint);
+  background-image:linear-gradient(115deg,transparent 0 58%,color-mix(in srgb,var(--michi-accent) 16%,transparent) 58% 77%,transparent 77%),linear-gradient(90deg,color-mix(in srgb,var(--michi-ink) 6%,transparent) 1px,transparent 1px),linear-gradient(color-mix(in srgb,var(--michi-ink) 6%,transparent) 1px,transparent 1px);
+  background-size:auto,42px 42px,42px 42px;
+}
+.article-michikusa.voice-team-holos .article-hero h1{font-size:clamp(4.6rem,10.5vw,11.5rem);line-height:.8;white-space:normal;overflow-wrap:anywhere;text-wrap:balance}
+.article-michikusa.voice-team-holos .article-title-ja{max-width:31rem}
+.article-michikusa.voice-team-holos .article-body{max-width:760px}
+.article-michikusa.voice-team-holos .article-body h2{color:var(--michi-accent);border-color:color-mix(in srgb,var(--michi-accent) 48%,transparent)}
+.article-michikusa.voice-team-holos .article-body-generated h2.section-marker{color:var(--michi-accent);background:var(--michi-tint);border-left-color:var(--michi-accent)}
+.article-michikusa.voice-team-holos .article-body li{border-color:var(--michi-accent);background:color-mix(in srgb,var(--michi-tint) 46%,transparent)}
+.article-michikusa.voice-team-holos .team-explains{border-left-color:var(--michi-accent);background:var(--michi-tint)}
+.article-michikusa.voice-team-holos .team-explains span{color:var(--michi-accent)}
+.article-michikusa.voice-team-holos.michikusa-field-philosophy{--michi-paper:#efebe4;--michi-ink:#211b25;--michi-accent:#6f536f;--michi-tint:#ddd3df}
+.article-michikusa.voice-team-holos.michikusa-field-arts{--michi-paper:#eee9db;--michi-ink:#172229;--michi-accent:#315c6b;--michi-tint:#cbdcdf}
+.article-michikusa.voice-team-holos.michikusa-field-culture{--michi-paper:#f1ece1;--michi-ink:#241c18;--michi-accent:#8a5745;--michi-tint:#e5d3c8}
+.article-michikusa.voice-team-holos.michikusa-field-care{--michi-paper:#f2ebe5;--michi-ink:#251b1d;--michi-accent:#8a4d5b;--michi-tint:#e8cfd2}
+.article-michikusa.voice-team-holos.michikusa-field-history{--michi-paper:#e9e6de;--michi-ink:#191d20;--michi-accent:#4f626a;--michi-tint:#ccd5d5}
+.article-michikusa.voice-team-holos.michikusa-field-ecology{--michi-paper:#ecebdf;--michi-ink:#182019;--michi-accent:#526b4e;--michi-tint:#d2ddc9}
+.article-michikusa.voice-team-holos.michikusa-field-museum{--michi-paper:#e9e9e2;--michi-ink:#172126;--michi-accent:#4b6872;--michi-tint:#cbd9da}
+@media(max-width:760px){
+  .article-michikusa.voice-team-holos .article-hero-text{min-height:auto;padding-top:2.5rem;padding-bottom:3rem;background-size:auto,30px 30px,30px 30px}
+  .article-michikusa.voice-team-holos .article-hero h1{font-size:clamp(3.8rem,16vw,6.5rem);margin:3.5rem 0 2rem}
+  .article-michikusa.voice-team-holos .article-body{font-size:16.5px;line-height:1.9}
+  .article-michikusa.voice-team-holos .article-body h2{margin-top:3.2rem}
+}
