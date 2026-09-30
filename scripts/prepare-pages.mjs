@@ -23,7 +23,7 @@ async function visit(directory) {
     const source = await readFile(target, 'utf8');
     const prepared = source
       .replace(/\b(href|src|action)=(["'])\/(?!\/)/g, `$1=$2${base}/`)
-      .replace(/(["'])\/(?=(?:articles|objects|stories|assets|studies)(?:\/|[?#]))/g, `$1${base}/`)
+      .replace(/(["'])\/(?=(?:prototype|en|articles|objects|stories|assets|studies)(?:\/|[?#]))/g, `$1${base}/`)
       .replace(/(["'])\/(?=[?#])/g, `$1${base}/`);
     if (prepared !== source) await writeFile(target, prepared);
   }
