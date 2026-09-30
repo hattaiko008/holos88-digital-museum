@@ -61,7 +61,7 @@ SATORI’S VIEW
 完成記事の出口に、必要な時だけ別の小さな窓を開く
 ```
 
-SATORIは要約係、品質検査係、HOLOS思想の説明係にしない。完成した記事をその記事として読み、空であれば公開画面に出さない。
+SATORIは要約係、品質検査係、HOLOS思想の説明係にしない。完成した記事をその記事として読み、記事ごとに原則1〜3個の短い問いを返す。問いが生まれない場合は無理に作らず、空であれば公開画面に出さない。
 
 ## 3｜ひとつの依頼が進む順番
 
@@ -104,6 +104,8 @@ CHATOが最小のDesk構成で制作する。外部AIが必要ならTask Packet�
 ### 8. REVIEW PACK
 
 Echoには、完成した確認画面または原稿、変更点、未確認点、公開時の注意だけを渡す。長い作業ログを読ませない。
+
+Review Packが完成した時点で、CHATOは[SATORI QUESTION PASS](../room-prompts/satori-question-pass.md)を自動で一度実行する。本文、Source Desk、図版クレジットが揃う前には実行しない。返された問いは本文へ混ぜず、`satori_view`へ保存してEchoの最終確認に含める。
 
 ### 9. PUBLISH / DISTRIBUTE
 

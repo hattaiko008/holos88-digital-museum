@@ -4,7 +4,7 @@
   "description": "Field contracts for future editing; no sound playback or source inference is implemented in Phase 04.",
   "type": "object",
   "properties": {
-    "satori_view": {"anyOf": [{"type": "null"}, {"type": "object", "required": ["body"], "properties": {"body": {"type": "array", "items": {"type": "object", "required": ["type", "text"], "properties": {"type": {"const": "paragraph"}, "text": {"type": "string"}}}}, "revision": {"type": ["object", "null"]}}}]},
+    "satori_view": {"anyOf": [{"type": "null"}, {"type": "object", "required": ["mode", "body"], "properties": {"mode": {"const": "questions"}, "body": {"type": "array", "minItems": 1, "maxItems": 3, "items": {"type": "object", "required": ["type", "text"], "properties": {"type": {"const": "paragraph"}, "text": {"type": "string", "minLength": 1}}}, "revision": {"type": ["object", "null"]}}}]},
     "audio": {"type": "array", "items": {"$ref": "#/$defs/sound"}},
     "ambient_audio": {"anyOf": [{"type": "null"}, {"$ref": "#/$defs/sound"}]}
   },

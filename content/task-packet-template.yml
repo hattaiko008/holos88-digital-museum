@@ -27,3 +27,8 @@ echo_approval_required_for: []
 artifacts: []
 unresolved: []
 decision_log: []
+
+satori_question_pass:
+  trigger: review-pack-complete
+  status: pending # pending | ready | empty | approved
+  questions: [] # 1–3 short questions; keep empty when no honest question emerges
