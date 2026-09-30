@@ -14,8 +14,23 @@
     <nav aria-label="主要ナビゲーション">
       <a href="#read">READ</a><a href="#michikusa">MICHIKUSA</a><a href="#museum">MUSEUM</a><a href="#atlas">ATLAS</a><a href="/en/" lang="en" hreflang="en">EN</a>
     </nav>
-    <button class="search" type="button" aria-label="検索">SEARCH <span aria-hidden="true">⌕</span></button>
+    <button class="search" type="button" data-search-open aria-label="サイト内を検索" aria-haspopup="dialog" aria-controls="site-search" aria-expanded="false">SEARCH <span aria-hidden="true">⌕</span></button>
   </header>
+
+  <section class="site-search-panel" id="site-search" data-site-search role="dialog" aria-modal="true" aria-labelledby="site-search-title" hidden>
+    <div class="site-search-shell">
+      <header>
+        <div><p class="eyebrow">SEARCH THE MUSEUM</p><h2 id="site-search-title">何を探しますか。</h2></div>
+        <button type="button" data-search-close aria-label="検索を閉じる">CLOSE <span aria-hidden="true">×</span></button>
+      </header>
+      <form role="search" data-search-form>
+        <label for="site-search-input">記事・世界・収蔵庫を検索</label>
+        <div><input id="site-search-input" data-search-input type="search" autocomplete="off" placeholder="例：哲学、月、身体、政治"><button type="submit">SEARCH →</button></div>
+      </form>
+      <p class="site-search-status" data-search-status aria-live="polite">言葉を入れると、公開中の窓から探します。</p>
+      <div class="site-search-results" data-search-results></div>
+    </div>
+  </section>
 
   <main id="main">
     <section class="category-cover portal-cover" aria-label="HOLOS 88にある読み物の入口" data-category-cover>
@@ -148,7 +163,7 @@
       <section class="living-atlas-entry" aria-labelledby="living-atlas-title">
         <div class="living-globe" id="home-globe" role="img" aria-label="ゆっくり回る地球儀。記事につながる場所をピンで示しています。"><span class="globe-ring ring-a"></span><span class="globe-ring ring-b"></span><i class="atlas-pin pin-a"></i><i class="atlas-pin pin-b"></i><i class="atlas-pin pin-c"></i></div>
         <header><p class="eyebrow">THE LIVING ATLAS / PLACE, TIME &amp; SOUND</p><h3 id="living-atlas-title">THE LIVING<br>ATLAS</h3><p class="title-ja">世界は、どこからでも始められる。</p></header>
-        <div class="living-atlas-copy"><p>地球を回して、ひとつの土地へ。そこに残る古い地図、音、歴史、気候、文化、そしてHOLOS 88の記事を重ねていきます。</p><ul><li>PLACE <small>場所</small></li><li>TIME <small>時間</small></li><li>SOUND <small>音</small></li><li>WINDOWS <small>記事</small></li></ul><a href="/prototype/time-atlas/index.html">TURN THE EARTH ↗</a></div>
+        <div class="living-atlas-copy"><p>地球を回して、ひとつの土地へ。そこに残る古い地図、音、歴史、気候、文化、そしてHOLOS 88の記事を重ねていきます。</p><ul><li>PLACE <small>場所</small></li><li>TIME <small>時間</small></li><li>SOUND <small>音</small></li><li>WINDOWS <small>記事</small></li></ul><a href="/prototype/time-atlas/index.html">TURN THE EARTH ↗</a><a class="atlas-five-ways" href="/prototype/layer02-preview.html"><span>FIVE WAYS TO EXPLORE</span><small>年表・地図・読む時間・収蔵品・世界から入る</small><b>→</b></a></div>
       </section>
 
       <section class="book-fortune" aria-labelledby="book-fortune-title" data-book-fortune>
@@ -293,15 +308,15 @@
     </nav>
     <div class="footer-closing"><p>世界は♾️<br>急いで通り過ぎるには、面白すぎる。</p><small>© 2026 HOLOS 88<br>A MUSEUM OF RELATIONSHIPS / OPENING EDITION</small></div>
   </footer>
-  <script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/topojson-client@3.1.0/dist/topojson-client.min.js"></script>
+  <script src="/prototype/time-atlas/vendor/d3.min.js?v=local-atlas-01"></script>
+  <script src="/prototype/time-atlas/vendor/topojson-client.min.js?v=local-atlas-01"></script>
   <script>
     (() => {
       const homeGlobe=document.querySelector('#home-globe');
       if(homeGlobe&&window.d3&&window.topojson){
         const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
         const places=[[-122.18,37.45],[139.69,35.68],[12.49,41.89],[31.23,30.04],[151.2,-33.86],[25,5]];
-        d3.json('https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json').then(world=>{
+        d3.json('/prototype/time-atlas/vendor/countries-110m.json').then(world=>{
           const land=topojson.feature(world,world.objects.land),width=720,height=720;
           homeGlobe.innerHTML='';
           const svg=d3.select(homeGlobe).append('svg').attr('viewBox',`0 0 ${width} ${height}`).attr('aria-hidden','true');
@@ -402,5 +417,6 @@
       }
     })();
   </script>
+  <script src="/prototype/site-search.js" defer></script>
 </body>
 </html>

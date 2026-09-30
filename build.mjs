@@ -108,9 +108,9 @@ const worldsPage=`<!doctype html><html lang="ja"><head><meta charset="utf-8"><me
 await writeFile(new URL('./dist/prototype/worlds.html',import.meta.url),worldsPage);
 // Keep editorial tooling and unfinished standalone previews out of the public artifact.
 const publicStandalone=new Set([
-  'index.html','worlds.html','collection.html','contact.html','privacy.html','terms.html','legal-commercial.html',
+  'index.html','worlds.html','collection.html','layer02-preview.html','contact.html','privacy.html','terms.html','legal-commercial.html',
   'watch-the-now-2026-09-26.html',
-  'prototype.css','legal.css','reading-trail.js','feedback.js',
+  'prototype.css','legal.css','reading-trail.js','feedback.js','site-search.js','editorial-status.json',
   ...[...approvedArticles].filter(file=>file.startsWith('pages/')).map(file=>file.split('/').pop())
 ]);
 for(const entry of await readdir(prototypeTarget,{withFileTypes:true})){

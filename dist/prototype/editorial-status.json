@@ -1,0 +1,1639 @@
+{
+  "schemaVersion": 1,
+  "stages": [
+    {
+      "id": "writing",
+      "label": "執筆中"
+    },
+    {
+      "id": "editing",
+      "label": "校正中"
+    },
+    {
+      "id": "sources",
+      "label": "資料確認中"
+    },
+    {
+      "id": "design",
+      "label": "デザイン確認中"
+    },
+    {
+      "id": "final-review",
+      "label": "最終確認待ち"
+    },
+    {
+      "id": "approved",
+      "label": "公開OK"
+    },
+    {
+      "id": "published",
+      "label": "公開中"
+    },
+    {
+      "id": "hold",
+      "label": "保留"
+    }
+  ],
+  "articles": [
+    {
+      "file": "a-photograph-of-the-whole-earth.html",
+      "title": "地球は、いつ「ひとつ」に見えたのか",
+      "series": "WHOLE EARTH, NOW?",
+      "stage": "final-review",
+      "location": "/prototype/articles/a-photograph-of-the-whole-earth.html",
+      "checks": {
+        "text": true,
+        "sources": false,
+        "visuals": true,
+        "layout": true,
+        "links": true
+      },
+      "note": "Category and voice format pass complete: language rhythm, spacing, title fit, contrast, links and mobile reading checked. Source Desk remains for final confirmation.",
+      "updated": "2026-09-30"
+    },
+    {
+      "file": "a-question-outlives-us.html",
+      "title": "問いが、人より長く残る",
+      "series": "MICHIKUSA",
+      "stage": "approved",
+      "location": "/prototype/articles/a-question-outlives-us.html",
+      "checks": {
+        "text": true,
+        "sources": true,
+        "visuals": true,
+        "layout": true,
+        "links": true
+      },
+      "note": "Approved by hachico after TEAM HOLOS MICHIKUSA format and language review; cleared for public build.",
+      "updated": "2026-09-30"
+    },
+    {
+      "file": "access-for-whom.html",
+      "title": "「道具へのアクセス」は、誰に開かれていたのか",
+      "series": "WHOLE EARTH, NOW?",
+      "stage": "final-review",
+      "location": "/prototype/articles/access-for-whom.html",
+      "checks": {
+        "text": true,
+        "sources": false,
+        "visuals": true,
+        "layout": true,
+        "links": true
+      },
+      "note": "Category and voice format pass complete: language rhythm, spacing, title fit, contrast, links and mobile reading checked. Source Desk remains for final confirmation.",
+      "updated": "2026-09-30"
+    },
+    {
+      "file": "after-the-tool.html",
+      "title": "道具を手に入れたあと、何を選ぶのか",
+      "series": "WHOLE EARTH, NOW?",
+      "stage": "final-review",
+      "location": "/prototype/articles/after-the-tool.html",
+      "checks": {
+        "text": true,
+        "sources": false,
+        "visuals": true,
+        "layout": true,
+        "links": true
+      },
+      "note": "Category and voice format pass complete: language rhythm, spacing, title fit, contrast, links and mobile reading checked. Source Desk remains for final confirmation.",
+      "updated": "2026-09-30"
+    },
+    {
+      "file": "apology-receipt.html",
+      "title": "謝罪したあと、何を変えたのか",
+      "series": "APOLOGY",
+      "stage": "approved",
+      "location": "ECHO / APOLOGY · REPARATION · NON-RECURRENCE",
+      "checks": {
+        "text": true,
+        "sources": true,
+        "visuals": true,
+        "layout": true,
+        "links": true
+      },
+      "note": "公開OK。Echoの導入・解説を加筆し、二つの時計、謝罪の五段階、領収書、修理の視覚ブロックを追加。SOURCE DESKは外務省一次資料3点と国連総会決議60/147へ接続済み。",
+      "updated": "2026-09-29T14:00:00+09:00"
+    },
+    {
+      "file": "appropriate-for-whom.html",
+      "title": "適正技術は、誰にとって「ちょうどいい」のか",
+      "series": "WHOLE EARTH, NOW?",
+      "stage": "final-review",
+      "location": "/prototype/articles/appropriate-for-whom.html",
+      "checks": {
+        "text": true,
+        "sources": false,
+        "visuals": true,
+        "layout": true,
+        "links": true
+      },
+      "note": "Category and voice format pass complete: language rhythm, spacing, title fit, contrast, links and mobile reading checked. Source Desk remains for final confirmation.",
+      "updated": "2026-09-30"
+    },
+    {
+      "file": "archaeology-of-fear.html",
+      "title": "恐怖のあとに、何が残るのか",
+      "series": "EXHIBITION",
+      "stage": "approved",
+      "location": "FEATURE / DEEP DIVE",
+      "checks": {
+        "text": true,
+        "sources": true,
+        "visuals": true,
+        "layout": true,
+        "links": true
+      },
+      "note": "hachico公開OK（2026-09-29）。本文・事実確認・図版・権利表示・相互リンク・デスクトップ／モバイル表示を確認済み。ECHO長編・考察型記事の基本フォーマットに採用。",
+      "updated": "2026-09-29T12:00:00+09:00"
+    },
+    {
+      "file": "before-a-plant-became-a-remedy.html",
+      "title": "BEFORE A PLANT BECAME A REMEDY — SHE CREATES",
+      "series": "HOLOS 88",
+      "stage": "approved",
+      "location": "SHE CREATES / BODY ALMANAC / HERBARIUM",
+      "checks": {
+        "text": true,
+        "sources": true,
+        "visuals": true,
+        "layout": true,
+        "links": true
+      },
+      "note": "公開OK。SHE CREATES専用誌面、植物図版、本文、Source Desk、関連導線を確認済み。",
+      "updated": "2026-09-29T15:30:00+09:00"
+    },
+    {
+      "file": "before-another-supplement.html",
+      "title": "BEFORE ANOTHER SUPPLEMENT — SHE CREATES",
+      "series": "HOLOS 88",
+      "stage": "approved",
+      "location": "SHE CREATES / BODY ALMANAC / NUTRITION DESK",
+      "checks": {
+        "text": true,
+        "sources": true,
+        "visuals": true,
+        "layout": true,
+        "links": true
+      },
+      "note": "公開OK。本文・出典・図版・レイアウト・関連導線を確認済み。消化管と胃の図版をMuseum収蔵カードへ登録し、将来の有料版では拡張資料に閲覧制限が入る方針を記録。",
+      "updated": "2026-09-29T16:10:00+09:00"
+    },
+    {
+      "file": "between-the-windows.html",
+      "title": "窓と窓のあいだに",
+      "series": "MUSEUM GUIDE",
+      "stage": "approved",
+      "location": "MUSEUM GUIDE / HOW TO READ HOLOS",
+      "checks": {
+        "text": true,
+        "sources": true,
+        "visuals": true,
+        "layout": true,
+        "links": true
+      },
+      "note": "公開OK。読者向けの案内ページとして内部制作メモを非表示化。静かな案内図、関係図、歩き方、三つの声、最後の入口を追加し、見出しの色と階層を強化。本文段落は通常ウェイトへ統一。",
+      "updated": "2026-09-29T15:00:00+09:00"
+    },
+    {
+      "file": "buchla-had-no-keyboard.html",
+      "title": "鍵盤を置かなかった電子楽器",
+      "series": "MICHIKUSA",
+      "stage": "approved",
+      "location": "/prototype/articles/buchla-had-no-keyboard.html",
+      "checks": {
+        "text": true,
+        "sources": true,
+        "visuals": true,
+        "layout": true,
+        "links": true
+      },
+      "note": "Approved by hachico after TEAM HOLOS MICHIKUSA format and language review; cleared for public build.",
+      "updated": "2026-09-30"
+    },
+    {
+      "file": "cabinet.html",
+      "title": "AIより前に、思考するカード箱があった",
+      "series": "UMESAO",
+      "stage": "approved",
+      "location": "MUSEUM ESSAY / LONG FORM",
+      "checks": {
+        "text": true,
+        "sources": true,
+        "visuals": true,
+        "layout": true,
+        "links": true
+      },
+      "note": "hachico公開OK（2026-09-29）。H88-0011 CARD BOX、HOLOSへの結び、MICHIKUSA、書籍棚を含むECHO長編の基準実装。",
+      "updated": "2026-09-29T10:30:00+09:00"
+    },
+    {
+      "file": "catalog-of-what-is-missing.html",
+      "title": "掲載されなかったものを、どう読むか",
+      "series": "WHOLE EARTH, NOW?",
+      "stage": "final-review",
+      "location": "/prototype/articles/catalog-of-what-is-missing.html",
+      "checks": {
+        "text": true,
+        "sources": false,
+        "visuals": true,
+        "layout": true,
+        "links": true
+      },
+      "note": "Category and voice format pass complete: language rhythm, spacing, title fit, contrast, links and mobile reading checked. Source Desk remains for final confirmation.",
+      "updated": "2026-09-30"
+    },
+    {
+      "file": "consciousness.html",
+      "title": "意識は、どこで始まるのか",
+      "series": "TEAM HOLOS",
+      "stage": "approved",
+      "location": "TEAM HOLOS / RESEARCH WINDOW",
+      "checks": {
+        "text": true,
+        "sources": true,
+        "visuals": true,
+        "layout": true,
+        "links": true
+      },
+      "note": "TEAM HOLOS / RESEARCH WINDOWの公開OK稿。専門記事の窓として分類・相互リンク・収蔵カード・出典導線を確認済み。",
+      "updated": "2026-09-29T13:00:00+09:00"
+    },
+    {
+      "file": "contempt-refund.html",
+      "title": "蔑視という払い戻し",
+      "series": "DENIAL",
+      "stage": "final-review",
+      "location": "/prototype/articles/contempt-refund.html",
+      "checks": {
+        "text": true,
+        "sources": false,
+        "visuals": true,
+        "layout": true,
+        "links": true
+      },
+      "note": "Category and voice format pass complete: language rhythm, spacing, title fit, contrast, links and mobile reading checked. Source Desk remains for final confirmation.",
+      "updated": "2026-09-30"
+    },
+    {
+      "file": "countercultures-blind-spot.html",
+      "title": "自由を語る人は、何を見落としたのか",
+      "series": "WHOLE EARTH, NOW?",
+      "stage": "final-review",
+      "location": "/prototype/articles/countercultures-blind-spot.html",
+      "checks": {
+        "text": true,
+        "sources": false,
+        "visuals": true,
+        "layout": true,
+        "links": true
+      },
+      "note": "Category and voice format pass complete: language rhythm, spacing, title fit, contrast, links and mobile reading checked. Source Desk remains for final confirmation.",
+      "updated": "2026-09-30"
+    },
+    {
+      "file": "crowd-farm.html",
+      "title": "群衆を栽培する農場",
+      "series": "CLICK FARMS",
+      "stage": "final-review",
+      "location": "/prototype/articles/crowd-farm.html",
+      "checks": {
+        "text": true,
+        "sources": false,
+        "visuals": true,
+        "layout": true,
+        "links": true
+      },
+      "note": "Category and voice format pass complete: language rhythm, spacing, title fit, contrast, links and mobile reading checked. Source Desk remains for final confirmation.",
+      "updated": "2026-09-30"
+    },
+    {
+      "file": "december-ten.html",
+      "title": "歓声は、誰が用意したのか。",
+      "series": "BONAPARTISM",
+      "stage": "final-review",
+      "location": "/prototype/articles/december-ten.html",
+      "checks": {
+        "text": true,
+        "sources": false,
+        "visuals": true,
+        "layout": true,
+        "links": true
+      },
+      "note": "Category and voice format pass complete: language rhythm, spacing, title fit, contrast, links and mobile reading checked. Source Desk remains for final confirmation.",
+      "updated": "2026-09-30"
+    },
+    {
+      "file": "dream-where-am-i.html",
+      "title": "眠っている私は、どこにいるのか",
+      "series": "MICHIKUSA",
+      "stage": "approved",
+      "location": "/prototype/articles/dream-where-am-i.html",
+      "checks": {
+        "text": true,
+        "sources": true,
+        "visuals": true,
+        "layout": true,
+        "links": true
+      },
+      "note": "Approved by hachico after TEAM HOLOS MICHIKUSA format and language review; cleared for public build.",
+      "updated": "2026-09-30"
+    },
+    {
+      "file": "duration.html",
+      "title": "待つことは、何もしないことではない。",
+      "series": "TIME",
+      "stage": "final-review",
+      "location": "/prototype/articles/duration.html",
+      "checks": {
+        "text": true,
+        "sources": false,
+        "visuals": true,
+        "layout": true,
+        "links": true
+      },
+      "note": "Category and voice format pass complete: language rhythm, spacing, title fit, contrast, links and mobile reading checked. Source Desk remains for final confirmation.",
+      "updated": "2026-09-30"
+    },
+    {
+      "file": "escape.html",
+      "title": "構造の外へ、どこまで逃げられるか",
+      "series": "STRUCTURE",
+      "stage": "final-review",
+      "location": "/prototype/articles/escape.html",
+      "checks": {
+        "text": true,
+        "sources": false,
+        "visuals": true,
+        "layout": true,
+        "links": true
+      },
+      "note": "Category and voice format pass complete: language rhythm, spacing, title fit, contrast, links and mobile reading checked. Source Desk remains for final confirmation.",
+      "updated": "2026-09-30"
+    },
+    {
+      "file": "exit-is-part-of-community.html",
+      "title": "去る自由まで、共同体に含められるか",
+      "series": "WHOLE EARTH, NOW?",
+      "stage": "final-review",
+      "location": "/prototype/articles/exit-is-part-of-community.html",
+      "checks": {
+        "text": true,
+        "sources": false,
+        "visuals": true,
+        "layout": true,
+        "links": true
+      },
+      "note": "Category and voice format pass complete: language rhythm, spacing, title fit, contrast, links and mobile reading checked. Source Desk remains for final confirmation.",
+      "updated": "2026-09-30"
+    },
+    {
+      "file": "fire-and-vessel.html",
+      "title": "火は、食べられる世界を広げた",
+      "series": "MICHIKUSA",
+      "stage": "approved",
+      "location": "/prototype/articles/fire-and-vessel.html",
+      "checks": {
+        "text": true,
+        "sources": true,
+        "visuals": true,
+        "layout": true,
+        "links": true
+      },
+      "note": "Approved by hachico after TEAM HOLOS MICHIKUSA format and language review; cleared for public build.",
+      "updated": "2026-09-30"
+    },
+    {
+      "file": "five-percent.html",
+      "title": "5％という数字の、その向こう",
+      "series": "MARKET",
+      "stage": "approved",
+      "location": "MARKET / LONG FORM",
+      "checks": {
+        "text": true,
+        "sources": true,
+        "visuals": true,
+        "layout": true,
+        "links": true
+      },
+      "note": "hachico公開OK（2026-09-29）。段落構成・終盤解説・一次資料・誌面・リンクを確認済み。MARKET長編記事の公開版。",
+      "updated": "2026-09-29T09:40:33+09:00"
+    },
+    {
+      "file": "forgetting-well.html",
+      "title": "よく忘れるために",
+      "series": "MICHIKUSA",
+      "stage": "approved",
+      "location": "/prototype/articles/forgetting-well.html",
+      "checks": {
+        "text": true,
+        "sources": true,
+        "visuals": true,
+        "layout": true,
+        "links": true
+      },
+      "note": "Approved by hachico after TEAM HOLOS MICHIKUSA format and language review; cleared for public build.",
+      "updated": "2026-09-30"
+    },
+    {
+      "file": "free-information-has-a-body.html",
+      "title": "情報は自由でも、運ぶ身体は疲れる",
+      "series": "WHOLE EARTH, NOW?",
+      "stage": "final-review",
+      "location": "/prototype/articles/free-information-has-a-body.html",
+      "checks": {
+        "text": true,
+        "sources": false,
+        "visuals": true,
+        "layout": true,
+        "links": true
+      },
+      "note": "Category and voice format pass complete: language rhythm, spacing, title fit, contrast, links and mobile reading checked. Source Desk remains for final confirmation.",
+      "updated": "2026-09-30"
+    },
+    {
+      "file": "from-commune-to-platform.html",
+      "title": "共同体からプラットフォームへ",
+      "series": "WHOLE EARTH, NOW?",
+      "stage": "final-review",
+      "location": "/prototype/articles/from-commune-to-platform.html",
+      "checks": {
+        "text": true,
+        "sources": false,
+        "visuals": true,
+        "layout": true,
+        "links": true
+      },
+      "note": "Category and voice format pass complete: language rhythm, spacing, title fit, contrast, links and mobile reading checked. Source Desk remains for final confirmation.",
+      "updated": "2026-09-30"
+    },
+    {
+      "file": "from-whole-earth-to-big-tech.html",
+      "title": "個人を自由にする道具は、なぜ巨大になったのか",
+      "series": "WHOLE EARTH, NOW?",
+      "stage": "final-review",
+      "location": "/prototype/articles/from-whole-earth-to-big-tech.html",
+      "checks": {
+        "text": true,
+        "sources": false,
+        "visuals": true,
+        "layout": true,
+        "links": true
+      },
+      "note": "Category and voice format pass complete: language rhythm, spacing, title fit, contrast, links and mobile reading checked. Source Desk remains for final confirmation.",
+      "updated": "2026-09-30"
+    },
+    {
+      "file": "germination.html",
+      "title": "芽が出るのは、種が決めた日ではない。",
+      "series": "BOTANY",
+      "stage": "final-review",
+      "location": "/prototype/articles/germination.html",
+      "checks": {
+        "text": true,
+        "sources": false,
+        "visuals": true,
+        "layout": true,
+        "links": true
+      },
+      "note": "Category and voice format pass complete: language rhythm, spacing, title fit, contrast, links and mobile reading checked. Source Desk remains for final confirmation.",
+      "updated": "2026-09-30"
+    },
+    {
+      "file": "gift-cannot-refuse.html",
+      "title": "断れない贈り物",
+      "series": "MICHIKUSA",
+      "stage": "approved",
+      "location": "/prototype/articles/gift-cannot-refuse.html",
+      "checks": {
+        "text": true,
+        "sources": true,
+        "visuals": true,
+        "layout": true,
+        "links": true
+      },
+      "note": "Approved by hachico after TEAM HOLOS MICHIKUSA format and language review; cleared for public build.",
+      "updated": "2026-09-30"
+    },
+    {
+      "file": "gift.html",
+      "title": "贈り物は、渡したところで終わらない",
+      "series": "GIFT",
+      "stage": "final-review",
+      "location": "/prototype/articles/gift.html",
+      "checks": {
+        "text": true,
+        "sources": false,
+        "visuals": true,
+        "layout": true,
+        "links": true
+      },
+      "note": "Category and voice format pass complete: language rhythm, spacing, title fit, contrast, links and mobile reading checked. Source Desk remains for final confirmation.",
+      "updated": "2026-09-30"
+    },
+    {
+      "file": "hegel-recognition.html",
+      "title": "認められたい私たち",
+      "series": "PHILOSOPHY",
+      "stage": "approved",
+      "location": "TEAM HOLOS / PHILOSOPHY COLUMN",
+      "checks": {
+        "text": true,
+        "sources": true,
+        "visuals": true,
+        "layout": true,
+        "links": true
+      },
+      "note": "hachico最終確認済み。本文、デザイン、Source Desk、関連書籍（斎藤幸平ほか）とAmazon通常検索リンクを確認し公開OK。",
+      "updated": "2026-09-30T00:00:00+09:00"
+    },
+    {
+      "file": "horse-time.html",
+      "title": "最近、雨ばっかり。",
+      "series": "LIFE NOTE",
+      "stage": "approved",
+      "location": "LIFE NOTE / SEASON / ANIMALS",
+      "checks": {
+        "text": true,
+        "sources": true,
+        "visuals": true,
+        "layout": true,
+        "links": true
+      },
+      "note": "公開OK。2026年9月15日執筆として日付を追加。hachicoによる最終修正、誤字脱字、写真・権利、出典、表示、関連導線を確認済み。",
+      "updated": "2026-09-29T17:12:00+09:00"
+    },
+    {
+      "file": "horse.html",
+      "title": "馬は、人をどこまで遠くへ運んだのだろう。",
+      "series": "ANIMAL",
+      "stage": "final-review",
+      "location": "/prototype/articles/horse.html",
+      "checks": {
+        "text": true,
+        "sources": false,
+        "visuals": true,
+        "layout": true,
+        "links": true
+      },
+      "note": "Category and voice format pass complete: language rhythm, spacing, title fit, contrast, links and mobile reading checked. Source Desk remains for final confirmation.",
+      "updated": "2026-09-30"
+    },
+    {
+      "file": "how-long-is-now.html",
+      "title": "「いま」は、どこまで続いているのか",
+      "series": "WHOLE EARTH, NOW?",
+      "stage": "final-review",
+      "location": "/prototype/articles/how-long-is-now.html",
+      "checks": {
+        "text": true,
+        "sources": false,
+        "visuals": true,
+        "layout": true,
+        "links": true
+      },
+      "note": "Category and voice format pass complete: language rhythm, spacing, title fit, contrast, links and mobile reading checked. Source Desk remains for final confirmation.",
+      "updated": "2026-09-30"
+    },
+    {
+      "file": "is-this-an-alliance-or-a-toxic-relationship.html",
+      "title": "それ、同盟ですか。不健全な関係ですか。",
+      "series": "DIPLOMACY",
+      "stage": "approved",
+      "location": "TEAM HOLOS / DIPLOMACY COLUMN",
+      "checks": {
+        "text": true,
+        "sources": true,
+        "visuals": true,
+        "layout": true,
+        "links": true
+      },
+      "note": "hachico公開OK（2026-09-29）。誤字・表示・リンク・時点依存情報を確認済み。キーワード別の関連読書棚を追加（直接の出典とは分離）。",
+      "updated": "2026-09-29T18:00:00+09:00"
+    },
+    {
+      "file": "kaleidoscope.html",
+      "title": "同じ欠片を、少しだけ回してみる。",
+      "series": "IMAGE",
+      "stage": "final-review",
+      "location": "/prototype/articles/kaleidoscope.html",
+      "checks": {
+        "text": true,
+        "sources": false,
+        "visuals": true,
+        "layout": true,
+        "links": true
+      },
+      "note": "Category and voice format pass complete: language rhythm, spacing, title fit, contrast, links and mobile reading checked. Source Desk remains for final confirmation.",
+      "updated": "2026-09-30"
+    },
+    {
+      "file": "land.html",
+      "title": "畑は、誰のものだったのだろう。",
+      "series": "LAND",
+      "stage": "final-review",
+      "location": "/prototype/articles/land.html",
+      "checks": {
+        "text": true,
+        "sources": false,
+        "visuals": true,
+        "layout": true,
+        "links": true
+      },
+      "note": "Category and voice format pass complete: language rhythm, spacing, title fit, contrast, links and mobile reading checked. Source Desk remains for final confirmation.",
+      "updated": "2026-09-30"
+    },
+    {
+      "file": "last-question.html",
+      "title": "最後の問いを、誰が持つのか",
+      "series": "AI",
+      "stage": "final-review",
+      "location": "/prototype/articles/last-question.html",
+      "checks": {
+        "text": true,
+        "sources": false,
+        "visuals": true,
+        "layout": true,
+        "links": true
+      },
+      "note": "Category and voice format pass complete: language rhythm, spacing, title fit, contrast, links and mobile reading checked. Source Desk remains for final confirmation.",
+      "updated": "2026-09-30"
+    },
+    {
+      "file": "leaving-the-city-carrying-a-catalog.html",
+      "title": "コミューンには、なぜカタログが必要だったのか",
+      "series": "THE WHOLE EARTH NETWORK",
+      "stage": "final-review",
+      "location": "/prototype/articles/leaving-the-city-carrying-a-catalog.html",
+      "checks": {
+        "text": true,
+        "sources": false,
+        "visuals": true,
+        "layout": true,
+        "links": true
+      },
+      "note": "Category and voice format pass complete: language rhythm, spacing, title fit, contrast, links and mobile reading checked. Source Desk remains for final confirmation.",
+      "updated": "2026-09-30"
+    },
+    {
+      "file": "millet.html",
+      "title": "手前に、人を置いた画家。",
+      "series": "ART",
+      "stage": "final-review",
+      "location": "/prototype/articles/millet.html",
+      "checks": {
+        "text": true,
+        "sources": false,
+        "visuals": true,
+        "layout": true,
+        "links": true
+      },
+      "note": "Category and voice format pass complete: language rhythm, spacing, title fit, contrast, links and mobile reading checked. Source Desk remains for final confirmation.",
+      "updated": "2026-09-30"
+    },
+    {
+      "file": "moon-to-stars.html",
+      "title": "秋の空から、月と星を想う。",
+      "series": "MOON",
+      "stage": "final-review",
+      "location": "/prototype/articles/moon-to-stars.html",
+      "checks": {
+        "text": true,
+        "sources": false,
+        "visuals": true,
+        "layout": true,
+        "links": true
+      },
+      "note": "Category and voice format pass complete: language rhythm, spacing, title fit, contrast, links and mobile reading checked. Source Desk remains for final confirmation.",
+      "updated": "2026-09-30"
+    },
+    {
+      "file": "other-sino-japanese-war.html",
+      "title": "もう一つの日清戦争",
+      "series": "DONGHAK",
+      "stage": "final-review",
+      "location": "/prototype/articles/other-sino-japanese-war.html",
+      "checks": {
+        "text": true,
+        "sources": false,
+        "visuals": true,
+        "layout": true,
+        "links": true
+      },
+      "note": "Category and voice format pass complete: language rhythm, spacing, title fit, contrast, links and mobile reading checked. Source Desk remains for final confirmation.",
+      "updated": "2026-09-30"
+    },
+    {
+      "file": "pain-enemy.html",
+      "title": "痛みは本物。敵は作られる。",
+      "series": "POPULISM",
+      "stage": "final-review",
+      "location": "/prototype/articles/pain-enemy.html",
+      "checks": {
+        "text": true,
+        "sources": false,
+        "visuals": true,
+        "layout": true,
+        "links": true
+      },
+      "note": "Category and voice format pass complete: language rhythm, spacing, title fit, contrast, links and mobile reading checked. Source Desk remains for final confirmation.",
+      "updated": "2026-09-30"
+    },
+    {
+      "file": "paper-google.html",
+      "title": "紙のGoogleだったのか",
+      "series": "WHOLE EARTH, NOW?",
+      "stage": "final-review",
+      "location": "/prototype/articles/paper-google.html",
+      "checks": {
+        "text": true,
+        "sources": false,
+        "visuals": true,
+        "layout": true,
+        "links": true
+      },
+      "note": "Category and voice format pass complete: language rhythm, spacing, title fit, contrast, links and mobile reading checked. Source Desk remains for final confirmation.",
+      "updated": "2026-09-30"
+    },
+    {
+      "file": "peace-is-not-silence.html",
+      "title": "平和は、戦争が聞こえないことではない",
+      "series": "WAR",
+      "stage": "final-review",
+      "location": "/prototype/articles/peace-is-not-silence.html",
+      "checks": {
+        "text": true,
+        "sources": false,
+        "visuals": true,
+        "layout": true,
+        "links": true
+      },
+      "note": "Category and voice format pass complete: language rhythm, spacing, title fit, contrast, links and mobile reading checked. Source Desk remains for final confirmation.",
+      "updated": "2026-09-30"
+    },
+    {
+      "file": "potatoes.html",
+      "title": "ジャガイモが悪いんだ。",
+      "series": "REPRESENTATION",
+      "stage": "final-review",
+      "location": "/prototype/articles/potatoes.html",
+      "checks": {
+        "text": true,
+        "sources": false,
+        "visuals": true,
+        "layout": true,
+        "links": true
+      },
+      "note": "Category and voice format pass complete: language rhythm, spacing, title fit, contrast, links and mobile reading checked. Source Desk remains for final confirmation.",
+      "updated": "2026-09-30"
+    },
+    {
+      "file": "repair-is-a-politics.html",
+      "title": "直すことは、どんな未来を選ぶことか",
+      "series": "WHOLE EARTH, NOW?",
+      "stage": "final-review",
+      "location": "/prototype/articles/repair-is-a-politics.html",
+      "checks": {
+        "text": true,
+        "sources": false,
+        "visuals": true,
+        "layout": true,
+        "links": true
+      },
+      "note": "Category and voice format pass complete: language rhythm, spacing, title fit, contrast, links and mobile reading checked. Source Desk remains for final confirmation.",
+      "updated": "2026-09-30"
+    },
+    {
+      "file": "season-is-not-a-prescription.html",
+      "title": "SEASON IS NOT A PRESCRIPTION — SHE CREATES",
+      "series": "HOLOS 88",
+      "stage": "approved",
+      "location": "SHE CREATES / BODY ALMANAC / SEASONAL TABLE",
+      "checks": {
+        "text": true,
+        "sources": true,
+        "visuals": true,
+        "layout": true,
+        "links": true
+      },
+      "note": "hachico公開OK（2026-09-29）。自然な標準語への初回文調調整、出典・図版・権利・表示・導線を確認済み。菊と梨の図版をH88-0018／H88-0019として収蔵。",
+      "updated": "2026-09-29"
+    },
+    {
+      "file": "seed.html",
+      "title": "蒔かぬ種は生えぬ。",
+      "series": "SPECIMEN",
+      "stage": "final-review",
+      "location": "/prototype/articles/seed.html",
+      "checks": {
+        "text": true,
+        "sources": false,
+        "visuals": true,
+        "layout": true,
+        "links": true
+      },
+      "note": "Category and voice format pass complete: language rhythm, spacing, title fit, contrast, links and mobile reading checked. Source Desk remains for final confirmation.",
+      "updated": "2026-09-30"
+    },
+    {
+      "file": "self-building-is-not-alone.html",
+      "title": "自分でつくることは、ひとりでつくることではない",
+      "series": "WHOLE EARTH, NOW?",
+      "stage": "final-review",
+      "location": "/prototype/articles/self-building-is-not-alone.html",
+      "checks": {
+        "text": true,
+        "sources": false,
+        "visuals": true,
+        "layout": true,
+        "links": true
+      },
+      "note": "Category and voice format pass complete: language rhythm, spacing, title fit, contrast, links and mobile reading checked. Source Desk remains for final confirmation.",
+      "updated": "2026-09-30"
+    },
+    {
+      "file": "spacewar-and-the-new-machine.html",
+      "title": "冷戦の機械は、どうして自由の道具に見えたのか",
+      "series": "THE WHOLE EARTH NETWORK",
+      "stage": "final-review",
+      "location": "/prototype/articles/spacewar-and-the-new-machine.html",
+      "checks": {
+        "text": true,
+        "sources": false,
+        "visuals": true,
+        "layout": true,
+        "links": true
+      },
+      "note": "Category and voice format pass complete: language rhythm, spacing, title fit, contrast, links and mobile reading checked. Source Desk remains for final confirmation.",
+      "updated": "2026-09-30"
+    },
+    {
+      "file": "symbols-do-not-diagnose-us.html",
+      "title": "SYMBOLS DO NOT DIAGNOSE US — SHE CREATES",
+      "series": "HOLOS 88",
+      "stage": "approved",
+      "location": "SHE CREATES / BODY ALMANAC / SYMBOL DESK",
+      "checks": {
+        "text": true,
+        "sources": true,
+        "visuals": true,
+        "layout": true,
+        "links": true
+      },
+      "note": "hachico公開OK（2026-09-29）。自然な日本語、右側グリッド線、ユング初出、Forer・WHO・NHS、図版権利を確認。ヴィスコンティ・スフォルツァ版カードをH88-0020〜0023として収蔵。会員記事のため公開収蔵庫からは無料レター入口へ接続。",
+      "updated": "2026-09-29T18:20:00+09:00"
+    },
+    {
+      "file": "taro-jomon.html",
+      "title": "太郎は、縄文を見つけた",
+      "series": "ART",
+      "stage": "final-review",
+      "location": "/prototype/articles/taro-jomon.html",
+      "checks": {
+        "text": true,
+        "sources": false,
+        "visuals": true,
+        "layout": true,
+        "links": true
+      },
+      "note": "Category and voice format pass complete: language rhythm, spacing, title fit, contrast, links and mobile reading checked. Source Desk remains for final confirmation.",
+      "updated": "2026-09-30"
+    },
+    {
+      "file": "the-algorithm-is-an-editor.html",
+      "title": "次に見るものを、誰が並べているのか",
+      "series": "WHOLE EARTH, NOW?",
+      "stage": "final-review",
+      "location": "/prototype/articles/the-algorithm-is-an-editor.html",
+      "checks": {
+        "text": true,
+        "sources": false,
+        "visuals": true,
+        "layout": true,
+        "links": true
+      },
+      "note": "Category and voice format pass complete: language rhythm, spacing, title fit, contrast, links and mobile reading checked. Source Desk remains for final confirmation.",
+      "updated": "2026-09-30"
+    },
+    {
+      "file": "the-body-keeps-more-than-one-clock.html",
+      "title": "THE BODY KEEPS MORE THAN ONE CLOCK — SHE CREATES",
+      "series": "HOLOS 88",
+      "stage": "approved",
+      "location": "SHE CREATES / BODY ALMANAC / TIME DESK",
+      "checks": {
+        "text": true,
+        "sources": true,
+        "visuals": true,
+        "layout": true,
+        "links": true
+      },
+      "note": "hachico加筆修正後の最終版を確認。SHE CREATES記事として公開OK。図版・収蔵・会員動線を確認済み。",
+      "updated": "2026-09-29T19:35:00+09:00"
+    },
+    {
+      "file": "the-button-we-stopped-pressing.html",
+      "title": "押すのをやめたボタン",
+      "series": "LEARNED HELPLESSNESS",
+      "stage": "approved",
+      "location": "TEAM HOLOS / COLUMN",
+      "checks": {
+        "text": true,
+        "sources": true,
+        "visuals": true,
+        "layout": true,
+        "links": true
+      },
+      "note": "hachico公開OK（2026-09-29）。自然な日本語、図解キャプション、余白、PC表示、リンクを確認済み。",
+      "updated": "2026-09-29T16:55:00+09:00"
+    },
+    {
+      "file": "the-chair-that-became-more-beautiful-after-we-bought-it.html",
+      "title": "買ったあとで、美しくなる椅子",
+      "series": "SELF-JUSTIFICATION",
+      "stage": "approved",
+      "location": "TEAM HOLOS / COLUMN",
+      "checks": {
+        "text": true,
+        "sources": true,
+        "visuals": true,
+        "layout": true,
+        "links": true
+      },
+      "note": "hachico公開OK（2026-09-29）。自然な日本語、図解キャプション、余白、PC表示、リンクを確認済み。",
+      "updated": "2026-09-29T16:55:00+09:00"
+    },
+    {
+      "file": "the-colonial-gaze.html",
+      "title": "見ることは、中立ではない",
+      "series": "MICHIKUSA",
+      "stage": "approved",
+      "location": "/prototype/articles/the-colonial-gaze.html",
+      "checks": {
+        "text": true,
+        "sources": true,
+        "visuals": true,
+        "layout": true,
+        "links": true
+      },
+      "note": "Approved by hachico after TEAM HOLOS MICHIKUSA format and language review; cleared for public build.",
+      "updated": "2026-09-30"
+    },
+    {
+      "file": "the-cost-behind-the-screen.html",
+      "title": "画面の向こうで、何が使われているのか",
+      "series": "WHOLE EARTH, NOW?",
+      "stage": "final-review",
+      "location": "/prototype/articles/the-cost-behind-the-screen.html",
+      "checks": {
+        "text": true,
+        "sources": false,
+        "visuals": true,
+        "layout": true,
+        "links": true
+      },
+      "note": "Category and voice format pass complete: language rhythm, spacing, title fit, contrast, links and mobile reading checked. Source Desk remains for final confirmation.",
+      "updated": "2026-09-30"
+    },
+    {
+      "file": "the-dome-that-leaked.html",
+      "title": "バックミンスター・フラー、ドーム、そして雨漏り",
+      "series": "THE WHOLE EARTH NETWORK",
+      "stage": "final-review",
+      "location": "/prototype/articles/the-dome-that-leaked.html",
+      "checks": {
+        "text": true,
+        "sources": false,
+        "visuals": true,
+        "layout": true,
+        "links": true
+      },
+      "note": "Category and voice format pass complete: language rhythm, spacing, title fit, contrast, links and mobile reading checked. Source Desk remains for final confirmation.",
+      "updated": "2026-09-30"
+    },
+    {
+      "file": "the-earth-is-not-a-logo.html",
+      "title": "地球は、ブランドマークではない",
+      "series": "WHOLE EARTH, NOW?",
+      "stage": "final-review",
+      "location": "/prototype/articles/the-earth-is-not-a-logo.html",
+      "checks": {
+        "text": true,
+        "sources": false,
+        "visuals": true,
+        "layout": true,
+        "links": true
+      },
+      "note": "Category and voice format pass complete: language rhythm, spacing, title fit, contrast, links and mobile reading checked. Source Desk remains for final confirmation.",
+      "updated": "2026-09-30"
+    },
+    {
+      "file": "the-field-before-data.html",
+      "title": "データになる前の野原",
+      "series": "MICHIKUSA",
+      "stage": "approved",
+      "location": "/prototype/articles/the-field-before-data.html",
+      "checks": {
+        "text": true,
+        "sources": true,
+        "visuals": true,
+        "layout": true,
+        "links": true
+      },
+      "note": "Approved by hachico after TEAM HOLOS MICHIKUSA format and language review; cleared for public build.",
+      "updated": "2026-09-30"
+    },
+    {
+      "file": "the-freedom-that-fit-the-market.html",
+      "title": "分散、自律、自己組織化は、なぜ新しい経済と相性がよかったのか",
+      "series": "THE WHOLE EARTH NETWORK",
+      "stage": "final-review",
+      "location": "/prototype/articles/the-freedom-that-fit-the-market.html",
+      "checks": {
+        "text": true,
+        "sources": false,
+        "visuals": true,
+        "layout": true,
+        "links": true
+      },
+      "note": "Category and voice format pass complete: language rhythm, spacing, title fit, contrast, links and mobile reading checked. Source Desk remains for final confirmation.",
+      "updated": "2026-09-30"
+    },
+    {
+      "file": "the-frontier-in-the-screen.html",
+      "title": "サイバースペースは、誰の「新天地」だったか",
+      "series": "WHOLE EARTH, NOW?",
+      "stage": "final-review",
+      "location": "/prototype/articles/the-frontier-in-the-screen.html",
+      "checks": {
+        "text": true,
+        "sources": false,
+        "visuals": true,
+        "layout": true,
+        "links": true
+      },
+      "note": "Category and voice format pass complete: language rhythm, spacing, title fit, contrast, links and mobile reading checked. Source Desk remains for final confirmation.",
+      "updated": "2026-09-30"
+    },
+    {
+      "file": "the-grateful-dead-was-a-network.html",
+      "title": "バンドの外側にできた、もう一つの共同体",
+      "series": "THE WHOLE EARTH NETWORK",
+      "stage": "final-review",
+      "location": "/prototype/articles/the-grateful-dead-was-a-network.html",
+      "checks": {
+        "text": true,
+        "sources": false,
+        "visuals": true,
+        "layout": true,
+        "links": true
+      },
+      "note": "Category and voice format pass complete: language rhythm, spacing, title fit, contrast, links and mobile reading checked. Source Desk remains for final confirmation.",
+      "updated": "2026-09-30"
+    },
+    {
+      "file": "the-judge-who-would-not-bow.html",
+      "title": "法の前で、頭を下げなかった人",
+      "series": "LAW",
+      "stage": "approved",
+      "location": "TEAM HOLOS / LAW COLUMN",
+      "checks": {
+        "text": true,
+        "sources": true,
+        "visuals": true,
+        "layout": true,
+        "links": true
+      },
+      "note": "本文・一次資料・カテゴリ別デザイン・コントラスト・本文ウェイト・関連記事導線を最終確認し、公開OK。",
+      "updated": "2026-09-29T23:59:00+09:00"
+    },
+    {
+      "file": "the-long-now-needs-a-short-today.html",
+      "title": "長い未来には、今日の手入れがいる",
+      "series": "WHOLE EARTH, NOW?",
+      "stage": "final-review",
+      "location": "/prototype/articles/the-long-now-needs-a-short-today.html",
+      "checks": {
+        "text": true,
+        "sources": false,
+        "visuals": true,
+        "layout": true,
+        "links": true
+      },
+      "note": "Category and voice format pass complete: language rhythm, spacing, title fit, contrast, links and mobile reading checked. Source Desk remains for final confirmation.",
+      "updated": "2026-09-30"
+    },
+    {
+      "file": "the-man-who-connected-rooms.html",
+      "title": "Stewart Brandは、何を発明したのか",
+      "series": "THE WHOLE EARTH NETWORK",
+      "stage": "final-review",
+      "location": "/prototype/articles/the-man-who-connected-rooms.html",
+      "checks": {
+        "text": true,
+        "sources": false,
+        "visuals": true,
+        "layout": true,
+        "links": true
+      },
+      "note": "Category and voice format pass complete: language rhythm, spacing, title fit, contrast, links and mobile reading checked. Source Desk remains for final confirmation.",
+      "updated": "2026-09-30"
+    },
+    {
+      "file": "the-melancholy-of-shorter-days.html",
+      "title": "THE MELANCHOLY OF SHORTER DAYS — SHE CREATES",
+      "series": "HOLOS 88",
+      "stage": "approved",
+      "location": "SHE CREATES / BODY ALMANAC / INNER WEATHER",
+      "checks": {
+        "text": true,
+        "sources": true,
+        "visuals": true,
+        "layout": true,
+        "links": true
+      },
+      "note": "hachico加筆修正後の最終版を確認。冒頭図版、自然な日本語、列線の整合、収蔵・会員動線を確認し公開OK。",
+      "updated": "2026-09-29T19:35:00+09:00"
+    },
+    {
+      "file": "the-price-of-free.html",
+      "title": "無料の場所で、私たちは何を渡しているのか",
+      "series": "WHOLE EARTH, NOW?",
+      "stage": "final-review",
+      "location": "/prototype/articles/the-price-of-free.html",
+      "checks": {
+        "text": true,
+        "sources": false,
+        "visuals": true,
+        "layout": true,
+        "links": true
+      },
+      "note": "Category and voice format pass complete: language rhythm, spacing, title fit, contrast, links and mobile reading checked. Source Desk remains for final confirmation.",
+      "updated": "2026-09-30"
+    },
+    {
+      "file": "the-red-carpet-is-a-map.html",
+      "title": "赤絨毯は、力関係を描く地図である",
+      "series": "DIPLOMACY",
+      "stage": "approved",
+      "location": "WATCH THE NOW / DIPLOMACY COLUMN",
+      "checks": {
+        "text": true,
+        "sources": true,
+        "visuals": true,
+        "layout": true,
+        "links": true
+      },
+      "note": "本文・一次資料・カテゴリ別デザイン・コントラスト・本文ウェイト・関連記事導線を最終確認し、公開OK。",
+      "updated": "2026-09-29T23:59:00+09:00"
+    },
+    {
+      "file": "the-rope-that-lets-a-ship-leave.html",
+      "title": "船をつなぐ綱は、船を留めるためだけにあるのか",
+      "series": "ATTACHMENT",
+      "stage": "approved",
+      "location": "TEAM HOLOS / RELATIONSHIP COLUMN",
+      "checks": {
+        "text": true,
+        "sources": true,
+        "visuals": true,
+        "layout": true,
+        "links": true
+      },
+      "note": "hachico確認済みの最終版。本文、Source Desk、デザイン、関連導線を確認し公開OK。",
+      "updated": "2026-09-29T19:35:00+09:00"
+    },
+    {
+      "file": "the-season-beneath-the-skin.html",
+      "title": "AUTUMN CARE NOTES — SHE CREATES",
+      "series": "HOLOS 88",
+      "stage": "approved",
+      "location": "SHE CREATES / MEMBER ARTICLE / BODY & MERIDIAN",
+      "checks": {
+        "text": true,
+        "sources": true,
+        "visuals": true,
+        "layout": true,
+        "links": true
+      },
+      "note": "公開OK。SheCreatesの文体・誌面・出典・図版・関連導線を確認。Museum収蔵カード3点と関連読書棚を追加。経絡・鍼灸欄の専門家確認予定は記事内に明示。",
+      "updated": "2026-09-29T23:05:00+09:00"
+    },
+    {
+      "file": "the-well-was-not-free.html",
+      "title": "オンラインの井戸端には、料金があった",
+      "series": "WHOLE EARTH, NOW?",
+      "stage": "final-review",
+      "location": "/prototype/articles/the-well-was-not-free.html",
+      "checks": {
+        "text": true,
+        "sources": false,
+        "visuals": true,
+        "layout": true,
+        "links": true
+      },
+      "note": "Category and voice format pass complete: language rhythm, spacing, title fit, contrast, links and mobile reading checked. Source Desk remains for final confirmation.",
+      "updated": "2026-09-30"
+    },
+    {
+      "file": "the-woman-beside-the-truck.html",
+      "title": "Lois Jenningsと、創業神話から消える共同制作者",
+      "series": "THE WHOLE EARTH NETWORK",
+      "stage": "final-review",
+      "location": "/prototype/articles/the-woman-beside-the-truck.html",
+      "checks": {
+        "text": true,
+        "sources": false,
+        "visuals": true,
+        "layout": true,
+        "links": true
+      },
+      "note": "Category and voice format pass complete: language rhythm, spacing, title fit, contrast, links and mobile reading checked. Source Desk remains for final confirmation.",
+      "updated": "2026-09-30"
+    },
+    {
+      "file": "three-nights-before-the-summer-of-love.html",
+      "title": "Trips Festival——音、光、身体がネットワークになった夜",
+      "series": "THE WHOLE EARTH NETWORK",
+      "stage": "final-review",
+      "location": "/prototype/articles/three-nights-before-the-summer-of-love.html",
+      "checks": {
+        "text": true,
+        "sources": false,
+        "visuals": true,
+        "layout": true,
+        "links": true
+      },
+      "note": "Category and voice format pass complete: language rhythm, spacing, title fit, contrast, links and mobile reading checked. Source Desk remains for final confirmation.",
+      "updated": "2026-09-30"
+    },
+    {
+      "file": "two-doors-opened-in-1968.html",
+      "title": "Whole Earth CatalogとMother of All Demos",
+      "series": "THE WHOLE EARTH NETWORK",
+      "stage": "final-review",
+      "location": "/prototype/articles/two-doors-opened-in-1968.html",
+      "checks": {
+        "text": true,
+        "sources": false,
+        "visuals": true,
+        "layout": true,
+        "links": true
+      },
+      "note": "Category and voice format pass complete: language rhythm, spacing, title fit, contrast, links and mobile reading checked. Source Desk remains for final confirmation.",
+      "updated": "2026-09-30"
+    },
+    {
+      "file": "wadokei.html",
+      "title": "夏至には長く、冬至には短くなる「一刻」。",
+      "series": "TIME",
+      "stage": "final-review",
+      "location": "/prototype/articles/wadokei.html",
+      "checks": {
+        "text": true,
+        "sources": false,
+        "visuals": true,
+        "layout": true,
+        "links": true
+      },
+      "note": "Category and voice format pass complete: language rhythm, spacing, title fit, contrast, links and mobile reading checked. Source Desk remains for final confirmation.",
+      "updated": "2026-09-30"
+    },
+    {
+      "file": "what-codependency-is-and-isnt.html",
+      "title": "共依存とは何か、何ではないか。",
+      "series": "HOLOS PSYCHOLOGY NOTE",
+      "stage": "final-review",
+      "location": "/prototype/articles/what-codependency-is-and-isnt.html",
+      "checks": {
+        "text": true,
+        "sources": false,
+        "visuals": true,
+        "layout": true,
+        "links": true
+      },
+      "note": "Category and voice format pass complete: language rhythm, spacing, title fit, contrast, links and mobile reading checked. Source Desk remains for final confirmation.",
+      "updated": "2026-09-30"
+    },
+    {
+      "file": "what-does-100-trillion-build.html",
+      "title": "百兆円で、何を直せただろう",
+      "series": "MONEY",
+      "stage": "approved",
+      "location": "WATCH THE NOW / ECONOMY COLUMN",
+      "checks": {
+        "text": true,
+        "sources": true,
+        "visuals": true,
+        "layout": true,
+        "links": true
+      },
+      "note": "本文・一次資料・カテゴリ別デザイン・コントラスト・本文ウェイト・関連記事導線を最終確認し、公開OK。",
+      "updated": "2026-09-29T23:59:00+09:00"
+    },
+    {
+      "file": "who-chooses-the-tool.html",
+      "title": "誰が道具を選ぶのか",
+      "series": "WHOLE EARTH, NOW?",
+      "stage": "final-review",
+      "location": "/prototype/articles/who-chooses-the-tool.html",
+      "checks": {
+        "text": true,
+        "sources": false,
+        "visuals": true,
+        "layout": true,
+        "links": true
+      },
+      "note": "Category and voice format pass complete: language rhythm, spacing, title fit, contrast, links and mobile reading checked. Source Desk remains for final confirmation.",
+      "updated": "2026-09-30"
+    },
+    {
+      "file": "who-is-feeding-whom.html",
+      "title": "世話をしているのは、どちらだろう。",
+      "series": "CARE",
+      "stage": "approved",
+      "location": "TEAM HOLOS / CARE COLUMN",
+      "checks": {
+        "text": true,
+        "sources": true,
+        "visuals": true,
+        "layout": true,
+        "links": true
+      },
+      "note": "hachico確認済みの最終版。本文、Source Desk、デザイン、関連導線を確認し公開OK。",
+      "updated": "2026-09-29T19:35:00+09:00"
+    },
+    {
+      "file": "who-is-speaking.html",
+      "title": "「私」と言うのは、誰か",
+      "series": "TEAM HOLOS",
+      "stage": "approved",
+      "location": "TEAM HOLOS / RESEARCH WINDOW",
+      "checks": {
+        "text": true,
+        "sources": true,
+        "visuals": true,
+        "layout": true,
+        "links": true
+      },
+      "note": "TEAM HOLOS / RESEARCH WINDOWの公開OK稿。専門記事の窓として分類・相互リンク・収蔵カード・出典導線を確認済み。",
+      "updated": "2026-09-29T13:00:00+09:00"
+    },
+    {
+      "file": "who-is-watching.html",
+      "title": "見ているのは、誰か",
+      "series": "MICHIKUSA",
+      "stage": "approved",
+      "location": "/prototype/articles/who-is-watching.html",
+      "checks": {
+        "text": true,
+        "sources": true,
+        "visuals": true,
+        "layout": true,
+        "links": true
+      },
+      "note": "Approved by hachico after TEAM HOLOS MICHIKUSA format and language review; cleared for public build.",
+      "updated": "2026-09-30"
+    },
+    {
+      "file": "who-may-move-the-object.html",
+      "title": "誰が、その物を動かせるのか",
+      "series": "MICHIKUSA",
+      "stage": "approved",
+      "location": "/prototype/articles/who-may-move-the-object.html",
+      "checks": {
+        "text": true,
+        "sources": true,
+        "visuals": true,
+        "layout": true,
+        "links": true
+      },
+      "note": "Approved by hachico after TEAM HOLOS MICHIKUSA format and language review; cleared for public build.",
+      "updated": "2026-09-30"
+    },
+    {
+      "file": "who-moderates-the-commons.html",
+      "title": "自由な広場を、誰が手入れするのか",
+      "series": "WHOLE EARTH, NOW?",
+      "stage": "final-review",
+      "location": "/prototype/articles/who-moderates-the-commons.html",
+      "checks": {
+        "text": true,
+        "sources": false,
+        "visuals": true,
+        "layout": true,
+        "links": true
+      },
+      "note": "Category and voice format pass complete: language rhythm, spacing, title fit, contrast, links and mobile reading checked. Source Desk remains for final confirmation.",
+      "updated": "2026-09-30"
+    },
+    {
+      "file": "who-remembers.html",
+      "title": "覚えているのは、誰か",
+      "series": "MICHIKUSA",
+      "stage": "approved",
+      "location": "/prototype/articles/who-remembers.html",
+      "checks": {
+        "text": true,
+        "sources": true,
+        "visuals": true,
+        "layout": true,
+        "links": true
+      },
+      "note": "Approved by hachico after TEAM HOLOS MICHIKUSA format and language review; cleared for public build.",
+      "updated": "2026-09-30"
+    },
+    {
+      "file": "who-speaks-for-the-river.html",
+      "title": "川を、判断の当事者にできるか",
+      "series": "WHOLE EARTH, NOW?",
+      "stage": "final-review",
+      "location": "/prototype/articles/who-speaks-for-the-river.html",
+      "checks": {
+        "text": true,
+        "sources": false,
+        "visuals": true,
+        "layout": true,
+        "links": true
+      },
+      "note": "Category and voice format pass complete: language rhythm, spacing, title fit, contrast, links and mobile reading checked. Source Desk remains for final confirmation.",
+      "updated": "2026-09-30"
+    },
+    {
+      "file": "who-worked-in-utopia.html",
+      "title": "理想郷の台所を、誰が支えたのか",
+      "series": "THE WHOLE EARTH NETWORK",
+      "stage": "final-review",
+      "location": "/prototype/articles/who-worked-in-utopia.html",
+      "checks": {
+        "text": true,
+        "sources": false,
+        "visuals": true,
+        "layout": true,
+        "links": true
+      },
+      "note": "Category and voice format pass complete: language rhythm, spacing, title fit, contrast, links and mobile reading checked. Source Desk remains for final confirmation.",
+      "updated": "2026-09-30"
+    },
+    {
+      "file": "whole-earth-catalog.html",
+      "title": "インターネットより前に、世界をつないだ本",
+      "series": "WHOLE EARTH, NOW?",
+      "stage": "final-review",
+      "location": "/prototype/articles/whole-earth-catalog.html",
+      "checks": {
+        "text": true,
+        "sources": false,
+        "visuals": true,
+        "layout": true,
+        "links": true
+      },
+      "note": "Category and voice format pass complete: language rhythm, spacing, title fit, contrast, links and mobile reading checked. Source Desk remains for final confirmation.",
+      "updated": "2026-09-30"
+    },
+    {
+      "file": "whole-earth-without-human-arrogance.html",
+      "title": "人間を、中心から少しずらす",
+      "series": "WHOLE EARTH, NOW?",
+      "stage": "final-review",
+      "location": "/prototype/articles/whole-earth-without-human-arrogance.html",
+      "checks": {
+        "text": true,
+        "sources": false,
+        "visuals": true,
+        "layout": true,
+        "links": true
+      },
+      "note": "Category and voice format pass complete: language rhythm, spacing, title fit, contrast, links and mobile reading checked. Source Desk remains for final confirmation.",
+      "updated": "2026-09-30"
+    },
+    {
+      "file": "wild-mind.html",
+      "title": "野生は、未開ではない",
+      "series": "ANTHROPOLOGY",
+      "stage": "final-review",
+      "location": "/prototype/articles/wild-mind.html",
+      "checks": {
+        "text": true,
+        "sources": false,
+        "visuals": true,
+        "layout": true,
+        "links": true
+      },
+      "note": "Category and voice format pass complete: language rhythm, spacing, title fit, contrast, links and mobile reading checked. Source Desk remains for final confirmation.",
+      "updated": "2026-09-30"
+    },
+    {
+      "file": "wired-utopia.html",
+      "title": "未来は、なぜ光る画面の中に見えたのか",
+      "series": "WHOLE EARTH, NOW?",
+      "stage": "final-review",
+      "location": "/prototype/articles/wired-utopia.html",
+      "checks": {
+        "text": true,
+        "sources": false,
+        "visuals": true,
+        "layout": true,
+        "links": true
+      },
+      "note": "Category and voice format pass complete: language rhythm, spacing, title fit, contrast, links and mobile reading checked. Source Desk remains for final confirmation.",
+      "updated": "2026-09-30"
+    },
+    {
+      "file": "pages/she-creates-seasonal-letter-subscriber.html",
+      "title": "THE BODY ALMANAC — SHE CREATES / HOLOS 88",
+      "series": "HOLOS 88",
+      "stage": "approved",
+      "location": "SHE CREATES / MEMBER EDITION / ISSUE 00",
+      "checks": {
+        "text": true,
+        "sources": true,
+        "visuals": true,
+        "layout": true,
+        "links": true
+      },
+      "note": "公開OK。SheCreates会員版として日本語、誌面、図版、会員導線を確認。ARCHIVE REGISTERからVisual Collectionへ接続。専門家監修前である範囲は共通注記と制作記録で管理。",
+      "updated": "2026-09-29T23:05:00+09:00"
+    },
+    {
+      "file": "pages/she-creates-seasonal-letter.html",
+      "title": "THE BODY ALMANAC — SHE CREATES / HOLOS 88",
+      "series": "HOLOS 88",
+      "stage": "approved",
+      "location": "SHE CREATES / FREE LETTER / ISSUE 00",
+      "checks": {
+        "text": true,
+        "sources": true,
+        "visuals": true,
+        "layout": true,
+        "links": true
+      },
+      "note": "公開OK。SheCreates無料版として日本語、誌面、図版、無料・有料導線を確認。ARCHIVE REGISTERからVisual Collectionへ接続。",
+      "updated": "2026-09-29T23:05:00+09:00"
+    },
+    {
+      "file": "pages/substack-letter-preview.html",
+      "title": "HOLOS 88 LETTER — ISSUE 001",
+      "series": "HOLOS 88",
+      "stage": "approved",
+      "location": "SUBSTACK / FREE LETTER / ISSUE 001",
+      "checks": {
+        "text": true,
+        "sources": true,
+        "visuals": true,
+        "layout": true,
+        "links": true
+      },
+      "note": "TEAM HOLOS無料レターの最終版。本文、出典、デザイン、無料／会員動線を確認し公開OK。",
+      "updated": "2026-09-29T19:35:00+09:00"
+    },
+    {
+      "file": "pages/watch-the-now-2026-09-26-subscriber.html",
+      "title": "WATCH THE NOW — HOLOS 88",
+      "series": "HOLOS 88",
+      "stage": "final-review",
+      "location": "",
+      "checks": {
+        "text": false,
+        "sources": false,
+        "visuals": false,
+        "layout": false,
+        "links": false
+      },
+      "note": "",
+      "updated": null
+    },
+    {
+      "file": "pages/watch-the-now-2026-09-26.html",
+      "title": "WATCH THE NOW — HOLOS 88",
+      "series": "HOLOS 88",
+      "stage": "final-review",
+      "location": "",
+      "checks": {
+        "text": false,
+        "sources": false,
+        "visuals": false,
+        "layout": false,
+        "links": false
+      },
+      "note": "",
+      "updated": null
+    },
+    {
+      "file": "pages/watch-the-now-preview.html",
+      "title": "WATCH THE NOW — HOLOS 88",
+      "series": "HOLOS 88",
+      "stage": "final-review",
+      "location": "",
+      "checks": {
+        "text": false,
+        "sources": false,
+        "visuals": false,
+        "layout": false,
+        "links": false
+      },
+      "note": "",
+      "updated": null
+    }
+  ]
+}
