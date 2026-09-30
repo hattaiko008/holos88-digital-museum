@@ -1591,33 +1591,33 @@
       "file": "pages/watch-the-now-2026-09-26-subscriber.html",
       "title": "WATCH THE NOW — HOLOS 88",
       "series": "HOLOS 88",
-      "stage": "final-review",
+      "stage": "approved",
       "location": "",
       "checks": {
-        "text": false,
-        "sources": false,
-        "visuals": false,
-        "layout": false,
-        "links": false
+        "text": true,
+        "sources": true,
+        "visuals": true,
+        "layout": true,
+        "links": true
       },
-      "note": "",
-      "updated": null
+      "note": "公開OK。WATCH THE NOW創刊号として本文・誌面・図版・出典導線を確認。購読版はサービス内容を伝える期間限定の全文公開サンプルとして表示。",
+      "updated": "2026-10-01T03:30:00+09:00"
     },
     {
       "file": "pages/watch-the-now-2026-09-26.html",
       "title": "WATCH THE NOW — HOLOS 88",
       "series": "HOLOS 88",
-      "stage": "final-review",
+      "stage": "approved",
       "location": "",
       "checks": {
-        "text": false,
-        "sources": false,
-        "visuals": false,
-        "layout": false,
-        "links": false
+        "text": true,
+        "sources": true,
+        "visuals": true,
+        "layout": true,
+        "links": true
       },
-      "note": "",
-      "updated": null
+      "note": "公開OK。WATCH THE NOW創刊号として本文・誌面・図版・出典導線を確認。購読版はサービス内容を伝える期間限定の全文公開サンプルとして表示。",
+      "updated": "2026-10-01T03:30:00+09:00"
     },
     {
       "file": "pages/watch-the-now-preview.html",
