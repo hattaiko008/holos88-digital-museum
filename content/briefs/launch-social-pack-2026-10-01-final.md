@@ -1,6 +1,6 @@
 # HOLOS 88｜公開・SNS ローンチパック
 
-更新日: 2026-10-01  
+更新日: 2026-10-01
 状態: 投稿前確認版。外部投稿・メール配信は未実行。
 
 ## 公開判定
@@ -13,14 +13,14 @@
 
 ## 最初に案内する三つの窓
 
-1. **ECHO / MUSEUM**  
-   「恐怖のあとに、何が残るのか」  
+1. **ECHO / MUSEUM**
+   「恐怖のあとに、何が残るのか」
    `/prototype/articles/archaeology-of-fear.html`
-2. **SHE CREATES**  
-   「もう一つ足す、その前に」  
+2. **SHE CREATES**
+   「もう一つ足す、その前に」
    `/prototype/articles/before-another-supplement.html`
-3. **WATCH THE NOW**  
-   「押すのをやめたボタン」  
+3. **WATCH THE NOW**
+   「押すのをやめたボタン」
    `/prototype/articles/the-button-we-stopped-pressing.html`
 
 ## 公開日の短い紹介
@@ -33,6 +33,21 @@ HOLOS 88を開きます。
 
 ## Instagram
 
+### 最初のプロフィール展示
+
+- 最初の12投稿は、3列 × 4行で一つの展示壁になるローンチグリッドを使う。
+- HOLOS 88と `@loveit_tonerico` に同じ12枚を掲載する。
+- HOLOS 88は「新しいデジタルMuseumの本館」、`@loveit_tonerico` は「TONERICOから続く道を既存のフォロワーへ案内する入口」とする。
+- 画像と投稿順は `content/assets/social/instagram-launch-grid-01/` に保存。
+- 途中の11枚は無言または一語、完成する12枚目で公開の意味と正規URLを伝える。
+
+`@loveit_tonerico` の橋渡し文:
+
+> 実体のある店を閉じたあとも、集めることは終わりませんでした。
+> 今度は、思考のミュージアムへ。
+> TONERICOからLoveitへ、そしてHOLOS 88へ。
+> 同じ道が、かたちを変えて続いています。
+
 ### 公開日のキャプション
 
 HOLOS 88を開きます。
@@ -41,8 +56,8 @@ HOLOS 88を開きます。
 
 最初に開くのは38の窓。
 
-ECHOから「恐怖のあとに、何が残るのか」。  
-SHE CREATESから「もう一つ足す、その前に」。  
+ECHOから「恐怖のあとに、何が残るのか」。
+SHE CREATESから「もう一つ足す、その前に」。
 WATCH THE NOWから「押すのをやめたボタン」。
 
 読む順番はありません。プロフィールのリンクから、いま気になる窓へ。
@@ -73,7 +88,7 @@ HOLOS 88を公開します。
 
 記事、図版、収蔵カードを通して、哲学・思想・政治・身体・自然・歴史・暮らしの関係を辿るデジタルMuseumです。
 
-最初に開くのは38の窓。  
+最初に開くのは38の窓。
 WORLDS TO ENTERから、いま気になる世界へ。
 
 ［正規URL］
