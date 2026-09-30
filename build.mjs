@@ -62,6 +62,11 @@ const addArticleReturnNav=document=>{
   const nav=`<nav class="article-return-nav" id="article-top" aria-label="記事の移動"><a href="#article-top">↑ ARTICLE TOP</a><a href="/">⌂ HOME</a></nav><style>.article-return-nav{position:fixed;z-index:350;left:1rem;bottom:1rem;display:flex;background:rgba(244,241,233,.94);color:#171714;border:1px solid rgba(23,23,20,.45);box-shadow:0 5px 22px rgba(0,0,0,.12);backdrop-filter:blur(8px)}.article-return-nav a{display:block;padding:.72rem .85rem;color:inherit!important;text-decoration:none!important;font:700 8px/1 Arial,sans-serif;letter-spacing:.12em}.article-return-nav a+a{border-left:1px solid rgba(23,23,20,.35)}.article-return-nav a:hover,.article-return-nav a:focus-visible{background:#171714;color:#f4f1e9!important}@media(max-width:760px){.article-return-nav{left:.65rem;bottom:.65rem}.article-return-nav a{min-height:42px;display:flex;align-items:center}}</style>`;
   return document.replace(/<body([^>]*)>/i,`<body$1>${nav}`);
 };
+const upgradeTrailAccount=document=>{
+  if(!document.includes('class="trail-account"')||document.includes('class="trail-account-action"'))return document;
+  const block=`<aside class="trail-account"><p>TAKE YOUR HOLOS WITH YOU / HOLOS LETTER</p><h3>この足跡を、あなたのものに。</h3><p>新しい窓や展示、季節のレターをメールでお届けします。読んだ窓と残した星は、現在この端末の中に保存されます。将来のMY HOLOSでは、別の端末からも同じ足跡を辿れるように準備しています。</p><div class="trail-account-action"><a href="https://holos88.substack.com" rel="external">無料レターを受け取る <span>↗</span></a></div><small>登録はSubstackで行います。MY HOLOSの足跡同期機能は準備中です。</small></aside>`;
+  return document.replace(/<aside class="trail-account">[\s\S]*?<\/aside>/,block);
+};
 for(const file of await readdir(articleDirectory)){
   if(!file.endsWith('.html'))continue;
   const target=new URL(file,articleDirectory);
@@ -77,6 +82,7 @@ for(const file of await readdir(articleDirectory)){
     const block=feedbackBlock(file,title);
     article=insertFeedback(article,block);
   }
+  article=upgradeTrailAccount(article);
   article=addArticleReturnNav(article);
   await writeFile(target,article);
 }
@@ -130,6 +136,7 @@ for(const article of editorialStatus.articles.filter(item=>['approved','publishe
     const block=feedbackBlock(article.file,article.title);
     document=insertFeedback(document,block);
   }
+  document=upgradeTrailAccount(document);
   document=addArticleReturnNav(document);
   await writeFile(target,document);
 }
