@@ -4,6 +4,7 @@ import { readFile, writeFile, access, cp, mkdir, rm, readdir } from 'node:fs/pro
 import {buildEditorial} from './lib/editorial.mjs';
 import {buildReconstruction} from './lib/reconstruction.mjs';
 import {buildApprovedEchoText} from './lib/approved-echo-text.mjs';
+import {buildMemberWindowPreviews} from './lib/member-window-previews.mjs';
 const data = JSON.parse(await readFile(new URL('./collection.json',import.meta.url),'utf8'));
 await mkdir(new URL('./dist/assets/collection/',import.meta.url),{recursive:true});
 await cp(new URL('./content/assets/collection/',import.meta.url),new URL('./dist/assets/collection/',import.meta.url),{recursive:true,force:true});
@@ -38,6 +39,7 @@ await buildEditorial(data,articles);
 await buildArticles(articles);
 await buildReconstruction();
 await buildApprovedEchoText();
+await buildMemberWindowPreviews();
 await rm(new URL('./dist/prototype/',import.meta.url),{recursive:true,force:true});
 await mkdir(new URL('./dist/prototype/',import.meta.url),{recursive:true});
 const prototypeSource=new URL('./prototype/reconstruction-01/',import.meta.url);

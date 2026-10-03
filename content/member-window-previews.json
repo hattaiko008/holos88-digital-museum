@@ -1,0 +1,119 @@
+{
+  "version": 1,
+  "substack": "https://holos88.substack.com/subscribe",
+  "patreon": "https://www.patreon.com/HOLOS88",
+  "items": [
+    {
+      "slug": "season-observation-notes-member",
+      "series": "SHE CREATES",
+      "title": "衣服と乾燥を見ておく、小さな季節ノート",
+      "lead": "肌の感じと、空気や衣服の変化を同じページへ。理由を急いで決めず、日々の違いを記録するための道草です。",
+      "outline": [
+        "一日の変化を残す",
+        "季節と生活を分けて見返す",
+        "相談に持っていくメモ"
+      ],
+      "status": "planned",
+      "sourceArticle": "the-season-beneath-the-skin"
+    },
+    {
+      "slug": "food-observation-notes-member",
+      "series": "SHE CREATES",
+      "title": "何かを足す前に、食卓を見返す",
+      "lead": "新しいものを買う前に、食べたものと暮らしの時間を残す。栄養の知識を、自分の日常へ戻すための入口です。",
+      "outline": [
+        "食卓の一行メモ",
+        "情報と体験を分ける",
+        "服薬や不調を相談する材料"
+      ],
+      "status": "planned",
+      "sourceArticle": "before-another-supplement"
+    },
+    {
+      "slug": "light-observation-notes-member",
+      "series": "SHE CREATES",
+      "title": "日が短くなる頃の、眠りのノート",
+      "lead": "朝と夜の過ごし方を、光の変化と一緒に記録する。気分の理由を季節だけに決めないための道草です。",
+      "outline": [
+        "朝と夜の記録",
+        "生活の時間を見返す",
+        "一つの原因にまとめない"
+      ],
+      "status": "planned",
+      "sourceArticle": "the-melancholy-of-shorter-days"
+    },
+    {
+      "slug": "seasonal-table-notes-member",
+      "series": "SHE CREATES",
+      "title": "旬の食卓を、自分の暮らしで読む",
+      "lead": "旬の名前を覚えるだけでなく、調理や食後の感じも残してみる。食べ方の違いを知るための小さなノートです。",
+      "outline": [
+        "食卓の観察",
+        "同じ食材の違う食べ方",
+        "自分に合うかを決めつけない"
+      ],
+      "status": "planned",
+      "sourceArticle": "season-is-not-a-prescription"
+    },
+    {
+      "slug": "plant-label-notes-member",
+      "series": "SHE CREATES",
+      "title": "一枚の葉から、瓶のラベルまで",
+      "lead": "植物の名前から、使う部位や製法へ。身近な瓶を手に取りながら、分かることと分からないことを読み分けます。",
+      "outline": [
+        "ラベルに書かれたこと",
+        "元の植物と製品の違い",
+        "相談のための製品メモ"
+      ],
+      "status": "planned",
+      "sourceArticle": "before-a-plant-became-a-remedy"
+    },
+    {
+      "slug": "symbol-reflection-notes-member",
+      "series": "SHE CREATES",
+      "title": "受け取った言葉を、暮らしへ戻す",
+      "lead": "月や星の言葉を、自分の答えとして急いで受け取らず、日々を見直す問いへ。判断を預けすぎないための道草です。",
+      "outline": [
+        "事実と解釈を分ける",
+        "象徴から得た問い",
+        "選び直せる余白"
+      ],
+      "status": "planned",
+      "sourceArticle": "symbols-do-not-diagnose-us"
+    },
+    {
+      "slug": "body-clock-observation-notes-member",
+      "series": "SHE CREATES",
+      "title": "身体の時計を記録する、小さなノート",
+      "lead": "月を見上げた日と、身体の変化を記した日。理由を一つに決める前に、暮らしにあったことを残しておく。いくつもの時間を、ゆっくり見返すノートです。",
+      "outline": [
+        "違う時計をほどく",
+        "一日にひとつ残す",
+        "一緒に起きたことと原因を分ける",
+        "相談へ持っていく",
+        "一行の観察ノート"
+      ],
+      "status": "review-draft",
+      "sourceArticle": "the-body-keeps-more-than-one-clock",
+      "opening": [
+        "月を見上げた日と、眠りにくかった日が、たまたま重なることがあります。手帳に二つの印が並ぶと、何か関係があるのかもしれない、と考えたくなる。そんなとき、すぐに答えを決めず、ほかに何があったかも残しておく。今回のノートは、そのためのものです。",
+        "手帳には、日付を順番に並べられます。でも、そこに残す身体の変化は、いつも同じ間隔ではありません。眠り、食欲、肌の感じ。その日ごとの違いを、ひとつの数字へ急いでまとめずに見ていきましょう。",
+        "まずは、気になっていることを一つ。書ける日に短く残し、あとで生活の時間と一緒に見返します。空白の日も含めて、自分の暮らしを思い出せる記録へ。その始め方と、理由を考えるときの手掛かりを、この先でほどいていきます。"
+      ]
+    },
+    {
+      "slug": "news-observation-notes-member",
+      "series": "WATCH THE NOW",
+      "title": "数字のあとに、暮らしを見ておく",
+      "lead": "ニュースの発表が終わったあと、値札や仕事や町で何が変わったか。見出しの続きを追うための、会員向けMICHIKUSAの入口です。",
+      "outline": [
+        "発表を日付と一緒に残す",
+        "数字の定義へ戻る",
+        "変化と解釈を分ける",
+        "翌号で確かめ直す"
+      ],
+      "status": "planned",
+      "sourceArticle": null
+    }
+  ]
+}
