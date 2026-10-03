@@ -1,0 +1,55 @@
+/* Approved ECHO text editions: horizontal Japanese headings and steady reading space. */
+:is(.page-stopped-button,.page-who-is-speaking) .article-body>h2:not(.section-marker){
+  max-width:none;width:auto;margin:3.25rem 0 1.1rem;
+  font:500 clamp(1.2rem,1.8vw,1.55rem)/1.65 var(--jp);
+  letter-spacing:.025em;text-wrap:balance;overflow-wrap:normal;
+}
+:is(.page-stopped-button,.page-who-is-speaking) .article-title-ja{min-width:0;max-width:42rem}
+:is(.page-stopped-button,.page-who-is-speaking) .article-title-ja p:last-child{
+  font:400 clamp(1rem,1.35vw,1.15rem)/1.8 var(--jp);letter-spacing:.02em;text-wrap:balance;
+}
+.page-stopped-button :is(.button-ending,.button-pullquote) b{
+  font:500 clamp(1.25rem,2.2vw,1.9rem)/1.6 var(--jp);text-wrap:balance;letter-spacing:.025em;
+}
+@media(max-width:760px){
+  :is(.page-stopped-button,.page-who-is-speaking) .article-body>h2:not(.section-marker){
+    font-size:clamp(1rem,5.5vw,1.15rem);margin-top:2.75rem;margin-bottom:1rem;line-height:1.65;
+  }
+  .page-stopped-button :is(.button-ending,.button-pullquote){margin-block:2.75rem;padding:1.1rem}
+  .page-stopped-button :is(.button-ending,.button-pullquote) b{font-size:1.2rem}
+  :is(.page-stopped-button,.page-who-is-speaking) .article-title-ja p:last-child{font-size:1rem}
+}
+
+@media(min-width:761px) and (max-width:1200px){
+  .page-who-is-speaking :is(.consciousness-evidence,.receiver-diagram,.consciousness-collection-card){
+    margin-left:0;margin-right:0;width:100%;max-width:100%;
+  }
+}
+
+/* Break Japanese subheadings at editorial phrase boundaries, never mid-phrase. */
+:is(.page-stopped-button,.page-who-is-speaking) .article-body>h2 .heading-phrase{
+  display:inline;font:inherit;letter-spacing:inherit;margin:0;
+}
+@media(max-width:760px){
+  :is(.page-stopped-button,.page-who-is-speaking) .article-body>h2 .heading-phrase{
+    display:block;white-space:nowrap;
+  }
+}
+
+/* Circuit cells must shrink within their frame; labels fit the available cell width. */
+.page-stopped-button .button-circuit>div{grid-template-columns:repeat(4,minmax(0,1fr))}
+.page-stopped-button .button-circuit span{min-width:0;container-type:inline-size}
+.page-stopped-button .button-circuit b{font-size:min(1.8rem,18cqi);white-space:nowrap}
+@media(max-width:700px){
+  .page-stopped-button .button-circuit>div{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .page-stopped-button .button-circuit span{padding:1rem .75rem}
+}
+
+.page-stopped-button .button-pullquote .quote-sentence{display:block}
+.page-stopped-button .button-pullquote .quote-phrase{display:inline}
+@media(max-width:760px){
+  .page-stopped-button .button-pullquote{padding:1.1rem .5rem}
+  .page-stopped-button .button-pullquote b{font-size:clamp(.9375rem,5vw,1.1rem);letter-spacing:0}
+  .page-stopped-button .button-pullquote .quote-sentence,
+  .page-stopped-button .button-pullquote .quote-phrase{display:block;white-space:nowrap}
+}

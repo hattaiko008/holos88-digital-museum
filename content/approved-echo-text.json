@@ -1,0 +1,33 @@
+{
+  "articles": [
+    {
+      "slug": "the-button-we-stopped-pressing",
+      "master": "content/drafts/echo/the-button-we-stopped-pressing.md",
+      "template": "content/templates/approved-echo/the-button-we-stopped-pressing.html",
+      "bodyStart": "古い建物のエレベーター",
+      "auxiliaryHeading": "## MICHIKUSA / NEXT WINDOWS",
+      "sectionCount": 9,
+      "layoutHeadings": [
+        "「どうせ」と思うまで",
+        "「何をしても無駄だ」と学んでしまう",
+        "民主主義という、巨大な機械",
+        "人々が諦めれば、権力は何もしなくていい",
+        "「関心を持て」だけでは、人は動けない",
+        "一度うまくいっただけでは、信頼は戻らない",
+        "希望は、気持ちだけでは続かない",
+        "直ったボタンの前で"
+      ],
+      "approval": "2026-10-03 本文・画面・公開承認済み。",
+      "masterHeadings": [
+        "「どうせ」という、小さな予言",
+        "学習された無力",
+        "民主主義は、巨大すぎる機械である",
+        "諦めは、権力にとって安い",
+        "「関心を持て」は、残酷な命令になりうる",
+        "一度の勝利では、学び直せない",
+        "希望は、気分ではなく設備である",
+        "直ったボタンの前で"
+      ]
+    }
+  ]
+}
