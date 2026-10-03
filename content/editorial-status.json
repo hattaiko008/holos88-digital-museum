@@ -103,7 +103,7 @@
       "file": "apology-receipt.html",
       "title": "謝罪したあと、何を変えたのか",
       "series": "APOLOGY",
-      "stage": "approved",
+      "stage": "published",
       "location": "ECHO / APOLOGY · REPARATION · NON-RECURRENCE",
       "checks": {
         "text": true,
@@ -112,8 +112,8 @@
         "layout": true,
         "links": true
       },
-      "note": "公開OK。Echoの導入・解説を加筆し、二つの時計、謝罪の五段階、領収書、修理の視覚ブロックを追加。SOURCE DESKは外務省一次資料3点と国連総会決議60/147へ接続済み。",
-      "updated": "2026-09-29T14:00:00+09:00"
+      "note": "hachico approved the 2000–2200-character revision, semantic line breaks, compact figures and contrast adjustments; publication replacement authorized 2026-10-03.",
+      "updated": "2026-10-03"
     },
     {
       "file": "appropriate-for-whom.html",
@@ -535,7 +535,7 @@
       "file": "hegel-recognition.html",
       "title": "認められたい私たち",
       "series": "PHILOSOPHY",
-      "stage": "approved",
+      "stage": "published",
       "location": "TEAM HOLOS / PHILOSOPHY COLUMN",
       "checks": {
         "text": true,
@@ -544,8 +544,8 @@
         "layout": true,
         "links": true
       },
-      "note": "hachico最終確認済み。本文、デザイン、Source Desk、関連書籍（斎藤幸平ほか）とAmazon通常検索リンクを確認し公開OK。",
-      "updated": "2026-09-30T00:00:00+09:00"
+      "note": "hachico approved the 2000–2200-character revision, semantic line breaks, compact figures and contrast adjustments; publication replacement authorized 2026-10-03.",
+      "updated": "2026-10-03"
     },
     {
       "file": "horse-time.html",
@@ -599,7 +599,7 @@
       "file": "is-this-an-alliance-or-a-toxic-relationship.html",
       "title": "それ、同盟ですか。不健全な関係ですか。",
       "series": "DIPLOMACY",
-      "stage": "approved",
+      "stage": "published",
       "location": "TEAM HOLOS / DIPLOMACY COLUMN",
       "checks": {
         "text": true,
@@ -608,8 +608,8 @@
         "layout": true,
         "links": true
       },
-      "note": "hachico公開OK（2026-09-29）。誤字・表示・リンク・時点依存情報を確認済み。キーワード別の関連読書棚を追加（直接の出典とは分離）。",
-      "updated": "2026-09-29T18:00:00+09:00"
+      "note": "hachico approved the 2000–2200-character revision, semantic line breaks, compact figures and contrast adjustments; publication replacement authorized 2026-10-03.",
+      "updated": "2026-10-03"
     },
     {
       "file": "kaleidoscope.html",
@@ -935,7 +935,7 @@
       "file": "the-button-we-stopped-pressing.html",
       "title": "押すのをやめたボタン",
       "series": "LEARNED HELPLESSNESS",
-      "stage": "approved",
+      "stage": "published",
       "location": "TEAM HOLOS / COLUMN",
       "checks": {
         "text": true,
@@ -944,14 +944,14 @@
         "layout": true,
         "links": true
       },
-      "note": "hachico公開OK（2026-09-29）。自然な日本語、図解キャプション、余白、PC表示、リンクを確認済み。",
-      "updated": "2026-09-29T16:55:00+09:00"
+      "note": "hachico approved the 2000–2200-character revision, semantic line breaks, compact figures and contrast adjustments; publication replacement authorized 2026-10-03.",
+      "updated": "2026-10-03"
     },
     {
       "file": "the-chair-that-became-more-beautiful-after-we-bought-it.html",
       "title": "買ったあとで、美しくなる椅子",
       "series": "SELF-JUSTIFICATION",
-      "stage": "approved",
+      "stage": "published",
       "location": "TEAM HOLOS / COLUMN",
       "checks": {
         "text": true,
@@ -960,8 +960,8 @@
         "layout": true,
         "links": true
       },
-      "note": "hachico公開OK（2026-09-29）。自然な日本語、図解キャプション、余白、PC表示、リンクを確認済み。",
-      "updated": "2026-09-29T16:55:00+09:00"
+      "note": "hachico approved the 2000–2200-character revision, semantic line breaks, compact figures and contrast adjustments; publication replacement authorized 2026-10-03.",
+      "updated": "2026-10-03"
     },
     {
       "file": "the-colonial-gaze.html",
@@ -1095,7 +1095,7 @@
       "file": "the-judge-who-would-not-bow.html",
       "title": "法の前で、頭を下げなかった人",
       "series": "LAW",
-      "stage": "approved",
+      "stage": "published",
       "location": "TEAM HOLOS / LAW COLUMN",
       "checks": {
         "text": true,
@@ -1104,8 +1104,8 @@
         "layout": true,
         "links": true
       },
-      "note": "本文・一次資料・カテゴリ別デザイン・コントラスト・本文ウェイト・関連記事導線を最終確認し、公開OK。",
-      "updated": "2026-09-29T23:59:00+09:00"
+      "note": "hachico approved the 2000–2200-character revision, semantic line breaks, compact figures and contrast adjustments; publication replacement authorized 2026-10-03.",
+      "updated": "2026-10-03"
     },
     {
       "file": "the-long-now-needs-a-short-today.html",
@@ -1175,7 +1175,7 @@
       "file": "the-red-carpet-is-a-map.html",
       "title": "赤絨毯は、力関係を描く地図である",
       "series": "DIPLOMACY",
-      "stage": "approved",
+      "stage": "published",
       "location": "WATCH THE NOW / DIPLOMACY COLUMN",
       "checks": {
         "text": true,
@@ -1184,14 +1184,14 @@
         "layout": true,
         "links": true
       },
-      "note": "本文・一次資料・カテゴリ別デザイン・コントラスト・本文ウェイト・関連記事導線を最終確認し、公開OK。",
-      "updated": "2026-09-29T23:59:00+09:00"
+      "note": "hachico approved the 2000–2200-character revision, semantic line breaks, compact figures and contrast adjustments; publication replacement authorized 2026-10-03.",
+      "updated": "2026-10-03"
     },
     {
       "file": "the-rope-that-lets-a-ship-leave.html",
       "title": "船をつなぐ綱は、船を留めるためだけにあるのか",
       "series": "ATTACHMENT",
-      "stage": "approved",
+      "stage": "published",
       "location": "TEAM HOLOS / RELATIONSHIP COLUMN",
       "checks": {
         "text": true,
@@ -1200,8 +1200,8 @@
         "layout": true,
         "links": true
       },
-      "note": "hachico確認済みの最終版。本文、Source Desk、デザイン、関連導線を確認し公開OK。",
-      "updated": "2026-09-29T19:35:00+09:00"
+      "note": "hachico approved the 2000–2200-character revision, semantic line breaks, compact figures and contrast adjustments; publication replacement authorized 2026-10-03.",
+      "updated": "2026-10-03"
     },
     {
       "file": "the-season-beneath-the-skin.html",
@@ -1319,7 +1319,7 @@
       "file": "what-does-100-trillion-build.html",
       "title": "百兆円で、何を直せただろう",
       "series": "MONEY",
-      "stage": "approved",
+      "stage": "published",
       "location": "WATCH THE NOW / ECONOMY COLUMN",
       "checks": {
         "text": true,
@@ -1328,8 +1328,8 @@
         "layout": true,
         "links": true
       },
-      "note": "本文・一次資料・カテゴリ別デザイン・コントラスト・本文ウェイト・関連記事導線を最終確認し、公開OK。",
-      "updated": "2026-09-29T23:59:00+09:00"
+      "note": "hachico approved the 2000–2200-character revision, semantic line breaks, compact figures and contrast adjustments; publication replacement authorized 2026-10-03.",
+      "updated": "2026-10-03"
     },
     {
       "file": "who-chooses-the-tool.html",
@@ -1351,7 +1351,7 @@
       "file": "who-is-feeding-whom.html",
       "title": "世話をしているのは、どちらだろう。",
       "series": "CARE",
-      "stage": "approved",
+      "stage": "published",
       "location": "TEAM HOLOS / CARE COLUMN",
       "checks": {
         "text": true,
@@ -1360,14 +1360,14 @@
         "layout": true,
         "links": true
       },
-      "note": "hachico確認済みの最終版。本文、Source Desk、デザイン、関連導線を確認し公開OK。",
-      "updated": "2026-09-29T19:35:00+09:00"
+      "note": "hachico approved the 2000–2200-character revision, semantic line breaks, compact figures and contrast adjustments; publication replacement authorized 2026-10-03.",
+      "updated": "2026-10-03"
     },
     {
       "file": "who-is-speaking.html",
       "title": "「私」と言うのは、誰か",
       "series": "TEAM HOLOS",
-      "stage": "approved",
+      "stage": "published",
       "location": "TEAM HOLOS / RESEARCH WINDOW",
       "checks": {
         "text": true,
@@ -1376,8 +1376,8 @@
         "layout": true,
         "links": true
       },
-      "note": "TEAM HOLOS / RESEARCH WINDOWの公開OK稿。専門記事の窓として分類・相互リンク・収蔵カード・出典導線を確認済み。",
-      "updated": "2026-09-29T13:00:00+09:00"
+      "note": "hachico approved the 2000–2200-character revision, semantic line breaks, compact figures and contrast adjustments; publication replacement authorized 2026-10-03.",
+      "updated": "2026-10-03"
     },
     {
       "file": "who-is-watching.html",

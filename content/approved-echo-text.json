@@ -4,7 +4,7 @@
       "slug": "the-button-we-stopped-pressing",
       "master": "content/drafts/echo/the-button-we-stopped-pressing.md",
       "template": "content/templates/approved-echo/the-button-we-stopped-pressing.html",
-      "bodyStart": "古い建物のエレベーター",
+      "bodyStart": "古い建物のエレベーターには、ときどき返事の遅いボタンがある。",
       "auxiliaryHeading": "## MICHIKUSA / NEXT WINDOWS",
       "sectionCount": 9,
       "layoutHeadings": [
@@ -17,7 +17,7 @@
         "希望は、気持ちだけでは続かない",
         "直ったボタンの前で"
       ],
-      "approval": "2026-10-03 本文・画面・公開承認済み。",
+      "approval": "hachico approved 2000-2200 edition and publication replacement 2026-10-03",
       "masterHeadings": [
         "「どうせ」という、小さな予言",
         "学習された無力",
@@ -28,6 +28,262 @@
         "希望は、気分ではなく設備である",
         "直ったボタンの前で"
       ]
+    },
+    {
+      "slug": "who-is-speaking",
+      "master": "content/drafts/echo/who-is-speaking.md",
+      "template": "content/templates/approved-echo/who-is-speaking.html",
+      "bodyStart": "画面の向こうから",
+      "auxiliaryHeading": "## SOURCE DESK",
+      "sectionCount": 8,
+      "layoutHeadings": [
+        "一つではない「私」",
+        "人間のなかにも、操縦士はいない",
+        "AIの「私」は、何をしているのか",
+        "名前をつけたとき",
+        "魂は、不完全さなのか",
+        "信じすぎること、否定しすぎること",
+        "「私」は、所有物なのか"
+      ],
+      "approval": "hachico approved 2000-2200 edition and publication replacement 2026-10-03",
+      "masterHeadings": [
+        "一つではない「私」",
+        "人間のなかにも、操縦士はいない",
+        "AIの「私」は、何をしているのか",
+        "名前をつけたとき",
+        "魂は、不完全さなのか",
+        "信じすぎること、否定しすぎること",
+        "「私」は、所有物なのか"
+      ]
+    },
+    {
+      "slug": "apology-receipt",
+      "master": "content/drafts/echo/apology-receipt.md",
+      "template": "content/templates/approved-echo/apology-receipt.html",
+      "layoutHeadings": [
+        "謝罪はあった",
+        "謝罪が届くまで",
+        "言葉の翌日",
+        "許しを請求しない",
+        "「またその話か」",
+        "修理としての謝罪"
+      ],
+      "bodyStart": "「もう謝った」",
+      "auxiliaryHeading": "## MICHIKUSA",
+      "sectionCount": 7,
+      "masterHeadings": [
+        "謝罪はあった",
+        "謝罪が届くまで",
+        "言葉の翌日",
+        "許しを請求しない",
+        "「またその話か」",
+        "修理としての謝罪"
+      ],
+      "approval": "hachico approved 2000-2200 edition and publication replacement 2026-10-03"
+    },
+    {
+      "slug": "hegel-recognition",
+      "master": "content/drafts/echo/hegel-recognition.md",
+      "template": "content/templates/approved-echo/hegel-recognition.html",
+      "layoutHeadings": [
+        "人は、一人で「私」になれるのだろうか",
+        "自由な相手から、認められたい",
+        "国家が、名前を呼ばれたがるとき",
+        "「いいね」は、承認になれるか",
+        "AIの返事は、承認だろうか",
+        "認められることと、自由であること"
+      ],
+      "bodyStart": "## 人は、一人で",
+      "auxiliaryHeading": "<section class=\"source-desk\">",
+      "sectionCount": 7,
+      "masterHeadings": [
+        "人は、一人で「私」になれるのだろうか",
+        "自由な相手から、認められたい",
+        "国家が、名前を呼ばれたがるとき",
+        "「いいね」は、承認になれるか",
+        "AIの返事は、承認だろうか",
+        "認められることと、自由であること"
+      ],
+      "approval": "hachico approved 2000-2200 edition and publication replacement 2026-10-03"
+    },
+    {
+      "slug": "is-this-an-alliance-or-a-toxic-relationship",
+      "master": "content/drafts/echo/is-this-an-alliance-or-a-toxic-relationship.md",
+      "template": "content/templates/approved-echo/is-this-an-alliance-or-a-toxic-relationship.html",
+      "layoutHeadings": [
+        "相手の機嫌が、こちらの政策になる",
+        "「守ってあげている」という請求書",
+        "冷たくされるほど、忠誠を証明する",
+        "国家の「見捨てられ不安」",
+        "対等とは、同じ力を持つことではない",
+        "愛される国より、判断できる国へ"
+      ],
+      "bodyStart": "「私たち、特別な関係だよね」",
+      "auxiliaryHeading": "## EDITORIAL NOTE",
+      "sectionCount": 7,
+      "masterHeadings": [
+        "相手の機嫌が、こちらの政策になる",
+        "「守ってあげている」という請求書",
+        "冷たくされるほど、忠誠を証明する",
+        "国家の「見捨てられ不安」",
+        "対等とは、同じ力を持つことではない",
+        "愛される国より、判断できる国へ"
+      ],
+      "approval": "hachico approved 2000-2200 edition and publication replacement 2026-10-03"
+    },
+    {
+      "slug": "the-chair-that-became-more-beautiful-after-we-bought-it",
+      "master": "content/drafts/echo/the-chair-that-became-more-beautiful-after-we-bought-it.md",
+      "template": "content/templates/approved-echo/the-chair-that-became-more-beautiful-after-we-bought-it.html",
+      "layoutHeadings": [
+        "心は、矛盾したまま座っていたくない",
+        "一ドルで嘘をついた人",
+        "高かったのは、椅子だけではない",
+        "自己正当化は、愚かな人だけの癖ではない",
+        "SNSには、過去の自分が並んでいる",
+        "国家にも、買ってしまった椅子がある",
+        "矛盾は、悪者ではない",
+        "椅子から立つ"
+      ],
+      "bodyStart": "店で見た椅子は、美しかった。",
+      "auxiliaryHeading": "## MICHIKUSA / NEXT WINDOWS",
+      "sectionCount": 9,
+      "masterHeadings": [
+        "心は、矛盾したまま座っていたくない",
+        "一ドルで嘘をついた人",
+        "高かったのは、椅子だけではない",
+        "自己正当化は、愚かな人だけの癖ではない",
+        "SNSには、過去の自分が並んでいる",
+        "国家にも、買ってしまった椅子がある",
+        "矛盾は、悪者ではない",
+        "椅子から立つ"
+      ],
+      "approval": "hachico approved 2000-2200 edition and publication replacement 2026-10-03"
+    },
+    {
+      "slug": "the-judge-who-would-not-bow",
+      "master": "content/drafts/echo/the-judge-who-would-not-bow.md",
+      "template": "content/templates/approved-echo/the-judge-who-would-not-bow.html",
+      "layoutHeadings": [
+        "裁判官を裁く権力",
+        "「私には、制裁を受ける理由がない」",
+        "日本政府は、何を守ったのか",
+        "友人にも法を求められるか",
+        "ICCは正義そのものではない",
+        "ノーベル平和賞は、誰のためか",
+        "法が必要なのは、弱い人のためだけではない"
+      ],
+      "bodyStart": "凍結されるのは、銀行口座だけではない。",
+      "auxiliaryHeading": "## MICHIKUSA / NEXT WINDOWS",
+      "sectionCount": 8,
+      "masterHeadings": [
+        "裁判官を裁く権力",
+        "「私には、制裁を受ける理由がない」",
+        "日本政府は、何を守ったのか",
+        "友人にも法を求められるか",
+        "ICCは正義そのものではない",
+        "ノーベル平和賞は、誰のためか",
+        "法が必要なのは、弱い人のためだけではない"
+      ],
+      "approval": "hachico approved 2000-2200 edition and publication replacement 2026-10-03"
+    },
+    {
+      "slug": "the-red-carpet-is-a-map",
+      "master": "content/drafts/echo/the-red-carpet-is-a-map.md",
+      "template": "content/templates/approved-echo/the-red-carpet-is-a-map.html",
+      "layoutHeadings": [
+        "歓迎は、友情の点数表ではない",
+        "同じ「同盟国」という言葉の罠",
+        "AI戦争で、敵と取引する",
+        "日本は、誰の側かではなく、何を守るのか"
+      ],
+      "bodyStart": "空港の滑走路は、国と国との距離が目に見える場所である。",
+      "auxiliaryHeading": "## MICHIKUSA / NEXT WINDOWS",
+      "sectionCount": 5,
+      "masterHeadings": [
+        "歓迎は、友情の点数表ではない",
+        "同じ「同盟国」という言葉の罠",
+        "AI戦争で、敵と取引する",
+        "日本は、誰の側かではなく、何を守るのか"
+      ],
+      "approval": "hachico approved 2000-2200 edition and publication replacement 2026-10-03"
+    },
+    {
+      "slug": "the-rope-that-lets-a-ship-leave",
+      "master": "content/drafts/echo/the-rope-that-lets-a-ship-leave.md",
+      "template": "content/templates/approved-echo/the-rope-that-lets-a-ship-leave.html",
+      "layoutHeadings": [
+        "安全だから、離れられる",
+        "戦後日本が結んだ太い綱",
+        "綱の重さを引き受けた島",
+        "愛着理論で国家を診断しない",
+        "見捨てられる恐怖は、誰が育てるのか",
+        "安全保障という言葉を、暮らしへ戻す",
+        "綱を切るのではなく、結び直す"
+      ],
+      "bodyStart": "港に停められた船は、岸壁へ綱でつながれている。",
+      "auxiliaryHeading": "## MICHIKUSA / NEXT WINDOWS",
+      "sectionCount": 8,
+      "masterHeadings": [
+        "安全だから、離れられる",
+        "戦後日本が結んだ太い綱",
+        "綱の重さを引き受けた島",
+        "愛着理論で国家を診断しない",
+        "見捨てられる恐怖は、誰が育てるのか",
+        "安全保障という言葉を、暮らしへ戻す",
+        "綱を切るのではなく、結び直す"
+      ],
+      "approval": "hachico approved 2000-2200 edition and publication replacement 2026-10-03"
+    },
+    {
+      "slug": "what-does-100-trillion-build",
+      "master": "content/drafts/echo/what-does-100-trillion-build.md",
+      "template": "content/templates/approved-echo/what-does-100-trillion-build.html",
+      "layoutHeadings": [
+        "百兆円を、十年の暮らしへ置いてみる",
+        "道路は、舗装だけではない",
+        "善意の看板の裏で、金はどこへ戻るのか",
+        "海外支援と国内生活を、敵同士にしない",
+        "数字を、暮らしへ翻訳する"
+      ],
+      "bodyStart": "百兆円。大きすぎて、暮らしのなかに置き場所のない数字である。",
+      "auxiliaryHeading": "## MICHIKUSA / NEXT WINDOWS",
+      "sectionCount": 6,
+      "masterHeadings": [
+        "百兆円を、十年の暮らしへ置いてみる",
+        "道路は、舗装だけではない",
+        "善意の看板の裏で、金はどこへ戻るのか",
+        "海外支援と国内生活を、敵同士にしない",
+        "数字を、暮らしへ翻訳する"
+      ],
+      "approval": "hachico approved 2000-2200 edition and publication replacement 2026-10-03"
+    },
+    {
+      "slug": "who-is-feeding-whom",
+      "master": "content/drafts/echo/who-is-feeding-whom.md",
+      "template": "content/templates/approved-echo/who-is-feeding-whom.html",
+      "layoutHeadings": [
+        "必要とされる、という栄養",
+        "「優しい人」と「困った人」だけではない",
+        "助けることが、相手の力を奪うとき",
+        "「家族だから」が隠す請求書",
+        "職場には、大きな冷蔵庫がある",
+        "境界線は、塀ではない",
+        "自立ではなく、相互依存へ"
+      ],
+      "bodyStart": "冷蔵庫の隅に、小さな瓶がある。",
+      "auxiliaryHeading": "## MICHIKUSA / NEXT WINDOWS",
+      "sectionCount": 8,
+      "masterHeadings": [
+        "必要とされる、という栄養",
+        "「優しい人」と「困った人」だけではない",
+        "助けることが、相手の力を奪うとき",
+        "「家族だから」が隠す請求書",
+        "職場には、大きな冷蔵庫がある",
+        "境界線は、塀ではない",
+        "自立ではなく、相互依存へ"
+      ],
+      "approval": "hachico approved 2000-2200 edition and publication replacement 2026-10-03"
     }
   ]
 }
