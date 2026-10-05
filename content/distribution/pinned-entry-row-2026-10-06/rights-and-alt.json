@@ -1,0 +1,27 @@
+{
+  "assets": [
+    {
+      "file": "assets/01-right-holos88.png",
+      "type": "original typographic card",
+      "source": "HOLOS 88 in-house layout",
+      "rights": "HOLOS 88",
+      "alt": "生成り色の紙面にWHAT IS HOLOS 88?とHOLOS 88って？の文字。右下に細い線で描いた球体がある。"
+    },
+    {
+      "file": "assets/02-center-how.png",
+      "type": "original typographic card",
+      "source": "HOLOS 88 in-house layout",
+      "rights": "HOLOS 88",
+      "alt": "深緑色の紙面にWHERE TO BEGINとどこから読む？の文字。右下に金色の軌道線がある。"
+    },
+    {
+      "file": "assets/03-left-take.png",
+      "type": "original typographic card",
+      "source": "HOLOS 88 in-house layout",
+      "rights": "HOLOS 88",
+      "alt": "赤土色の紙面にTAKE SOMETHING HOMEと何を持ち帰れる？の文字。右下に三つの円が重なっている。"
+    }
+  ],
+  "externalMediaUsed": false,
+  "aiGeneratedRasterUsed": false
+}

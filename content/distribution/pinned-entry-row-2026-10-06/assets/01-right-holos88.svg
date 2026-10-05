@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+<rect width="1080" height="1350" fill="#e9e3d5"/><rect x="36" y="36" width="1008" height="1278" fill="none" stroke="#25211c" stroke-opacity=".45"/>
+<text x="70" y="91" fill="#25211c" font-family="Avenir,Arial,sans-serif" font-size="19" letter-spacing="5">HOLOS 88 · A MUSEUM OF RELATIONSHIPS</text>
+<line x1="70" y1="125" x2="1010" y2="125" stroke="#25211c" stroke-opacity=".5"/>
+<text x="70" y="260" fill="#25211c" font-family="Bodoni 72,Times New Roman,serif" font-size="112" letter-spacing="-3"><tspan x="70" dy="0">WHAT IS
+HOLOS 88?</tspan></text>
+<text x="70" y="635" fill="#8f4b43" font-family="Hiragino Mincho ProN,YuMincho,serif" font-size="46"><tspan x="70" dy="0">HOLOS 88って？</tspan></text>
+<text x="70" y="790" fill="#25211c" font-family="Hiragino Mincho ProN,YuMincho,serif" font-size="29" letter-spacing="1"><tspan x="70" dy="0">記事と図版から、
+自分と世界の関係をたどる。</tspan></text>
+<circle cx="780" cy="960" r="220" fill="none" stroke="#8f4b43" stroke-width="2"/><ellipse cx="780" cy="960" rx="110" ry="220" fill="none" stroke="#8f4b43" stroke-width="2"/><path d="M560 960h440M590 850c120 55 260 55 380 0M590 1070c120-55 260-55 380 0" fill="none" stroke="#8f4b43" stroke-width="2"/>
+<text x="70" y="1260" fill="#25211c" font-family="Avenir,Arial,sans-serif" font-size="17" letter-spacing="4">PINNED ENTRY · 2026.10</text><text x="1010" y="1260" text-anchor="end" fill="#25211c" font-family="Avenir,Arial,sans-serif" font-size="17">HOLOS88.COM</text>
+</svg>

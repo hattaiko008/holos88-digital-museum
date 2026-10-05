@@ -1,0 +1,37 @@
+# Threads
+
+HOLOS 88には、決まった順路がありません。
+
+身体や季節の変化が気になる日はSHE CREATESへ。ニュースを自分の暮らしまで引き寄せたい日はWATCH THE NOWへ。心理や歴史、哲学の問いを歩きたい日はECHOとMuseumへ。
+
+SHE CREATESとWATCH THE NOWの創刊サンプルは全文公開中です。読むだけでなく、あとで使える観察ノートと深い版も準備しています。
+
+https://holos88.com/
+
+# X
+
+身体と季節を読むSHE CREATES。
+ニュースを暮らしへ戻すWATCH THE NOW。
+
+HOLOS 88は、今日の自分に近い窓から入れるデジタルミュージアムです。創刊サンプルは全文公開中。
+https://holos88.com/
+
+# Pinterest
+
+## Pin 1
+Title: HOLOS 88｜記事と図版から関係をたどるデジタルミュージアム
+Description: 身体、季節、ニュース、心理、歴史、哲学。HOLOS 88は、気になる窓から読み始められる小さなデジタルミュージアムです。
+Destination: https://holos88.com/
+Image: assets/01-right-holos88.png
+
+## Pin 2
+Title: SHE CREATESとWATCH THE NOW｜どこから読む？
+Description: 身体と季節を観察するSHE CREATES。ニュースを暮らしへ引き寄せるWATCH THE NOW。創刊サンプルを全文公開しています。
+Destination: https://holos88.com/
+Image: assets/02-center-how.png
+
+## Pin 3
+Title: 読んだあとに使える観察ノート｜HOLOS 88
+Description: 読むだけで終わらず、自分の暮らしに持ち帰れる問いと観察ノート。深い版と印刷用ノートの案内は無料レターから。
+Destination: https://holos88.substack.com/subscribe
+Image: assets/03-left-take.png

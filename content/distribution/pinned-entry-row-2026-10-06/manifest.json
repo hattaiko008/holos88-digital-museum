@@ -1,0 +1,36 @@
+{
+  "date": "2026-10-06",
+  "status": "ready_for_hachico_review",
+  "rowType": "PINNED_ENTRY",
+  "publishOrder": [
+    {"position":"right","asset":"assets/01-right-holos88.png","timeJST":"12:17"},
+    {"position":"center","asset":"assets/02-center-how.png","timeJST":"12:53"},
+    {"position":"left","asset":"assets/03-left-take.png","timeJST":"13:29"}
+  ],
+  "pinAfterPublish": true,
+  "pinRequiresManualVisualCheck": true,
+  "destinations": {
+    "home":"https://holos88.com/",
+    "sheCreates":"https://holos88.com/prototype/she-creates-seasonal-letter-subscriber.html",
+    "watchTheNow":"https://holos88.com/prototype/watch-the-now-2026-09-26.html",
+    "newsletter":"https://holos88.substack.com/subscribe",
+    "note":"https://note.com/holos_hachico",
+    "patreon":"https://www.patreon.com/HOLOS88"
+  },
+  "paidOffer": {
+    "workingTitle":"SHE CREATES｜秋の深い版＋七日間の観察ノート",
+    "workingPriceJPY":980,
+    "approvedForSale":false,
+    "reason":"PDF・販売条件・受取確認が未完了"
+  },
+  "automation": {
+    "followerAIUsed":false,
+    "reason":"サービス同定と公式API・権限・順序保持の確認前",
+    "preferredScheduler":"Instagram official scheduling or Meta Business Suite"
+  },
+  "publication": {
+    "scheduled":false,
+    "published":false,
+    "externalEmailsSent":false
+  }
+}
