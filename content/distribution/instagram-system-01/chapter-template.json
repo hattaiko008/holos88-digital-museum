@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "chapterId": "YYYY-MM-DD-topic",
+  "status": "draft",
+  "account": "@holos88_hachico",
+  "timezone": "Asia/Tokyo",
+  "palette": {
+    "paper": "#e9e2d4",
+    "ink": "#172326",
+    "accent": "#8b3f47"
+  },
+  "source": {
+    "articleUrl": "",
+    "objectUrl": "",
+    "objectId": "",
+    "access": "free",
+    "rightsChecked": false
+  },
+  "rows": [
+    {"day": 1, "type": "OBJECT", "publishOrder": ["right", "center", "left"], "times": ["12:17", "12:53", "13:29"]},
+    {"day": 2, "type": "WINDOW", "publishOrder": ["right", "center", "left"], "times": ["12:17", "12:53", "13:29"]},
+    {"day": 3, "type": "RELATIONSHIP", "publishOrder": ["right", "center", "left"], "times": ["12:17", "12:53", "13:29"]},
+    {"day": 4, "type": "RETURN", "publishOrder": ["right", "center", "left"], "times": ["12:17", "12:53", "13:29"]}
+  ],
+  "tiles": [],
+  "distribution": {
+    "stories": {"enabled": true, "count": 3, "link": ""},
+    "reel": {"enabled": false, "durationSeconds": 12, "audioRightsChecked": false},
+    "threads": {"enabled": true, "text": ""},
+    "x": {"enabled": true, "text": ""},
+    "pinterest": {"enabled": false, "title": "", "description": ""},
+    "loveit": {"enabled": true, "bridgeText": ""}
+  },
+  "checks": {
+    "duplicateImage": false,
+    "altComplete": false,
+    "creditComplete": false,
+    "linksVerified": false,
+    "accessVerified": false,
+    "gridPreviewVerified": false,
+    "approved": false
+  }
+}
