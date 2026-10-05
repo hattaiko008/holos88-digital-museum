@@ -13,14 +13,14 @@ https://holos88.com/
 身体と季節を読むSHE CREATES。
 ニュースを暮らしへ戻すWATCH THE NOW。
 
-HOLOS 88は、今日の自分に近い窓から入れるデジタルミュージアムです。創刊サンプルは全文公開中。
+HOLOS 88は、今日の自分に近い窓から入れるDIGITAL MUSEUMです。創刊サンプルは全文公開中。
 https://holos88.com/
 
 # Pinterest
 
 ## Pin 1
-Title: HOLOS 88｜記事と図版から関係をたどるデジタルミュージアム
-Description: 身体、季節、ニュース、心理、歴史、哲学。HOLOS 88は、気になる窓から読み始められる小さなデジタルミュージアムです。
+Title: HOLOS 88｜記事と図版から関係をたどるDIGITAL MUSEUM
+Description: 身体、季節、ニュース、心理、歴史、哲学。HOLOS 88は、気になる窓から読み始められる小さなDIGITAL MUSEUMです。
 Destination: https://holos88.com/
 Image: assets/01-right-holos88.png
 
