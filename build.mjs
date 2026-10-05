@@ -4,6 +4,7 @@ import { readFile, writeFile, access, cp, mkdir, rm, readdir } from 'node:fs/pro
 import {buildEditorial} from './lib/editorial.mjs';
 import {buildReconstruction} from './lib/reconstruction.mjs';
 import {buildApprovedEchoText} from './lib/approved-echo-text.mjs';
+import {buildApprovedFive} from './lib/approved-five.mjs';
 import {buildMemberWindowPreviews} from './lib/member-window-previews.mjs';
 const data = JSON.parse(await readFile(new URL('./collection.json',import.meta.url),'utf8'));
 await mkdir(new URL('./dist/assets/collection/',import.meta.url),{recursive:true});
@@ -39,6 +40,7 @@ await buildEditorial(data,articles);
 await buildArticles(articles);
 await buildReconstruction();
 await buildApprovedEchoText();
+await buildApprovedFive();
 await buildMemberWindowPreviews();
 await rm(new URL('./dist/prototype/',import.meta.url),{recursive:true,force:true});
 await mkdir(new URL('./dist/prototype/',import.meta.url),{recursive:true});
@@ -126,7 +128,7 @@ await writeFile(new URL('./dist/prototype/worlds.html',import.meta.url),worldsPa
 const publicStandalone=new Set([
   'index.html','worlds.html','collection.html','layer02-preview.html','contact.html','privacy.html','terms.html','legal-commercial.html',
   'watch-the-now-2026-09-26.html',
-  'prototype.css','legal.css','reading-trail.js','feedback.js','site-search.js','editorial-status.json',
+  'prototype.css','approved-five.css','legal.css','reading-trail.js','feedback.js','site-search.js','editorial-status.json',
   ...[...approvedArticles].filter(file=>file.startsWith('pages/')).map(file=>file.split('/').pop())
 ]);
 for(const entry of await readdir(prototypeTarget,{withFileTypes:true})){

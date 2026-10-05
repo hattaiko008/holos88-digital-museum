@@ -343,17 +343,17 @@
       "file": "duration.html",
       "title": "待つことは、何もしないことではない。",
       "series": "TIME",
-      "stage": "final-review",
+      "stage": "approved",
       "location": "/prototype/articles/duration.html",
       "checks": {
         "text": true,
-        "sources": false,
+        "sources": true,
         "visuals": true,
         "layout": true,
         "links": true
       },
-      "note": "Category and voice format pass complete: language rhythm, spacing, title fit, contrast, links and mobile reading checked. Source Desk remains for final confirmation.",
-      "updated": "2026-09-30"
+      "note": "hachico公開OK（2026-10-05）。自然な日本語、記事別図版、Source Desk、関連書籍、MICHIKUSA、Objectカード、PC・スマホ表示を確認済み。",
+      "updated": "2026-10-05T20:15:00+09:00"
     },
     {
       "file": "escape.html",
@@ -487,17 +487,17 @@
       "file": "germination.html",
       "title": "芽が出るのは、種が決めた日ではない。",
       "series": "BOTANY",
-      "stage": "final-review",
+      "stage": "approved",
       "location": "/prototype/articles/germination.html",
       "checks": {
         "text": true,
-        "sources": false,
+        "sources": true,
         "visuals": true,
         "layout": true,
         "links": true
       },
-      "note": "Category and voice format pass complete: language rhythm, spacing, title fit, contrast, links and mobile reading checked. Source Desk remains for final confirmation.",
-      "updated": "2026-09-30"
+      "note": "hachico公開OK（2026-10-05）。自然な日本語、記事別図版、Source Desk、関連書籍、MICHIKUSA、Objectカード、PC・スマホ表示を確認済み。",
+      "updated": "2026-10-05T20:15:00+09:00"
     },
     {
       "file": "gift-cannot-refuse.html",
@@ -615,17 +615,17 @@
       "file": "kaleidoscope.html",
       "title": "同じ欠片を、少しだけ回してみる。",
       "series": "IMAGE",
-      "stage": "final-review",
+      "stage": "approved",
       "location": "/prototype/articles/kaleidoscope.html",
       "checks": {
         "text": true,
-        "sources": false,
+        "sources": true,
         "visuals": true,
         "layout": true,
         "links": true
       },
-      "note": "Category and voice format pass complete: language rhythm, spacing, title fit, contrast, links and mobile reading checked. Source Desk remains for final confirmation.",
-      "updated": "2026-09-30"
+      "note": "hachico公開OK（2026-10-05）。自然な日本語、記事別図版、Source Desk、関連書籍、MICHIKUSA、Objectカード、PC・スマホ表示を確認済み。",
+      "updated": "2026-10-05T20:15:00+09:00"
     },
     {
       "file": "land.html",
@@ -695,17 +695,17 @@
       "file": "moon-to-stars.html",
       "title": "秋の空から、月と星を想う。",
       "series": "MOON",
-      "stage": "final-review",
+      "stage": "approved",
       "location": "/prototype/articles/moon-to-stars.html",
       "checks": {
         "text": true,
-        "sources": false,
+        "sources": true,
         "visuals": true,
         "layout": true,
         "links": true
       },
-      "note": "Category and voice format pass complete: language rhythm, spacing, title fit, contrast, links and mobile reading checked. Source Desk remains for final confirmation.",
-      "updated": "2026-09-30"
+      "note": "hachico公開OK（2026-10-05）。自然な日本語、記事別図版、Source Desk、関連書籍、MICHIKUSA、Objectカード、PC・スマホ表示を確認済み。",
+      "updated": "2026-10-05T20:15:00+09:00"
     },
     {
       "file": "other-sino-japanese-war.html",
@@ -1287,17 +1287,17 @@
       "file": "wadokei.html",
       "title": "夏至には長く、冬至には短くなる「一刻」。",
       "series": "TIME",
-      "stage": "final-review",
+      "stage": "approved",
       "location": "/prototype/articles/wadokei.html",
       "checks": {
         "text": true,
-        "sources": false,
+        "sources": true,
         "visuals": true,
         "layout": true,
         "links": true
       },
-      "note": "Category and voice format pass complete: language rhythm, spacing, title fit, contrast, links and mobile reading checked. Source Desk remains for final confirmation.",
-      "updated": "2026-09-30"
+      "note": "hachico公開OK（2026-10-05）。自然な日本語、記事別図版、Source Desk、関連書籍、MICHIKUSA、Objectカード、PC・スマホ表示を確認済み。",
+      "updated": "2026-10-05T20:15:00+09:00"
     },
     {
       "file": "what-codependency-is-and-isnt.html",
