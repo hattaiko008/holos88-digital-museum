@@ -12,7 +12,7 @@ HOLOS 88は、その棚のあいだを歩くための小さなDIGITAL MUSEUMで�
 
 まずは、プロフィールの本館へ。
 
-#HOLOS88 #DIGITALMUSEUM #読みもの
+#HOLOS88 #DIGITALMUSEUM #読書好き #Webメディア #知的好奇心
 
 ## 02｜二番目に投稿・完成時は中央
 
@@ -28,7 +28,7 @@ HOLOS 88は、その棚のあいだを歩くための小さなDIGITAL MUSEUMで�
 
 SHE CREATESとWATCH THE NOWの創刊サンプルは、いま全文を公開しています。入口はプロフィールのリンクから。
 
-#SHECREATES #WATCHTHENOW #HOLOS88
+#SHECREATES #WATCHTHENOW #HOLOS88 #季節の暮らし #ニュースを読む
 
 ## 03｜最後に投稿・完成時は左
 
@@ -44,4 +44,4 @@ HOLOS 88では、読むための記事だけでなく、印刷して使える観
 
 プロフィールのリンクから、本館と無料レターへ。
 
-#観察ノート #季節の手紙 #HOLOS88
+#観察ノート #季節の手紙 #HOLOS88 #ジャーナリング #暮らしを整える

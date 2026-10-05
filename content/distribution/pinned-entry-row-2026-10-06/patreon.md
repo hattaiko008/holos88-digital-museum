@@ -27,3 +27,6 @@ The opening editions of SHE CREATES and WATCH THE NOW are currently available as
 Our first paid publication will pair a deeper seasonal edition with a printable seven-day observation notebook. It will add something readers can use and revisit, rather than repackaging the same free article.
 
 This is a free public post. The contents, sample pages, and price will be shown before the first release.
+
+
+Tags: reading, seasonal living, journaling, current affairs, digital publication
