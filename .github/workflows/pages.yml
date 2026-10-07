@@ -24,10 +24,14 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 22
+      - name: Build site
+        run: npm run build
+        env:
+          BASE_PATH: /
       - name: Validate content and links
         run: npm test
-      - name: Build site for GitHub Pages
-        run: npm run build:pages
+      - name: Prepare site for GitHub Pages
+        run: node scripts/prepare-pages.mjs
         env:
           BASE_PATH: /
       - name: Configure Pages
