@@ -6,9 +6,12 @@ import {buildReconstruction} from './lib/reconstruction.mjs';
 import {buildApprovedEchoText} from './lib/approved-echo-text.mjs';
 import {buildApprovedFive} from './lib/approved-five.mjs';
 import {buildMemberWindowPreviews} from './lib/member-window-previews.mjs';
+import {buildPublicationCopyright} from './lib/publication-copyright.mjs';
 const data = JSON.parse(await readFile(new URL('./collection.json',import.meta.url),'utf8'));
+await cp(new URL('./collection.json',import.meta.url),new URL('./dist/collection.json',import.meta.url),{force:true});
 await mkdir(new URL('./dist/assets/collection/',import.meta.url),{recursive:true});
 await cp(new URL('./content/assets/collection/',import.meta.url),new URL('./dist/assets/collection/',import.meta.url),{recursive:true,force:true});
+await rm(new URL('./dist/assets/social/',import.meta.url),{recursive:true,force:true});
 await mkdir(new URL('./dist/assets/social/',import.meta.url),{recursive:true});
 await cp(new URL('./content/assets/social/',import.meta.url),new URL('./dist/assets/social/',import.meta.url),{recursive:true,force:true});
 const escape = value => String(value ?? '').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -47,6 +50,7 @@ await mkdir(new URL('./dist/prototype/',import.meta.url),{recursive:true});
 const prototypeSource=new URL('./prototype/reconstruction-01/',import.meta.url);
 const prototypeTarget=new URL('./dist/prototype/',import.meta.url);
 for(const entry of await readdir(prototypeSource)){
+  if(entry==='memos')continue;
   await cp(new URL(entry,prototypeSource),new URL(entry,prototypeTarget),{recursive:true,force:true});
 }
 await cp(new URL('./content/editorial-status.json',import.meta.url),new URL('./dist/prototype/editorial-status.json',import.meta.url));
@@ -117,24 +121,95 @@ for(const entry of await readdir(new URL('./dist/',import.meta.url))){
 }
 const publicArticles=editorialStatus.articles.filter(article=>['approved','published'].includes(article.stage)&&taxonomy[article.file]);
 const articleRoute=file=>file.startsWith('pages/')?'/prototype/'+file.split('/').pop():'/prototype/articles/'+file;
+const latestPublicArticle=[...publicArticles].filter(article=>!/(subscriber|preview)/.test(article.file)).sort((a,b)=>String(b.updated||'').localeCompare(String(a.updated||'')))[0];
+if(latestPublicArticle){
+  const latestTarget=new URL(latestPublicArticle.file.startsWith('pages/')?latestPublicArticle.file.split('/').pop():latestPublicArticle.file,prototypeTarget);
+  let latestDocument='';try{latestDocument=await readFile(latestTarget,'utf8')}catch{}
+  const description=(latestDocument.match(/<meta\s+name="description"\s+content="([^"]*)"/i)||[])[1]||'公開中の記事';
+  const imageMatch=latestDocument.match(/<img[^>]+src="([^"]+)"[^>]*alt="([^"]*)"/i)||latestDocument.match(/<img[^>]+alt="([^"]*)"[^>]+src="([^"]+)"/i);
+  let image='/assets/survivor-tree.jpg',alt='HOLOS 88の公開記事';
+  if(imageMatch){if(imageMatch[1].startsWith('/')){image=imageMatch[1];alt=imageMatch[2]||alt}else{alt=imageMatch[1]||alt;image=imageMatch[2]||image}}
+  const date=latestPublicArticle.updated?new Date(latestPublicArticle.updated).toISOString().slice(0,10):'';
+  const block=`<aside class="museum-latest-window" data-latest-museum-window><p>LATEST PUBLIC WINDOW</p><div><img src="${escape(image)}" alt="${escape(alt)}"><span><strong>${escape(latestPublicArticle.title)}</strong><small>${escape(date)}${date?' · ':''}${escape(description)}</small></span></div><a href="${articleRoute(latestPublicArticle.file)}">READ STORY <span>↗</span></a></aside>`;
+  const homeTarget=new URL('index.html',prototypeTarget);let homeDocument=await readFile(homeTarget,'utf8');homeDocument=homeDocument.replace(/<aside class="museum-latest-window" data-latest-museum-window>.*?<\/aside>/s,block);await writeFile(homeTarget,homeDocument);
+}
+// Publication scrubbing can remove unpublished feature slides. Reconcile the
+// remaining controls with what readers can actually open in the public build.
+{
+  const homeTarget=new URL('index.html',prototypeTarget);
+  let homeDocument=await readFile(homeTarget,'utf8');
+  const featureSlides=[...homeDocument.matchAll(/<a class="feature-slide(?: is-active)?" data-feature-slide[^>]*href="([^"]+)"[\s\S]*?<\/a>/g)];
+  if(featureSlides.length){
+    let seen=false;
+    homeDocument=homeDocument.replace(/<a class="feature-slide(?: is-active)?" data-feature-slide aria-hidden="(?:true|false)"/g,match=>{
+      const active=!seen;seen=true;
+      return `<a class="feature-slide${active?' is-active':''}" data-feature-slide aria-hidden="${active?'false':'true'}"`;
+    });
+    homeDocument=homeDocument.replace(/(<span data-feature-current>)\d+(<\/span>\s*\/\s*)\d+/,`$101$2${String(featureSlides.length).padStart(2,'0')}`);
+    if(featureSlides.length===1)homeDocument=homeDocument.replace(/<div><button type="button" data-feature-prev[\s\S]*?<\/div>/,'');
+    if(!/<a data-feature-enter\b/.test(homeDocument)){
+      homeDocument=homeDocument.replace(/(<div class="feature-controls">[\s\S]*?<p>[\s\S]*?<\/p>)/,`$1<a data-feature-enter href="${featureSlides[0][1]}">ENTER THE FEATURE ↗</a>`);
+    } else {
+      homeDocument=homeDocument.replace(/(<a data-feature-enter href=")[^"]+("[^>]*>)/,`$1${featureSlides[0][1]}$2`);
+    }
+  }
+  await writeFile(homeTarget,homeDocument);
+}
 const worldsHtml=Object.entries(worldLabels).map(([world,label],index)=>{
   const items=publicArticles.filter(article=>taxonomy[article.file].worlds.includes(world));
   return `<section class="world" id="world-${world}"><header><p>${String(index+1).padStart(2,'0')} / WORLD</p><h2>${label.split(' / ')[0]}</h2><span>${label.split(' / ')[1]} · ${items.length} WINDOWS</span></header><div class="world-grid">${items.map(article=>{const data=taxonomy[article.file];return `<a class="world-card" data-fields="${data.fields.join(' ')}" href="${articleRoute(article.file)}"><small>${data.fields.map(field=>fieldLabels[field]||field).join(' · ')}</small><strong>${escape(article.title)}</strong><em>${data.tags.map(tag=>'#'+escape(tag)).join(' ')}</em><span>OPEN WINDOW ↗</span></a>`}).join('')}</div></section>`;
 }).join('');
 const fieldNav='<button type="button" data-field="all" aria-pressed="true">すべて</button>'+Object.entries(fieldLabels).map(([id,label])=>`<button id="field-${id}" type="button" data-field="${id}" aria-pressed="false">${label}</button>`).join('');
-const worldsPage=`<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>WORLDS TO ENTER — HOLOS 88</title><meta name="description" content="HOLOS 88の公開記事を、世界・分野・小さなテーマから辿る入口。"><link rel="stylesheet" href="/prototype/prototype.css"><style>body{background:#ece7dc}.worlds-hero{min-height:70vh;padding:8vh 3vw;border-bottom:1px solid;display:grid;grid-template-columns:.7fr 1.3fr;align-items:end}.worlds-hero h1{margin:0;font:400 clamp(5rem,14vw,15rem)/.72 var(--serif);letter-spacing:-.075em}.worlds-hero p{max-width:35rem;font:1rem/2 var(--jp)}.field-nav{padding:2rem 3vw;display:flex;flex-wrap:wrap;gap:.55rem;border-bottom:1px solid}.field-nav button{padding:.65rem;border:1px solid;background:transparent;font:9px var(--sans);letter-spacing:.1em}.field-nav button[aria-pressed="true"]{background:#171714;color:#fff}.world{padding:7rem 3vw;border-bottom:1px solid;scroll-margin-top:1rem}.world header{display:grid;grid-template-columns:.35fr 1.3fr .65fr;align-items:end}.world h2{margin:0;font:400 clamp(4rem,10vw,10rem)/.75 var(--serif);letter-spacing:-.065em}.world header p,.world header span{font:9px var(--sans);letter-spacing:.13em}.world-grid{display:grid;grid-template-columns:repeat(3,1fr);margin-top:3rem;border-top:1px solid;border-left:1px solid}.world-card{min-height:310px;padding:1.35rem;border-right:1px solid;border-bottom:1px solid;display:flex;flex-direction:column}.world-card[hidden]{display:none}.world-card small{font:8px/1.6 var(--sans);letter-spacing:.1em}.world-card strong{margin:auto 0 1.2rem;font:1.45rem/1.45 var(--jp)}.world-card em{font:9px/1.8 var(--sans);font-style:normal;color:#6d3e43}.world-card span{margin-top:1.5rem;font:8px var(--sans);letter-spacing:.12em}@media(max-width:760px){.worlds-hero,.world header{grid-template-columns:1fr}.worlds-hero{gap:2rem}.world-grid{grid-template-columns:1fr}.world{padding:5rem 1rem}.world header span{margin-top:1rem}}</style></head><body><header class="site-head"><a class="wordmark" href="/prototype/index.html"><span>HOLOS</span><sup>88</sup></a><nav><a href="/prototype/index.html#read">READ</a><a href="/prototype/index.html#museum">MUSEUM</a></nav><a class="close-page" href="/prototype/index.html#categories-title">CLOSE ×</a></header><main><section class="worlds-hero"><div><p class="eyebrow">EXPLORE BY RELATIONSHIP</p><h1>WORLDS<br>TO ENTER</h1></div><p>大きな世界から、分野へ。分野から、小さなテーマへ。ひとつの記事を読み終えたら、同じ棚に戻らず、隣の世界へ歩いてみてください。</p></section><nav class="field-nav" aria-label="中分類から探す">${fieldNav}</nav>${worldsHtml}</main><script>(()=>{const buttons=[...document.querySelectorAll('[data-field]')],cards=[...document.querySelectorAll('.world-card')];buttons.forEach(button=>button.addEventListener('click',()=>{const field=button.dataset.field;buttons.forEach(item=>item.setAttribute('aria-pressed',String(item===button)));cards.forEach(card=>card.hidden=field!=='all'&&!card.dataset.fields.split(' ').includes(field));document.querySelectorAll('.world').forEach(world=>world.hidden=![...world.querySelectorAll('.world-card')].some(card=>!card.hidden))}))})();</script></body></html>`;
+const worldsPage=`<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>WORLDS TO ENTER — HOLOS 88</title><meta name="description" content="HOLOS 88の公開記事を、世界・分野・小さなテーマから辿る入口。"><link rel="stylesheet" href="/prototype/prototype.css"><style>body{background:#ece7dc}.worlds-hero{min-height:70vh;padding:8vh 3vw;border-bottom:1px solid;display:grid;grid-template-columns:.7fr 1.3fr;align-items:end}.worlds-hero h1{margin:0;font:400 clamp(5rem,14vw,15rem)/.72 var(--serif);letter-spacing:-.075em}.worlds-hero p{max-width:35rem;font:1rem/2 var(--jp)}.field-nav{padding:2rem 3vw;display:flex;flex-wrap:wrap;gap:.55rem;border-bottom:1px solid}.field-nav button{padding:.65rem;border:1px solid;background:transparent;font:9px var(--sans);letter-spacing:.1em}.field-nav button[aria-pressed="true"]{background:#171714;color:#fff}.world{padding:7rem 3vw;border-bottom:1px solid;scroll-margin-top:1rem}.world header{display:grid;grid-template-columns:.35fr 1.3fr .65fr;align-items:end}.world h2{margin:0;font:400 clamp(4rem,10vw,10rem)/.75 var(--serif);letter-spacing:-.065em}.world header p,.world header span{font:9px var(--sans);letter-spacing:.13em}.world-grid{display:grid;grid-template-columns:repeat(3,1fr);margin-top:3rem;border-top:1px solid;border-left:1px solid}.world-card{min-height:310px;padding:1.35rem;border-right:1px solid;border-bottom:1px solid;display:flex;flex-direction:column}.world-card[hidden]{display:none}.world-card small{font:8px/1.6 var(--sans);letter-spacing:.1em}.world-card strong{margin:auto 0 1.2rem;font:1.45rem/1.45 var(--jp)}.world-card em{font:9px/1.8 var(--sans);font-style:normal;color:#6d3e43}.world-card span{margin-top:1.5rem;font:8px var(--sans);letter-spacing:.12em}@media(max-width:760px){.worlds-hero,.world header{grid-template-columns:1fr}.worlds-hero{gap:2rem}.world-grid{grid-template-columns:1fr}.world{padding:5rem 1rem}.world header span{margin-top:1rem}}</style></head><body><header class="site-head"><a class="wordmark" href="/prototype/index.html"><span>HOLOS</span><sup>88</sup></a><nav><a href="/prototype/index.html#read">READ</a><a href="/prototype/index.html#museum">MUSEUM</a></nav><a class="close-page" href="/prototype/index.html#categories-title">CLOSE ×</a></header><main><section class="worlds-hero" id="relationships"><div><p class="eyebrow">EXPLORE BY RELATIONSHIP</p><h1>WORLDS<br>TO ENTER</h1></div><p>大きな世界から、分野へ。分野から、小さなテーマへ。ひとつの記事を読み終えたら、同じ棚に戻らず、隣の世界へ歩いてみてください。</p></section><nav class="field-nav" aria-label="中分類から探す">${fieldNav}</nav>${worldsHtml}</main><script>(()=>{const buttons=[...document.querySelectorAll('[data-field]')],cards=[...document.querySelectorAll('.world-card')];buttons.forEach(button=>button.addEventListener('click',()=>{const field=button.dataset.field;buttons.forEach(item=>item.setAttribute('aria-pressed',String(item===button)));cards.forEach(card=>card.hidden=field!=='all'&&!card.dataset.fields.split(' ').includes(field));document.querySelectorAll('.world').forEach(world=>world.hidden=![...world.querySelectorAll('.world-card')].some(card=>!card.hidden))}))})();</script></body></html>`;
 await writeFile(new URL('./dist/prototype/worlds.html',import.meta.url),worldsPage);
+const readPublicCard=async article=>{
+  const target=new URL(article.file.startsWith('pages/')?article.file.split('/').pop():`articles/${article.file}`,prototypeTarget);
+  let document='';try{document=await readFile(target,'utf8')}catch{}
+  const image=(document.match(/<img[^>]+src="([^"]+)"/i)||[])[1]||'';
+  const description=(document.match(/<meta\s+name="description"\s+content="([^"]*)"/i)||[])[1]||'';
+  return {...article,href:articleRoute(article.file),image,description,hachico:/\bvoice-hachico\b/.test(document)};
+};
+const publicCards=await Promise.all(publicArticles.filter(article=>!/(subscriber|preview)/.test(article.file)).map(readPublicCard));
+const approvedCards=await Promise.all(editorialStatus.articles.filter(article=>['approved','published'].includes(article.stage)&&article.file.endsWith('.html')&&!article.file.startsWith('pages/')&&!/(subscriber|preview)/.test(article.file)).map(readPublicCard));
+const sheFiles=/before-a-plant|before-another|season-is-not|symbols-do-not|body-keeps|melancholy|season-beneath|she-creates/;
+const watchFiles=/watch-the-now|five-percent|what-does-100-trillion|red-carpet|judge-who|alliance-or/;
+const groups=[
+  {id:'museum-essay',label:'ARTICLES / MUSEUM ESSAY',ja:'博物誌から考える',items:publicCards.filter(item=>!sheFiles.test(item.file)&&!watchFiles.test(item.file)&&!item.file.includes('archaeology-of-fear'))},
+  {id:'features',label:'FEATURES',ja:'ひとつの主題を深く読む',items:publicCards.filter(item=>item.file.includes('archaeology-of-fear'))},
+  {id:'watch-the-now',label:'WATCH THE NOW',ja:'現在を複数の窓から見る',items:publicCards.filter(item=>watchFiles.test(item.file))},
+  {id:'she-creates',label:'SHE CREATES',ja:'身体と季節を読む',items:publicCards.filter(item=>sheFiles.test(item.file))}
+];
+{
+  const newest=items=>[...items].sort((a,b)=>String(b.updated||'').localeCompare(String(a.updated||'')))[0];
+  const extra=[['SHE CREATES',newest(publicCards.filter(item=>sheFiles.test(item.file)))],['HACHICO, HERE & THERE.',newest(approvedCards.filter(item=>item.hachico))]].filter(([,item])=>item);
+  const cards=extra.map(([label,item])=>`<article class="stage-latest"><a href="${item.href}">${item.image?`<img src="${escape(item.image)}" alt="">`:''}<p class="mode">LATEST / ${label}</p><h3>${escape(item.title)}</h3><p>${label==='SHE CREATES'?'身体と季節を読む、最新の窓。':'あっちへ、こっちへ。暮らしから始まる最新の窓。'}</p><span>OPEN THIS WINDOW ↗</span></a></article>`).join('');
+  const target=new URL('index.html',prototypeTarget);let home=await readFile(target,'utf8');
+  home=home.replace(/(<article class="stage-michikusa">[\s\S]*?<\/article>)(\s*<\/div>\s*<nav class="reading-index")/,`$1${cards}$2`);
+  await writeFile(target,home);
+}
+const indexCards=items=>`<div class="visual-index">${items.map((item,index)=>`<a href="${item.href}"><span class="article-cover-window">${item.image?`<img src="${escape(item.image)}" alt="">`:`<iframe data-cover-src="${item.href}" title="${escape(item.title)}の承認済み表紙" loading="lazy" tabindex="-1" aria-hidden="true"></iframe>`}</span><small>${String(index+1).padStart(2,'0')} · ${escape(String(item.updated||'').slice(0,10))}</small><strong>${escape(item.title)}</strong><em>OPEN WINDOW ↗</em></a>`).join('')}</div><ol class="text-index">${items.map((item,index)=>`<li><span>${String(index+1).padStart(2,'0')}</span><a href="${item.href}">${escape(item.title)}</a><time>${escape(String(item.updated||'').slice(0,10))}</time></li>`).join('')}</ol>`;
+const indexHead=(title,ja)=>`<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${title.replace(/<br>/g,' ')} — HOLOS 88</title><meta name="description" content="HOLOS 88の公開記事INDEX"><link rel="stylesheet" href="/prototype/prototype.css"><script defer>addEventListener('DOMContentLoaded',()=>{const load=e=>{const f=e.target;if(f.dataset.coverSrc&&!f.src)f.src=f.dataset.coverSrc};const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){load({target:e.target});io.unobserve(e.target)}}),{rootMargin:'300px'});document.querySelectorAll('iframe[data-cover-src]').forEach(f=>io.observe(f))})</script><style>.library-page{background:#eeeae1}.library-head{min-height:58vh;padding:9vh 3vw 4rem;display:grid;grid-template-columns:.45fr 1.55fr;align-items:end;border-bottom:1px solid}.library-head h1{margin:0;font:400 clamp(4.5rem,13vw,14rem)/.72 var(--serif);letter-spacing:-.075em}.library-head p{font:1rem/2 var(--jp)}.library-nav{position:sticky;top:0;z-index:4;display:flex;flex-wrap:wrap;background:#eeeae1;border-bottom:1px solid}.library-nav a{padding:1rem;border-right:1px solid;font:8px var(--sans);letter-spacing:.12em}.library-section{padding:7rem 3vw;border-bottom:1px solid;scroll-margin-top:4rem}.library-section header{display:grid;grid-template-columns:.4fr 1.1fr .5fr;align-items:end}.library-section h2{margin:0;font:400 clamp(3rem,8vw,9rem)/.78 var(--serif);letter-spacing:-.06em}.visual-index{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;margin-top:3rem;background:#111;border:1px solid}.visual-index a{min-width:0;min-height:380px;padding:1rem;overflow:hidden;background:#f7f4ec;display:flex;flex-direction:column}.article-cover-window{position:relative;display:block;width:100%;min-width:0;height:210px;overflow:hidden;background:#f7f4ec;border-bottom:1px solid}.article-cover-window img{width:100%;height:100%;object-fit:cover}.article-cover-window iframe{position:absolute;inset:0 auto auto 0;width:1440px;height:900px;border:0;transform:scale(.19);transform-origin:0 0;pointer-events:none}.visual-index img{filter:grayscale(.18)}.visual-index small,.visual-index em{margin-top:1rem;font:8px var(--sans);letter-spacing:.1em}.visual-index strong{margin:auto 0;font:1.25rem/1.5 var(--jp)}.visual-index em{font-style:normal}.text-index{list-style:none;margin:2rem 0 0;padding:0;border-top:1px solid}.text-index li{display:grid;grid-template-columns:3rem 1fr 8rem;gap:1rem;padding:.8rem 0;border-bottom:1px solid}.text-index span,.text-index time{font:8px var(--sans);letter-spacing:.1em}.text-index a{font:12px var(--jp)}@media(max-width:760px){.library-head,.library-section header{grid-template-columns:1fr}.library-head{gap:2rem;padding-inline:1rem}.library-section{padding:5rem 1rem}.visual-index{grid-template-columns:repeat(2,1fr)}.visual-index a{min-height:300px}.article-cover-window{height:145px}.article-cover-window iframe{transform:scale(.125)}.text-index li{grid-template-columns:2rem 1fr}.text-index time{grid-column:2}.library-nav{top:58px;overflow-x:auto;flex-wrap:nowrap}.library-nav a{white-space:nowrap}}</style></head><body class="library-page"><header class="site-head"><a class="wordmark" href="/prototype/index.html"><span>HOLOS</span><sup>88</sup></a><nav><a href="/prototype/index.html#read">READ</a><a href="/prototype/index.html#museum">COLLECTION</a></nav><a href="/prototype/index.html">CLOSE ×</a></header><main><section class="library-head"><div><p class="eyebrow">MUSEUM INDEX / PUBLISHED WINDOWS</p><h1>${title}</h1></div><p>${ja}</p></section>`;
+const categoriesPage=indexHead('READING<br>ROOMS','公開中の記事を、カテゴリーごとの表紙と巻末索引から探せます。')+`<nav class="library-nav">${groups.map(group=>`<a href="#${group.id}">${group.label}</a>`).join('')}<a href="/prototype/michikusa.html">MICHIKUSA</a></nav>${groups.map((group,index)=>`<section class="library-section" id="${group.id}"><header><small>${String(index+1).padStart(2,'0')} / CATEGORY</small><h2>${group.label}</h2><p>${group.ja} · ${group.items.length} WINDOWS</p></header>${indexCards(group.items)}</section>`).join('')}</main></body></html>`;
+await writeFile(new URL('./dist/prototype/categories.html',import.meta.url),categoriesPage);
+const featureItems=groups.find(group=>group.id==='features').items;
+await writeFile(new URL('./dist/prototype/features.html',import.meta.url),indexHead('FEATURES','公開中の特集だけを収録します。未公開の企画は表示しません。')+`<section class="library-section" id="current"><header><small>01 / CURRENT</small><h2>CURRENT FEATURES</h2><p>${featureItems.length} EXHIBITION</p></header>${indexCards(featureItems)}</section></main></body></html>`);
+const michikusaItems=publicCards.filter(item=>!item.file.startsWith('pages/')).slice(0,24);
+await writeFile(new URL('./dist/prototype/michikusa.html',import.meta.url),indexHead('MICHIKUSA','ひとつの記事の隣にある、別の問いへ。公開中の横道だけを並べています。')+`<section class="library-section" id="all-paths"><header><small>01 / SIDE PATHS</small><h2>ALL PATHS</h2><p>${michikusaItems.length} WINDOWS</p></header>${indexCards(michikusaItems)}</section></main></body></html>`);
+const hachicoItems=approvedCards.filter(item=>item.hachico);
+await writeFile(new URL('./dist/prototype/hachico.html',import.meta.url),indexHead('HACHICO, HERE &amp; THERE.','あっちへ、こっちへ。暮らしから始まるhachicoの公開エッセイ。')+`<section class="library-section" id="hachico"><header><small>01 / HACHICO</small><h2>HERE &amp; THERE.</h2><p>${hachicoItems.length} WINDOWS</p></header>${indexCards(hachicoItems)}</section></main></body></html>`);
 // Keep editorial tooling and unfinished standalone previews out of the public artifact.
 const publicStandalone=new Set([
-  'index.html','worlds.html','collection.html','layer02-preview.html','contact.html','privacy.html','terms.html','legal-commercial.html',
+  'thinking-box.html','thinking-cards.css','thinking-cards.js','home-refinement-02.js',
+  'index.html','worlds.html','categories.html','features.html','michikusa.html','hachico.html','collection.html','layer02-preview.html','contact.html','privacy.html','terms.html','legal-commercial.html',
   'watch-the-now-2026-09-26.html',
-  'prototype.css','approved-five.css','legal.css','reading-trail.js','feedback.js','site-search.js','editorial-status.json',
+  'prototype.css','approved-five.css','legal.css','reading-trail.js','feedback.js','site-search.js','collection-filter.js','editorial-status.json',
   ...[...approvedArticles].filter(file=>file.startsWith('pages/')).map(file=>file.split('/').pop())
 ]);
 for(const entry of await readdir(prototypeTarget,{withFileTypes:true})){
   if(entry.isFile()&&!publicStandalone.has(entry.name))await rm(new URL(entry.name,prototypeTarget),{force:true});
 }
 await rm(new URL('./dist/prototype/life-specimen/',import.meta.url),{recursive:true,force:true});
+await rm(new URL('./dist/prototype/time-atlas/',import.meta.url),{recursive:true,force:true});
 for(const article of editorialStatus.articles.filter(item=>['approved','published'].includes(item.stage)&&item.file.startsWith('pages/'))){
   const file=article.file.split('/').pop(),target=new URL(file,prototypeTarget);
   let document=await readFile(target,'utf8');
@@ -157,7 +232,7 @@ const addPublicMeta=(document,urlPath)=>{
   const type=urlPath.includes('/articles/')?'article':'website';
   const tags=[];
   if(!output.includes('rel="canonical"'))tags.push(`<link rel="canonical" href="${canonical}">`);
-  if(!output.includes('rel="icon"'))tags.push('<link rel="icon" href="/assets/social/favicon.svg" type="image/svg+xml">');
+  if(!output.includes('rel="icon"'))tags.push('<link rel="icon" href="/assets/social/favicon.png" type="image/png">');
   if(!output.includes('rel="apple-touch-icon"'))tags.push('<link rel="apple-touch-icon" href="/assets/social/apple-touch-icon.png">');
   if(!output.includes('rel="manifest"'))tags.push('<link rel="manifest" href="/site.webmanifest">');
   if(!output.includes('property="og:title"'))tags.push(`<meta property="og:title" content="${title}">`);
@@ -181,6 +256,8 @@ const decoratePublicHtml=async(directory,pathPrefix)=>{
     if(entry.isDirectory()){await decoratePublicHtml(target,path+'/');continue;}
     if(!entry.name.endsWith('.html'))continue;
     let document=await readFile(target,'utf8');
+    document=document.replaceAll('/prototype/index.html#atlas','/prototype/worlds.html');
+    document=document.replaceAll('../index.html#atlas','/prototype/index.html');
     document=addPublicMeta(document,path);
     await writeFile(target,document);
     publicHtml.push(path);
@@ -205,3 +282,4 @@ await cp(new URL('./dist/prototype/index.html',import.meta.url),new URL('./dist/
 const rootHome=await readFile(new URL('./dist/index.html',import.meta.url),'utf8');
 await writeFile(new URL('./dist/index.html',import.meta.url),rootHome.replaceAll(`${siteOrigin}/prototype/index.html`,`${siteOrigin}/`));
 console.log('Built reconstruction as the public HOME and preserved the legacy HOME at /legacy/.');
+console.log(`Added publication copyright: ${await buildPublicationCopyright(new URL('./dist/',import.meta.url))} pages.`);

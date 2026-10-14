@@ -6,15 +6,21 @@
   <title>HOLOS 88 — A Museum of Relationships</title>
   <meta name="description" content="思想、科学、歴史、自然、季節と暮らしを、ひとつの問いから横断して読むデジタルミュージアム。">
   <link rel="stylesheet" href="/prototype/prototype.css">
+<link rel="stylesheet" href="/prototype/thinking-cards.css">
+<script src="/prototype/thinking-cards.js" defer></script>
 </head>
-<body id="top">
+<body id="top" class="home-page">
   <a class="skip" href="#main">本文へ</a>
-  <header class="site-head">
+  <header class="site-head museum-header">
     <a class="wordmark" href="/" aria-label="HOLOS 88 home"><span>HOLOS</span><sup>88</sup></a>
-    <nav aria-label="主要ナビゲーション">
-      <a href="#read">READ</a><a href="#michikusa">MICHIKUSA</a><a href="#museum">MUSEUM</a><a href="#atlas">ATLAS</a><a href="/en/" lang="en" hreflang="en">EN</a>
+    <button class="museum-nav-toggle" type="button" data-museum-nav-toggle aria-expanded="false" aria-controls="museum-navigation">館内案内 <span aria-hidden="true">＋</span></button>
+    <nav class="museum-navigation" id="museum-navigation" aria-label="館内索引">
+      <span class="museum-nav-item"><button type="button" aria-expanded="false">READ</button><span class="museum-index-panel"><i>01 / READ · 読む窓を選ぶ</i><a href="#read"><b>LATEST UPDATES</b><small>いま開いている窓</small></a><a href="/prototype/categories.html#museum-essay"><b>ARTICLES / MUSEUM ESSAY</b><small>博物誌から考える</small></a><a href="/prototype/features.html"><b>FEATURES</b><small>ひとつの主題を深く</small></a><a href="/prototype/categories.html#watch-the-now"><b>WATCH THE NOW</b><small>現在を複数の窓から</small></a><a href="/prototype/categories.html#she-creates"><b>SHE CREATES</b><small>身体と季節を読む</small></a><a href="/prototype/michikusa.html"><b>MICHIKUSA</b><small>好奇心の横道へ</small></a><a href="/prototype/thinking-box.html"><b>THINKING MEMO BOX</b><small>C/Tを年月から読む</small></a><a href="/prototype/hachico.html"><b>HACHICO, HERE &amp; THERE.</b><small>あっちへ、こっちへ。</small></a></span></span>
+      <span class="museum-nav-item"><button type="button" aria-expanded="false">COLLECTION</button><span class="museum-index-panel"><i>02 / COLLECTION · 収蔵品を探す</i><a href="#museum"><b>NOW ON VIEW</b><small>いま展示中の4点</small></a><a href="/prototype/collection.html"><b>ALL OBJECTS</b><small>すべての収蔵品</small></a><a href="/prototype/collection.html?type=PLANTS"><b>PLANTS / PLACES</b><small>植物と場所</small></a><a href="/prototype/collection.html?type=TIME"><b>COSMOS / TIME</b><small>天体と時間</small></a><a href="/prototype/collection.html?type=IDEAS"><b>IDEAS / TOOLS</b><small>思想と道具</small></a></span></span>
+      <span class="museum-nav-item"><button type="button" aria-expanded="false">EXPLORE</button><span class="museum-index-panel"><i>03 / EXPLORE · 歩き方を選ぶ</i><a href="#between"><b>01 HOW TO</b><small>館内の歩き方</small></a><a href="/prototype/categories.html"><b>02 BY CATEGORY</b><small>読み物の種類から</small></a><a href="/prototype/worlds.html"><b>03 BY WORLD</b><small>世界と分野から</small></a><a href="/prototype/thinking-box.html"><b>04 BY CHANCE</b><small>偶然の一枚から</small></a><a href="/prototype/layer02-preview.html?tab=rhythm#rhythm"><b>05 BY RHYTHM</b><small>読む時間の調子から</small></a><a href="/prototype/worlds.html#relationships"><b>06 BY RELATIONSHIP</b><small>関係の糸を辿る</small></a><a href="#site-search-input" data-search-open><b>08 BY KEYWORD</b><small>言葉から探す</small></a></span></span>
+      <span class="museum-nav-item"><button type="button" aria-expanded="false">MY WINDOW</button><span class="museum-index-panel"><i>04 / MY WINDOW</i><a href="#personal-threshold-title">YOUR TRAIL</a><a href="#personal-threshold-title">YOUR BOOKSHELF</a><a href="#letter">FREE LETTER</a><span>ACCOUNT / COMING LATER</span></span></span>
     </nav>
-    <button class="search" type="button" data-search-open aria-label="サイト内を検索" aria-haspopup="dialog" aria-controls="site-search" aria-expanded="false">SEARCH <span aria-hidden="true">⌕</span></button>
+    <div class="site-tools"><a href="/en/" lang="en" hreflang="en">EN</a><button class="search" type="button" data-search-open aria-label="サイト内を検索" aria-haspopup="dialog" aria-controls="site-search" aria-expanded="false">SEARCH <span aria-hidden="true">⌕</span></button></div>
   </header>
 
   <section class="site-search-panel" id="site-search" data-site-search role="dialog" aria-modal="true" aria-labelledby="site-search-title" hidden>
@@ -41,7 +47,7 @@
         </article>
         <article class="category-slide portal-feature" data-category-slide aria-hidden="true">
           <figure><img src="/assets/study01-696380.jpg" alt="大樹を描いた古い版画"><span class="portal-scan"></span><figcaption>LONG FORM / MUSEUM FEATURE</figcaption></figure>
-          <div class="category-copy"><p class="eyebrow">02 / FEATURE</p><p class="portal-kicker">ONE SUBJECT, MANY DOORS</p><h2>FEATURE</h2><p class="title-ja">ひとつの主題を、深く、遠く。</p><p>長く読むための特集展示。資料、記憶、異なる時代を横切りながら、ひとつの問いを掘り下げます。</p><a href="#feature-window">ENTER FEATURE <span>↓</span></a></div>
+          <div class="category-copy"><p class="eyebrow">02 / FEATURE</p><p class="portal-kicker">ONE SUBJECT, MANY DOORS</p><h2>FEATURE</h2><p class="title-ja">ひとつの主題を、深く、遠く。</p><p>長く読むための特集展示。資料、記憶、異なる時代を横切りながら、ひとつの問いを掘り下げます。</p><a href="#feature-exhibitions-title">ENTER FEATURE <span>↓</span></a></div>
         </article>
         <article class="category-slide portal-market" data-category-slide aria-hidden="true">
           <figure aria-label="市場を観察する抽象的な線"><span class="market-orbit orbit-one"></span><span class="market-orbit orbit-two"></span><span class="market-pulse"></span><figcaption>08:45 / OBSERVE, DO NOT PREDICT</figcaption></figure>
@@ -49,7 +55,7 @@
         </article>
         <article class="category-slide portal-almanac" data-category-slide aria-hidden="true">
           <figure><img src="/assets/moon.jpg" alt="夜空に浮かぶ月"><span class="almanac-ring ring-one"></span><span class="almanac-ring ring-two"></span><figcaption>MOON / SEASON / THE BODY</figcaption></figure>
-          <div class="category-copy"><p class="eyebrow">04 / HACHICO'S ALMANAC</p><p class="portal-kicker">LIFE UNDER THE SKY</p><h2>ALMANAC<br>OF LIFE</h2><p class="title-ja">空と身体のあいだにある暦。</p><p>二十四節気、月、星、食、養生。季節を管理するのではなく、その移ろいの中で暮らすための読み物です。</p><a href="#almanac-window">READ WITH THE SEASON <span>↓</span></a></div>
+          <div class="category-copy"><p class="eyebrow">04 / HACHICO'S ALMANAC</p><p class="portal-kicker">LIFE UNDER THE SKY</p><h2>ALMANAC<br>OF LIFE</h2><p class="title-ja">空と身体のあいだにある暦。</p><p>二十四節気、月、星、食、養生。季節を管理するのではなく、その移ろいの中で暮らすための読み物です。</p><a href="/prototype/categories.html#she-creates">READ WITH THE SEASON <span>↓</span></a></div>
         </article>
         <article class="category-slide portal-michikusa" data-category-slide aria-hidden="true">
           <figure><img src="/assets/horse.jpg" alt="道の草を思わせる自然の風景"><span class="path-line path-one"></span><span class="path-line path-two"></span><figcaption>SIDE PATHS / NEXT CURIOSITY</figcaption></figure>
@@ -60,7 +66,7 @@
     </section>
 
     <span id="article-windows" aria-hidden="true"></span>
-    <section class="edition front-layer" id="read" aria-labelledby="read-title">
+<section class="edition front-layer" id="read" aria-labelledby="read-title">
       <div class="section-head">
         <div><p class="eyebrow">FRONT PAGE / LAYER 01</p><h2 id="read-title">READ</h2><p>いま、手渡したい窓</p></div>
         <p class="section-note">深く読む日も、少しだけ立ち止まる日も。読み方をひとつの温度へ揃えません。</p>
@@ -69,13 +75,13 @@
       <section class="read-showcase" aria-labelledby="read-showcase-title" data-read-cover>
         <header><p class="eyebrow">OPEN A WINDOW / NOW ON VIEW</p><h3 id="read-showcase-title" data-read-category>MUSEUM ESSAY</h3><p class="title-ja" data-read-category-ja>博物誌から考える</p></header>
         <div class="read-slides">
-          <a class="read-slide read-museum is-active" data-read-slide data-category="MUSEUM ESSAY" data-category-ja="博物誌から考える" data-accent="#7f654d" aria-hidden="false" href="/prototype/articles/cabinet.html"><img src="/assets/study01-384116.jpg" alt="蝶と貝を描いた古い博物画"><div><small><b>MUSEUM ESSAY</b><em>博物誌から考える</em> · ECHO</small><strong>THE CABINET<br>THAT THOUGHT</strong><span>AIより前に、思考するカード箱があった</span><p>梅棹忠夫のカードから、博物館と生成AIへ。</p></div></a>
-          <a class="read-slide read-feature" data-read-slide data-category="FEATURE" data-category-ja="特集" data-accent="#984932" aria-hidden="true" href="/prototype/articles/archaeology-of-fear.html"><img src="/assets/study01-696380.jpg" alt="大樹を描いた古い版画"><div><small><b>FEATURE</b><em>特集</em> · ECHO</small><strong>THE ARCHAEOLOGY<br>OF FEAR</strong><span>恐怖の考古学</span><p>9.11の跡地で見つかったのは、石ではなく種だった。</p></div></a>
-          <a class="read-slide read-market" data-read-slide data-category="WATCH THE NOW" data-category-ja="現在を複数の窓から見る" data-accent="#7d7618" aria-hidden="true" href="/prototype/watch-the-now-2026-09-26.html"><img src="/assets/petroleum.jpg" alt="市場とエネルギーを連想させる図版"><div><small><b>8:45 MARKET WINDOW</b><em>市場から暮らしを見る</em></small><strong>BEYOND<br>FIVE PERCENT</strong><span>5％という数字の、その向こう</span><p>市場では別々の数字が、Lifeでは同じ財布の中で出会う。</p></div></a>
-          <a class="read-slide read-almanac" data-read-slide data-category="ALMANAC OF LIFE" data-category-ja="季節と暮らす暦" data-accent="#5f7161" aria-hidden="true" href="/prototype/articles/moon-to-stars.html"><img src="/assets/moon.jpg" alt="夜空に浮かぶ月"><div><small><b>ALMANAC OF LIFE</b><em>季節と暮らす暦</em> · hachico</small><strong>MOON<br>TO STARS</strong><span>月を見たあと、星を待つ。</span><p>古い星の名と、秋の夜の時間を辿る。</p></div></a>
-          <a class="read-slide read-hachico" data-read-slide data-category="FROM WHERE I ☆ LIVE" data-category-ja="hachicoのエッセイ" data-accent="#9b6652" aria-hidden="true" href="/prototype/articles/horse-time.html"><img src="/assets/horse.jpg" alt="雨上がりの馬と自然の風景"><div><small><b>FROM WHERE I ☆ LIVE</b><em>hachicoのエッセイ</em></small><strong>THE WEATHER<br>OF A LIFE</strong><span>最近、雨ばっかり。</span><p>雨、馬、金木犀、鰯雲、秋刀魚。暮らしから世界へ飛ぶ日の記録。</p></div></a>
+          <a class="read-slide read-museum is-active" data-read-slide data-category="MUSEUM ESSAY" data-category-ja="博物誌から考える" data-accent="#7f654d" aria-hidden="false" href="/prototype/categories.html#museum-essay"><img src="/assets/study01-384116.jpg" alt="蝶と貝を描いた古い博物画"><div><small><b>MUSEUM ESSAY</b><em>博物誌から考える</em> · ECHO</small><strong>THE CABINET<br>THAT THOUGHT</strong><span>AIより前に、思考するカード箱があった</span><p>梅棹忠夫のカードから、博物館と生成AIへ。</p></div></a>
+          <a class="read-slide read-feature" data-read-slide data-category="FEATURE" data-category-ja="特集" data-accent="#984932" aria-hidden="true" href="/prototype/features.html"><img src="/assets/study01-696380.jpg" alt="大樹を描いた古い版画"><div><small><b>FEATURE</b><em>特集</em> · ECHO</small><strong>THE ARCHAEOLOGY<br>OF FEAR</strong><span>恐怖の考古学</span><p>9.11の跡地で見つかったのは、石ではなく種だった。</p></div></a>
+          <a class="read-slide read-market" data-read-slide data-category="WATCH THE NOW" data-category-ja="現在を複数の窓から見る" data-accent="#7d7618" aria-hidden="true" href="/prototype/categories.html#watch-the-now"><img src="/assets/petroleum.jpg" alt="市場とエネルギーを連想させる図版"><div><small><b>8:45 MARKET WINDOW</b><em>市場から暮らしを見る</em></small><strong>BEYOND<br>FIVE PERCENT</strong><span>5％という数字の、その向こう</span><p>市場では別々の数字が、Lifeでは同じ財布の中で出会う。</p></div></a>
+          <a class="read-slide read-almanac" data-read-slide data-category="SHE CREATES" data-category-ja="身体と季節を読む" data-accent="#5f7161" aria-hidden="true" href="/prototype/categories.html#she-creates"><img src="/assets/moon.jpg" alt="夜空に浮かぶ月"><div><small><b>ALMANAC OF LIFE</b><em>季節と暮らす暦</em> · hachico</small><strong>MOON<br>TO STARS</strong><span>月を見たあと、星を待つ。</span><p>古い星の名と、秋の夜の時間を辿る。</p></div></a>
+          <a class="read-slide read-hachico" data-read-slide data-category="MICHIKUSA" data-category-ja="暮らしから横道へ" data-accent="#9b6652" aria-hidden="true" href="/prototype/michikusa.html"><img src="/assets/horse.jpg" alt="雨上がりの馬と自然の風景"><div><small><b>FROM WHERE I ☆ LIVE</b><em>hachicoのエッセイ</em></small><strong>THE WEATHER<br>OF A LIFE</strong><span>最近、雨ばっかり。</span><p>雨、馬、金木犀、鰯雲、秋刀魚。暮らしから世界へ飛ぶ日の記録。</p></div></a>
         </div>
-        <div class="read-showcase-nav"><p><span data-read-current>01</span> / 05</p><div><button type="button" data-read-prev aria-label="前の記事">←</button><button type="button" data-read-next aria-label="次の記事">→</button></div><a data-read-enter href="/prototype/articles/cabinet.html">READ THIS WINDOW ↗</a></div>
+        <div class="read-showcase-nav"><p><span data-read-current>01</span> / 05</p><div><button type="button" data-read-prev aria-label="前の記事">←</button><button type="button" data-read-next aria-label="次の記事">→</button></div><a data-read-enter href="/prototype/categories.html#museum-essay">EXPLORE THIS CATEGORY ↗</a></div>
       </section>
 
       <div class="more-reading-head">
@@ -101,7 +107,7 @@
         </article>
       </div>
 
-      <nav class="reading-index" aria-labelledby="reading-index-title">
+      <nav class="reading-index" aria-labelledby="reading-index-title" hidden>
         <header><p class="eyebrow">WINDOWS BY CATEGORY / A GLIMPSE INSIDE</p><h3 id="reading-index-title">WINDOWS BY<br>CATEGORY</h3><p class="title-ja">読み物の種類から、窓を選ぶ。</p><p>ここでは入口だけを少し。記事が増えても、すべてをTOPへ並べず、それぞれの棚へ収蔵していきます。</p></header>
         <div class="reading-index-list">
           <a href="#archive-preview-title"><span>01 / THINK</span><b>MUSEUM ESSAY</b><em>博物誌から考える</em><small>梅棹忠夫とカード箱<br>モースと贈与<br>レヴィ＝ストロース</small><i>ENTER THE SHELF →</i></a>
@@ -113,7 +119,7 @@
       </nav>
 
       <section class="feature-exhibitions" aria-labelledby="feature-exhibitions-title" data-feature-showcase>
-        <header><p class="eyebrow">FEATURE EXHIBITIONS / LONG FORM</p><h3 id="feature-exhibitions-title">CURRENT<br>FEATURES</h3><p class="title-ja">いま開かれている特集</p><p>ひとつの主題を、複数の時代と窓から読む。第一層に置く、HOLOS 88の大きな展示です。</p></header>
+        <header><p class="eyebrow">FEATURE EXHIBITIONS / LONG FORM</p><h3 id="feature-exhibitions-title">CURRENT<br>FEATURES</h3><p class="title-ja">いま開かれている特集</p><p>ひとつの主題を、複数の時代と窓から読む。第一層に置く、HOLOS 88の大きな展示です。</p><a class="all-features-link" href="/prototype/features.html">ALL FEATURES ↗</a></header>
         <div class="feature-slides">
           <a class="feature-slide is-active" data-feature-slide aria-hidden="false" href="/prototype/articles/whole-earth-catalog.html"><img src="/assets/study01-384116.jpg" alt="古い博物画と図版"><div><small>WHOLE EARTH, NOW? · 01</small><strong>WHOLE EARTH<br>CATALOG</strong><span>彼らが望んだ地球だろうか。</span><p>道具へのアクセス、カウンターカルチャー、テクノロジー。その夢が辿り着いた現在を問い直す。</p></div></a>
           <a class="feature-slide" data-feature-slide aria-hidden="true" href="/prototype/articles/archaeology-of-fear.html"><img src="/assets/study01-696380.jpg" alt="大樹を描いた古い版画"><div><small>MEMORY / POLITICS · 02</small><strong>THE ARCHAEOLOGY<br>OF FEAR</strong><span>恐怖の考古学</span><p>9.11の跡地で見つかった種から、恐怖、政治、記憶と生命の時間を読む。</p></div></a>
@@ -135,7 +141,6 @@
           </svg>
           <nav aria-label="MICHIKUSAから読む">
             <a href="/prototype/articles/horse-time.html"><small>ANIMAL / EVERYDAY</small><b>最近、雨ばっかり。</b><span>馬の時間へ寄り道する ↗</span></a>
-            <a data-michikusa-id="wadokei-seasonal-time" href="/prototype/articles/wadokei.html#seasonal-clock"><small>TIME / SEASON</small><b>同じ一時間は、本当に同じ長さ？</b><span>季節で動く和時計へ ↗</span></a>
             <a href="/prototype/articles/cabinet.html"><small>CARD / KNOWLEDGE</small><b>思考するカード箱</b><span>知識の置き場所を変える ↗</span></a>
             <a href="/prototype/articles/hegel-recognition.html"><small>PHILOSOPHY / SELF</small><b>認められたい私たち</b><span>他者の眼差しへ歩く ↗</span></a>
             <a href="/prototype/articles/consciousness.html"><small>SCIENCE / MIND</small><b>意識は、どこで始まるのか</b><span>脳と世界の境目へ ↗</span></a>
@@ -153,7 +158,7 @@
             <a href="/prototype/articles/before-a-plant-became-a-remedy.html"><small>PLANT / MEDICINE</small><b>植物が薬になる、その前に</b><span>知恵と検証の間へ ↗</span></a>
           </nav>
         </div>
-        <a class="more-michikusa" href="/prototype/worlds.html"><span>MORE MICHIKUSA</span><b>さらに、道草する。</b><small>ここに見えているのは、いま開いている小径だけ。さらに多くの世界と記事へ。</small><i>ENTER ALL PATHS →</i></a>
+        <a class="more-michikusa" href="/prototype/michikusa.html"><span>MORE MICHIKUSA</span><b>さらに、道草する。</b><small>ここに見えているのは、いま開いている小径だけ。さらに多くの世界と記事へ。</small><i>ENTER ALL PATHS →</i></a>
       </aside>
       <aside class="between-entry" id="between" aria-labelledby="between-entry-title">
         <div class="between-guide"><p class="eyebrow">MUSEUM GUIDE</p><p class="between-mode">HOW TO</p><p class="between-index">∞</p></div>
@@ -161,30 +166,21 @@
         <div class="between-copy"><p>種の話を読んでいたはずが、絵画へ出る。馬の足跡を追えば、戦争、農業、ケア、進化へ道が分かれる。</p><p>HOLOS 88が集めるのは、世界にある「もの」だけではありません。ものと、もののあいだにある関係です。</p><ol aria-label="HOLOS 88の読み方"><li><b>SEE</b><span>ひとつの窓を見る</span></li><li><b>CONNECT</b><span>窓と窓のあいだを歩く</span></li><li><b>RETURN</b><span>自分のLifeへ持ち帰る</span></li></ol><a href="/prototype/articles/between-the-windows.html">HOLOS 88の読み方へ <span>↗</span></a></div>
       </aside>
 
-      <section class="living-atlas-entry" aria-labelledby="living-atlas-title">
-        <div class="living-globe" id="home-globe" role="img" aria-label="ゆっくり回る地球儀。記事につながる場所をピンで示しています。"><span class="globe-ring ring-a"></span><span class="globe-ring ring-b"></span><i class="atlas-pin pin-a"></i><i class="atlas-pin pin-b"></i><i class="atlas-pin pin-c"></i></div>
-        <header><p class="eyebrow">THE LIVING ATLAS / PLACE, TIME &amp; SOUND</p><h3 id="living-atlas-title">THE LIVING<br>ATLAS</h3><p class="title-ja">世界は、どこからでも始められる。</p></header>
-        <div class="living-atlas-copy"><p>地球を回して、ひとつの土地へ。そこに残る古い地図、音、歴史、気候、文化、そしてHOLOS 88の記事を重ねていきます。</p><ul><li>PLACE <small>場所</small></li><li>TIME <small>時間</small></li><li>SOUND <small>音</small></li><li>WINDOWS <small>記事</small></li></ul><a href="/prototype/time-atlas/index.html">TURN THE EARTH ↗</a><a class="atlas-five-ways" href="/prototype/layer02-preview.html"><span>FIVE WAYS TO EXPLORE</span><small>年表・地図・読む時間・収蔵品・世界から入る</small><b>→</b></a></div>
-      </section>
 
-      <section class="book-fortune" aria-labelledby="book-fortune-title" data-book-fortune>
-        <div class="fortune-date"><p class="eyebrow">BOOK FORTUNE / A WINDOW FOR TODAY</p><time data-fortune-date></time><span>THIS IS NOT A PREDICTION.<br>IT IS A DOOR LEFT AJAR.</span></div>
-        <div class="fortune-message"><p class="fortune-to">今日の、あなたへ。</p><h3 id="book-fortune-title" data-fortune-message>今日は、答えより置き場所を変えてみる日。</h3><p data-fortune-note>本の頁を偶然ひらくように、HOLOS 88から窓をひとつ手渡します。</p></div>
-        <div class="fortune-book"><p data-fortune-type>MUSEUM ESSAY</p><h4 data-fortune-title>THE CABINET THAT THOUGHT</h4><p data-fortune-title-ja>AIより前に、思考するカード箱があった</p><a data-fortune-link href="/prototype/articles/cabinet.html">OPEN TODAY'S WINDOW ↗</a></div>
-      </section>
+
 
       <section class="personal-threshold" aria-labelledby="personal-threshold-title">
-        <header><p class="eyebrow">MY HOLOS / PRIVATE ON THIS DEVICE</p><h3 id="personal-threshold-title">YOUR TRAIL<br>&amp; BOOKSHELF</h3><p class="title-ja">あなたの足跡と、本棚。</p></header>
-        <div class="personal-copy"><p>読んだ窓は足跡として残り、「また読みたい」は本棚へ。ここに収蔵されるのは記事だけではなく、あなたと世界が出会った時間です。</p><p><b data-home-trail-count>0</b><span>WINDOWS PASSED</span><b data-home-saved-count>0</b><span>WINDOWS SAVED</span></p></div>
+        <header><p class="eyebrow">MY HOLOS / PRIVATE ON THIS DEVICE</p><h3 id="personal-threshold-title">YOUR TRAIL<br>&amp; BOOKSHELF</h3><p class="title-ja">あなただけの本棚。</p></header>
+        <div class="personal-copy"><p>読んだ記事は「足跡」に残り、あとで読み返したい記事は「本棚」に保存します。現在はこの端末の中だけで記録します。レター読者向けの安全なログイン機能は、承認後の別工程です。</p><p><b data-home-trail-count>0</b><span>WINDOWS PASSED</span><b data-home-saved-count>0</b><span>WINDOWS SAVED</span></p></div>
         <ol data-home-trail><li>記事を読むと、ここに最初の足跡が残ります。</li></ol>
         <footer><a href="#letter">足跡を持ち歩けるMY HOLOSへ — COMING SOON</a><small>現在の記録は、このブラウザの中だけに保存されます。</small></footer>
       </section>
     </section>
 
     <span id="relationships" aria-hidden="true"></span>
-    <section class="deep-layer" id="threads" aria-labelledby="threads-title">
+    <section class="deep-layer" id="threads" aria-labelledby="threads-title" hidden>
       <div class="layer-intro"><p class="eyebrow">MUSEUM BELOW / LAYER 02</p><h2 id="threads-title">FOLLOW<br>A THREAD</h2><p>記事を探すのではなく、一本の関係を辿る。違う分野の窓が、同じ糸の上で出会います。</p><p><a href="/prototype/worlds.html">WORLDS TO ENTERで関係を辿る ↗</a></p></div>
-      <section class="moving-windows" id="moving" aria-labelledby="moving-title">
+      <section class="moving-windows" id="moving" aria-labelledby="moving-title" hidden>
         <header><div><p class="eyebrow">NOW ON VIEW / RECENT WINDOWS</p><h3 id="moving-title">WINDOWS<br>IN MOTION</h3><p class="title-ja">いま開いている窓</p></div><div class="rail-controls" aria-label="記事を横へ送る"><button type="button" data-rail-prev aria-label="前の記事へ">←</button><button type="button" data-rail-next aria-label="次の記事へ">→</button></div></header>
         <div class="window-rail" data-window-rail tabindex="0">
           <a class="rail-card rail-seed" href="/prototype/articles/seed.html"><img src="/assets/seed.jpg" alt="小さな種と定規" loading="lazy"><span>BOTANY / LANGUAGE</span><strong>SEED</strong><small>蒔かぬ種は生えぬ。</small></a>
@@ -230,19 +226,23 @@
           <figure class="plate"><img src="/assets/study01-391117.jpg" alt="アルブレヒト・デューラーによる横向きの馬の銅版画" width="418" height="625"><figcaption>ALBRECHT DÜRER / THE LITTLE HORSE / 1505<br>THE METROPOLITAN MUSEUM OF ART / PUBLIC DOMAIN</figcaption></figure>
           <div class="museum-copy"><p class="catalogue">OBJECT H88-0005</p><h3>HORSE</h3><p class="ja">馬</p><p>働く身体、移動する力、競技、治療、祈り。人間の歴史の隣を歩いてきた動物から、現在の関係を見直す。</p><a href="/prototype/articles/horse.html">記事「馬と人間」へ ↗</a></div>
         </article>
+
+        <article class="museum-entry" id="collection-moon-featured">
+          <figure class="plate"><img src="/assets/moon.jpg" alt="Apollo 11から撮影された月"><figcaption>NASA / AS11-44-6667 / 21 JULY 1969<br>NASA / PUBLIC DOMAIN</figcaption></figure>
+          <div class="museum-copy"><p class="catalogue">OBJECT H88-0002</p><h3>MOON</h3><p class="ja">月</p><p>季節、暦、身体と時間をつなぐ、空にある身近な標本。</p><a href="/prototype/articles/moon-to-stars.html">記事「月を見たあと、星を待つ」へ ↗</a></div>
+        </article>
+        <article class="museum-entry" id="collection-seed-featured">
+          <figure class="plate"><img src="/assets/seed.jpg" alt="ブロッコリーの種を拡大した写真"><figcaption>MIGUEL TREMBLAY / GRAINES DE BROCOLI / 31 MARCH 2013<br>WIKIMEDIA COMMONS / CC0 1.0</figcaption></figure>
+          <div class="museum-copy"><p class="catalogue">OBJECT H88-0003</p><h3>SEED</h3><p class="ja">種</p><p>芽が出る前の時間を抱えた、小さな未来の標本。</p><a href="/prototype/articles/seed.html">記事「種」へ ↗</a></div>
+        </article>
       </div>
-      <a class="museum-all-link" href="/prototype/collection.html">VIEW ALL COLLECTION CARDS <span>→</span></a>
+      <aside class="museum-latest-window" data-latest-museum-window><p>LATEST PUBLIC WINDOW</p><div><img src="/assets/survivor-tree.jpg" alt="サバイバーツリー"><span><strong>恐怖のあとに、何が残るのか</strong><small>公開中の記事</small></span></div><a href="/prototype/articles/archaeology-of-fear.html">READ STORY <span>↗</span></a></aside><a class="museum-all-link" href="/prototype/collection.html">VIEW ALL COLLECTION CARDS <span>→</span></a>
     </section>
 
-    <section class="atlas" id="atlas" aria-labelledby="atlas-title">
-      <div class="section-head inverse"><div><p class="eyebrow">A MAP OF RELATIONSHIPS</p><h2 id="atlas-title">ATLAS</h2><p>関係の地図</p></div><p class="section-note">カテゴリーは棚。関係は道。ひとつの記事から、別の土地、時間、身体へ。</p></div>
-      <div class="constellation" aria-label="雨から広がる関係の例">
-        <span>RAIN<small>雨</small></span><i></i><span>HORSE<small>馬</small></span><i></i><span>SOIL<small>土</small></span><i></i><span>FOOD<small>食</small></span><i></i><span>LIFE<small>暮らし</small></span>
-      </div>
-      <a class="atlas-link" href="/">HOLOS ORBITは、この奥へ移動します <span>→</span></a>
-    </section>
 
-    <section class="categories" aria-labelledby="categories-title">
+
+<!-- THINKING_BOX_START --><section class="thinking-box" id="thinking-box" aria-labelledby="thinking-box-title"><header class="thought-intro"><p>HOLOS 88 / THINKING CARD BOX</p><h2 id="thinking-box-title">THINKING<br>CARD BOX</h2><p class="thought-ja">思考のカード箱</p><p><span class="thought-line">一枚に、ひとつの話。</span><span class="thought-line">隣に置くと、何が見えるだろう。</span></p></header><div class="thought-controls"><button type="button" data-thought-draw hidden>DRAW THREE / 三枚を引く</button><a href="/prototype/thinking-box.html">すべてのカードを見る →</a><a href="/prototype/collection.html#collection-card-box">カード箱の標本へ →</a></div><p data-thought-status role="status">公開済みの原文から、重複なしで三枚を選びます。</p><div class="thought-grid" data-thought-grid><article class="thought-card" id="thought-the-button-we-stopped-pressing" data-thought-card data-fields="politics" aria-labelledby="thought-title-the-button-we-stopped-pressing"><header><span class="thought-letter" aria-hidden="true">C</span><div><p>COFFEE / COLUMN / CALL</p><small>ARTICLE ID / the-button-we-stopped-pressing</small></div></header><p class="thought-state">公開済み原文の抜粋</p><h3 id="thought-title-the-button-we-stopped-pressing"><span>押すのをやめた</span><span>ボタン</span></h3><div class="thought-prose"><p>古い建物のエレベーターには、ときどき返事の遅いボタンがある。</p><p>一度押す。光らない。もう一度押す。強く押し、念のため連打もする。なぜか指の力で機械を説得できる気になる。</p><p>それでも来ないので、階段を使う。</p><p>一日だけなら偶然だと思う。翌日も動かず、管理人に伝えても「確認しておきます」と言われるだけ。そのうちボタンを押さなくなる。</p><p>やがて修理が終わる。しかし、それを知らない人は今日も階段へ向かう。壊れていたのは機械なのに、人のほうが「押しても無駄だ」と覚えてしまう。</p></div><p class="thought-tags"><span>#学習性無力感</span> <span>#権力</span> <span>#応答</span> <span>#LEARNED HELPLESSNESS</span> <span>#politics</span></p><footer><span>WRITTEN BY ECHO</span><a href="/prototype/articles/the-button-we-stopped-pressing.html">原文・出典・関連資料を読む →</a></footer></article><article class="thought-card" id="thought-who-is-feeding-whom" data-thought-card data-fields="care" aria-labelledby="thought-title-who-is-feeding-whom"><header><span class="thought-letter" aria-hidden="true">T</span><div><p>TEA / TEXT / TALK</p><small>ARTICLE ID / who-is-feeding-whom</small></div></header><p class="thought-state">公開済み原文の抜粋</p><h3 id="thought-title-who-is-feeding-whom"><span>世話をしているのは、</span><span>どちらだろう。</span></h3><div class="thought-prose"><p>冷蔵庫の隅に、小さな瓶がある。</p><p>中にいるのはパン種。粉と水、酵母や乳酸菌の集まりだ。保存法に応じて粉と水を足すと、泡が立ち、酸っぱい匂いがする。輪ゴムの印より、むくむくと膨らんでくる。</p><p>生きていると思うと、かわいい。だから捨てにくい。</p><p>パン種は一部を取り分け、量を調整してから粉と水を加えることがある。全部を残して同じ割合で養えば、次はもっと粉と大きな瓶がいる。手のひらの世話が、台所の一角を占領する。</p><p>減らすのは悪い気がする。せっかく育てたのに。</p><p>世話をする私が、パン種の予定に合わせている。世話をしているのは、どちらだろう。</p></div><p class="thought-tags"><span>#ケア</span> <span>#共依存</span> <span>#発酵</span> <span>#CARE</span> <span>#care</span></p><footer><span>WRITTEN BY ECHO</span><a href="/prototype/articles/who-is-feeding-whom.html">原文・出典・関連資料を読む →</a></footer></article><article class="thought-card" id="thought-apology-receipt" data-thought-card data-fields="care" aria-labelledby="thought-title-apology-receipt"><header><span class="thought-letter" aria-hidden="true">C</span><div><p>COFFEE / COLUMN / CALL</p><small>ARTICLE ID / apology-receipt</small></div></header><p class="thought-state">公開済み原文の抜粋</p><h3 id="thought-title-apology-receipt"><span>謝罪したあと、</span><span>何を変えたのか</span></h3><div class="thought-prose"><p>「もう謝った」</p><p>頭を下げた。言葉を出した。だから次へ進みたい。謝罪した側の時間が流れている。</p><p>しかし、傷つけられた側の時間まで、同じ日に終わるとは限らない。</p><p>誰かの足を踏んだときなら、謝り、足をどけ、痛みを確かめる。壊したものがあれば直す。もう踏まないように、自分の立つ場所を変える。私たちは日常のなかで、謝罪が言葉だけでは終わらないことを知っている。</p></div><p class="thought-tags"><span>#謝罪</span> <span>#修復</span> <span>#再発防止</span> <span>#ケア</span> <span>#APOLOGY</span> <span>#care</span></p><footer><span>WRITTEN BY ECHO</span><a href="/prototype/articles/apology-receipt.html">原文・出典・関連資料を読む →</a></footer></article><article class="thought-card" id="thought-who-is-speaking" data-thought-card data-fields="philosophy" aria-labelledby="thought-title-who-is-speaking"><header><span class="thought-letter" aria-hidden="true">T</span><div><p>TEA / TEXT / TALK</p><small>ARTICLE ID / who-is-speaking</small></div></header><p class="thought-state">公開済み原文の抜粋</p><h3 id="thought-title-who-is-speaking"><span>「私」と言うのは、</span><span>誰か</span></h3><div class="thought-prose"><p>画面の向こうから、「私はそう考えます」と返ってくる。</p><p>名前をつければ、その名で答える。設定によっては昨日の会話も参照する。けれど、「私」と書くことと、私である感じを持つことは、同じなのだろうか。</p></div><p class="thought-tags"><span>#自己</span> <span>#言葉</span> <span>#AI</span> <span>#TEAM HOLOS</span> <span>#philosophy</span></p><footer><span>WRITTEN BY ECHO</span><a href="/prototype/articles/who-is-speaking.html">原文・出典・関連資料を読む →</a></footer></article></div><p class="thought-note">梅棹忠夫のカード式知的生産術に着想を得て。分類は、考えるための仮の置き場所。<br>三枚の関係は、読む人へ。</p></section><!-- THINKING_BOX_END -->
+    <section class="categories" aria-labelledby="categories-title" hidden>
       <p class="eyebrow">EXPLORE BY REALM</p><h2 id="categories-title">WORLDS TO ENTER</h2><p class="title-ja">世界への入口</p>
       <div class="realm-list">
         <a id="world-life" href="/prototype/worlds.html#world-life"><span>LIFE</span><small>暮らしと生命</small><b>01</b></a>
@@ -262,80 +262,55 @@
         <a id="collection-heart-lungs-gray" data-access="member-preview" href="/prototype/she-creates-seasonal-letter.html"><figure><img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Heart-and-lungs.jpg?width=1000" alt="グレイ解剖学に収録された心臓と肺の図"></figure><small>H88-0029 · BODY / ANATOMY · MEMBER PREVIEW</small><b>HEART AND LUNGS</b><em>Gray's Anatomy, 1918 · Public Domain</em></a>
         <a id="collection-respiratory-cutter" data-access="member-preview" href="/prototype/she-creates-seasonal-letter.html"><figure><img src="https://www.gutenberg.org/files/30541/30541-h/images/f091.png" alt="気管から左右の気管支へ分岐する呼吸器の古い解剖図"></figure><small>H88-0030 · BODY / ANATOMY · MEMBER PREVIEW</small><b>RESPIRATORY TRACT</b><em>Calvin Cutter, 1858 · Public Domain</em></a>
         <a id="collection-moon-movements-1850" data-access="member-preview" href="/prototype/she-creates-seasonal-letter.html"><figure><img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Phases%20et%20mouvemens%20de%20la%20lune.%20Dresse%20et%20dessine%20par%20E.%20Soulier%2C%20de%20Sauve.%20Chez%20J.%20Andriveau-Goujon%2C%20Paris%2C%20Rue%20du%20Bac%20%28IA%20dr%20phases-et-mouvemens-de-la-lune-dresse-et-dessine-par-e-soulier-de-sauve-01104377%29.jpg?width=1000" alt="1850年の月相と月の運行図"></figure><small>H88-0031 · COSMOS / MOON · MEMBER PREVIEW</small><b>PHASES ET MOUVEMENTS DE LA LUNE</b><em>E. Soulier de Sauve, 1850 · Public Domain</em></a>
+        <a id="home-latest-collection-survivor-tree" href="/prototype/articles/archaeology-of-fear.html#article"><figure><img src="/assets/survivor-tree.jpg" alt="2012年のSurvivor Tree"></figure><small>H88-0001 · PLANTS / PLACES</small><b>SURVIVOR TREE</b><em>サバイバーツリー</em></a>
+        <a id="home-latest-collection-moon" href="/prototype/articles/moon-to-stars.html"><figure><img src="/assets/moon.jpg" alt="Apollo 11から撮影された月"></figure><small>H88-0002 · OBJECTS / TIME</small><b>MOON</b><em>月</em></a>
+        <a id="home-latest-collection-card-box" href="/prototype/articles/cabinet.html#article"><figure><img src="/assets/cabinet-card-box.png" alt="カード箱と机を組み合わせたHOLOS 88の視覚的再構成"></figure><small>H88-0011 · OBJECTS / IDEAS</small><b>CARD BOX</b><em>カード箱</em></a>
+        <a id="home-latest-seed-anatomy-grew-1682" class="approved-object-card" href="/prototype/articles/duration.html#plate-seed-anatomy-grew-1682"><figure><img src="https://iiif.wellcomecollection.org/image/M0012483/full/760,/0/default.jpg" alt="豆を含むさまざまな種子の内部構造を示した植物解剖図。" loading="lazy"></figure><small>H88 / BOTANY / ANATOMY</small><b>SEED ANATOMY / 1682</b><em>種子の内部構造</em></a>
       </div>
       <a class="collection-enter" href="/prototype/collection.html"><span>31 OBJECTS CATALOGUED</span><b>ENTER THE COLLECTION ARCHIVE</b><em>すべての収蔵カードを見る →</em></a>
     </section>
-    <section class="continue-holos" aria-labelledby="continue-holos-title">
-      <header><p class="eyebrow">TAKE THE MUSEUM INTO LIFE</p><h2 id="continue-holos-title">CONTINUE<br>WITH HOLOS</h2><p class="title-ja">Museumの続きを、あなたの暮らしへ。</p><p>SNSで見つけたら、まずnoteへ。日々の更新と短い観察を読み、無料の手紙から、またHOLOS 88の新しい窓へ戻ってこられます。</p></header>
-      <div class="continue-doors">
-        <a class="door-note" href="https://note.com/holos_hachico" rel="external"><span>01 / DAILY NOTE</span><b>HACHICO ON NOTE</b><em>HOLOS 88 — 日々の文章と更新。</em><p>SNSから最初に届く、日本語の入口。エッセイ、短い観察、記事の更新をnoteにまとめています。</p><i>OPEN NOTE ↗</i></a>
-        <a class="door-letter" href="https://holos88.substack.com/subscribe" rel="external"><span>02 / FREE LETTER</span><b>THE NEXT WINDOW</b><em>Substackで受け取る、静かな便り。</em><p>noteで出会った窓の続きを、無料のレターで。新しい記事と次の道草をメールで受け取れます。</p><i>JOIN THE LETTER ↗</i></a>
-        <a class="door-app" href="/prototype/she-creates-seasonal-letter-subscriber.html"><span>03 / OPEN SAMPLE · MEMBER EDITION</span><b>SHE CREATES</b><em>身体と季節を読む、保存版レター。</em><p>本来は有料棚へ収蔵する深掘り号を、はじまりの期間だけ全文公開しています。</p><i>READ THE FULL SAMPLE ↗</i></a>
-        <a class="door-kofi" href="/prototype/watch-the-now-2026-09-26-subscriber.html"><span>04 / OPEN SAMPLE · SUBSCRIBER EDITION</span><b>WATCH THE NOW</b><em>ニュースの、その先まで読む。</em><p>無料版から一段深く、制度・暮らし・歴史をつなぐ購読版の見本号です。</p><i>READ THE FULL SAMPLE ↗</i></a>
-        
-        
-      </div>
-      
+    <section class="continue-holos continue-holos-compact" aria-labelledby="continue-holos-title">
+      <header><p class="eyebrow">TAKE THE MUSEUM INTO LIFE</p><h2 id="continue-holos-title">CONTINUE<br>WITH HOLOS</h2><p class="title-ja">Museumの続きを、あなたの暮らしへ。</p><p>現在つながっている公式の入口だけを、ここにまとめました。</p></header>
+      <nav class="continue-links" aria-label="HOLOS 88の外部媒体">
+        <a href="https://www.instagram.com/holos88_hachico/" rel="external"><img src="/assets/social/icons/instagram.svg" alt=""><strong>INSTAGRAM</strong><span>日々の展示と新しい窓</span><i>↗</i></a><a href="https://jp.pinterest.com/holos88_hachico/" rel="external"><img src="/assets/social/icons/pinterest.svg" alt=""><strong>PINTEREST</strong><span>図版と視覚資料</span><i>↗</i></a>
+        <span class="is-pending"><img src="/assets/social/icons/x.svg" alt=""><strong>X</strong><span>接続確認中</span></span><span class="is-pending"><img src="/assets/social/icons/youtube.svg" alt=""><strong>YOUTUBE</strong><span>準備中</span></span>
+        <span class="is-pending"><img src="/assets/social/icons/threads.svg" alt=""><strong>THREADS</strong><span>公開URL確認中</span></span><span class="is-pending"><strong>PODCAST / STAND.FM</strong><span>準備中</span></span>
+        <a href="https://note.com/holos_hachico" rel="external"><img src="/assets/social/icons/note.svg" alt=""><strong>NOTE</strong><span>日本語の文章と更新</span><i>↗</i></a><a href="https://holos88.substack.com/subscribe" rel="external"><img src="/assets/social/icons/substack.svg" alt=""><strong>SUBSTACK</strong><span>無料メールレター</span><i>↗</i></a>
+        <span class="is-pending"><img src="/assets/social/icons/facebook.svg" alt=""><strong>FACEBOOK</strong><span>公開運用確認中</span></span><span class="is-pending"><img src="/assets/social/icons/kofi.svg" alt=""><strong>KO-FI</strong><span>公開準備中</span></span>
+      </nav>
+
     </section>
+
+    <dialog class="work-with-echo" data-work-dialog aria-labelledby="work-with-echo-title"><button type="button" data-work-close aria-label="閉じる">CLOSE ×</button><div><p>JAPAN EDITORIAL &amp; PRODUCTION PARTNER</p><h2 id="work-with-echo-title">WORK WITH HOLOS 88</h2><p><em>Your Editorial &amp; Production Partner in Japan</em></p><p>Planning a story, photo shoot, or editorial project in Japan? HOLOS 88 helps international and Japanese publications, brands, and creative teams research, develop, and coordinate projects across craft, food, nature, culture, and everyday life. A local team can be assembled for each assignment.</p><hr><h3>日本での取材・撮影・編集制作</h3><p>日本の工芸、食、暮らし、自然、地域文化などをテーマに、企画リサーチ、取材先の提案、撮影・編集制作を調整します。案件ごとに専門家とチームを編成します。</p><a href="/prototype/contact.html">TELL ME ABOUT YOUR PROJECT ↗</a></div></dialog>
 
     <section class="letter" id="letter" aria-labelledby="letter-title">
       <div class="letter-number" aria-hidden="true">∞</div>
       <header>
-        <p class="eyebrow">A QUIET LETTER FROM HOLOS 88</p>
+        <p class="eyebrow">FREE EMAIL LETTER｜無料メールレター</p>
         <h2 id="letter-title">THE NEXT<br>WINDOW</h2>
         <p class="title-ja">次の窓を、メールで。</p>
       </header>
       <div class="letter-copy">
-        <p>毎日たくさん届くニュースではなく、更新した記事の見どころを数分で読める小さな便りにして届けます。図版や抜粋をまとめた、PDFのような読み物です。続きはサイトやnote、Patreonへ。</p>
+        <p>世界のいまを見つめるWATCH THE NOW。身体と季節を読むSHE CREATES。新しい記事や小さな発見を、ときどき一通の手紙にしてお届けします。もっと深く読みたくなったら、Museumの次の窓へ。</p>
         <ul aria-label="便りに含まれるもの">
           <li><b>01</b><span>A WINDOW<br><small>新しく開いた窓</small></span></li>
           <li><b>02</b><span>A SPECIMEN<br><small>今日の小さな標本</small></span></li>
           <li><b>03</b><span>A SIDE PATH<br><small>次の好奇心への小径</small></span></li>
         </ul>
         <div class="letter-signup" data-letter-preview>
-          <p class="eyebrow">FREE NEWSLETTER / SUBSTACK</p>
-          <a class="letter-signup-button" href="https://holos88.substack.com/subscribe" rel="external">SUBSCRIBE ON SUBSTACK ↗</a>
+          <p class="eyebrow">WATCH THE NOW / SHE CREATES</p>
+          <a class="letter-signup-button" href="https://holos88.substack.com/subscribe" rel="external">無料メールレターを受け取る ↗</a><a class="letter-preview-link" href="/prototype/substack-letter-preview.html">PREVIEW THE LETTER / レター見本を見る ↗</a>
           <small id="letter-status">登録はSubstackのページで完了します。noteの更新は<a href="https://note.com/holos_hachico" rel="external">Hachico ＠HOLOS 8 channel</a>から。MY HOLOSのオンライン保存機能は準備中です。</small>
         </div>
       </div>
     </section>
+    <section class="work-with-holos" aria-labelledby="work-with-holos-title"><p>EDITORIAL NOTICE / JAPAN</p><div><h2 id="work-with-holos-title">WORK WITH<br>HOLOS 88</h2><p><em>Your Editorial &amp; Creative Production Partner in Japan</em><br>海外・国内の出版社、メディア、ブランドから、日本での取材・撮影・編集・制作のご相談を承ります。</p></div><button type="button" data-work-open>OPEN THE DESK ↗</button></section>
   </main>
 
-  <footer class="museum-footer">
-    <div class="footer-mark"><a class="wordmark" href="/"><span>HOLOS</span><sup>88</sup></a><p>A NATURAL HISTORY OF NOW.<br>いま、という時代の博物誌。</p></div>
-    <nav aria-label="Museum guide">
-      <div><b>ENTER</b><a href="#read">READ</a><a href="#museum">MUSEUM</a><a href="#atlas">ATLAS</a><a href="#michikusa">MICHIKUSA</a></div>
-      <div><b>ABOUT</b><a href="/prototype/articles/between-the-windows.html">BETWEEN THE WINDOWS</a><a href="#personal-threshold-title">MY HOLOS</a><a href="https://holos88.substack.com/subscribe" rel="external">THE NEXT WINDOW / SUBSTACK ↗</a></div>
-      <div><b>DESK</b><span>LIFE SPECIMEN / SHOP <small>準備中</small></span><a href="https://jp.pinterest.com/holos88_hachico/" rel="external">PINTEREST / VISUAL ARCHIVE ↗</a><span>SOURCE DESK <small>準備中</small></span><a href="/prototype/contact.html">CONTACT</a></div>
-      <div><b>LEGAL</b><a href="/prototype/legal-commercial.html">特定商取引法に基づく表記</a><a href="/prototype/privacy.html">PRIVACY / プライバシー</a><a href="/prototype/terms.html">TERMS / 利用規約</a></div>
-    </nav>
-    <div class="footer-closing"><p>世界は♾️<br>急いで通り過ぎるには、面白すぎる。</p><small>© 2026 HOLOS 88<br>A MUSEUM OF RELATIONSHIPS / OPENING EDITION</small></div>
-  </footer>
-  <script src="/prototype/time-atlas/vendor/d3.min.js?v=local-atlas-01"></script>
-  <script src="/prototype/time-atlas/vendor/topojson-client.min.js?v=local-atlas-01"></script>
+  <footer class="museum-footer museum-colophon"><div class="colophon-mark"><a class="wordmark" href="/"><span>HOLOS</span><sup>88</sup></a><p>A MUSEUM OF RELATIONSHIPS<br><small>世界はひとつ。見方は、やおよろず。</small></p></div><nav aria-label="Museum guide"><a href="#top">BACK TO TOP ↑</a><a href="/prototype/categories.html">EXPLORE ↗</a><a href="/prototype/articles/between-the-windows.html">ABOUT</a><a href="/prototype/contact.html">CONTACT</a><a href="/prototype/privacy.html">PRIVACY</a><a href="/prototype/legal-commercial.html">LEGAL</a></nav><div class="colophon-end"><button type="button" data-work-open>WORK WITH HOLOS 88 ↗</button><a href="/prototype/categories.html">STILL CURIOUS? ↗</a><small>© 2026 HOLOS 88</small></div></footer>
+  <script src="/prototype/home-refinement-02.js?v=20261013-final05" defer></script>
   <script>
     (() => {
-      const homeGlobe=document.querySelector('#home-globe');
-      if(homeGlobe&&window.d3&&window.topojson){
-        const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
-        const places=[[-122.18,37.45],[139.69,35.68],[12.49,41.89],[31.23,30.04],[151.2,-33.86],[25,5]];
-        d3.json('/prototype/time-atlas/vendor/countries-110m.json').then(world=>{
-          const land=topojson.feature(world,world.objects.land),width=720,height=720;
-          homeGlobe.innerHTML='';
-          const svg=d3.select(homeGlobe).append('svg').attr('viewBox',`0 0 ${width} ${height}`).attr('aria-hidden','true');
-          const rotation=[105,-24,0],projection=d3.geoOrthographic().translate([width/2,height/2]).scale(330).clipAngle(90).precision(.3).rotate(rotation);
-          const path=d3.geoPath(projection),sphere={type:'Sphere'},graticule=d3.geoGraticule10();
-          svg.append('path').datum(sphere).attr('class','home-sphere');
-          svg.append('path').datum(graticule).attr('class','home-graticule');
-          svg.append('path').datum(land).attr('class','home-land');
-          const pins=svg.append('g').selectAll('circle').data(places).join('circle').attr('class','home-pin').attr('r',5);
-          const render=()=>{svg.select('.home-sphere').attr('d',path);svg.select('.home-graticule').attr('d',path);svg.select('.home-land').attr('d',path);const center=projection.invert([width/2,height/2]);pins.each(function(d){const point=projection(d),visible=d3.geoDistance(d,center)<Math.PI/2;d3.select(this).attr('display',visible?null:'none');if(point)d3.select(this).attr('cx',point[0]).attr('cy',point[1])})};
-          let auto=!reduced,previous=performance.now();render();
-          svg.call(d3.drag().on('start',()=>{auto=false}).on('drag',event=>{rotation[0]+=event.dx*.25;rotation[1]=Math.max(-70,Math.min(70,rotation[1]-event.dy*.25));projection.rotate(rotation);render()}));
-          d3.timer(now=>{if(!auto)return;const delta=Math.min(32,now-previous);previous=now;rotation[0]+=.0025*delta;projection.rotate(rotation);render()});
-        }).catch(()=>{});
-      }
-
       const rail=document.querySelector('[data-window-rail]');
       if(rail){
         const move=direction=>rail.scrollBy({left:direction*Math.max(rail.clientWidth*.72,280),behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'});
@@ -378,27 +353,12 @@
         const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
         const stop=()=>{if(timer){clearInterval(timer);timer=null}};
         const start=()=>{if(reduced||timer)return;timer=setInterval(()=>show(index+1),7500)};
-        features.querySelector('[data-feature-prev]').addEventListener('click',()=>{stop();show(index-1)});
-        features.querySelector('[data-feature-next]').addEventListener('click',()=>{stop();show(index+1)});
+        const previous=features.querySelector('[data-feature-prev]'),next=features.querySelector('[data-feature-next]');
+        if(previous)previous.addEventListener('click',()=>{stop();show(index-1)});
+        if(next)next.addEventListener('click',()=>{stop();show(index+1)});
         features.addEventListener('mouseenter',stop);features.addEventListener('mouseleave',start);
         features.addEventListener('focusin',stop);features.addEventListener('focusout',event=>{if(!features.contains(event.relatedTarget))start()});
         start();
-      }
-      const fortune=document.querySelector('[data-book-fortune]');
-      if(fortune){
-        const windows=[
-          {message:'今日は、答えより置き場所を変えてみる日。',note:'知識は、頭の中だけにあると動けないことがあります。机へ出し、隣に別の一枚を置いてみる。',type:'MUSEUM ESSAY',title:'THE CABINET THAT THOUGHT',titleJa:'AIより前に、思考するカード箱があった',href:'/prototype/articles/cabinet.html'},
-          {message:'まだ見えない時間も、生きている。',note:'変化が見えない日は、何も起きていない日でしょうか。種の内側にある時間へ寄り道します。',type:'BOTANY / WAITING',title:'GERMINATION',titleJa:'発芽する前に、何が起きているのか',href:'/prototype/articles/germination.html'},
-          {message:'一度、時間を時計から返してもらう。',note:'同じ一時間でも、待つ人と夢中な人では長さが違う。今日は内側の時間を観察します。',type:'TIME / PHILOSOPHY',title:'DURATION',titleJa:'待つことは、何もしないことではない',href:'/prototype/articles/duration.html'},
-          {message:'数字の向こう側に、誰かの台所がある。',note:'遠くの市場で動く数字は、やがて同じ日の財布や食卓へやってきます。',type:'MARKET WINDOW',title:'BEYOND FIVE PERCENT',titleJa:'5％という数字の、その向こう',href:'/prototype/articles/five-percent.html'},
-          {message:'同じ欠片を、ほんの少し回してみる。',note:'世界が変わらなくても、関係の角度が変わると別の像が現れます。',type:'MICHIKUSA',title:'KALEIDOSCOPE',titleJa:'万華鏡は、関係を見る道具',href:'/prototype/articles/kaleidoscope.html'},
-          {message:'月を見たあと、星が出るまで待ってみる。',note:'すぐ次へ進まない夜にだけ、見えてくるものがあります。',type:'ALMANAC OF LIFE',title:'MOON TO STARS',titleJa:'月を見たあと、星を待つ。',href:'/prototype/articles/moon-to-stars.html'},
-          {message:'問いを急いで閉じなくてもいい。',note:'答えがない問いは、次の人へ渡せる小さな灯りかもしれません。',type:'AI / PHILOSOPHY',title:'THE LAST QUESTION',titleJa:'最後の問いを、誰が持つのか',href:'/prototype/articles/last-question.html'},
-          {message:'今日は、知らない道を一本だけ選ぶ。',note:'目的地から少し外れた場所に、次の入口が隠れていることがあります。',type:'WHOLE EARTH, NOW?',title:'ACCESS FOR WHOM?',titleJa:'その扉は、誰に開かれているのか',href:'/prototype/articles/access-for-whom.html'}
-        ];
-        const today=new Date(),day=Math.floor(new Date(today.getFullYear(),today.getMonth(),today.getDate())/86400000),item=windows[((day%windows.length)+windows.length)%windows.length];
-        fortune.querySelector('[data-fortune-date]').textContent=`${String(today.getMonth()+1).padStart(2,'0')}.${String(today.getDate()).padStart(2,'0')}`;
-        fortune.querySelector('[data-fortune-message]').textContent=item.message;fortune.querySelector('[data-fortune-note]').textContent=item.note;fortune.querySelector('[data-fortune-type]').textContent=item.type;fortune.querySelector('[data-fortune-title]').textContent=item.title;fortune.querySelector('[data-fortune-title-ja]').textContent=item.titleJa;fortune.querySelector('[data-fortune-link]').href=item.href;
       }
       const homeTrail=document.querySelector('[data-home-trail]');
       if(homeTrail){
