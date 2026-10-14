@@ -200,7 +200,7 @@ await writeFile(new URL('./dist/prototype/hachico.html',import.meta.url),indexHe
 // Keep editorial tooling and unfinished standalone previews out of the public artifact.
 const publicStandalone=new Set([
   'thinking-box.html','thinking-cards.css','thinking-cards.js','home-refinement-02.js',
-  'index.html','worlds.html','categories.html','features.html','michikusa.html','hachico.html','collection.html','layer02-preview.html','contact.html','privacy.html','terms.html','legal-commercial.html',
+  'index.html','worlds.html','categories.html','features.html','michikusa.html','hachico.html','collection.html','contact.html','privacy.html','terms.html','legal-commercial.html',
   'watch-the-now-2026-09-26.html',
   'prototype.css','approved-five.css','legal.css','reading-trail.js','feedback.js','site-search.js','collection-filter.js','editorial-status.json',
   ...[...approvedArticles].filter(file=>file.startsWith('pages/')).map(file=>file.split('/').pop())

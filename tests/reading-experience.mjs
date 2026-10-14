@@ -32,7 +32,7 @@ const logo=await readFile(new URL('dist'+h.orbit.logo.src,root));assert.equal(cr
 const home=await readFile(new URL('dist/legacy/index.html',root),'utf8');
 const publicHome=await readFile(new URL('dist/index.html',root),'utf8');
 assert(publicHome.includes('<title>HOLOS 88 — A Museum of Relationships</title>'));
-assert(publicHome.includes('href="/prototype/prototype.css"'));
+assert(/href="\/prototype\/prototype\.css(?:\?[^"]+)?"/.test(publicHome));
 assert(publicHome.includes('href="/" aria-label="HOLOS 88 home"'));
 for(const a of d.articles)assert(home.includes(`href="${a.route}"`));
 assert(!/<section[^>]+class="cover-scene[^>]+hidden/.test(home),'Static covers accessible without JS');
