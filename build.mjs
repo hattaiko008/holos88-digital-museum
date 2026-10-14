@@ -54,6 +54,14 @@ for(const entry of await readdir(prototypeSource)){
   await cp(new URL(entry,prototypeSource),new URL(entry,prototypeTarget),{recursive:true,force:true});
 }
 await cp(new URL('./content/editorial-status.json',import.meta.url),new URL('./dist/prototype/editorial-status.json',import.meta.url));
+// Keep the approved THINKING CARD BOX source available to the editorial room,
+// while withholding the complete HOME block from the public artifact.
+{
+  const homeTarget=new URL('index.html',prototypeTarget);
+  let homeDocument=await readFile(homeTarget,'utf8');
+  homeDocument=homeDocument.replace(/<!-- THINKING_BOX_START -->[\s\S]*?<!-- THINKING_BOX_END -->/,'');
+  await writeFile(homeTarget,homeDocument);
+}
 const editorialStatus=JSON.parse(await readFile(new URL('./content/editorial-status.json',import.meta.url),'utf8'));
 const approvedArticles=new Set(editorialStatus.articles.filter(article=>['approved','published'].includes(article.stage)).map(article=>article.file));
 const taxonomy=JSON.parse(await readFile(new URL('./content/article-taxonomy.json',import.meta.url),'utf8'));
