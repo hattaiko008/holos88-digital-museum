@@ -1,0 +1,47 @@
+{
+  "images": [
+    {
+      "objectId": "NIJL-37TA-00020",
+      "articleAnchor": "object-nijl-37ta-00020",
+      "title": "大日本物産図会 同国漆取之図・三河国名倉砥切出ノ図",
+      "titleJa": "漆を採る人たち（上段）",
+      "creator": "三代歌川広重",
+      "date": "1877",
+      "institution": "国文学研究資料館",
+      "credit": "国文学研究資料館所蔵、日本実業史博物館準備室旧蔵資料、37TA/00020",
+      "source": "https://archives.nijl.ac.jp/G000000253300/data/00020",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "rights": "CC BY-SA 4.0",
+      "rightsSource": "https://archives.nijl.ac.jp/db_setsumei.html",
+      "rightsStatus": "verified",
+      "checkedAt": "2026-10-22",
+      "imageFile": "nijl-37ta-00020.jpg",
+      "imageSha256": "24bfdef0647249e0b4a3e54be2fe757abf5f173bc69fab45628cac345baddb6c",
+      "alt": "木の幹に傷をつけて漆を採る人たち。三代歌川広重『大日本物産図会』の上段。",
+      "derivative": "原画像ファイルは無改変。記事ではCSSによって上段の漆取之図だけを部分表示。下段は名倉砥の切り出し。",
+      "publicationState": "held",
+      "articleId": "repair-is-a-politics",
+      "objectUrl": "/assets/articles/repair-is-a-politics/objects.html#object-nijl-37ta-00020"
+    },
+    {
+      "title": "Brushes used in lacquer painting, fig. 5",
+      "image": "outputs/old-tools/01185.jpg",
+      "source": "https://www.loc.gov/resource/jpd.01185/",
+      "creator": null,
+      "creatorNote": "Unsigned; LOC suggests possibly Kano, not a firm attribution",
+      "date": "[1878?]",
+      "institution": "Library of Congress",
+      "rights": "No known restrictions on publication (LOC Rights & Access)",
+      "relevance": "漆用の筆の図。金継ぎ専用の道具図とは断定しない。",
+      "sha256": "3310f622610f9635ceb951257eb1ab1c80f1887c4acd76a3fd83b468fcaf9e04",
+      "objectId": "LOC-jpd-01185",
+      "titleJa": "漆を塗る筆",
+      "imageFile": "lacquer-01185.jpg",
+      "checkedAt": "2026-10-21",
+      "publicationState": "held",
+      "rightsStatus": "verified",
+      "articleAnchor": "object-loc-jpd-01185"
+    }
+  ]
+}

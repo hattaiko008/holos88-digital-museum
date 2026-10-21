@@ -1,0 +1,53 @@
+{
+  "images": [
+    {
+      "objectId": "SMVK-OM-2009-0009",
+      "title": "Backside of an indigo dyed quilt (boro) from Japan",
+      "creator": null,
+      "date": null,
+      "photographer": "Karl Zetterström, Statens museer för världskultur",
+      "photoDate": "2020-10-08",
+      "institution": "Statens museer för världskultur",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "source": "https://commons.wikimedia.org/wiki/File:Boro_textile_from_Japan,_with_sashiko.jpg",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/b/bf/Boro_textile_from_Japan%2C_with_sashiko.jpg",
+      "file": "boro-quilt.jpg",
+      "alt": "藍染の襤褸の布団の裏側。濃淡の異なる布の継ぎ当てと、幾重もの刺し子の針目。",
+      "collectionNote": "田中忠三郎コレクションとの関係は未確認。作品の制作年代・作者は未詳。",
+      "checkedAt": "2026-10-21",
+      "derivative": "Proportional resize and JPEG compression only; full composition retained",
+      "imageSha256": "dd80f77c6a6f29209670983c7989fa7f88f6a82172e854a9a2fb713735ce665e"
+    },
+    {
+      "objectId": "CHNDM-2017-15-1",
+      "title": "Child’s sleeping mat (boro shikimono)",
+      "creator": null,
+      "date": "late 19th century",
+      "photographer": "Matt Flynn",
+      "institution": "Cooper Hewitt, Smithsonian Design Museum",
+      "credit": "Museum purchase from General Acquisitions Endowment Fund",
+      "license": "CC0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://www.si.edu/object/childs-sleeping-mat-boro-shikimono:chndm_2017-15-1",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/1/10/Child%27s_Sleeping_Mat_%28boro_Shikimono%29%2C_late_19th_century_%28CH_1108827543%29.jpg",
+      "file": "boro-child-mat.jpg",
+      "alt": "19世紀末の子ども用敷物。藍染の綿布を継ぎ合わせた横長の一枚に、縞や格子や細かな縫い目が残る。",
+      "collectionNote": "田中忠三郎コレクションとは別の所蔵品。",
+      "rightsNote": "画像内の旧IPTC権利欄より、現行Smithsonian所蔵記録のCC0表示を優先。",
+      "checkedAt": "2026-10-21",
+      "derivative": "Proportional resize and JPEG compression only; full composition retained",
+      "imageSha256": "e621d2a9ed34b4755d655de666caa2f9cc9255b07f04333cfd5c9fb3bfec5999"
+    }
+  ],
+  "textSources": [
+    {
+      "url": "https://towadaartcenter.com/projects/towada-oirase-project-2014/",
+      "supports": "田中忠三郎の生没年・収集保存活動・民具・衣服・重要有形民俗文化財"
+    },
+    {
+      "url": "https://assets.ctfassets.net/zwqohdz2e0fx/51iliFha8rfDfrgpvJ1aoK/5090b16c8326f55d5c41063b93d2a2b5/Japan_Society_Gallery_Boro_Textiles.pdf",
+      "supports": "寒冷地での布の再利用、田中コレクションの海外展示、ファッションとの関係。2020年の資料。"
+    }
+  ]
+}

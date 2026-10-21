@@ -789,19 +789,120 @@
     },
     {
       "file": "repair-is-a-politics.html",
-      "title": "直すことは、どんな未来を選ぶことか",
-      "series": "WHOLE EARTH, NOW?",
-      "stage": "final-review",
+      "title": "金色の傷",
+      "series": "READ / ECHO",
+      "stage": "approved",
       "location": "/prototype/articles/repair-is-a-politics.html",
       "checks": {
         "text": true,
-        "sources": false,
+        "sources": true,
         "visuals": true,
         "layout": true,
-        "links": true
+        "links": true,
+        "images": true
       },
-      "note": "Category and voice format pass complete: language rhythm, spacing, title fit, contrast, links and mobile reading checked. Source Desk remains for final confirmation.",
-      "updated": "2026-09-30"
+      "note": "金色の傷 / THE ART OF REPAIR。ECHOの保存済み最終稿。本人の公開指示に基づく公開。",
+      "updated": "2026-10-21T09:40:56.943Z",
+      "publicationPreparation": {
+        "status": "release-authorized",
+        "designId": "echo/cabinet",
+        "template": "content/templates/editorial-holds/repair-is-a-politics.html",
+        "templateSha256": "8088a4da9746d0854fdda8ce27cc089e06620cc1ea4b10844352e68a78b4825e",
+        "master": "content/drafts/echo/repair-is-a-politics.md",
+        "masterSha256": "89bcaa9c465ea123772042e2419c6cd5b27de7610434609814f0b7a13e77a5f4",
+        "savedAt": "2026-10-21",
+        "target": {
+          "route": "/prototype/articles/repair-is-a-politics.html",
+          "canonicalUrl": "https://holos88.com/prototype/articles/repair-is-a-politics.html",
+          "category": "READ / ECHO",
+          "worlds": [
+            "making",
+            "human",
+            "life"
+          ],
+          "fields": [
+            "technology",
+            "culture",
+            "everyday"
+          ],
+          "tags": [
+            "金継ぎ",
+            "襤褸",
+            "付喪神",
+            "修理する権利"
+          ],
+          "access": "free",
+          "title": "金色の傷",
+          "description": "金継ぎの金の下では、漆が働いている。襤褸、江戸の焼継ぎ、付喪神、修理する権利へ。傷を美談にする前に、物を使い続ける手と制度をたどる。",
+          "thumbnail": "/assets/articles/repair-is-a-politics/cover.jpg",
+          "publishAt": null,
+          "timezone": "Asia/Tokyo"
+        },
+        "social": {
+          "status": "draft-only",
+          "scheduled": false,
+          "sent": false,
+          "automaticDispatch": false,
+          "articleId": "repair-is-a-politics",
+          "duplicateKey": "repair-is-a-politics:release-1",
+          "x": {
+            "text": "金継ぎの金の下では、漆が働いている。\n襤褸、焼継ぎ、付喪神。傷を美談にする前に、物の続きを考える。\n金色の傷 / THE ART OF REPAIR\nhttps://holos88.com/prototype/articles/repair-is-a-politics.html"
+          },
+          "threads": {
+            "text": "金継ぎの金の下では、漆が働いている。\n襤褸、焼継ぎ、付喪神。傷を美談にする前に、物の続きを考える。\n金色の傷 / THE ART OF REPAIR\nhttps://holos88.com/prototype/articles/repair-is-a-politics.html"
+          },
+          "instagram": {
+            "caption": "金継ぎの金の下では、漆が働いている。\n襤褸、焼継ぎ、付喪神。傷を美談にする前に、物の続きを考える。\n金色の傷 / THE ART OF REPAIR\nhttps://holos88.com/prototype/articles/repair-is-a-politics.html",
+            "image": "/assets/articles/repair-is-a-politics/cover.jpg",
+            "storyLink": "https://holos88.com/prototype/articles/repair-is-a-politics.html",
+            "music": null,
+            "reel": null
+          }
+        },
+        "deployment": {
+          "provider": "GitHub Pages",
+          "repository": "hattaiko008/holos88-digital-museum",
+          "workflow": ".github/workflows/pages.yml",
+          "productionChanged": false,
+          "oneClickPublishingConnected": true,
+          "blocker": null,
+          "method": "Codex native final-approval action -> authenticated GitHub connector -> existing Pages workflow",
+          "websitePublishButton": false,
+          "tested": "isolated checkout at public HEAD; build + both repository tests + Pages output; production deployment awaits explicit ECHO OK"
+        },
+        "published": false,
+        "approved": true,
+        "qa": {
+          "status": "checked",
+          "bodyChars": 3679,
+          "lastOperationOnly": true,
+          "viewportWidths": [
+            1208,
+            390
+          ],
+          "browserSaveTest": "save-proof.json",
+          "imageRights": "SLAM Public Domain; BORO CC BY 4.0 / CC0; NDL PDM; NIJL 37TA/00020 CC BY-SA 4.0; LOC jpd.01185 No known restrictions on publication",
+          "designReference": "cabinet; identical hero background and title typography",
+          "reviewedMasterSha256": "89bcaa9c465ea123772042e2419c6cd5b27de7610434609814f0b7a13e77a5f4",
+          "textProvider": "ECHO final manuscript / Codex preservation checks",
+          "textReview": "ECHOの保存済み最終稿15段落を保持。図版・関連書籍・リンク・表示のみ調整。",
+          "lastOperation": "Codex native approval action: この完成稿を公開する",
+          "buildEvidence": "release-2026-10-22-build.log"
+        },
+        "approval": {
+          "actor": "ECHO",
+          "decision": "publish",
+          "exactUserText": "OK!では公開して。",
+          "subsequentInstructions": [
+            "似た他のものを探す方が早くない？",
+            "広告表記：9px、背景となじむ文字色 rgb(17 17 15 / 19%)、共通ルール承認済み",
+            "漆を採る人たちと筆の図の並びを承認済み"
+          ],
+          "approvedAt": "2026-10-21T16:10:12.523Z",
+          "templateSha256": "8088a4da9746d0854fdda8ce27cc089e06620cc1ea4b10844352e68a78b4825e",
+          "masterSha256": "89bcaa9c465ea123772042e2419c6cd5b27de7610434609814f0b7a13e77a5f4"
+        }
+      }
     },
     {
       "file": "season-is-not-a-prescription.html",

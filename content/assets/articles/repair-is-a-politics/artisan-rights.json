@@ -1,0 +1,38 @@
+{
+  "images": [
+    {
+      "objectId": "NDL-2592395-12-edo-tinker",
+      "title": "鋳掛職人",
+      "creator": "喜田川守貞",
+      "date": "江戸時代後期",
+      "institution": "国立国会図書館",
+      "work": "守貞謾稿 巻6 生業",
+      "source": "https://dl.ndl.go.jp/pid/2592395/1/12",
+      "bibliography": "https://ndlsearch.ndl.go.jp/books/R100000039-I2592395",
+      "license": "Public Domain Mark (NDL record)",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "imageFile": "edo-tinker.jpg",
+      "imageSha256": "fbf1015a323e2e7f0e35eedc1d9d505ed6d055c6c3371fb5b276fc1e7e351b10",
+      "derivative": "NDL IIIF原図12コマ目から人物部分を切り出し、幅1000pxへ縮小。色補正・描き直しなし。",
+      "alt": "天秤棒で道具箱とふいごを担ぐ鋳掛職人。喜田川守貞『守貞謾稿』巻6の図。",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "objectId": "NDL-2592395-12-edo-pottery-repair",
+      "title": "瀬戸物焼接",
+      "creator": "喜田川守貞",
+      "date": "江戸時代後期",
+      "institution": "国立国会図書館",
+      "work": "守貞謾稿 巻6 生業",
+      "source": "https://dl.ndl.go.jp/pid/2592395/1/12",
+      "bibliography": "https://ndlsearch.ndl.go.jp/books/R100000039-I2592395",
+      "license": "Public Domain Mark (NDL record)",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "imageFile": "edo-pottery-repair.jpg",
+      "imageSha256": "3ec27af661b7a25a1c47070f620215494f49e1437d4026c56dc6aaea35b22244",
+      "derivative": "NDL IIIF原図12コマ目から人物部分を切り出し、幅1000pxへ縮小。色補正・描き直しなし。",
+      "alt": "割れた器を詰めた二つの籠を天秤棒で担ぐ焼継ぎ屋。京坂の姿として描かれている。",
+      "checkedAt": "2026-10-21"
+    }
+  ]
+}

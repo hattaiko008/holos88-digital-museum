@@ -737,18 +737,20 @@
   },
   "repair-is-a-politics.html": {
     "worlds": [
+      "making",
       "human",
-      "life",
-      "earth"
+      "life"
     ],
     "fields": [
-      "politics",
-      "science",
-      "technology"
+      "culture",
+      "technology",
+      "everyday"
     ],
     "tags": [
-      "権力",
-      "WHOLE EARTH, NOW?"
+      "金継ぎ",
+      "襤褸",
+      "付喪神",
+      "修理する権利"
     ]
   },
   "season-is-not-a-prescription.html": {

@@ -1,3 +1,4 @@
+import {applyArticleReleases} from './lib/article-release.mjs';
 import {buildCover} from './lib/cover.mjs';
 import {loadArticles,articleWindows,buildArticles,collectionArticleLinks} from './lib/articles.mjs';
 import { readFile, writeFile, access, cp, mkdir, rm, readdir } from 'node:fs/promises';
@@ -45,6 +46,7 @@ await buildReconstruction();
 await buildApprovedEchoText();
 await buildApprovedFive();
 await buildMemberWindowPreviews();
+await applyArticleReleases(import.meta.dirname);
 await rm(new URL('./dist/prototype/',import.meta.url),{recursive:true,force:true});
 await mkdir(new URL('./dist/prototype/',import.meta.url),{recursive:true});
 const prototypeSource=new URL('./prototype/reconstruction-01/',import.meta.url);
