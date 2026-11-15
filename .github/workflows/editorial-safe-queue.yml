@@ -4,6 +4,9 @@ on:
     paths:
       - 'scripts/editorial-safe-queue.py'
       - 'tests/editorial-safe-queue-test.py'
+      - 'scripts/generate-public-rss.mjs'
+      - 'tests/public-rss.mjs'
+      - 'scripts/prepare-pages.mjs'
       - '.github/workflows/editorial-safe-queue.yml'
   workflow_dispatch:
   schedule:
@@ -26,6 +29,11 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Validate generated RSS feed rules
+        run: node tests/public-rss.mjs
       - name: Inspect only; never send or publish
         run: |
           python3 scripts/editorial-safe-queue.py --out work/qa/editorial-review-candidates.json
