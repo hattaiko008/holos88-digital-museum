@@ -1,0 +1,33 @@
+name: HOLOS safe editorial inventory
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '15 23 * * 1'
+permissions:
+  contents: read
+concurrency:
+  group: holos-safe-editorial-inventory
+  cancel-in-progress: false
+jobs:
+  audit:
+    if: vars.HOLOS_FREE_QUOTA_VERIFIED == 'true'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 3
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Inspect only; do not publish
+        run: |
+          python3 scripts/editorial-safe-queue.py --out work/qa/editorial-review-candidates.json
+          python3 tests/editorial-safe-queue-test.py
+      - name: Save private-to-run review evidence (no publication)
+        uses: actions/upload-artifact@v4
+        with:
+          name: holos-editorial-audit-${{ github.run_id }}
+          path: work/qa/editorial-review-candidates.json
+          retention-days: 7
+          if-no-files-found: error
