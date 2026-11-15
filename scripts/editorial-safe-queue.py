@@ -31,7 +31,7 @@ def inspect(record, root):
     if location != expected:
         reason.append("route_mismatch")
     # Reject unsafe or non-article paths before any filesystem read.
-    safe_file = bool(file) and file.endswith(".html") and file not in (".", "..") and "/" not in file and "\\\\" not in file and not file.startswith(".")
+    safe_file = bool(file) and file.endswith(".html") and file not in (".", "..") and "/" not in file and chr(92) not in file and not file.startswith(".")
     if not safe_file:
         reason.append("unsafe_article_file")
     html_file = root / "dist" / "prototype" / "articles" / file if safe_file else None
