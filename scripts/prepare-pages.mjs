@@ -1,5 +1,6 @@
 import {cp, readdir, readFile, rm, writeFile} from 'node:fs/promises';
 import path from 'node:path';
+import {writeRss} from './generate-public-rss.mjs';
 
 const rawBase = process.env.BASE_PATH ?? '';
 const base = rawBase === '/' ? '' : `/${rawBase.replace(/^\/+|\/+$/g, '')}`;
@@ -30,6 +31,7 @@ async function visit(directory) {
 }
 
 await visit(root);
+await writeRss(projectRoot);
 await writeFile(path.join(root, '.nojekyll'), '');
 console.log(base
   ? `Prepared GitHub Pages build for ${base}/`
