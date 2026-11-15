@@ -7,7 +7,7 @@ on:
       - '.github/workflows/editorial-safe-queue.yml'
   workflow_dispatch:
   schedule:
-    - cron: '15 23 * * 1'
+    - cron: '45 21 * * *'
 permissions:
   contents: read
 concurrency:
@@ -15,7 +15,8 @@ concurrency:
   cancel-in-progress: false
 jobs:
   audit:
-    if: github.event_name == 'pull_request' || vars.HOLOS_FREE_QUOTA_VERIFIED == 'true'
+    # Public standard GitHub-hosted runner; no private assets or outbound publication.
+    if: github.event.repository.private == false
     runs-on: ubuntu-24.04
     timeout-minutes: 3
     steps:
@@ -25,14 +26,19 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-      - name: Inspect only; do not publish
+      - name: Inspect only; never send or publish
         run: |
           python3 scripts/editorial-safe-queue.py --out work/qa/editorial-review-candidates.json
           python3 tests/editorial-safe-queue-test.py
-      - name: Save private-to-run review evidence (no publication)
-        uses: actions/upload-artifact@v4
-        with:
-          name: holos-editorial-audit-${{ github.run_id }}
-          path: work/qa/editorial-review-candidates.json
-          retention-days: 7
-          if-no-files-found: error
+      - name: Summarize only aggregate counts; no public review artifacts
+        run: |
+          python3 - <<'PY'
+          import json, os
+          from pathlib import Path
+          j=json.loads(Path('work/qa/editorial-review-candidates.json').read_text())
+          with open(os.environ["GITHUB_STEP_SUMMARY"],'a') as out:
+              out.write("## HOLOS editorial safety audit\n\n")
+              out.write("Candidates for human/source review: "+str(j["review_candidate_count"])+"\n\n")
+              out.write("Blocked: "+str(j["blocked_count"])+"\n\n")
+              out.write("**No site publication, social posting, email send, or AI image generation.**\n")
+          PY
