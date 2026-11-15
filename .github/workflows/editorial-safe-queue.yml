@@ -1,5 +1,10 @@
 name: HOLOS safe editorial inventory
 on:
+  pull_request:
+    paths:
+      - 'scripts/editorial-safe-queue.py'
+      - 'tests/editorial-safe-queue-test.py'
+      - '.github/workflows/editorial-safe-queue.yml'
   workflow_dispatch:
   schedule:
     - cron: '15 23 * * 1'
@@ -10,7 +15,7 @@ concurrency:
   cancel-in-progress: false
 jobs:
   audit:
-    if: vars.HOLOS_FREE_QUOTA_VERIFIED == 'true'
+    if: github.event_name == 'pull_request' || vars.HOLOS_FREE_QUOTA_VERIFIED == 'true'
     runs-on: ubuntu-24.04
     timeout-minutes: 3
     steps:
