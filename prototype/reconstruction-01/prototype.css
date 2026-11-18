@@ -761,3 +761,6 @@ body.search-is-open{overflow:hidden}.site-search-panel[hidden]{display:none}.sit
     white-space: normal;
   }
 }
+/* HOLOS approved footer copy: readable on all widths (2026-11-18 proposal E: emoji infinity, larger mark) */
+.museum-colophon .colophon-mark p small{display:block;margin-top:.5em;font:12px/1.75 "Hiragino Mincho ProN","Yu Mincho",serif;letter-spacing:.04em}@media(max-width:760px){.museum-colophon .colophon-mark{flex-wrap:wrap;align-items:flex-start}.museum-colophon .colophon-mark p{display:block;text-align:left}.museum-colophon .colophon-mark p small{font-size:13px}}
+.museum-colophon .colophon-mark .infinity-mark{font-size:1.6em;line-height:1;vertical-align:-.12em;margin-left:.08em}
