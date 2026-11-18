@@ -1,0 +1,70 @@
+name: Editorial v1 private preparation audit
+on:
+  pull_request:
+    paths:
+      - 'lib/editorial-v1.mjs'
+      - 'scripts/editorial-v1.mjs'
+      - 'tests/editorial-v1.mjs'
+      - 'content/production/editorial-v1.json'
+      - '.github/workflows/editorial-private-v1.yml'
+  workflow_dispatch:
+  schedule:
+    # 06:23 JST; GitHub schedules can be delayed. This activates only on default branch.
+    - cron: '23 21 * * *'
+permissions:
+  contents: read
+concurrency:
+  group: editorial-private-v1-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  prepare:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Test editorial boundaries
+        run: node tests/editorial-v1.mjs
+      - name: Restore derived job receipts only
+        if: github.event_name != 'pull_request'
+        uses: actions/cache/restore@v4
+        with:
+          path: |
+            work/editorial-line/v1/**/handoff.json
+            work/editorial-line/v1/events.jsonl
+          key: editorial-v1-${{ github.ref_name }}-${{ github.run_id }}
+          restore-keys: editorial-v1-${{ github.ref_name }}-
+      - name: Prepare from checked-in sources without publishing
+        run: node scripts/editorial-v1.mjs
+      - name: Save derived job receipts only
+        if: always() && github.event_name != 'pull_request'
+        uses: actions/cache/save@v4
+        with:
+          path: |
+            work/editorial-line/v1/**/handoff.json
+            work/editorial-line/v1/events.jsonl
+          key: editorial-v1-${{ github.ref_name }}-${{ github.run_id }}
+      - name: Redact output for public repository audit
+        if: always()
+        run: |
+          node --input-type=module <<'JS'
+          import {readFile,writeFile,mkdir} from 'node:fs/promises';
+          await mkdir('work/editorial-line/cloud-audit',{recursive:true});
+          let audit;
+          try {
+            const r=JSON.parse(await readFile('work/editorial-line/v1/run-manifest.json','utf8'));
+            audit={execution:r.execution,targetDate:r.targetDate,canonicalCount:r.canonicalCount,manuscriptCount:r.manuscripts.count,sourceHashes:r.sourceRefs.map(x=>x.sha256),jobs:r.jobs.map(x=>({id:x.id,status:x.status,duplicatePrevented:x.duplicatePrevented})),cloudRecurringVerified:false,scheduled:false,published:false,privatePreviewPersisted:false,warning:'Public repository input differs from local canonical assets. This run proves cloud execution only. No private prose or previews are uploaded.'};
+          } catch(e) { audit={status:'failed',reason:'Preparation failed; inspect step result. No manuscript output attached.',scheduled:false,published:false}; }
+          await writeFile('work/editorial-line/cloud-audit/cloud-audit.json',JSON.stringify(audit,null,2));
+          JS
+      - name: Upload redacted audit only
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: editorial-v1-cloud-audit-${{ github.run_id }}
+          path: work/editorial-line/cloud-audit/cloud-audit.json
+          retention-days: 7

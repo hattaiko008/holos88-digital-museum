@@ -1,0 +1,102 @@
+{
+  "schemaVersion": 1,
+  "timezone": "Asia/Tokyo",
+  "canonicalStatus": "content/editorial-status.json",
+  "canonicalTaxonomy": "content/article-taxonomy.json",
+  "postingDesk": "content/distribution/POSTING-DESK.md",
+  "stateDirectory": "work/editorial-line/v1",
+  "mode": "private-production-only",
+  "weeklyDay": 5,
+  "weeklyDayDecision": "Friday is an implementation assumption; issue production never grants publication approval.",
+  "leadDays": 3,
+  "maxAttempts": 2,
+  "holds": {
+    "wadokei": {
+      "reason": "CFO修正要。今回の明示指示で予約不可。過去の承認より優先。",
+      "ref": "ECHO request 2026-10-18"
+    },
+    "cabinet": {
+      "reason": "後日の権利・出典・placeholder監査で保留。",
+      "ref": "content/distribution/publication-audit-2026-10-09.md"
+    },
+    "germination": {
+      "reason": "旧5篇の不採用。改稿版への明示承認未照合。",
+      "ref": "content/briefs/kohaku-chato-shared-handoff-2026-10-04.md"
+    },
+    "duration": {
+      "reason": "旧5篇の不採用。改稿版への明示承認未照合。",
+      "ref": "content/briefs/kohaku-chato-shared-handoff-2026-10-04.md"
+    },
+    "kaleidoscope": {
+      "reason": "旧5篇の不採用。改稿版への明示承認未照合。",
+      "ref": "content/briefs/kohaku-chato-shared-handoff-2026-10-04.md"
+    },
+    "moon-to-stars": {
+      "reason": "旧5篇の不採用。改稿版への明示承認未照合。",
+      "ref": "content/briefs/kohaku-chato-shared-handoff-2026-10-04.md"
+    }
+  },
+  "lengths": {
+    "C": [
+      150,
+      300
+    ],
+    "T": [
+      400,
+      700
+    ],
+    "echo": [
+      1800,
+      2200
+    ],
+    "hachico": [
+      600,
+      1200
+    ]
+  },
+  "manualChecks": [
+    "meaning-and-voice",
+    "facts-and-sources",
+    "image-rights",
+    "pc-ipad-mobile",
+    "contrast-and-linebreaks",
+    "links-and-return",
+    "free-paid-boundary",
+    "seo",
+    "current-hold-review",
+    "current-publication-status"
+  ],
+  "calendar": {
+    "designReference": "preview-calendar/simple-2026-10-10.html",
+    "system": "Gregorian / JST; other systems must have independent source evidence",
+    "maya": "blocked: distinguish historical Tzolkin/Long Count from modern Dreamspell; epoch/correlation and source not verified",
+    "source": "https://eco.mtk.nao.ac.jp/koyomi/yoko/2026/rekiyou263.html",
+    "checkedAt": "2026-10-18",
+    "events": [
+      {
+        "phase": "new",
+        "at": "2026-10-11T00:50:00+09:00"
+      },
+      {
+        "phase": "full",
+        "at": "2026-10-26T13:12:00+09:00"
+      },
+      {
+        "phase": "new",
+        "at": "2026-11-09T16:02:00+09:00"
+      },
+      {
+        "phase": "full",
+        "at": "2026-11-24T23:54:00+09:00"
+      },
+      {
+        "phase": "new",
+        "at": "2026-12-09T09:52:00+09:00"
+      },
+      {
+        "phase": "full",
+        "at": "2026-12-24T10:28:00+09:00"
+      }
+    ]
+  }
+}
