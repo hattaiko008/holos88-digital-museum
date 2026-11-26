@@ -519,17 +519,17 @@
       "file": "gift.html",
       "title": "贈り物は、渡したところで終わらない",
       "series": "GIFT",
-      "stage": "final-review",
+      "stage": "approved",
       "location": "/prototype/articles/gift.html",
       "checks": {
         "text": true,
-        "sources": false,
+        "sources": true,
         "visuals": true,
         "layout": true,
         "links": true
       },
-      "note": "Category and voice format pass complete: language rhythm, spacing, title fit, contrast, links and mobile reading checked. Source Desk remains for final confirmation.",
-      "updated": "2026-09-30"
+      "note": "2026-11-26 Claude: rewritten to the approved-five format, SOURCE DESK verified (all cited pages opened), museum open-access images (Met PD / Cleveland CC0), voice pass. ECHO GO 2026-11-26 (order: gift, wild-mind, taro-jomon).",
+      "updated": "2026-11-26T20:00:00+09:00"
     },
     {
       "file": "hegel-recognition.html",
@@ -988,17 +988,17 @@
       "file": "taro-jomon.html",
       "title": "太郎は、縄文を見つけた",
       "series": "ART",
-      "stage": "final-review",
+      "stage": "approved",
       "location": "/prototype/articles/taro-jomon.html",
       "checks": {
         "text": true,
-        "sources": false,
+        "sources": true,
         "visuals": true,
         "layout": true,
         "links": true
       },
-      "note": "Category and voice format pass complete: language rhythm, spacing, title fit, contrast, links and mobile reading checked. Source Desk remains for final confirmation.",
-      "updated": "2026-09-30"
+      "note": "2026-11-26 Claude: rewritten to the approved-five format, SOURCE DESK verified (all cited pages opened), museum open-access images (Met PD / Cleveland CC0), voice pass. ECHO GO 2026-11-26 (order: gift, wild-mind, taro-jomon).",
+      "updated": "2026-11-26T20:00:00+09:00"
     },
     {
       "file": "the-algorithm-is-an-editor.html",
@@ -1612,17 +1612,17 @@
       "file": "wild-mind.html",
       "title": "野生は、未開ではない",
       "series": "ANTHROPOLOGY",
-      "stage": "final-review",
+      "stage": "approved",
       "location": "/prototype/articles/wild-mind.html",
       "checks": {
         "text": true,
-        "sources": false,
+        "sources": true,
         "visuals": true,
         "layout": true,
         "links": true
       },
-      "note": "Category and voice format pass complete: language rhythm, spacing, title fit, contrast, links and mobile reading checked. Source Desk remains for final confirmation.",
-      "updated": "2026-09-30"
+      "note": "2026-11-26 Claude: rewritten to the approved-five format, SOURCE DESK verified (all cited pages opened), museum open-access images (Met PD / Cleveland CC0), voice pass. ECHO GO 2026-11-26 (order: gift, wild-mind, taro-jomon).",
+      "updated": "2026-11-26T20:00:00+09:00"
     },
     {
       "file": "wired-utopia.html",
