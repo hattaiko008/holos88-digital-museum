@@ -223,3 +223,4 @@ body.echo-review.page-kaleidoscope .article-hero-text h1{display:flex;flex-wrap:
 body.echo-review.page-kaleidoscope .article-hero-text h1 span{display:inline;white-space:nowrap}
 body.echo-review .echo-source-desk li,body.echo-review .echo-source-desk p,body.echo-review .echo-source-desk a{overflow-wrap:anywhere;word-break:normal}
 @media(max-width:760px){body.echo-review .article-title-ja>p:first-child{font-size:1.6rem!important}body.echo-review .reading-shelf ol{grid-template-columns:1fr}body.echo-review.page-kaleidoscope .article-hero-text h1{display:block}body.echo-review.page-kaleidoscope .article-hero-text h1 span{display:block}}
+body.echo-review a.cite{font-family:var(--sans,system-ui),sans-serif;font-size:.5em;line-height:0;vertical-align:.8em;margin-left:.15em;letter-spacing:.02em;color:inherit;opacity:.45;text-decoration:none;border-bottom:0}body.echo-review a.cite:hover,body.echo-review a.cite:focus-visible{opacity:1;text-decoration:underline}
