@@ -55,3 +55,24 @@
   });
   save();render();
 })();
+(()=>{
+  const cites=document.querySelectorAll('a.cite');
+  const desk=document.querySelector('#source-desk');
+  if(!cites.length||!desk)return;
+  const key='holos88-show-cites-v1';
+  const button=document.createElement('button');
+  button.type='button';
+  button.className='cite-toggle';
+  const set=on=>{
+    document.body.classList.toggle('show-cites',on);
+    button.setAttribute('aria-pressed',String(on));
+    button.textContent=on?'本文の注の番号を隠す':'本文に注の番号を表示';
+    try{localStorage.setItem(key,on?'1':'0')}catch{}
+  };
+  let on=false;
+  try{on=localStorage.getItem(key)==='1'}catch{}
+  button.addEventListener('click',()=>set(!document.body.classList.contains('show-cites')));
+  const intro=desk.querySelector(':scope > p');
+  (intro||desk.querySelector('h2:last-of-type')||desk.firstElementChild).after(button);
+  set(on);
+})();
