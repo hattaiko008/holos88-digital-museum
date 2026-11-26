@@ -567,17 +567,17 @@
       "file": "horse.html",
       "title": "馬は、人をどこまで遠くへ運んだのだろう。",
       "series": "ANIMAL",
-      "stage": "final-review",
+      "stage": "approved",
       "location": "/prototype/articles/horse.html",
       "checks": {
         "text": true,
-        "sources": false,
+        "sources": true,
         "visuals": true,
         "layout": true,
         "links": true
       },
-      "note": "Category and voice format pass complete: language rhythm, spacing, title fit, contrast, links and mobile reading checked. Source Desk remains for final confirmation.",
-      "updated": "2026-09-30"
+      "note": "2026-11-26 Claude: SOURCE DESK verified (all cited pages opened), museum open-access images (Met PD / Cleveland CC0), voice pass. Published with ECHO GO 2026-11-26.",
+      "updated": "2026-11-26T12:00:00+09:00"
     },
     {
       "file": "how-long-is-now.html",
@@ -924,17 +924,17 @@
       "file": "seed.html",
       "title": "蒔かぬ種は生えぬ。",
       "series": "SPECIMEN",
-      "stage": "final-review",
+      "stage": "approved",
       "location": "/prototype/articles/seed.html",
       "checks": {
         "text": true,
-        "sources": false,
+        "sources": true,
         "visuals": true,
         "layout": true,
         "links": true
       },
-      "note": "Category and voice format pass complete: language rhythm, spacing, title fit, contrast, links and mobile reading checked. Source Desk remains for final confirmation.",
-      "updated": "2026-09-30"
+      "note": "2026-11-26 Claude: SOURCE DESK verified (all cited pages opened), museum open-access images (Met PD / Cleveland CC0), voice pass. Published with ECHO GO 2026-11-26.",
+      "updated": "2026-11-26T12:00:00+09:00"
     },
     {
       "file": "self-building-is-not-alone.html",
