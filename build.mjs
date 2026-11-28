@@ -199,8 +199,8 @@ const groups=[
 }
 // Cover slides: each category slide shows the newest public article of that
 // category. An article can name its slide with "cover" in editorial-status.json.
-// WATCH THE NOW keeps its drawn figure and only gains the link. MICHIKUSA shows
-// the newest article not already on another slide.
+// WATCH THE NOW keeps its drawn figure and only gains the link. MICHIKUSA
+// keeps its own horse picture and is not replaced (ECHO 2026-11-28).
 {
   const byDate=(a,b)=>String(b.updated||'').localeCompare(String(a.updated||''));
   const isMichikusa=item=>item.series==='MICHIKUSA';
@@ -209,8 +209,7 @@ const groups=[
     read:item=>!isMichikusa(item)&&!sheFiles.test(item.file)&&!watchFiles.test(item.file)&&!/archaeology-of-fear|consciousness/.test(item.file),
     feature:item=>/archaeology-of-fear|consciousness/.test(item.file),
     market:item=>/watch-the-now/.test(item.file),
-    almanac:item=>almanacFiles.test(item.file),
-    michikusa:()=>true
+    almanac:item=>almanacFiles.test(item.file)
   };
   const used=new Set();
   const target=new URL('index.html',prototypeTarget);let home=await readFile(target,'utf8');
