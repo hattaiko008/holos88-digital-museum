@@ -197,6 +197,39 @@ const groups=[
   home=home.replace(/(<article class="stage-michikusa">[\s\S]*?<\/article>)(\s*<\/div>\s*<nav class="reading-index")/,`$1${cards}$2`);
   await writeFile(target,home);
 }
+// Cover slides: each category slide shows the newest public article of that
+// category. An article can name its slide with "cover" in editorial-status.json.
+// WATCH THE NOW keeps its drawn figure and only gains the link. MICHIKUSA shows
+// the newest article not already on another slide.
+{
+  const byDate=(a,b)=>String(b.updated||'').localeCompare(String(a.updated||''));
+  const isMichikusa=item=>item.series==='MICHIKUSA';
+  const almanacFiles=/moon-to-stars|season-is-not|body-keeps|melancholy|season-beneath/;
+  const auto={
+    read:item=>!isMichikusa(item)&&!sheFiles.test(item.file)&&!watchFiles.test(item.file)&&!/archaeology-of-fear|consciousness/.test(item.file),
+    feature:item=>/archaeology-of-fear|consciousness/.test(item.file),
+    market:item=>/watch-the-now/.test(item.file),
+    almanac:item=>almanacFiles.test(item.file),
+    michikusa:()=>true
+  };
+  const used=new Set();
+  const target=new URL('index.html',prototypeTarget);let home=await readFile(target,'utf8');
+  for(const [slot,test] of Object.entries(auto)){
+    const needsImage=slot!=='market';
+    const pick=publicCards.filter(item=>!/(subscriber|preview)/.test(item.file)&&!used.has(item.file)&&(!needsImage||item.image)&&(item.cover?item.cover===slot:test(item))).sort(byDate)[0];
+    if(!pick)continue;used.add(pick.file);
+    const source=await readFile(new URL(pick.file.startsWith('pages/')?pick.file.split('/').pop():`articles/${pick.file}`,prototypeTarget),'utf8').catch(()=>'');
+    const alt=(source.match(new RegExp(`<img[^>]+src="${pick.image.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')}"[^>]*alt="([^"]*)"`,'i'))||source.match(/<img[^>]+alt="([^"]*)"/i)||[])[1]||'';
+    const issue=(pick.file.match(/(\d{4})-(\d{2})-(\d{2})/)||[]);
+    const title=slot==='market'&&issue.length?`${Number(issue[2])}月${Number(issue[3])}日号`:String(pick.title||'').replace(/\s*—\s*HOLOS 88\s*$/,'').trim();
+    const slide=new RegExp(`(<article class="category-slide portal-${slot}[^"]*"[^>]*>)([\\s\\S]*?)(<a href="[^"]*">[^<]*<span>↓</span></a></div>)`);
+    home=home.replace(slide,(all,open,middle,button)=>{
+      if(needsImage)middle=middle.replace(/(<figure[^>]*>)<img[^>]*>/,`$1<img src="${escape(pick.image)}" alt="${escape(alt)}">`);
+      return `${open}${middle}<a class="cover-latest" href="${escape(pick.href)}"><small>NEW</small>${escape(title)} <span>↗</span></a>${button}`;
+    });
+  }
+  await writeFile(target,home);
+}
 const indexCards=items=>`<div class="visual-index">${items.map((item,index)=>`<a href="${item.href}"><span class="article-cover-window">${item.image?`<img src="${escape(item.image)}" alt="">`:`<iframe data-cover-src="${item.href}" title="${escape(item.title)}の承認済み表紙" loading="lazy" tabindex="-1" aria-hidden="true"></iframe>`}</span><small>${String(index+1).padStart(2,'0')} · ${escape(String(item.updated||'').slice(0,10))}</small><strong>${escape(item.title)}</strong><em>OPEN WINDOW ↗</em></a>`).join('')}</div><ol class="text-index">${items.map((item,index)=>`<li><span>${String(index+1).padStart(2,'0')}</span><a href="${item.href}">${escape(item.title)}</a><time>${escape(String(item.updated||'').slice(0,10))}</time></li>`).join('')}</ol>`;
 const indexHead=(title,ja)=>`<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${title.replace(/<br>/g,' ')} — HOLOS 88</title><meta name="description" content="HOLOS 88の公開記事INDEX"><link rel="stylesheet" href="/prototype/prototype.css"><script defer>addEventListener('DOMContentLoaded',()=>{const load=e=>{const f=e.target;if(f.dataset.coverSrc&&!f.src)f.src=f.dataset.coverSrc};const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){load({target:e.target});io.unobserve(e.target)}}),{rootMargin:'300px'});document.querySelectorAll('iframe[data-cover-src]').forEach(f=>io.observe(f))})</script><style>.library-page{background:#eeeae1}.library-head{min-height:58vh;padding:9vh 3vw 4rem;display:grid;grid-template-columns:.45fr 1.55fr;align-items:end;border-bottom:1px solid}.library-head h1{margin:0;font:400 clamp(4.5rem,13vw,14rem)/.72 var(--serif);letter-spacing:-.075em}.library-head p{font:1rem/2 var(--jp)}.library-nav{position:sticky;top:0;z-index:4;display:flex;flex-wrap:wrap;background:#eeeae1;border-bottom:1px solid}.library-nav a{padding:1rem;border-right:1px solid;font:8px var(--sans);letter-spacing:.12em}.library-section{padding:7rem 3vw;border-bottom:1px solid;scroll-margin-top:4rem}.library-section header{display:grid;grid-template-columns:.4fr 1.1fr .5fr;align-items:end}.library-section h2{margin:0;font:400 clamp(3rem,8vw,9rem)/.78 var(--serif);letter-spacing:-.06em}.visual-index{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;margin-top:3rem;background:#111;border:1px solid}.visual-index a{min-width:0;min-height:380px;padding:1rem;overflow:hidden;background:#f7f4ec;display:flex;flex-direction:column}.article-cover-window{position:relative;display:block;width:100%;min-width:0;height:210px;overflow:hidden;background:#f7f4ec;border-bottom:1px solid}.article-cover-window img{width:100%;height:100%;object-fit:cover}.article-cover-window iframe{position:absolute;inset:0 auto auto 0;width:1440px;height:900px;border:0;transform:scale(.19);transform-origin:0 0;pointer-events:none}.visual-index img{filter:grayscale(.18)}.visual-index small,.visual-index em{margin-top:1rem;font:8px var(--sans);letter-spacing:.1em}.visual-index strong{margin:auto 0;font:1.25rem/1.5 var(--jp)}.visual-index em{font-style:normal}.text-index{list-style:none;margin:2rem 0 0;padding:0;border-top:1px solid}.text-index li{display:grid;grid-template-columns:3rem 1fr 8rem;gap:1rem;padding:.8rem 0;border-bottom:1px solid}.text-index span,.text-index time{font:8px var(--sans);letter-spacing:.1em}.text-index a{font:12px var(--jp)}@media(max-width:760px){.library-head,.library-section header{grid-template-columns:1fr}.library-head{gap:2rem;padding-inline:1rem}.library-section{padding:5rem 1rem}.visual-index{grid-template-columns:repeat(2,1fr)}.visual-index a{min-height:300px}.article-cover-window{height:145px}.article-cover-window iframe{transform:scale(.125)}.text-index li{grid-template-columns:2rem 1fr}.text-index time{grid-column:2}.library-nav{top:58px;overflow-x:auto;flex-wrap:nowrap}.library-nav a{white-space:nowrap}}</style></head><body class="library-page"><header class="site-head"><a class="wordmark" href="/prototype/index.html"><span>HOLOS</span><sup>88</sup></a><nav><a href="/prototype/index.html#read">READ</a><a href="/prototype/index.html#museum">COLLECTION</a></nav><a href="/prototype/index.html">CLOSE ×</a></header><main><section class="library-head"><div><p class="eyebrow">MUSEUM INDEX / PUBLISHED WINDOWS</p><h1>${title}</h1></div><p>${ja}</p></section>`;
 const categoriesPage=indexHead('READING<br>ROOMS','公開中の記事を、カテゴリーごとの表紙と巻末索引から探せます。')+`<nav class="library-nav">${groups.map(group=>`<a href="#${group.id}">${group.label}</a>`).join('')}<a href="/prototype/michikusa.html">MICHIKUSA</a></nav>${groups.map((group,index)=>`<section class="library-section" id="${group.id}"><header><small>${String(index+1).padStart(2,'0')} / CATEGORY</small><h2>${group.label}</h2><p>${group.ja} · ${group.items.length} WINDOWS</p></header>${indexCards(group.items)}</section>`).join('')}</main></body></html>`;
